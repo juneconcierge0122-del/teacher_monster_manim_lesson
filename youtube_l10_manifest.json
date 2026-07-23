@@ -1,0 +1,16 @@
+[
+  {
+    "file": "manim_lessons/samples/output/landau_l10_zh-TW.mp4",
+    "title": "第 10 課｜機械相似性：不用重新解一次｜Landau–Lifshitz 經典力學",
+    "description": "把同一個力學系統放大後，運動仍會相似嗎？透過長度、時間與能量的尺度變換，理解如何從一個解得到一整族相似軌跡。\n\n本影片為《Landau–Lifshitz 經典力學》教學系列第 10 課（繁體中文版）。",
+    "tags": ["經典力學", "機械相似性", "尺度變換", "Landau Lifshitz", "物理教學"],
+    "language": "zh-TW"
+  },
+  {
+    "file": "manim_lessons/samples/output/landau_l10_en.mp4",
+    "title": "Lesson 10 | Mechanical Similarity | Landau–Lifshitz",
+    "description": "If we scale a mechanical system, will its motion remain similar? By rescaling length, time, and energy, one solution can describe an entire family of trajectories.\n\nLesson 10 of the Landau–Lifshitz Classical Mechanics teaching series (English edition).",
+    "tags": ["classical mechanics", "mechanical similarity", "scaling", "Landau Lifshitz", "physics education"],
+    "language": "en"
+  }
+]
