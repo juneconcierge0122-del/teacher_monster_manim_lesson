@@ -1,0 +1,16 @@
+[
+  {
+    "file": "manim_lessons/samples/output/landau_l11_zh-TW.mp4",
+    "title": "第 11 課｜一維運動：從能量讀出軌跡｜Landau–Lifshitz 經典力學",
+    "description": "不先解二階運動方程，也能看出粒子如何運動。利用能量守恆判斷允許區域、速度與轉向點，理解一維有限振盪。\n\n本影片為《Landau–Lifshitz 經典力學》教學系列第 11 課（繁體中文版）。",
+    "tags": ["經典力學", "一維運動", "能量守恆", "轉向點", "Landau Lifshitz"],
+    "language": "zh-TW"
+  },
+  {
+    "file": "manim_lessons/samples/output/landau_l11_en.mp4",
+    "title": "Lesson 11 | One-Dimensional Motion from Energy | Landau–Lifshitz",
+    "description": "We can understand one-dimensional motion without first solving a second-order equation. Energy conservation reveals the allowed region, speed, turning points, and bounded oscillation.\n\nLesson 11 of the Landau–Lifshitz Classical Mechanics teaching series (English edition).",
+    "tags": ["classical mechanics", "one dimensional motion", "energy conservation", "turning point", "Landau Lifshitz"],
+    "language": "en"
+  }
+]
