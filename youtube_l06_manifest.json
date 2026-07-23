@@ -1,0 +1,16 @@
+[
+  {
+    "file": "manim_lessons/samples/output/landau_l06_zh-TW.mp4",
+    "title": "第 6 課｜能量：時間均勻性留下的守恆量｜Landau–Lifshitz 經典力學",
+    "description": "為什麼能量會守恆？從拉格朗日量不顯含時間出發，理解 E = Σ q̇∂L/∂q̇ − L，以及時間均勻性如何留下守恆量。\n\n本影片為《Landau–Lifshitz 經典力學》教學系列第 6 課（繁體中文版）。",
+    "tags": ["經典力學", "能量守恆", "拉格朗日量", "Landau Lifshitz", "物理教學"],
+    "language": "zh-TW"
+  },
+  {
+    "file": "manim_lessons/samples/output/landau_l06_en.mp4",
+    "title": "Lesson 6 | Energy from Uniform Time | Landau–Lifshitz",
+    "description": "Why is energy conserved? Starting from a Lagrangian with no explicit time dependence, we derive E = Σ q̇∂L/∂q̇ − L and connect uniform time with conservation of energy.\n\nLesson 6 of the Landau–Lifshitz Classical Mechanics teaching series (English edition).",
+    "tags": ["classical mechanics", "energy conservation", "Lagrangian", "Landau Lifshitz", "physics education"],
+    "language": "en"
+  }
+]
