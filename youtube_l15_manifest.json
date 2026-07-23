@@ -1,0 +1,16 @@
+[
+  {
+    "file": "manim_lessons/samples/output/landau_l15_zh-TW.mp4",
+    "title": "第 15 課｜克卜勒問題：能量決定圓錐軌道｜Landau–Lifshitz 經典力學",
+    "description": "平方反比引力為什麼會產生圓錐曲線軌道？本課由 U(r) = −α/r 出發，說明軌道方程 p/r = 1 + e cosφ，並用總能量區分橢圓、拋物線與雙曲線，最後連結克卜勒第三定律 T² ∝ a³。\n\n本影片為《Landau–Lifshitz 經典力學》教學系列第 15 課（繁體中文版）。",
+    "tags": ["經典力學", "克卜勒問題", "圓錐曲線", "萬有引力", "克卜勒第三定律", "Landau Lifshitz"],
+    "language": "zh-TW"
+  },
+  {
+    "file": "manim_lessons/samples/output/landau_l15_en.mp4",
+    "title": "Lesson 15 | Kepler's Problem and Conic Orbits | Landau–Lifshitz",
+    "description": "Why does an inverse-square attraction produce conic-section orbits? Starting from U(r) = −α/r, this lesson derives p/r = 1 + e cosφ, uses total energy to distinguish ellipses, parabolas, and hyperbolas, and connects bound orbits to Kepler's third law T² ∝ a³.\n\nLesson 15 of the Landau–Lifshitz Classical Mechanics teaching series (English edition).",
+    "tags": ["classical mechanics", "Kepler problem", "conic sections", "gravity", "Kepler's third law", "Landau Lifshitz"],
+    "language": "en"
+  }
+]
