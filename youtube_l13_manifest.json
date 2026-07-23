@@ -1,0 +1,34 @@
+[
+  {
+    "file": "manim_lessons/samples/output/landau_l13_zh-TW.mp4",
+    "title": "第 13 課｜約化質量：把兩體變成一體｜Landau–Lifshitz 經典力學",
+    "description": "從兩個互相作用的粒子出發，分離質心平移，並用相對座標 r = r₁ − r₂ 將兩體問題化為單粒子問題。本課介紹約化質量 μ = m₁m₂/(m₁ + m₂)，以及相對運動的拉格朗日量 L = ½μṙ² − U(r)。\n\nLandau–Lifshitz《力學》雙語動畫課程，第 13 課。",
+    "tags": [
+      "Landau Lifshitz",
+      "經典力學",
+      "約化質量",
+      "兩體問題",
+      "拉格朗日力學",
+      "物理"
+    ],
+    "category_id": "27",
+    "privacy_status": "private",
+    "language": "zh-TW"
+  },
+  {
+    "file": "manim_lessons/samples/output/landau_l13_en.mp4",
+    "title": "Lesson 13 | Reduced Mass: Two Bodies into One | Landau–Lifshitz",
+    "description": "Starting with two interacting particles, we separate the translation of the centre of mass and use the relative coordinate r = r₁ − r₂ to reduce the two-body problem to a one-particle problem. This lesson introduces the reduced mass μ = m₁m₂/(m₁ + m₂) and the relative Lagrangian L = ½μṙ² − U(r).\n\nBilingual animated course based on Landau and Lifshitz's Mechanics, Lesson 13.",
+    "tags": [
+      "Landau Lifshitz",
+      "classical mechanics",
+      "reduced mass",
+      "two-body problem",
+      "Lagrangian mechanics",
+      "physics"
+    ],
+    "category_id": "27",
+    "privacy_status": "private",
+    "language": "en"
+  }
+]
