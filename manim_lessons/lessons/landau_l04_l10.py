@@ -1,5 +1,5 @@
 """Shared story animation for Landau episodes 04–10."""
-import pathlib, sys
+import pathlib, sys, textwrap
 sys.path.insert(0, str(pathlib.Path(__file__).resolve().parents[2]))
 import av, numpy as np
 from manim import Axes, Create, Dot, FadeIn, FadeOut, Line, Scene, Text, UP, DOWN, LEFT, RIGHT, VGroup, Write, ValueTracker, linear
@@ -10,6 +10,8 @@ class LandauBatchBase(Scene):
  def setup(self):
   apply_global_config(); self.title,self.lines=TOPICS[self.EPISODE][self.LANGUAGE]; self.clock=ValueTracker(0); self.audio_dir=pathlib.Path(__file__).resolve().parents[1]/"samples"/f"audio_l{self.EPISODE:02d}"/("zh-TW" if self.LANGUAGE=="zh" else "en")
  def text(self,s,size=FS_BODY,color=INK):
+  if size==FS_BODY and self.LANGUAGE=="en":
+   s=textwrap.fill(s,width=72,break_long_words=False,break_on_hyphens=False)
   m=Text(s,font_size=size,color=color)
   if m.width>11.8:m.scale_to_fit_width(11.8)
   return m
