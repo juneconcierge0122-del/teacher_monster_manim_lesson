@@ -37,5 +37,5 @@ class LandauBatchBase(Scene):
    active_card=card
   self.wait(.8)
 def make_scene(n,lang): return type(f"LandauL{n:02d}{'ZH' if lang=='zh' else 'EN'}",(LandauBatchBase,),{"EPISODE":n,"LANGUAGE":lang})
-for _n in range(4,20):
+for _n in range(4,21):
  globals()[f"LandauL{_n:02d}ZH"]=make_scene(_n,"zh"); globals()[f"LandauL{_n:02d}EN"]=make_scene(_n,"en")

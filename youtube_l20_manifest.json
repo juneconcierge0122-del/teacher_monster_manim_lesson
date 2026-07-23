@@ -1,0 +1,16 @@
+[
+  {
+    "file": "manim_lessons/samples/output/landau_l20_zh-TW.mp4",
+    "title": "第 20 課｜小角度散射：用微擾法直接算偏轉｜Landau–Lifshitz 經典力學",
+    "description": "當撞擊參數很大、位能很弱時，粒子只被輕輕推偏。本課用微擾法在實驗室系直接計算小角度散射：由橫向衝量 Δp⊥ = ∫ F⊥ dt 求出散射角，把對 x 的積分換成對 r 的積分，導出 χ = −[2b/(m·v∞²)]·∫(dU/dr)dr/√(r²−b²)，再代回 dσ = (b/χ)·|db/dχ|·dΩ 得到弱場散射的微分截面。\n\n本影片為《Landau–Lifshitz 經典力學》教學系列第 20 課（繁體中文版）。",
+    "tags": ["經典力學", "小角度散射", "微擾法", "撞擊參數", "微分截面", "Landau Lifshitz"],
+    "language": "zh-TW"
+  },
+  {
+    "file": "manim_lessons/samples/output/landau_l20_en.mp4",
+    "title": "Lesson 20 | Small-Angle Scattering by Perturbation | Landau–Lifshitz",
+    "description": "When the impact parameter is large and the potential weak, a particle is only gently deflected. This lesson computes small-angle scattering directly in the laboratory frame: from the transverse impulse Δp⊥ = ∫ F⊥ dt it finds the scattering angle, converts the x-integral into an r-integral, and derives χ = −[2b/(m·v∞²)]·∫(dU/dr)dr/√(r²−b²), then substitutes into dσ = (b/χ)·|db/dχ|·dΩ for the weak-field differential cross-section.\n\nLesson 20 of the Landau–Lifshitz Classical Mechanics teaching series (English edition).",
+    "tags": ["classical mechanics", "small-angle scattering", "perturbation", "impact parameter", "differential cross-section", "Landau Lifshitz"],
+    "language": "en"
+  }
+]
