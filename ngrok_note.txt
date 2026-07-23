@@ -1,0 +1,7 @@
+ngrok config check
+
+
+/home/r08849002/.config/ngrok/ngrok.yml
+
+
+ngrok start model-a model-b model-c

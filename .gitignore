@@ -1,0 +1,22 @@
+.secrets/
+.git-backup/
+.venv/
+**/__pycache__/
+.pytest_cache/
+*.py[cod]
+
+# Source books and generated audiovisual artifacts are not part of the code backup.
+books/
+manim_output/
+**/media/
+**/output/
+**/samples/audio*/
+**/samples/frames*/
+*.mp3
+*.wav
+*.mp4
+*.mov
+*.mkv
+
+# Nested repository metadata must never be copied into this backup.
+**/.git/

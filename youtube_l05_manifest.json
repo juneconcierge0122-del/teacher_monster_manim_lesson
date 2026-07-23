@@ -1,0 +1,16 @@
+[
+  {
+    "file": "manim_lessons/samples/output/landau_l05_zh-TW.mp4",
+    "title": "第 5 課｜粒子系統的拉格朗日量｜Landau–Lifshitz 經典力學",
+    "description": "從單一自由粒子走向多粒子系統：了解動能的可加性、相互作用勢能，以及 L = T − U。\n\n本影片為《Landau–Lifshitz 經典力學》教學系列第 5 課（繁體中文版）。",
+    "tags": ["經典力學", "拉格朗日量", "Landau Lifshitz", "物理教學"],
+    "language": "zh-TW"
+  },
+  {
+    "file": "manim_lessons/samples/output/landau_l05_en.mp4",
+    "title": "Lesson 5 | The Lagrangian of a System of Particles | Landau–Lifshitz",
+    "description": "From one free particle to a many-particle system: kinetic-energy additivity, interaction potential, and L = T − U.\n\nLesson 5 of the Landau–Lifshitz Classical Mechanics teaching series (English edition).",
+    "tags": ["classical mechanics", "Lagrangian", "Landau Lifshitz", "physics education"],
+    "language": "en"
+  }
+]
