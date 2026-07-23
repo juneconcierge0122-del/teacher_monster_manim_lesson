@@ -23,14 +23,16 @@ class LandauBatchBase(Scene):
   heading=self.text(self.title,FS_H1,ACCENT_A).to_edge(UP,buff=.45)
   axes=Axes(x_range=[-5,5,1],y_range=[-2,3,1],x_length=9,y_length=4,axis_config={"color":GHOST,"stroke_width":2})
   dot=Dot(axes.c2p(-3,0),color=ACCENT_A,radius=.18); trail=Line(axes.c2p(-3,0),axes.c2p(3,0),color=ACCENT_B,stroke_width=3)
-  self.add(axes,dot)
+  self.add(axes)
+  active_card=None
   for i,line in enumerate(self.lines):
    card=self.text(line,FS_BODY,INK).to_edge(DOWN,buff=.5)
-   if i==0:self.speak(i,Write(heading),FadeIn(dot))
-   elif i==1:self.speak(i,Create(trail),Write(card))
-   elif i==2:self.speak(i,FadeOut(card),dot.animate.move_to(axes.c2p(0,1.8)),Write(card))
-   elif i==3:self.speak(i,FadeOut(card),Write(card))
-   if i<3:self.remove(card)
+   transition=[FadeIn(card)] if active_card is None else [FadeOut(active_card),FadeIn(card)]
+   if i==0:self.speak(i,Write(heading),FadeIn(dot),*transition)
+   elif i==1:self.speak(i,Create(trail),*transition)
+   elif i==2:self.speak(i,dot.animate.move_to(axes.c2p(0,1.8)),*transition)
+   else:self.speak(i,*transition)
+   active_card=card
   self.wait(.8)
 def make_scene(n,lang): return type(f"LandauL{n:02d}{'ZH' if lang=='zh' else 'EN'}",(LandauBatchBase,),{"EPISODE":n,"LANGUAGE":lang})
 for _n in range(4,11):
