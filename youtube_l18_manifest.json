@@ -1,0 +1,16 @@
+[
+  {
+    "file": "manim_lessons/samples/output/landau_l18_zh-TW.mp4",
+    "title": "第 18 課｜散射：從撞擊參數到截面｜Landau–Lifshitz 經典力學",
+    "description": "碰撞中的偏轉角如何反映粒子間作用力？本課從約化質量、無限遠速度與撞擊參數出發，連結最近距離與散射角，並由均勻粒子束的圓環面積導出散射截面及微分截面 dσ/dΩ。\n\n本影片為《Landau–Lifshitz 經典力學》教學系列第 18 課（繁體中文版）。",
+    "tags": ["經典力學", "散射", "撞擊參數", "散射截面", "微分截面", "Landau Lifshitz"],
+    "language": "zh-TW"
+  },
+  {
+    "file": "manim_lessons/samples/output/landau_l18_en.mp4",
+    "title": "Lesson 18 | Scattering: Impact Parameter to Cross-Section | Landau–Lifshitz",
+    "description": "How does a collision's deflection angle reveal the interaction between particles? Starting from reduced mass, speed at infinity, and impact parameter, this lesson connects closest approach to scattering angle and derives the scattering and differential cross-sections from the annular geometry of a uniform beam.\n\nLesson 18 of the Landau–Lifshitz Classical Mechanics teaching series (English edition).",
+    "tags": ["classical mechanics", "scattering", "impact parameter", "cross-section", "differential cross-section", "Landau Lifshitz"],
+    "language": "en"
+  }
+]
