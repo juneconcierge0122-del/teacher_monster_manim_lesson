@@ -1,0 +1,16 @@
+[
+  {
+    "file": "manim_lessons/samples/output/landau_l19_zh-TW.mp4",
+    "title": "第 19 課｜拉塞福公式：庫侖力的散射指紋｜Landau–Lifshitz 經典力學",
+    "description": "庫侖位能如何決定散射角分布？本課從撞擊參數與雙曲線軌道出發，導出拉塞福微分散射截面，解釋其 sin⁻⁴(χ/2) 角度特徵、吸引與排斥的對稱性，以及如何由測量檢驗平方反比定律。\n\n本影片為《Landau–Lifshitz 經典力學》教學系列第 19 課（繁體中文版）。",
+    "tags": ["經典力學", "拉塞福散射", "庫侖力", "微分截面", "平方反比", "Landau Lifshitz"],
+    "language": "zh-TW"
+  },
+  {
+    "file": "manim_lessons/samples/output/landau_l19_en.mp4",
+    "title": "Lesson 19 | Rutherford's Coulomb Scattering Formula | Landau–Lifshitz",
+    "description": "How does the Coulomb potential determine the angular distribution of scattering? Starting from the impact parameter and hyperbolic orbit, this lesson derives Rutherford's differential cross-section, explains its sin⁻⁴(χ/2) signature and attraction-repulsion symmetry, and shows how measurements test the inverse-square law.\n\nLesson 19 of the Landau–Lifshitz Classical Mechanics teaching series (English edition).",
+    "tags": ["classical mechanics", "Rutherford scattering", "Coulomb force", "differential cross-section", "inverse-square law", "Landau Lifshitz"],
+    "language": "en"
+  }
+]
