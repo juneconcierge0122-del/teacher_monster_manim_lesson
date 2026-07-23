@@ -1,0 +1,16 @@
+[
+  {
+    "file": "manim_lessons/samples/output/landau_l16_zh-TW.mp4",
+    "title": "第 16 課｜粒子解體：守恆律預測碎片方向｜Landau–Lifshitz 經典力學",
+    "description": "粒子自發解體後，碎片會往哪裡走？本課利用動量與能量守恆，說明質心系中的等大反向動量 p₀ = √(2με)，再用 v = V + v₀ 轉換到實驗室系，導出 V 大於 v₀ 時碎片只能出現在前向圓錐內。\n\n本影片為《Landau–Lifshitz 經典力學》教學系列第 16 課（繁體中文版）。",
+    "tags": ["經典力學", "粒子解體", "動量守恆", "能量守恆", "質心系", "Landau Lifshitz"],
+    "language": "zh-TW"
+  },
+  {
+    "file": "manim_lessons/samples/output/landau_l16_en.mp4",
+    "title": "Lesson 16 | Particle Disintegration and Conservation Laws | Landau–Lifshitz",
+    "description": "Where do the fragments go after a spontaneous particle disintegration? This lesson uses momentum and energy conservation to obtain equal and opposite centre-of-mass momenta p₀ = √(2με), then transforms with v = V + v₀ to show why fragments are confined to a forward cone when V exceeds v₀.\n\nLesson 16 of the Landau–Lifshitz Classical Mechanics teaching series (English edition).",
+    "tags": ["classical mechanics", "particle disintegration", "momentum conservation", "energy conservation", "centre of mass", "Landau Lifshitz"],
+    "language": "en"
+  }
+]
