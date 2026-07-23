@@ -1,0 +1,16 @@
+[
+  {
+    "file": "manim_lessons/samples/output/landau_l08_zh-TW.mp4",
+    "title": "第 8 課｜質心：把整個系統看成一點｜Landau–Lifshitz 經典力學",
+    "description": "複雜的多粒子系統如何化繁為簡？從質量加權位置定義質心 R，並理解內力抵消後為何有 M R̈ = F 外。\n\n本影片為《Landau–Lifshitz 經典力學》教學系列第 8 課（繁體中文版）。",
+    "tags": ["經典力學", "質心", "多粒子系統", "Landau Lifshitz", "物理教學"],
+    "language": "zh-TW"
+  },
+  {
+    "file": "manim_lessons/samples/output/landau_l08_en.mp4",
+    "title": "Lesson 8 | The Centre of Mass | Landau–Lifshitz",
+    "description": "How can one point simplify a many-particle system? We define the centre of mass R using mass-weighted positions and see why internal forces cancel, leaving M R̈ = F external.\n\nLesson 8 of the Landau–Lifshitz Classical Mechanics teaching series (English edition).",
+    "tags": ["classical mechanics", "centre of mass", "center of mass", "Landau Lifshitz", "physics education"],
+    "language": "en"
+  }
+]
