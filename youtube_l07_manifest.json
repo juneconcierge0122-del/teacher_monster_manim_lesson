@@ -1,0 +1,16 @@
+[
+  {
+    "file": "manim_lessons/samples/output/landau_l07_zh-TW.mp4",
+    "title": "第 7 課｜動量：空間均勻性留下的守恆量｜Landau–Lifshitz 經典力學",
+    "description": "為什麼動量會守恆？從空間平移不改變物理定律出發，理解 p = ∂L/∂q̇，以及空間均勻性如何留下守恆量。\n\n本影片為《Landau–Lifshitz 經典力學》教學系列第 7 課（繁體中文版）。",
+    "tags": ["經典力學", "動量守恆", "拉格朗日量", "Landau Lifshitz", "物理教學"],
+    "language": "zh-TW"
+  },
+  {
+    "file": "manim_lessons/samples/output/landau_l07_en.mp4",
+    "title": "Lesson 7 | Momentum from Uniform Space | Landau–Lifshitz",
+    "description": "Why is momentum conserved? Starting from invariance under spatial translation, we connect p = ∂L/∂q̇ with the uniformity of space.\n\nLesson 7 of the Landau–Lifshitz Classical Mechanics teaching series (English edition).",
+    "tags": ["classical mechanics", "momentum conservation", "Lagrangian", "Landau Lifshitz", "physics education"],
+    "language": "en"
+  }
+]
