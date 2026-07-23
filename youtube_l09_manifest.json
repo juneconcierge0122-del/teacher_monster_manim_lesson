@@ -1,0 +1,16 @@
+[
+  {
+    "file": "manim_lessons/samples/output/landau_l09_zh-TW.mp4",
+    "title": "第 9 課｜角動量：旋轉的守恆量｜Landau–Lifshitz 經典力學",
+    "description": "旋轉運動也有自己的守恆量。從 M = r × p 定義角動量，理解外力矩為零時的角動量守恆，以及它與旋轉對稱性的關係。\n\n本影片為《Landau–Lifshitz 經典力學》教學系列第 9 課（繁體中文版）。",
+    "tags": ["經典力學", "角動量", "旋轉對稱性", "Landau Lifshitz", "物理教學"],
+    "language": "zh-TW"
+  },
+  {
+    "file": "manim_lessons/samples/output/landau_l09_en.mp4",
+    "title": "Lesson 9 | Angular Momentum and Rotation | Landau–Lifshitz",
+    "description": "Rotation has its own conserved quantity. Starting from M = r × p, we connect zero external torque with conservation of angular momentum and rotational symmetry.\n\nLesson 9 of the Landau–Lifshitz Classical Mechanics teaching series (English edition).",
+    "tags": ["classical mechanics", "angular momentum", "rotational symmetry", "Landau Lifshitz", "physics education"],
+    "language": "en"
+  }
+]
