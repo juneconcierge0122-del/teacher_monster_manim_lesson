@@ -1,0 +1,16 @@
+[
+  {
+    "file": "manim_lessons/samples/output/landau_l17_zh-TW.mp4",
+    "title": "第 17 課｜彈性碰撞：質心系裡只轉方向｜Landau–Lifshitz 經典力學",
+    "description": "彈性碰撞如何同時滿足動量與動能守恆？本課從質心系觀察等大反向的動量向量如何只改變方向，再轉回實驗室系，並導出靜止靶粒子能取得的最大能量比例 4m₁m₂/(m₁+m₂)²。\n\n本影片為《Landau–Lifshitz 經典力學》教學系列第 17 課（繁體中文版）。",
+    "tags": ["經典力學", "彈性碰撞", "動量守恆", "動能守恆", "質心系", "Landau Lifshitz"],
+    "language": "zh-TW"
+  },
+  {
+    "file": "manim_lessons/samples/output/landau_l17_en.mp4",
+    "title": "Lesson 17 | Elastic Collisions in the Centre-of-Mass Frame | Landau–Lifshitz",
+    "description": "How does an elastic collision conserve both momentum and kinetic energy? This lesson shows why equal and opposite centre-of-mass momenta only rotate, transforms the result back to the laboratory, and derives the maximum energy-transfer fraction 4m₁m₂/(m₁+m₂)² for a target initially at rest.\n\nLesson 17 of the Landau–Lifshitz Classical Mechanics teaching series (English edition).",
+    "tags": ["classical mechanics", "elastic collision", "momentum conservation", "kinetic energy", "centre of mass", "Landau Lifshitz"],
+    "language": "en"
+  }
+]
