@@ -1,0 +1,16 @@
+[
+  {
+    "file": "manim_lessons/samples/output/landau_l12_zh-TW.mp4",
+    "title": "第 12 課｜由週期反推勢能井｜Landau–Lifshitz 經典力學",
+    "description": "只知道振盪週期如何隨能量改變，能反推出勢能嗎？從轉向點與振盪寬度出發，理解阿貝爾反演，以及為何還需要對稱性才能唯一決定勢能。\n\n本影片為《Landau–Lifshitz 經典力學》教學系列第 12 課（繁體中文版）。",
+    "tags": ["經典力學", "勢能", "振盪週期", "阿貝爾反演", "Landau Lifshitz"],
+    "language": "zh-TW"
+  },
+  {
+    "file": "manim_lessons/samples/output/landau_l12_en.mp4",
+    "title": "Lesson 12 | Reconstructing a Potential from Its Period | Landau–Lifshitz",
+    "description": "Can the energy dependence of an oscillation period reveal the potential well? Turning points and Abel inversion determine the well's width, while symmetry removes the remaining ambiguity.\n\nLesson 12 of the Landau–Lifshitz Classical Mechanics teaching series (English edition).",
+    "tags": ["classical mechanics", "potential energy", "oscillation period", "Abel inversion", "Landau Lifshitz"],
+    "language": "en"
+  }
+]
