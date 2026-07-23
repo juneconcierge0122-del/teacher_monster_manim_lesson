@@ -1,0 +1,16 @@
+[
+  {
+    "file": "manim_lessons/samples/output/landau_l14_zh-TW.mp4",
+    "title": "第 14 課｜中心力場：角動量如何決定軌道｜Landau–Lifshitz 經典力學",
+    "description": "當位能只依賴到固定中心的距離，角動量守恆會讓軌道限制在單一平面。本課從 M = mr²φ̇ 說明等時掃過等面積的克卜勒第二定律，並以有效位能 Ueff(r) = U(r) + M²/(2mr²) 判斷徑向運動的範圍。\n\n本影片為《Landau–Lifshitz 經典力學》教學系列第 14 課（繁體中文版）。",
+    "tags": ["經典力學", "中心力", "角動量", "有效位能", "克卜勒第二定律", "Landau Lifshitz"],
+    "language": "zh-TW"
+  },
+  {
+    "file": "manim_lessons/samples/output/landau_l14_en.mp4",
+    "title": "Lesson 14 | Central Fields and Angular Momentum | Landau–Lifshitz",
+    "description": "When the potential depends only on distance from a fixed centre, conservation of angular momentum confines the orbit to a plane. This lesson connects M = mr²φ̇ to Kepler's equal-area law and uses the effective potential Ueff(r) = U(r) + M²/(2mr²) to determine the allowed radial motion.\n\nLesson 14 of the Landau–Lifshitz Classical Mechanics teaching series (English edition).",
+    "tags": ["classical mechanics", "central force", "angular momentum", "effective potential", "Kepler's second law", "Landau Lifshitz"],
+    "language": "en"
+  }
+]
