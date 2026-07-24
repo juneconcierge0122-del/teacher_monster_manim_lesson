@@ -1,0 +1,16 @@
+[
+  {
+    "file": "manim_lessons/samples/output/landau_l27_zh-TW.mp4",
+    "title": "第 27 課｜參數共振：盪鞦韆為何越盪越高｜Landau–Lifshitz 經典力學",
+    "description": "有些系統不靠外力，只要週期性地改變自身參數就能被激振。本課從 ẍ + ω²(t)x = 0 出發，取 ω²(t) = ω₀²(1 + h·cos(γt))。參數共振最強的條件是調變頻率接近固有頻率的兩倍，即 γ ≈ 2ω₀；此時平衡不穩定，振幅以 e^(st) 指數成長，和普通共振的線性成長不同。不穩定帶半寬約為 ½hω₀，帶寬與成長率都正比於 h；有摩擦時淨成長為 e^((s−λ)t)。影片以「被泵動的鞦韆」動畫呈現振幅指數成長。\n\n本影片為《Landau–Lifshitz 經典力學》教學系列第 27 課（繁體中文版）。",
+    "tags": ["經典力學", "參數共振", "馬修方程", "不穩定", "鞦韆", "Landau Lifshitz"],
+    "language": "zh-TW"
+  },
+  {
+    "file": "manim_lessons/samples/output/landau_l27_en.mp4",
+    "title": "Lesson 27 | Parametric Resonance: Why a Swing Grows | Landau–Lifshitz",
+    "description": "Some systems are excited with no external force, simply by varying a parameter periodically. Starting from ẍ + ω²(t)x = 0 with ω²(t) = ω₀²(1 + h·cos(γt)), parametric resonance is strongest when the modulation frequency is near twice the natural frequency, γ ≈ 2ω₀. The equilibrium then becomes unstable and the amplitude grows exponentially, x ∝ e^(st), unlike the linear growth of ordinary resonance. The instability band has half-width about ½hω₀, with width and growth proportional to h; with friction the net growth is e^((s−λ)t). Animated as a pumped swing whose amplitude grows exponentially.\n\nLesson 27 of the Landau–Lifshitz Classical Mechanics teaching series (English edition).",
+    "tags": ["classical mechanics", "parametric resonance", "Mathieu equation", "instability", "swing", "Landau Lifshitz"],
+    "language": "en"
+  }
+]
