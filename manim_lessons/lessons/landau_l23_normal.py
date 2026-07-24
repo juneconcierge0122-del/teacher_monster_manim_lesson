@@ -16,6 +16,9 @@ from manim_lessons.localization.landau_l04_l10 import FORMULAS
 
 class NormalBase(LandauBatchBase):
  EPISODE = 23; LANGUAGE = "zh"
+ # language-specific captions for the two normal-mode beats
+ MODE_LABEL = {4: {"zh": "同相 ", "en": "in-phase :  "},
+               5: {"zh": "反相 ", "en": "out-of-phase :  "}}
 
  # ── displacements of the two masses ───────────────────────────────
  def _d(self, t):
@@ -91,7 +94,10 @@ class NormalBase(LandauBatchBase):
    s = self.sub(self.lines[i]); fin = [s]; fout = []
    if active_sub is not None: fout.append(active_sub)
    if i in F:
-    f = self.formula(F[i]); fin.append(f)
+    txt = F[i]
+    if i in self.MODE_LABEL:
+     txt = self.MODE_LABEL[i]["zh" if self.LANGUAGE == "zh" else "en"] + txt
+    f = self.formula(txt); fin.append(f)
     if active_f is not None: fout.append(active_f)
     active_f = f
    self.beat(i, fin=fin, fout=fout)
