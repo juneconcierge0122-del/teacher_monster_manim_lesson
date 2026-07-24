@@ -44,7 +44,7 @@ The general motion is a superposition of these normal modes; in normal coordinat
 - 第 4 句 / line 4: `det( kᵢₖ − ω² mᵢₖ ) = 0`
 - 第 5 句 / line 5: `同相 in-phase :  ω₁ = √( k / m )`
 - 第 6 句 / line 6: `反相 out-of-phase :  ω₂ = √( 3k / m )`
-- 第 7 句 / line 7: `Θ̈ₐ + ωₐ² Θₐ = 0`
+- 第 7 句 / line 7: `d²Θₐ/dt² + ωₐ² Θₐ = 0`
 
 ## 動畫 / Animation
 
