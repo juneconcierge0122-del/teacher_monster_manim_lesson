@@ -1,0 +1,16 @@
+[
+  {
+    "file": "manim_lessons/samples/output/landau_l23_zh-TW.mp4",
+    "title": "第 23 課｜多自由度振盪與簡正模態｜Landau–Lifshitz 經典力學",
+    "description": "多個自由度、彼此耦合的系統要怎麼分析？本課在穩定平衡附近把動能與位能寫成二次型，得到耦合的線性運動方程；假設各座標以同一頻率振盪，導出特徵方程 det(kᵢₖ − ω²mᵢₖ) = 0，其根就是固有頻率。每個固有頻率對應一個簡正模態，影片以兩個耦合質量動畫呈現同相模態、反相模態，以及一般運動為兩者的疊加。\n\n本影片為《Landau–Lifshitz 經典力學》教學系列第 23 課（繁體中文版）。",
+    "tags": ["經典力學", "簡正模態", "耦合振盪", "固有頻率", "特徵方程", "Landau Lifshitz"],
+    "language": "zh-TW"
+  },
+  {
+    "file": "manim_lessons/samples/output/landau_l23_en.mp4",
+    "title": "Lesson 23 | Normal Modes of Coupled Oscillations | Landau–Lifshitz",
+    "description": "How do we analyse many coupled degrees of freedom? Near stable equilibrium the kinetic and potential energies become quadratic forms, giving coupled linear equations of motion. Assuming a common frequency yields the characteristic equation det(kᵢₖ − ω²mᵢₖ) = 0, whose roots are the eigenfrequencies. Each eigenfrequency defines a normal mode, animated here with two coupled masses: the in-phase mode, the out-of-phase mode, and the general motion as their superposition.\n\nLesson 23 of the Landau–Lifshitz Classical Mechanics teaching series (English edition).",
+    "tags": ["classical mechanics", "normal modes", "coupled oscillations", "eigenfrequencies", "characteristic equation", "Landau Lifshitz"],
+    "language": "en"
+  }
+]
