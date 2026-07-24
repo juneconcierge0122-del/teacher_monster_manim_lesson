@@ -1,0 +1,16 @@
+[
+  {
+    "file": "manim_lessons/samples/output/landau_l24_zh-TW.mp4",
+    "title": "第 24 課｜分子振動：自由度數與簡正模態｜Landau–Lifshitz 經典力學",
+    "description": "分子的原子不只會振動，整個分子還能平移與轉動。本課先數自由度：n 個原子有 3n 個自由度，扣掉平移與轉動後，非直線分子有 3n−6 個振動、直線分子有 3n−5 個。接著以直線三原子分子為例，用動畫呈現三種簡正模態：對稱伸縮 ωₛ = √(k/m₁)、反對稱伸縮 ωₐ = √(kμ/(m₁m₂))，以及兩重簡併的彎曲模態。\n\n本影片為《Landau–Lifshitz 經典力學》教學系列第 24 課（繁體中文版）。",
+    "tags": ["經典力學", "分子振動", "簡正模態", "自由度", "對稱伸縮", "Landau Lifshitz"],
+    "language": "zh-TW"
+  },
+  {
+    "file": "manim_lessons/samples/output/landau_l24_en.mp4",
+    "title": "Lesson 24 | Vibrations of Molecules: Normal Modes | Landau–Lifshitz",
+    "description": "A molecule's atoms not only vibrate — the whole molecule can translate and rotate. This lesson counts the degrees of freedom: n atoms give 3n, and after removing translation and rotation a non-linear molecule has 3n−6 vibrations, a linear one 3n−5. Then, for a linear triatomic molecule, three normal modes are animated: the symmetric stretch ωₛ = √(k/m₁), the antisymmetric stretch ωₐ = √(kμ/(m₁m₂)), and the doubly degenerate bending mode.\n\nLesson 24 of the Landau–Lifshitz Classical Mechanics teaching series (English edition).",
+    "tags": ["classical mechanics", "molecular vibrations", "normal modes", "degrees of freedom", "symmetric stretch", "Landau Lifshitz"],
+    "language": "en"
+  }
+]
