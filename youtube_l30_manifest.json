@@ -1,0 +1,16 @@
+[
+  {
+    "file": "manim_lessons/samples/output/landau_l30_zh-TW.mp4",
+    "title": "第 30 課｜快速振盪場中的運動：Kapitza 倒立擺｜Landau–Lifshitz 經典力學",
+    "description": "當粒子除了靜態位能還受到高頻振盪力時，運動可分成緩慢平均運動 X 與細小快速抖動 ξ。快速抖動 ξ = −f/(mω²)；對快速振盪取平均後，緩慢運動就像在一個有效位能 U_eff = U + f²/(4mω²) 中運動。用到 Kapitza 擺：支點上下高頻振動，有效位能多了一項正比於 sin²θ 的能量；只要 a²ω² 大於 2gl，擺頂出現新的極小值——倒立位置竟然變穩定！影片以倒立擺與雙井有效位能動畫呈現。這是第五章「小振盪」的最後一課。\n\n本影片為《Landau–Lifshitz 經典力學》教學系列第 30 課（繁體中文版）。",
+    "tags": ["經典力學", "Kapitza 擺", "有效位能", "倒立擺", "快速振盪", "Landau Lifshitz"],
+    "language": "zh-TW"
+  },
+  {
+    "file": "manim_lessons/samples/output/landau_l30_en.mp4",
+    "title": "Lesson 30 | Motion in a Rapidly Oscillating Field: Kapitza's Pendulum | Landau–Lifshitz",
+    "description": "When a particle feels a static potential plus a high-frequency oscillating force, its motion splits into a slow average X and a small fast jitter ξ = −f/(mω²). Averaging over the fast oscillation, the slow motion behaves as if it moves in an effective potential U_eff = U + f²/(4mω²). For Kapitza's pendulum, vibrating the pivot vertically adds a term proportional to sin²θ; once a²ω² exceeds 2gl, a new minimum appears at the top and the inverted position becomes stable. Animated with the inverted pendulum and its double-well effective potential. The final lesson of Chapter V, Small Oscillations.\n\nLesson 30 of the Landau–Lifshitz Classical Mechanics teaching series (English edition).",
+    "tags": ["classical mechanics", "Kapitza pendulum", "effective potential", "inverted pendulum", "rapid oscillation", "Landau Lifshitz"],
+    "language": "en"
+  }
+]
