@@ -3,8 +3,8 @@ import pathlib, sys, textwrap
 sys.path.insert(0, str(pathlib.Path(__file__).resolve().parents[2]))
 import av, numpy as np
 from manim import Axes, Create, Dot, FadeIn, FadeOut, Line, Scene, Text, UP, DOWN, LEFT, RIGHT, VGroup, Write, ValueTracker, linear
-from manim_lessons.lib.design_tokens import ACCENT_A, ACCENT_B, ACCENT_C, DIM, FS_BODY, FS_H1, GHOST, INK, apply_global_config
-from manim_lessons.localization.landau_l04_l10 import TOPICS
+from manim_lessons.lib.design_tokens import ACCENT_A, ACCENT_B, ACCENT_C, DIM, FS_BODY, FS_H1, FS_H2, GHOST, INK, apply_global_config
+from manim_lessons.localization.landau_l04_l10 import TOPICS, FORMULAS
 class LandauBatchBase(Scene):
  EPISODE=4; LANGUAGE="zh"
  def setup(self):
@@ -21,8 +21,27 @@ class LandauBatchBase(Scene):
   d=self.dur(i);self.add_sound(str(self.audio_dir/f"{i:02d}.mp3"));r=min(1.2,d)
   if an:self.play(*an,run_time=r,rate_func=linear);d-=r
   if d:self.play(self.clock.animate.increment_value(1),run_time=d,rate_func=linear)
+ def formula(self,s):
+  m=Text(s,font_size=FS_H2,color=ACCENT_A,line_spacing=1.1)
+  if m.width>12.3:m.scale_to_fit_width(12.3)
+  return m.move_to(UP*.5)
+ def _construct_formula_stage(self,heading,formulas):
+  active_card=None; active_formula=None
+  for i,line in enumerate(self.lines):
+   card=self.text(line,FS_BODY,INK).to_edge(DOWN,buff=.5)
+   anims=[FadeIn(card)] if active_card is None else [FadeOut(active_card),FadeIn(card)]
+   if i in formulas:
+    f=self.formula(formulas[i])
+    anims+=[FadeIn(f)] if active_formula is None else [FadeOut(active_formula),FadeIn(f)]
+    active_formula=f
+   if i==0:anims=[Write(heading)]+anims
+   self.speak(i,*anims)
+   active_card=card
+  self.wait(.8)
  def construct(self):
   heading=self.text(self.title,FS_H1,ACCENT_A).to_edge(UP,buff=.45)
+  formulas=FORMULAS.get(self.EPISODE)
+  if formulas:self._construct_formula_stage(heading,formulas);return
   axes=Axes(x_range=[-5,5,1],y_range=[-2,3,1],x_length=9,y_length=4,axis_config={"color":GHOST,"stroke_width":2})
   dot=Dot(axes.c2p(-3,0),color=ACCENT_A,radius=.18); trail=Line(axes.c2p(-3,0),axes.c2p(3,0),color=ACCENT_B,stroke_width=3)
   self.add(axes)
