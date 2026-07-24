@@ -1,0 +1,16 @@
+[
+  {
+    "file": "manim_lessons/samples/output/landau_l21_zh-TW.mp4",
+    "title": "第 21 課｜一維自由振盪：每個穩定平衡都是簡諧｜Landau–Lifshitz 經典力學",
+    "description": "任何穩定平衡附近的小運動，為什麼都是簡諧振盪？本課把位能在極小值附近展開成二次項 U ≈ ½kx²，寫出拉格朗日量 L = ½mẋ² − ½kx²，導出運動方程 mẍ + kx = 0，得到通解 x = a·cos(ωt + α)。角頻率 ω = √(k/m) 只由系統本身決定，與振幅無關；總能量 E = ½mω²a² 正比於振幅平方。\n\n本影片為《Landau–Lifshitz 經典力學》教學系列第 21 課（繁體中文版）。",
+    "tags": ["經典力學", "小振盪", "簡諧運動", "角頻率", "穩定平衡", "Landau Lifshitz"],
+    "language": "zh-TW"
+  },
+  {
+    "file": "manim_lessons/samples/output/landau_l21_en.mp4",
+    "title": "Lesson 21 | Free Oscillations in One Dimension | Landau–Lifshitz",
+    "description": "Why is small motion near any stable equilibrium always harmonic? This lesson expands the potential near its minimum as a quadratic U ≈ ½kx², writes the Lagrangian L = ½mẋ² − ½kx², derives the equation of motion mẍ + kx = 0, and obtains the general solution x = a·cos(ωt + α). The angular frequency ω = √(k/m) is fixed by the system alone, independent of amplitude; the total energy E = ½mω²a² is proportional to the amplitude squared.\n\nLesson 21 of the Landau–Lifshitz Classical Mechanics teaching series (English edition).",
+    "tags": ["classical mechanics", "small oscillations", "simple harmonic motion", "angular frequency", "stable equilibrium", "Landau Lifshitz"],
+    "language": "en"
+  }
+]
