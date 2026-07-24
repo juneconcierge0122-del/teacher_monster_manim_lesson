@@ -1,0 +1,16 @@
+[
+  {
+    "file": "manim_lessons/samples/output/landau_l26_zh-TW.mp4",
+    "title": "第 26 課｜有阻尼的受迫振盪與共振曲線｜Landau–Lifshitz 經典力學",
+    "description": "把週期性外力加到有阻尼的振子上，過渡項衰減後只剩穩態 x = b·cos(γt+δ)。穩態振幅 b = f / (m√((ω₀²−γ²)² + 4λ²γ²)) 隨驅動頻率變化：和無阻尼不同，共振峰有限、不發散，峰值落在 γ = √(ω₀²−2λ²)。阻尼越小，共振峰越高越尖，其尖銳程度由品質因子 Q = ω₀ / 2λ 衡量。影片以共振曲線族動畫呈現「阻尼越小、峰越尖」。\n\n本影片為《Landau–Lifshitz 經典力學》教學系列第 26 課（繁體中文版）。",
+    "tags": ["經典力學", "受迫振盪", "共振曲線", "品質因子", "阻尼", "Landau Lifshitz"],
+    "language": "zh-TW"
+  },
+  {
+    "file": "manim_lessons/samples/output/landau_l26_en.mp4",
+    "title": "Lesson 26 | Forced Oscillations under Friction: the Resonance Curve | Landau–Lifshitz",
+    "description": "Driving a damped oscillator with a periodic force leaves, after the transient decays, the steady state x = b·cos(γt+δ). The amplitude b = f / (m√((ω₀²−γ²)² + 4λ²γ²)) varies with the driving frequency: unlike the frictionless case the resonance peak is finite, peaking at γ = √(ω₀²−2λ²). The smaller the damping, the taller and sharper the peak, its sharpness measured by the quality factor Q = ω₀ / 2λ. Animated with a family of resonance curves showing how less damping sharpens the peak.\n\nLesson 26 of the Landau–Lifshitz Classical Mechanics teaching series (English edition).",
+    "tags": ["classical mechanics", "forced oscillations", "resonance curve", "quality factor", "damping", "Landau Lifshitz"],
+    "language": "en"
+  }
+]
