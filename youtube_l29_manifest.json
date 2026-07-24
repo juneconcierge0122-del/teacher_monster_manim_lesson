@@ -1,0 +1,16 @@
+[
+  {
+    "file": "manim_lessons/samples/output/landau_l29_zh-TW.mp4",
+    "title": "第 29 課｜非線性共振：傾斜的共振峰與跳變｜Landau–Lifshitz 經典力學",
+    "description": "當被驅動的振子本身是非線性的，共振會出現全新現象。線性近似下共振峰是對稱的 b²(ε²+λ²)=f²/(4m²ω₀²)；但非線性使固有頻率隨振幅改變 ω = ω₀ + κb²，代回後整條共振峰向一側傾斜、彎過去，變成三次方程。驅動力夠大時曲線折返：同一頻率有三個振幅，中間分支不穩定，造成振幅跳變與遲滯。影片以共振曲線從對稱→傾斜→折疊的動畫呈現。\n\n本影片為《Landau–Lifshitz 經典力學》教學系列第 29 課（繁體中文版）。",
+    "tags": ["經典力學", "非線性共振", "遲滯", "跳變", "Duffing", "Landau Lifshitz"],
+    "language": "zh-TW"
+  },
+  {
+    "file": "manim_lessons/samples/output/landau_l29_en.mp4",
+    "title": "Lesson 29 | Non-linear Resonance: the Leaning Peak and Jumps | Landau–Lifshitz",
+    "description": "When the driven oscillator is itself non-linear, resonance shows new features. In the linear approximation the peak is symmetric, b²(ε²+λ²)=f²/(4m²ω₀²); but non-linearity makes the eigenfrequency depend on amplitude, ω = ω₀ + κb². Substituting this back, the whole peak leans over and bends, becoming a cubic. When the force is large enough the curve folds: three amplitudes at one frequency, with the middle branch unstable, giving amplitude jumps and hysteresis. Animated as the resonance curve going from symmetric to leaning to folded.\n\nLesson 29 of the Landau–Lifshitz Classical Mechanics teaching series (English edition).",
+    "tags": ["classical mechanics", "nonlinear resonance", "hysteresis", "jump phenomenon", "Duffing", "Landau Lifshitz"],
+    "language": "en"
+  }
+]
