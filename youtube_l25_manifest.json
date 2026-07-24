@@ -1,0 +1,16 @@
+[
+  {
+    "file": "manim_lessons/samples/output/landau_l25_zh-TW.mp4",
+    "title": "第 25 課｜阻尼振盪：欠阻尼、過阻尼與臨界阻尼｜Landau–Lifshitz 經典力學",
+    "description": "真實振子會受到介質阻力而衰減。本課把正比於速度的阻力加進運動方程，得到 ẍ + 2λẋ + ω₀²x = 0，並解特徵方程 r = −λ ± √(λ²−ω₀²)。依阻尼強弱分三種行為：欠阻尼（λ 小於 ω₀）為指數衰減的振盪 x = a·e^(−λt)·cos(ωt+φ)，能量以 e^(−2λt) 衰減；過阻尼（λ 大於 ω₀）非週期回到平衡；臨界阻尼（λ 等於 ω₀）最快回到平衡。影片以 x(t) 曲線與指數包絡線動畫呈現。\n\n本影片為《Landau–Lifshitz 經典力學》教學系列第 25 課（繁體中文版）。",
+    "tags": ["經典力學", "阻尼振盪", "欠阻尼", "臨界阻尼", "衰減", "Landau Lifshitz"],
+    "language": "zh-TW"
+  },
+  {
+    "file": "manim_lessons/samples/output/landau_l25_en.mp4",
+    "title": "Lesson 25 | Damped Oscillations: Under-, Over- and Critical Damping | Landau–Lifshitz",
+    "description": "A real oscillator decays under resistance from the medium. Adding a velocity-proportional friction gives ẍ + 2λẋ + ω₀²x = 0, with characteristic roots r = −λ ± √(λ²−ω₀²). Three regimes follow: underdamped (λ smaller than ω₀), a harmonic oscillation with exponentially decaying amplitude x = a·e^(−λt)·cos(ωt+φ) and energy decaying as e^(−2λt); overdamped (λ larger than ω₀), an aperiodic return to equilibrium; and critical damping (λ equal to ω₀), the fastest non-oscillatory return. Animated with x(t) curves and the exponential envelope.\n\nLesson 25 of the Landau–Lifshitz Classical Mechanics teaching series (English edition).",
+    "tags": ["classical mechanics", "damped oscillations", "underdamped", "critical damping", "decay", "Landau Lifshitz"],
+    "language": "en"
+  }
+]
