@@ -1,0 +1,16 @@
+[
+  {
+    "file": "manim_lessons/samples/output/landau_l22_zh-TW.mp4",
+    "title": "第 22 課｜受迫振盪與共振｜Landau–Lifshitz 經典力學",
+    "description": "自由振盪的系統再加上週期性外力會怎麼運動？本課從運動方程 mẍ + kx = F(t) 出發，取 F(t) = f·cos(γt)，得到穩定解 x(t) = [f/(m(ω²−γ²))]·cos(γt)。當驅動頻率 γ 接近固有頻率 ω，振幅急速放大；恰在共振點上，振幅隨時間線性成長 x(t) = (f/2mω)·t·sin(ωt)。影片以動畫呈現彈簧振子、驅動力、共振曲線與共振增幅。\n\n本影片為《Landau–Lifshitz 經典力學》教學系列第 22 課（繁體中文版）。",
+    "tags": ["經典力學", "受迫振盪", "共振", "驅動頻率", "簡諧運動", "Landau Lifshitz"],
+    "language": "zh-TW"
+  },
+  {
+    "file": "manim_lessons/samples/output/landau_l22_en.mp4",
+    "title": "Lesson 22 | Forced Oscillations and Resonance | Landau–Lifshitz",
+    "description": "How does a free oscillator respond to a periodic external force? Starting from mẍ + kx = F(t) with F(t) = f·cos(γt), this lesson derives the steady-state motion x(t) = [f/(m(ω²−γ²))]·cos(γt). As the driving frequency γ approaches the natural frequency ω the amplitude grows sharply, and exactly at resonance it grows linearly in time: x(t) = (f/2mω)·t·sin(ωt). Animated with a spring-mass oscillator, the driving force, the resonance curve, and resonant growth.\n\nLesson 22 of the Landau–Lifshitz Classical Mechanics teaching series (English edition).",
+    "tags": ["classical mechanics", "forced oscillations", "resonance", "driving frequency", "simple harmonic motion", "Landau Lifshitz"],
+    "language": "en"
+  }
+]
