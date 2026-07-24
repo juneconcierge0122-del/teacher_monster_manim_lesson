@@ -1,0 +1,16 @@
+[
+  {
+    "file": "manim_lessons/samples/output/landau_l28_zh-TW.mp4",
+    "title": "第 28 課｜非簡諧振盪：頻率隨振幅改變｜Landau–Lifshitz 經典力學",
+    "description": "小振盪只保留二次項；保留更高次項就進入非簡諧（非線性）振盪。本課把拉格朗日量展開到 x³、x⁴，運動方程變成 ẍ + ω₀²x = −αx² − βx³，並用逐次逼近法求解。兩個新現象：波形不再是純正弦、會生出 2ω、3ω 的泛音；更重要的是頻率隨振幅改變 ω = ω₀ + κa²。影片以波形變形與不同振幅振子逐漸失步的動畫呈現。\n\n本影片為《Landau–Lifshitz 經典力學》教學系列第 28 課（繁體中文版）。",
+    "tags": ["經典力學", "非簡諧振盪", "非線性", "泛音", "頻率振幅關係", "Landau Lifshitz"],
+    "language": "zh-TW"
+  },
+  {
+    "file": "manim_lessons/samples/output/landau_l28_en.mp4",
+    "title": "Lesson 28 | Anharmonic Oscillations: Amplitude-Dependent Frequency | Landau–Lifshitz",
+    "description": "Small-oscillation theory keeps only quadratic terms; keeping higher terms gives anharmonic (non-linear) oscillations. Expanding the Lagrangian to x³ and x⁴, the equation becomes ẍ + ω₀²x = −αx² − βx³, solved by successive approximation. Two new effects appear: the waveform is no longer a pure sine and gains overtones at 2ω and 3ω; and, more importantly, the frequency depends on amplitude, ω = ω₀ + κa². Animated with the distorted waveform and two different-amplitude oscillators drifting out of step.\n\nLesson 28 of the Landau–Lifshitz Classical Mechanics teaching series (English edition).",
+    "tags": ["classical mechanics", "anharmonic oscillations", "nonlinear", "overtones", "amplitude-frequency", "Landau Lifshitz"],
+    "language": "en"
+  }
+]
