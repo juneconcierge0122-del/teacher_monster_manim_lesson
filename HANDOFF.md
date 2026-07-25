@@ -1,6 +1,6 @@
 # HANDOFF — Landau–Lifshitz 雙語教學影片
 
-貼到新 session 的接手 prompt。**進度：已完成第 31 課（第六章「剛體運動」§31 角速度）。下一步：第 32 課（§32 慣性張量）。**
+貼到新 session 的接手 prompt。**進度：已完成第 32 課（第六章「剛體運動」§32 慣性張量）。下一步：第 33 課（§33 剛體的角動量）。**
 
 ---
 
@@ -9,15 +9,15 @@
 專案路徑：
 /datadrive/r08849002/teacher_monster_manim_lesson
 
-目前已完成到第 31 課（第六章「剛體運動」第一課 §31 角速度）。請從**第 32 課**開始（§32 慣性張量）。
+目前已完成到第 32 課（第六章「剛體運動」第二課 §32 慣性張量）。請從**第 33 課**開始（§33 剛體的角動量）。
 
 請沿用既有流程：
 1. 先查看專案、Git 狀態與上一課設定；用 pdftotext 讀 books/Landau_Lifshitz_T1.pdf 取得下一節內容。
 2. 依書中下一節撰寫繁體中文及英文腳本，寫進 `manim_lessons/localization/landau_l04_l10.py` 的 `TOPICS[課號]`，公式寫進同檔的 `FORMULAS[課號]`。
-3. 每個版本控制在 60–100 秒（先用 `av` 估算配音總長 + 0.6~0.8 秒尾巴；太短就補充旁白、太長就精簡）。
+3. 每個版本控制在 5 分鐘以內（第 32 課起放寬；先用 `av` 估算配音總長）。舊規範為 60–100 秒（先用 `av` 估算配音總長 + 0.6~0.8 秒尾巴；太短就補充旁白、太長就精簡）。
 4. **旁白＝字幕＝配音用白話自然語言**（不要把 ∫、√、⊥ 等符號塞進旁白，TTS 會念錯）；數學式用放大的 unicode Text 放在畫面上方（`FS_H2`、`ACCENT_A`）。乘號用 ×、清楚的括號與上下標間距，二階導數用 Leibniz 記法 `d²x/dt²`（避免組合雙點在大寫字母上變淡）。
 5. 英文字幕固定 22pt（`FS_BODY`），長句由 `self.text()` 自動 textwrap 換行，不縮太小。
-6. **盡量用真實動畫解釋物理**（這是這系列的重點）：簡單主題可用「公式舞台」（見 `landau_l04_l10.py` 的 `_construct_formula_stage`）；有物理圖像的主題請新開客製場景檔 `manim_lessons/lessons/landau_lNN_xxx.py`，subclass `LandauBatchBase`，用 `ValueTracker` 時間軸 + updater / `always_redraw` 做動畫（可參考 l22 彈簧共振、l23 簡正模態、l25 阻尼曲線、l27 鞦韆、l29 折疊共振、l30 Kapitza 倒立擺、l31 剛體平板與滾動輪）。
+6. **盡量用真實動畫解釋物理**（這是這系列的重點）：簡單主題可用「公式舞台」（見 `landau_l04_l10.py` 的 `_construct_formula_stage`）；有物理圖像的主題請新開客製場景檔 `manim_lessons/lessons/landau_lNN_xxx.py`，subclass `LandauBatchBase`，用 `ValueTracker` 時間軸 + updater / `always_redraw` 做動畫（可參考 l22 彈簧共振、l23 簡正模態、l25 阻尼曲線、l27 鞦韆、l29 折疊共振、l30 Kapitza 倒立擺、l31 剛體平板與滾動輪、l32 即時慣性張量矩陣）。
 7. 產生中英文配音（`python manim_lessons/samples/generate_l04_l10_tts.py NN zh|en <out_dir>`）並渲染 1080p60、H.264/AAC。**先用 `-ql --fps 15` 低畫質試算除錯、抽幾張關鍵幀確認動畫**，再用 `-qh --fps 60` 出正式版。
 8. 抽查中英文字幕、數學式、片長及畫面（用 imageio_ffmpeg 的 ffmpeg 抽幀；系統無 ffprobe/ffmpeg，路徑：`/home/r08849002/miniconda3/envs/teacher-monster/lib/python3.10/site-packages/imageio_ffmpeg/binaries/ffmpeg-linux-x86_64-v7.0.2`）。
 9. 把畫面公式裡任何「語言相關的文字」（模態名稱等）用場景內的 `MODE_LABEL` 字典依語言切換，**不要寫死在共用的 `FORMULAS` 裡**（否則英文版會出現中文）。
@@ -28,14 +28,16 @@
 14. 完成後提供中英文 YouTube 連結、片長及 Git commit。
 
 重要狀態：
-- 第 31 課中文：https://youtu.be/WduZLL2jymU
-- 第 31 課英文：https://youtu.be/sqnhVl7gIXc
-- 最新 Git commit：87a9208
+- 第 32 課中文：https://youtu.be/qBjmrb3oiKU
+- 第 32 課英文：https://youtu.be/9bgPfuZF0oo
+- 最新 Git commit：見 git log（第 32 課）
 - YouTube、GitHub 憑證都在專案的 `.secrets` 內，請勿顯示憑證內容。
 - Git metadata 位於 `.git-backup`，Git 指令需使用：`git --git-dir=.git-backup --work-tree=.`（推送用 `GIT_ASKPASS=.secrets/github-askpass.sh`）。
 - 環境：先 `source .venv/bin/activate`。渲染指令在 `manim_lessons/` 目錄下執行（`manim -qh --fps 60 lessons/landau_lNN_xxx.py LandauLNNZH`）。
 - 目前設計慣例：標題在上、公式在上方、白話字幕在下、動畫置中；顏色用 `manim_lessons/lib/design_tokens.py`（`ACCENT_A` 橘黃、`ACCENT_B` 青、`ACCENT_C` 紫、`WARN` 紅、`DIM/GHOST` 灰）。
 - YouTube token 只有上傳權限、無法刪片；被取代的舊版需人工在 YouTube Studio 刪除。
+- **英文字幕行數上限 4 行**：`self.text()` 對英文以 72 字元 textwrap，5 行時字幕頂端會升到 y ≈ −1.7 蓋住動畫；英文每句請控制在 ~285 字元內，動畫元素也盡量保持在 y ≥ −1.75。
+- `beat()` 內的 `self.play()` **不要**在 play 層傳 `rate_func`，會覆蓋各動畫自己的 rate_func（改用 `tracker.animate(rate_func=...)`）。
 
 ---
 
@@ -55,5 +57,6 @@
 | 29 | 非線性共振 | https://youtu.be/BkBcgQZwcSc | https://youtu.be/A9lG2zLZYxo |
 | 30 | Kapitza 倒立擺 | https://youtu.be/Om57rf26yDw | https://youtu.be/j4-2t_-bwOE |
 | 31 | 角速度 | https://youtu.be/WduZLL2jymU | https://youtu.be/sqnhVl7gIXc |
+| 32 | 慣性張量 | https://youtu.be/qBjmrb3oiKU | https://youtu.be/9bgPfuZF0oo |
 
 （第 4–19 課亦已完成並上傳；連結見各自的 `youtube_lNN_manifest.json` 與 Git 歷史。）

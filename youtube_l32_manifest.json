@@ -1,0 +1,16 @@
+[
+  {
+    "file": "manim_lessons/samples/output/landau_l32_zh-TW.mp4",
+    "title": "第 32 課｜慣性張量：轉動能量的九個係數｜Landau–Lifshitz 經典力學",
+    "description": "把剛體看成一堆質點，總動能就是每個質點 ½mv² 的總和；代入 v = V + Ω × r 展開後會出現三項，而因為原點取在質心、位置向量的質量加權和為零，交叉項剛好消失，動能乾淨地分成平移動能 ½μV² 與繞質心的轉動動能。轉動那一項是角速度分量的二次式，所有質量分布的訊息都收進九個係數，也就是慣性張量 I_ik = Σ m ( r² δ_ik − x_i x_k )：對角線是繞座標軸的轉動慣量（質量乘上到該軸垂直距離的平方），非對角線是質量乘兩個座標再取負號；它對稱而且可加。這九個數字不是物體固有的，會隨座標軸方向改變；但因為張量對稱，一定存在一組方向讓非對角線分量同時歸零，這就是慣性主軸，轉動動能於是化成 ½(I₁Ω₁² + I₂Ω₂² + I₃Ω₃²)。三個主慣量決定物體類型：非對稱陀螺、對稱陀螺、球陀螺。最後兩個特例：質點共面時 I₃ = I₁ + I₂，質點共線的「轉子」則 I₃ = 0、只有兩個轉動自由度；換原點時兩組張量只差 μ(a²δ_ik − a_i a_k)。影片用一塊平移自轉的五質點剛體、即時變化的 3 乘 3 慣性張量矩陣（方塊面積代表分量大小）與能量長條圖呈現。\n\n本影片為《Landau–Lifshitz 經典力學》教學系列第 32 課（繁體中文版）。",
+    "tags": ["經典力學", "剛體運動", "慣性張量", "慣性主軸", "轉動慣量", "對稱陀螺", "轉子", "Landau Lifshitz"],
+    "language": "zh-TW"
+  },
+  {
+    "file": "manim_lessons/samples/output/landau_l32_en.mp4",
+    "title": "Lesson 32 | The Inertia Tensor: Nine Coefficients for Rotational Energy | Landau–Lifshitz",
+    "description": "Treating a rigid body as a set of particles, its kinetic energy is the sum of ½mv² over all of them. Substituting v = V + Ω × r gives three terms, and because the origin sits at the centre of mass the mass-weighted sum of the position vectors vanishes, so the cross term drops out and the energy splits cleanly into translation ½μV² plus rotation about the centre of mass. The rotational part is a quadratic form in the components of the angular velocity, and the whole mass distribution collapses into nine coefficients: the inertia tensor I_ik = Σ m ( r² δ_ik − x_i x_k ). Its diagonal entries are the moments of inertia about the axes (mass times squared perpendicular distance), the off-diagonal ones are minus the mass times a product of two coordinates, and the tensor is symmetric and additive. These nine numbers depend on where the axes point, but symmetry guarantees an orientation in which every off-diagonal component vanishes at once: the principal axes, where the rotational energy becomes ½(I₁Ω₁² + I₂Ω₂² + I₃Ω₃²). The three principal moments classify the body as an asymmetrical, symmetrical, or spherical top. Two special cases close the lesson: a coplanar system has I₃ = I₁ + I₂, a collinear rotator has I₃ = 0 and only two rotational degrees of freedom, and shifting the origin changes the tensor by μ(a²δ_ik − a_i a_k). Animated with a drifting, spinning five-particle body, a live 3 by 3 inertia matrix whose cell areas track the components, and energy bars.\n\nLesson 32 of the Landau–Lifshitz Classical Mechanics teaching series (English edition).",
+    "tags": ["classical mechanics", "rigid body", "inertia tensor", "principal axes", "moment of inertia", "symmetrical top", "rotator", "Landau Lifshitz"],
+    "language": "en"
+  }
+]
