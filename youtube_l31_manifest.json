@@ -1,0 +1,16 @@
+[
+  {
+    "file": "manim_lessons/samples/output/landau_l31_zh-TW.mp4",
+    "title": "第 31 課｜角速度：剛體運動的第一步｜Landau–Lifshitz 經典力學",
+    "description": "第六章「剛體運動」開始！剛體是一群彼此距離永遠不變的質點，需要三個座標定出質心、三個角度定出方向，共六個自由度。描述它要用兩套座標系：固定的慣性座標系，以及牢牢黏在物體上、原點取在質心的體座標系。任何無限小位移都能拆成「平移 dR」加「繞質心轉 dφ」，除以時間就得到 v = V + Ω × r。角速度 Ω 沿轉軸、大小是每秒轉過的角度，離軸越遠的點轉動貢獻越大。換一個體座標原點時平移速度會變（V′ = V + Ω × a），但角速度完全不變（Ω′ = Ω），所以它是整個物體的性質。最後：當 V 垂直於 Ω，總有一點瞬間靜止，通過它的軸就是瞬時轉動軸——滾動輪子與地面的接觸點正是如此。影片用平移自轉的剛體平板、速度向量三角形與滾動輪子動畫呈現。\n\n本影片為《Landau–Lifshitz 經典力學》教學系列第 31 課（繁體中文版）。",
+    "tags": ["經典力學", "剛體運動", "角速度", "瞬時轉動軸", "質心", "自由度", "Landau Lifshitz"],
+    "language": "zh-TW"
+  },
+  {
+    "file": "manim_lessons/samples/output/landau_l31_en.mp4",
+    "title": "Lesson 31 | Angular Velocity: the First Step in Rigid-Body Motion | Landau–Lifshitz",
+    "description": "Chapter VI, Motion of a Rigid Body, begins. A rigid body is a set of particles whose mutual distances never change: three coordinates fix its centre of mass and three angles fix its orientation, giving six degrees of freedom. We use two coordinate systems, a fixed inertial frame and a moving frame glued to the body with its origin at the centre of mass. Any infinitesimal displacement splits into a translation dR plus a rotation dφ about that centre, and dividing by time gives v = V + Ω × r. The angular velocity Ω lies along the axis of rotation, its magnitude is the angle turned per second, and points farther from the axis gain more velocity from rotation. Moving the body-fixed origin changes the translational velocity (V′ = V + Ω × a) but leaves Ω unchanged, so it is a property of the whole body. Finally, when V is perpendicular to Ω some point is instantaneously at rest: the instantaneous axis of rotation, as with the contact point of a rolling wheel. Animated with a drifting, spinning rigid plate, velocity vector triangles, and a rolling wheel.\n\nLesson 31 of the Landau–Lifshitz Classical Mechanics teaching series (English edition).",
+    "tags": ["classical mechanics", "rigid body", "angular velocity", "instantaneous axis of rotation", "centre of mass", "degrees of freedom", "Landau Lifshitz"],
+    "language": "en"
+  }
+]
