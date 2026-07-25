@@ -1,0 +1,16 @@
+[
+  {
+    "file": "manim_lessons/samples/output/landau_l33_zh-TW.mp4",
+    "title": "第 33 課｜角動量：為什麼 M 通常不平行於 Ω｜Landau–Lifshitz 經典力學",
+    "description": "剛體的角動量以質心為原點定義最方便。把每個質點的速度換成 v = Ω × r 代進 M = Σ m r × v，展開二重叉積後會得到 M = Σ m [ r²Ω − r(r·Ω) ]，括號裡出現的正是上一課的慣性張量，於是 M_i = I_ik Ω_k：慣性張量把角速度映射成角動量。用慣性主軸來寫最簡潔，M₁ = I₁Ω₁、M₂ = I₂Ω₂、M₃ = I₃Ω₃。關鍵在於三個分量各自被不同的主慣量放大，所以 M 一般不平行於 Ω，只有球陀螺（三個主慣量相等）或角速度剛好沿著某根主軸時才平行。自由轉動時角動量守恆：球陀螺繞空間中固定的軸等速轉動，轉子在一個平面內等速旋轉。對稱陀螺最有趣：把第二根主軸取成垂直於 M 與對稱軸所張的平面，則 M₂ = 0 因而 Ω₂ = 0，M、Ω 與對稱軸永遠共面；由於 M 在空間中不動，這個平面繞著 M 轉，對稱軸就掃出一個圓錐，這就是規則進動。自轉角速度 Ω₃ = (M/I₃)cos θ，進動角速度 Ω_pr = M/I₁。影片用可掃描角速度方向的側視圖、分量長條圖，以及軸測投影的進動陀螺動畫呈現。\n\n本影片為《Landau–Lifshitz 經典力學》教學系列第 33 課（繁體中文版）。",
+    "tags": ["經典力學", "剛體運動", "角動量", "慣性張量", "規則進動", "對稱陀螺", "球陀螺", "Landau Lifshitz"],
+    "language": "zh-TW"
+  },
+  {
+    "file": "manim_lessons/samples/output/landau_l33_en.mp4",
+    "title": "Lesson 33 | Angular Momentum: Why M Is Usually Not Parallel to Ω | Landau–Lifshitz",
+    "description": "The angular momentum of a rigid body is best defined about the centre of mass. Substituting v = Ω × r into M = Σ m r × v and expanding the double cross product gives M = Σ m [ r²Ω − r(r·Ω) ], whose bracket is exactly the inertia tensor of the previous lesson, so M_i = I_ik Ω_k: the inertia tensor maps the angular velocity to the angular momentum. In the principal axes this reads M₁ = I₁Ω₁, M₂ = I₂Ω₂, M₃ = I₃Ω₃. The key point is that each component is stretched by a different principal moment, so M is generally not parallel to Ω; they coincide only for a spherical top, where all three moments are equal, or when Ω lies along a principal axis. In free rotation the angular momentum is conserved: a spherical top spins uniformly about an axis fixed in space, and a rotator turns uniformly in one plane. The symmetrical top is the interesting case: choosing the second principal axis perpendicular to the plane of M and the symmetry axis makes M₂ = 0 and therefore Ω₂ = 0, so M, Ω and the symmetry axis stay coplanar. Since M is fixed in space, that plane turns about it and the axis sweeps out a circular cone — regular precession — with spin rate Ω₃ = (M/I₃)cos θ and precession rate Ω_pr = M/I₁. Animated with a sweepable side view, component bars, and an axonometric precessing top.\n\nLesson 33 of the Landau–Lifshitz Classical Mechanics teaching series (English edition).",
+    "tags": ["classical mechanics", "rigid body", "angular momentum", "inertia tensor", "regular precession", "symmetrical top", "spherical top", "Landau Lifshitz"],
+    "language": "en"
+  }
+]
