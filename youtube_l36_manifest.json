@@ -1,0 +1,16 @@
+[
+  {
+    "file": "manim_lessons/samples/output/landau_l36_zh-TW.mp4",
+    "title": "第 36 課｜歐拉方程：在動座標系裡寫運動方程｜Landau–Lifshitz 經典力學",
+    "description": "第 34 課的運動方程寫在固定座標系裡，但角動量與角速度之間最簡單的關係 Mᵢ = Iᵢ Ωᵢ，只在跟著物體轉、而且沿慣性主軸的座標系裡成立，所以要先把方程換過去。轉換的關鍵是一條對任何向量都成立的規則：dA/dt = d′A/dt + Ω × A。如果 A 固定在物體上，它在固定座標系裡的變化純粹來自轉動，等於 Ω × A；一般情況再加上它在動座標系裡自己的變化率 d′A/dt。把這條規則用到動量與角動量上，就得到 d′P/dt + Ω × P = F 與 d′M/dt + Ω × M = K。第一條取分量並寫成 P = μV，得到 μ ( dV₁/dt + Ω₂V₃ − Ω₃V₂ ) = F₁ 與其指標輪換。第二條在主軸上代入 Mᵢ = Iᵢ Ωᵢ，就得到歐拉方程：I₁ dΩ₁/dt + ( I₃ − I₂ ) Ω₂Ω₃ = K₁，I₂ dΩ₂/dt + ( I₁ − I₃ ) Ω₃Ω₁ = K₂，I₃ dΩ₃/dt + ( I₂ − I₁ ) Ω₁Ω₂ = K₃；其中的乘積項正是 Ω × M 的三個分量。自由轉動時 K = 0，三個分量彼此耦合，任何一個的變化率都由另外兩個的乘積決定。對稱陀螺 I₁ = I₂ 時第三條的乘積項消失，Ω₃ 是常數；剩下兩條變成 dΩ₁/dt = − ω Ω₂、dΩ₂/dt = ω Ω₁，其中 ω = Ω₃ ( I₃ − I₁ ) / I₁。解得 Ω₁ = A cos ωt、Ω₂ = A sin ωt，所以角速度垂直於對稱軸的部分大小固定、以 ω 繞軸旋轉；加上 Ω₃ 也是常數，結論就是在物體座標系裡 Ω 的大小不變並繞著物體自己的對稱軸等速旋轉，M 也做同樣的運動。這正是第 33 課與第 35 課的規則進動，只是換成從物體上看。影片中非對稱陀螺那一段的軌跡是對無力矩的歐拉方程做數值積分得到的真實 polhode。\n\n本影片為《Landau–Lifshitz 經典力學》教學系列第 36 課（繁體中文版）。",
+    "tags": ["經典力學", "剛體運動", "歐拉方程", "動座標系", "自由轉動", "對稱陀螺", "polhode", "Landau Lifshitz"],
+    "language": "zh-TW"
+  },
+  {
+    "file": "manim_lessons/samples/output/landau_l36_en.mp4",
+    "title": "Lesson 36 | Euler's Equations: The Equations of Motion in the Moving Frame | Landau–Lifshitz",
+    "description": "The equations of motion of lesson 34 refer to the fixed frame, but the simplest relation between angular momentum and angular velocity, Mᵢ = Iᵢ Ωᵢ, holds only in the frame turning with the body along its principal axes, so the equations must be transformed. The key is one rule valid for any vector: dA/dt = d′A/dt + Ω × A. If A is pinned to the body, its rate of change in the fixed frame comes purely from the rotation and equals Ω × A; in general we add its own rate d′A/dt in the moving frame. Applying this to the momentum and the angular momentum gives d′P/dt + Ω × P = F and d′M/dt + Ω × M = K. Taking components of the first with P = μV yields μ ( dV₁/dt + Ω₂V₃ − Ω₃V₂ ) = F₁ and its cyclic partners. Substituting Mᵢ = Iᵢ Ωᵢ into the second gives Euler's equations: I₁ dΩ₁/dt + ( I₃ − I₂ ) Ω₂Ω₃ = K₁, I₂ dΩ₂/dt + ( I₁ − I₃ ) Ω₃Ω₁ = K₂, I₃ dΩ₃/dt + ( I₂ − I₁ ) Ω₁Ω₂ = K₃, whose product terms are exactly the components of Ω × M. In free rotation K = 0 and the three components stay coupled, the rate of change of each set by the product of the other two. For a symmetrical top with I₁ = I₂ the product term in the third equation drops out, so Ω₃ is constant, and the remaining pair becomes dΩ₁/dt = − ω Ω₂, dΩ₂/dt = ω Ω₁ with ω = Ω₃ ( I₃ − I₁ ) / I₁. The solution Ω₁ = A cos ωt, Ω₂ = A sin ωt shows the transverse part of the angular velocity keeping a fixed magnitude and turning about the axis at ω. Together with the constant Ω₃, the angular velocity keeps its magnitude and rotates uniformly about the body's own symmetry axis in the body frame, and so does M. This is the regular precession of lessons 33 and 35, seen from the body. The asymmetric-top segment shows a real polhode, obtained by numerically integrating the torque-free Euler equations.\n\nLesson 36 of the Landau–Lifshitz Classical Mechanics teaching series (English edition).",
+    "tags": ["classical mechanics", "rigid body", "Euler's equations", "moving frame", "free rotation", "symmetrical top", "polhode", "Landau Lifshitz"],
+    "language": "en"
+  }
+]
