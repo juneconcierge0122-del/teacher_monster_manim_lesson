@@ -9,9 +9,23 @@ class LandauBatchBase(Scene):
  EPISODE=4; LANGUAGE="zh"
  def setup(self):
   apply_global_config(); self.title,self.lines=TOPICS[self.EPISODE][self.LANGUAGE]; self.clock=ValueTracker(0); self.audio_dir=pathlib.Path(__file__).resolve().parents[1]/"samples"/f"audio_l{self.EPISODE:02d}"/("zh-TW" if self.LANGUAGE=="zh" else "en")
+ def _wrap_cjk(self,s,width=72):
+  # CJK has no spaces, so textwrap leaves one long line that scale_to_fit_width
+  # then shrinks into illegibility. Break on display width (CJK counts double),
+  # never leaving closing punctuation stranded at the start of a line.
+  lines=[];cur="";w=0
+  for ch in s:
+   cw=1 if ch.isascii() else 2
+   if w+cw>width and cur:lines.append(cur);cur="";w=0
+   cur+=ch;w+=cw
+  if cur:lines.append(cur)
+  for i in range(1,len(lines)):
+   while lines[i] and lines[i][0] in "、。，；：？！）」』〉》":
+    lines[i-1]+=lines[i][0];lines[i]=lines[i][1:]
+  return "\n".join(l for l in lines if l)
  def text(self,s,size=FS_BODY,color=INK):
-  if size==FS_BODY and self.LANGUAGE=="en":
-   s=textwrap.fill(s,width=72,break_long_words=False,break_on_hyphens=False)
+  if size==FS_BODY:
+   s=textwrap.fill(s,width=72,break_long_words=False,break_on_hyphens=False) if self.LANGUAGE=="en" else self._wrap_cjk(s)
   m=Text(s,font_size=size,color=color)
   if m.width>11.8:m.scale_to_fit_width(11.8)
   return m

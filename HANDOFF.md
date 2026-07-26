@@ -1,6 +1,6 @@
 # HANDOFF — Landau–Lifshitz 雙語教學影片
 
-貼到新 session 的接手 prompt。**進度：已完成第 33 課（第六章「剛體運動」§33 角動量）。下一步：第 34 課（§34 剛體的運動方程）。**
+貼到新 session 的接手 prompt。**進度：已完成第 34 課（第六章「剛體運動」§34 剛體的運動方程）。下一步：第 35 課（§35 歐拉角）。**
 
 ---
 
@@ -9,7 +9,7 @@
 專案路徑：
 /datadrive/r08849002/teacher_monster_manim_lesson
 
-目前已完成到第 33 課（第六章「剛體運動」第三課 §33 角動量）。請從**第 34 課**開始（§34 剛體的運動方程）。
+目前已完成到第 34 課（第六章「剛體運動」第四課 §34 剛體的運動方程）。請從**第 35 課**開始（§35 歐拉角）。
 
 請沿用既有流程：
 1. 先查看專案、Git 狀態與上一課設定；用 pdftotext 讀 books/Landau_Lifshitz_T1.pdf 取得下一節內容。
@@ -17,7 +17,7 @@
 3. 每個版本控制在 5 分鐘以內（第 32 課起放寬；先用 `av` 估算配音總長）。舊規範為 60–100 秒（先用 `av` 估算配音總長 + 0.6~0.8 秒尾巴；太短就補充旁白、太長就精簡）。
 4. **旁白＝字幕＝配音用白話自然語言**（不要把 ∫、√、⊥ 等符號塞進旁白，TTS 會念錯）；數學式用放大的 unicode Text 放在畫面上方（`FS_H2`、`ACCENT_A`）。乘號用 ×、清楚的括號與上下標間距，二階導數用 Leibniz 記法 `d²x/dt²`（避免組合雙點在大寫字母上變淡）。
 5. 英文字幕固定 22pt（`FS_BODY`），長句由 `self.text()` 自動 textwrap 換行，不縮太小。
-6. **盡量用真實動畫解釋物理**（這是這系列的重點）：簡單主題可用「公式舞台」（見 `landau_l04_l10.py` 的 `_construct_formula_stage`）；有物理圖像的主題請新開客製場景檔 `manim_lessons/lessons/landau_lNN_xxx.py`，subclass `LandauBatchBase`，用 `ValueTracker` 時間軸 + updater / `always_redraw` 做動畫（可參考 l22 彈簧共振、l23 簡正模態、l25 阻尼曲線、l27 鞦韆、l29 折疊共振、l30 Kapitza 倒立擺、l31 剛體平板與滾動輪、l32 即時慣性張量矩陣、l33 軸測投影的進動陀螺）。
+6. **盡量用真實動畫解釋物理**（這是這系列的重點）：簡單主題可用「公式舞台」（見 `landau_l04_l10.py` 的 `_construct_formula_stage`）；有物理圖像的主題請新開客製場景檔 `manim_lessons/lessons/landau_lNN_xxx.py`，subclass `LandauBatchBase`，用 `ValueTracker` 時間軸 + updater / `always_redraw` 做動畫（可參考 l22 彈簧共振、l23 簡正模態、l25 阻尼曲線、l27 鞦韆、l29 折疊共振、l30 Kapitza 倒立擺、l31 剛體平板與滾動輪、l32 即時慣性張量矩陣、l33 軸測投影的進動陀螺、l34 拋物飛行的剛體與即時力矩長條圖）。
 7. 產生中英文配音（`python manim_lessons/samples/generate_l04_l10_tts.py NN zh|en <out_dir>`）並渲染 1080p60、H.264/AAC。**先用 `-ql --fps 15` 低畫質試算除錯、抽幾張關鍵幀確認動畫**，再用 `-qh --fps 60` 出正式版。
 8. 抽查中英文字幕、數學式、片長及畫面（用 imageio_ffmpeg 的 ffmpeg 抽幀；系統無 ffprobe/ffmpeg，路徑：`/home/r08849002/miniconda3/envs/teacher-monster/lib/python3.10/site-packages/imageio_ffmpeg/binaries/ffmpeg-linux-x86_64-v7.0.2`）。
 9. 把畫面公式裡任何「語言相關的文字」（模態名稱等）用場景內的 `MODE_LABEL` 字典依語言切換，**不要寫死在共用的 `FORMULAS` 裡**（否則英文版會出現中文）。
@@ -28,9 +28,9 @@
 14. 完成後提供中英文 YouTube 連結、片長及 Git commit。
 
 重要狀態：
-- 第 33 課中文：https://youtu.be/tECuBBc06gs
-- 第 33 課英文：https://youtu.be/x6DMO4HarZM
-- 最新 Git commit：見 git log（第 33 課）
+- 第 34 課中文：https://youtu.be/cid5YtyFHuU
+- 第 34 課英文：https://youtu.be/B-yItNOgF4A
+- 最新 Git commit：見 git log（第 34 課）
 - YouTube、GitHub 憑證都在專案的 `.secrets` 內，請勿顯示憑證內容。
 - Git metadata 位於 `.git-backup`，Git 指令需使用：`git --git-dir=.git-backup --work-tree=.`（推送用 `GIT_ASKPASS=.secrets/github-askpass.sh`）。
 - 環境：先 `source .venv/bin/activate`。渲染指令在 `manim_lessons/` 目錄下執行（`manim -qh --fps 60 lessons/landau_lNN_xxx.py LandauLNNZH`）。
@@ -41,6 +41,8 @@
 - **公式區三行會撞到標題**：`formula()` 已改成行數大於 2 時自動下移；仍建議一課最多兩行。
 - **英文標籤比中文寬約兩倍**：畫面內的雙語標籤（`self.lab()`）要分別檢查英文版是否貼到邊緣（安全範圍 |x| ≤ 6.3）。
 - 3D 感的場景可用軸測投影（見 l33 的 `_proj()`：EX/EY/EZ 三個螢幕基向量），球面／圓錐用取樣點 + `set_points_as_corners` 畫。
+- **`always_redraw` 裡絕對不要用 `DashedLine`**：虛線段數由長度決定，長度一變 submobject 數就變，會打亂同一個 VGroup 被 `FadeIn` 時的家族對齊，**相鄰 `Text` 的字母會被靜默吃掉**（l34 英文版第 7 拍字幕曾少掉開頭 7 個字母，中文版因為字數較少而正常）。改用固定 `num_dashes` 的 `DashedVMobject`（見 l34 的 `_dash()`）。同理，任何在 `always_redraw` 裡會改變 submobject 數量的物件都要避免。
+- 除錯這類「畫面元素被吃掉」的問題時，可用一個 subclass 覆寫 `dur()` 回傳固定 1.2 秒、`add_sound()` 設成 no-op，就能在一分鐘內重跑整支影片抽幀比對。
 
 ---
 
@@ -62,5 +64,6 @@
 | 31 | 角速度 | https://youtu.be/WduZLL2jymU | https://youtu.be/sqnhVl7gIXc |
 | 32 | 慣性張量 | https://youtu.be/qBjmrb3oiKU | https://youtu.be/9bgPfuZF0oo |
 | 33 | 角動量與規則進動 | https://youtu.be/tECuBBc06gs | https://youtu.be/x6DMO4HarZM |
+| 34 | 剛體的運動方程 | https://youtu.be/cid5YtyFHuU | https://youtu.be/B-yItNOgF4A |
 
 （第 4–19 課亦已完成並上傳；連結見各自的 `youtube_lNN_manifest.json` 與 Git 歷史。）
