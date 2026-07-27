@@ -1,6 +1,6 @@
 # HANDOFF — Landau–Lifshitz 雙語教學影片
 
-貼到新 session 的接手 prompt。**進度：已完成第 43 課（第七章「正則方程」§43 作用量作為座標的函數）。下一步：第 44 課（§44 漢彌頓－雅可比方程）。**
+貼到新 session 的接手 prompt。**進度：已完成第 48 課（第七章「正則方程」§48 分離變數）。下一步：第 49 課（§49 絕熱不變量）。**
 
 ---
 
@@ -9,7 +9,7 @@
 專案路徑：
 /datadrive/r08849002/teacher_monster_manim_lesson
 
-目前已完成到第 43 課（第七章「正則方程」§43 作用量作為座標的函數）。請從**第 44 課**開始（§44 漢彌頓－雅可比方程）。
+目前已完成到第 48 課（第七章「正則方程」§48 分離變數）。請從**第 49 課**開始（§49 絕熱不變量）。
 
 請沿用既有流程：
 1. 先查看專案、Git 狀態與上一課設定；用 pdftotext 讀 books/Landau_Lifshitz_T1.pdf 取得下一節內容。
@@ -18,7 +18,8 @@
 4. **旁白＝字幕＝配音用白話自然語言**（不要把 ∫、√、⊥ 等符號塞進旁白，TTS 會念錯）；數學式用放大的 unicode Text 放在畫面上方（`FS_H2`、`ACCENT_A`）。乘號用 ×、清楚的括號與上下標間距，二階導數用 Leibniz 記法 `d²x/dt²`（避免組合雙點在大寫字母上變淡）。
 5. 英文字幕固定 22pt（`FS_BODY`），長句由 `self.text()` 自動 textwrap 換行，不縮太小。
 6. **盡量用真實動畫解釋物理**（這是這系列的重點）：簡單主題可用「公式舞台」（見 `landau_l04_l10.py` 的 `_construct_formula_stage`）；有物理圖像的主題請新開客製場景檔 `manim_lessons/lessons/landau_lNN_xxx.py`，subclass `LandauBatchBase`，用 `ValueTracker` 時間軸 + updater / `always_redraw` 做動畫（可參考 l22 彈簧共振、l23 簡正模態、l25 阻尼曲線、l27 鞦韆、l29 折疊共振、l30 Kapitza 倒立擺、l31 剛體平板與滾動輪、l32 即時慣性張量矩陣、l33 軸測投影的進動陀螺、l34 拋物飛行的剛體與即時力矩長條圖、l35 兩個座標系與三次接續轉動的歐拉角、l36 數值積分出來的 polhode、l37 橢球與球面交出的整族 polhode、l38 沿封閉路徑滾一圈換了朝向的球、l39 轉盤上同一段運動的兩個視角、l40 勒讓德變換的切線幾何與相空間流、l41 循環座標與有效位能、l42 守恆量等值線沿著流、l43 波前與光線＋q–t 圖上累積的作用量）。
-   - **第七章起請 subclass `manim_lessons/lessons/canonical_base.py` 的 `CanonicalBase`**：它已經包含 `beat()`、`formula()`、`sub()`、`_row()`／`_mid()`（會自動縮到 x ≤ 6.3）、`_arr()`／`_dash()`／`_curve()`（會自動降取樣）與 `construct()`。新課只要設 `EPISODE`、`MODE_LABEL`，並實作 `stage()` 回傳十組 `(fin, fout)`，最後用 `make(cls, NN)` 產生 ZH／EN 兩個場景類別（見 l42、l43）。
+   - **第七章起請 subclass `manim_lessons/lessons/canonical_base.py` 的 `CanonicalBase`**：它已經包含 `beat()`、`formula()`、`sub()`、`_row()`／`_mid()`（會自動縮到 x ≤ 6.3）、`_arr()`／`_dash()`／`_curve()`（會自動降取樣）、`_axes()` 與 `construct()`。新課只要設 `EPISODE`、`MODE_LABEL`，並實作 `stage()` 回傳十組 `(fin, fout)`，最後用 `make(cls, NN)` 產生 ZH／EN 兩個場景類別（見 l42–l48）。
+   - `stage()` 的每一組可以加**第三個元素：一個在該拍開始前執行的 callable**。`stage()` 只在一開始求值一次，所以要在拍與拍之間改變狀態（例如 `self.mode`，或記下某個動畫自己的起始時間）只能用它——寫在 `stage()` 裡面會在建構當下就全部執行完（見 l45 的 `mode()` 與 l46 的 `tflow0`）。
 7. 產生中英文配音（`python manim_lessons/samples/generate_l04_l10_tts.py NN zh|en <out_dir>`）並渲染 1080p60、H.264/AAC。**先用 `-ql --fps 15` 低畫質試算除錯、抽幾張關鍵幀確認動畫**，再用 `-qh --fps 60` 出正式版。
 8. 抽查中英文字幕、數學式、片長及畫面（用 imageio_ffmpeg 的 ffmpeg 抽幀；系統無 ffprobe/ffmpeg，路徑：`/home/r08849002/miniconda3/envs/teacher-monster/lib/python3.10/site-packages/imageio_ffmpeg/binaries/ffmpeg-linux-x86_64-v7.0.2`）。
 9. 把畫面公式裡任何「語言相關的文字」（模態名稱等）用場景內的 `MODE_LABEL` 字典依語言切換，**不要寫死在共用的 `FORMULAS` 裡**（否則英文版會出現中文）。
@@ -29,8 +30,8 @@
 14. 完成後提供中英文 YouTube 連結、片長及 Git commit。
 
 重要狀態：
-- 第 43 課中文：https://youtu.be/w9JPelcVQDc
-- 第 43 課英文：https://youtu.be/_o_tSpf5x0c
+- 第 48 課中文：https://youtu.be/Sok6AnLh72A
+- 第 48 課英文：https://youtu.be/VkZgGDm-gGc
 - 最新 Git commit：見 git log（第 43 課）
 - YouTube、GitHub 憑證都在專案的 `.secrets` 內，請勿顯示憑證內容。
 - Git metadata 位於 `.git-backup`，Git 指令需使用：`git --git-dir=.git-backup --work-tree=.`（推送用 `GIT_ASKPASS=.secrets/github-askpass.sh`）。
@@ -51,6 +52,9 @@
 - **三行公式的下緣實測在 y = 1.40**（兩行是 1.93）。任何在該拍出現的動畫元素與標籤都要壓在 y ≤ 1.30，包含箭頭尖端與它旁邊的文字（l39 第 5 拍的 Ω 標籤原本在 y = 1.35，正好被公式第三行蓋住）。
 - **同一張圖裡的兩個標籤也會互撞**，不是只有「公式 vs 動畫」：l41 第 8 拍的座標軸標籤 `U_eff`（y = 1.50）和面板小標題（y = 1.45）疊在一起。新加軸標籤時要順手檢查同高度有沒有別的字。
 - **不要讓後半段的畫面空掉**：l43 原本第 5 拍以後把所有圖都 fade out，左半邊連續五拍全黑。若後半段的內容偏代數，就另外設計一張圖（l43 補了一張 q–t 圖：同一個 q、不同抵達時刻的世界線，作用量沿線累積，再把 (43.6) 的兩個微分畫成一步 t 和一步 q）。
+- **`self._tau()` 在每一拍開頭都會歸零**（`construct()` 每拍重設 `self.t0`）。單拍內的循環動畫用它剛好，但**跨拍要連續演化的動畫不能用**，否則每到下一拍就跳回起點。改用絕對時間減去自己記下的起始值（見 l46 的 `tflow0`，由第 7 拍的 callable 設定）。
+- **`_arr()` 在長度小於 0.05 時回傳空的 `VGroup`，不會報錯**。兩個並排面板中間的連接箭頭最容易踩到：面板中心相距 3.5、座標軸半寬 1.5，扣掉之後只剩 0.5，箭頭幾乎看不見（l45、l47 都發生過）。畫之前先把「中心距離 − 兩邊半寬」算出來，並且**把箭頭放在面板下方**，因為中心高度上有 x 軸和它的標籤。
+- **畫折射／光線類比時要核對彎曲方向**：進入 √(E − U) 較大（位能較低）的區域時路徑要**偏向法線**，所以第二個角要比第一個小；而且入射線要從交界的**另一側**畫過來（l44 兩個錯都犯過：先是角度反了，改完又把入射線畫到同一側）。
 - **不要同時跑多個 `manim -qh`**：`media/texts/*.svg` 是共用快取，兩個 process 同時要同一個未快取的字串時會 `FileNotFoundError`。用序列佇列（見 `scratchpad/queue.sh` 的做法：一次一支、失敗重試一次），或至少錯開啟動時間。
 - **用 `type()` 動態產生場景類別時一定要設 `__module__`**：manim 只收集 `__module__` 與它被指到的檔案相符的場景。`canonical_base.make()` 一開始沒設，於是 `LandauL42ZH` / `LandauL43EN` 這些類別在 manim 眼中不存在，**它會安靜地改渲染 base class**——`manim ... LandauL43EN` 產出的是 `ActionOfQBase.mp4`，而且因為 base 的 `LANGUAGE` 預設 `zh`，中英文兩次渲染寫進同一個檔案、內容都是中文版。現在 `make()` 會把 `cls.__module__` 帶過去。**渲染完務必核對 log 裡的 `Rendered <名字>` 與輸出檔名**，別只看有沒有 mp4。（在課程檔案內就地定義的 `_mk()` 沒有這個問題，因為 `type()` 會自動取得該模組名。）
 
@@ -84,5 +88,10 @@
 | 41 | 勞斯函數 | https://youtu.be/4HvXmPOyYkc | https://youtu.be/iO0sGN8G2mA |
 | 42 | 帕松括號 | https://youtu.be/pUGr6L8s7Sw | https://youtu.be/ppenRRKgDPo |
 | 43 | 作用量作為座標的函數 | https://youtu.be/w9JPelcVQDc | https://youtu.be/_o_tSpf5x0c |
+| 44 | 莫佩爾蒂原理 | https://youtu.be/SmYw_m1Odyg | https://youtu.be/ST0SPiKvBm4 |
+| 45 | 正則變換 | https://youtu.be/AKHCY45Vf04 | https://youtu.be/fsAK9Wu0Mzg |
+| 46 | 劉維定理 | https://youtu.be/LNEGaThsHUQ | https://youtu.be/ktkOhRzuk6g |
+| 47 | 漢彌頓－雅可比方程 | https://youtu.be/ulwnWyHbJFM | https://youtu.be/xAxfqnot4Mk |
+| 48 | 分離變數 | https://youtu.be/Sok6AnLh72A | https://youtu.be/VkZgGDm-gGc |
 
 （第 4–19 課亦已完成並上傳；連結見各自的 `youtube_lNN_manifest.json` 與 Git 歷史。）

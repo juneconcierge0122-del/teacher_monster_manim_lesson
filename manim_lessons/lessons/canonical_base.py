@@ -95,7 +95,13 @@ class CanonicalBase(LandauBatchBase):
   return self.text(line, FS_BODY, INK).to_edge(DOWN, buff=.5)
 
  def stage(self):
-  """Return a list of (fin, fout) pairs, one per narration line."""
+  """Return a list of (fin, fout) pairs, one per narration line.
+
+  A third element may be added to any entry: a zero-argument callable run
+  just before that beat starts. `stage` is evaluated once, up front, so this
+  is the only place a lesson can change something (typically `self.mode`)
+  between beats — doing it inline would fire every change immediately.
+  """
   raise NotImplementedError
 
  def construct(self):
@@ -105,7 +111,9 @@ class CanonicalBase(LandauBatchBase):
   self.add(heading)
   plan = self.stage()
   active_sub = None; active_f = None
-  for i, (fin, fout) in enumerate(plan):
+  for i, entry in enumerate(plan):
+   fin, fout = entry[0], entry[1]
+   if len(entry) > 2 and entry[2] is not None: entry[2]()
    self.t0 = self.t.get_value()
    s = self.sub(self.lines[i]); fin = list(fin) + [s]; fout = list(fout)
    if active_sub is not None: fout.append(active_sub)
