@@ -1,0 +1,32 @@
+[
+  {
+    "file": "manim_lessons/samples/output/landau_l50_zh-TW.mp4",
+    "title": "第 50 課｜正則變數：作用變數與角變數｜Landau–Lifshitz 經典力學",
+    "description": "現在把參數固定住，系統又是封閉的。我們來做一個正則變換，把上一課那個絕熱不變量本身當成新的「動量」。 生成函數就取簡略作用量：動量沿著座標的積分，在給定的能量與參數下計算。 對封閉系統，那個不變量只是能量的函數，所以簡略作用量同樣可以寫成座標和它的函數；而且固定能量微分與固定它微分是同一回事。於是動量就等於簡略作用量對座標的偏導數。 正則變換的第二條公式給出新的「座標」，我們叫它角變數。這一對變數就叫正則變數：一個是作用變數，一個是角變數。 生成函數不顯含時間，所以新的哈密頓量就是原來的能量，只是改用作用變數表示。於是運動方程變得極簡單：作用變數的時間導數是零，角變數的時間導數是能量對作用變數的導數。 第一條說作用變數是常數，本來就該如此。第二條說角變數是時間的線性函數：頻率乘時間再加一個常數。它正是振盪的相位。 簡略作用量是座標的多值函數：每繞一個週期，它就增加二π乘上作用變數。因此同一段時間裡，角變數剛好增加二π。 反過來說，把座標和動量、或任何它們的單值函數改用正則變數表示，角變數增加二π時它們都回到原值。也就是說，任何單值函數都是角變數的週期函數，週期是二π。 如果參數隨時間變化，同樣的變換照樣可以做，只是生成函數現在顯含時間。新的哈密頓量因此多出一項：能量再加上一個量乘上參數的變化率，那個量是簡略作用量在固定作用變數下對參數的偏導數。 運動方程於是變成：作用變數的變化率等於那個量對角變數的偏導數乘上參數變化率再取負號；角變數的變化率則是頻率再加一個小修正。對頻率緩變的諧振子，座標與動量就是正弦與餘弦，那個量正比於二倍角的正弦。 影片用一條歪斜的封閉相軌跡，配上一個面積相同的虛線圓：軌跡上的點忽快忽慢，圓上的指針卻勻速轉動；最後幾拍參數隨時間變化，軌跡的形狀變了，圓卻沒動。\n\n本影片為《Landau–Lifshitz 經典力學》教學系列第 50 課（繁體中文版）。",
+    "tags": [
+      "經典力學",
+      "正則變數",
+      "作用變數",
+      "角變數",
+      "正則變換",
+      "簡略作用量",
+      "Landau Lifshitz"
+    ],
+    "language": "zh-TW"
+  },
+  {
+    "file": "manim_lessons/samples/output/landau_l50_en.mp4",
+    "title": "Lesson 50 | Canonical Variables: The Action Variable and the Angle Variable | Landau–Lifshitz",
+    "description": "Now hold the parameter fixed, so the system is closed again. We make a canonical transformation that takes the adiabatic invariant of the last lesson as the new momentum. The generating function is the abbreviated action: the integral of the momentum over the coordinate, computed for a given energy and a given parameter. For a closed system the invariant is a function of the energy alone, so the abbreviated action can also be written through the coordinate and the invariant. Differentiating at fixed energy is then the same as at fixed invariant, and the momentum is that derivative. The second formula of the canonical transformation supplies the new coordinate, which we call the angle variable. Together the two are the canonical variables: one action variable and one angle variable. The generating function has no explicit time, so the new Hamiltonian is just the old energy written through the action variable. Hamilton's equations become very simple: the action variable has zero time derivative, and the angle variable has the derivative of the energy. The first says the action variable is constant, as it should be. The second says the angle variable is a linear function of time: the frequency times the time, plus a constant. It is the phase of the oscillation. The abbreviated action is a many-valued function of the coordinate: over each period it increases by two pi times the action variable. In that same time, therefore, the angle variable increases by exactly two pi. Conversely, write the coordinate and momentum, or any one-valued function of them, in canonical variables, and they return to their old values when the angle variable increases by two pi. Every one-valued function is periodic in the angle variable with period two pi. If the parameter does depend on time, the same transformation still works, but the generating function now contains the time explicitly. So the new Hamiltonian gains a term: the energy, plus a quantity times the rate of change of the parameter. The equations become these: the action variable changes at minus the derivative of that quantity by the angle, times the rate of change of the parameter, while the angle variable runs at the frequency plus a small correction. For an oscillator it goes as the sine of twice the angle. The video draws a lop-sided closed phase path together with a dashed circle of exactly the same area: the point on the path runs unevenly while the hand on the circle turns at a constant rate, and in the last beats the path deforms with a time-dependent parameter while the circle stays put.\n\nLesson 50 of the Landau–Lifshitz Classical Mechanics teaching series (English edition).",
+    "tags": [
+      "classical mechanics",
+      "canonical variables",
+      "action variable",
+      "angle variable",
+      "canonical transformation",
+      "abbreviated action",
+      "Landau Lifshitz"
+    ],
+    "language": "en"
+  }
+]

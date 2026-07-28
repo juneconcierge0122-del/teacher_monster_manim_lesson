@@ -1,0 +1,32 @@
+[
+  {
+    "file": "manim_lessons/samples/output/landau_l52_zh-TW.mp4",
+    "title": "第 52 課｜條件週期運動：軌道永遠不閉合，卻無限接近｜Landau–Lifshitz 經典力學",
+    "description": "現在看任意多個自由度的系統，運動在每個座標上都是有限的，而且變數在漢彌頓－雅可比方程裡可以完全分離。簡略作用量就是每個座標各一項的和。 每一項都是那個座標的動量的積分，而且是多值的。座標在有限的範圍裡來回走一趟，作用量就增加二π乘上一個量；這樣就定義出 s 個作用變數。 接著做和單自由度時一樣的正則變換：作用變數與角變數。運動方程給出：每個作用變數都是常數，每個角變數都是自己的頻率乘時間再加常數。 第 i 個座標來回一趟，只讓第 i 個角變數增加二π。所以任何座標與動量的單值函數，改用正則變數寫出來，就是每個角變數的週期函數，週期都是二π。 把它展成多重傅立葉級數，再把角變數代成時間的線性函數，就會看到：時間依賴是一堆項的和，每一項的頻率是各個基本頻率的整數倍相加。 這些頻率一般不可公度，所以整個和並不是週期函數，座標與動量也不是。也就是說，這種運動不論就整體或就任何單一座標而言，都不是嚴格週期的。 系統經過某個狀態以後，不會在有限時間內再回到那個狀態；但只要時間夠長，它會任意接近那個狀態。這樣的運動就叫條件週期運動。 如果有幾個基本頻率彼此可公度，就叫簡併；若 s 個全部可公度，就是完全簡併，這時運動是週期的，軌道閉合。簡併還會減少能量真正依賴的獨立作用變數個數。 簡併還有一個重要後果：單值的運動積分變多。沒有簡併時只有 s 個積分是單值的，其餘要寫成角變數除以頻率的差，並不單值。有簡併時，某個角變數的組合只差二π的整數倍，取它的三角函數就又是一個單值積分。 庫侖場就是例子：它多出來的那個單值積分，正是專屬於它的那個向量；而克卜勒運動在球座標與拋物線座標下都能分離變數。最後補一句：多自由度時，每個作用變數同樣是絕熱不變量。 影片把兩個角變數畫成一個四邊都接起來的正方形，讓一條斜率為無理數的直線慢慢把它塗滿卻永不閉合；把頻率比換成小整數比之後它立刻閉合，最後以克卜勒橢圓與它多出來的守恆向量收尾。\n\n本影片為《Landau–Lifshitz 經典力學》教學系列第 52 課（繁體中文版）。",
+    "tags": [
+      "經典力學",
+      "條件週期運動",
+      "作用變數",
+      "角變數",
+      "簡併",
+      "克卜勒問題",
+      "Landau Lifshitz"
+    ],
+    "language": "zh-TW"
+  },
+  {
+    "file": "manim_lessons/samples/output/landau_l52_en.mp4",
+    "title": "Lesson 52 | Conditionally Periodic Motion: Never Quite Closing | Landau–Lifshitz",
+    "description": "Take a system with any number of degrees of freedom, moving finitely in every coordinate, whose variables separate completely in the Hamilton-Jacobi treatment. The abbreviated action is then a sum of one function per coordinate. Each is an integral of that momentum, and each is many-valued. When the coordinate runs there and back over its finite range, the action increases by two pi times a certain quantity, and that defines one action variable per degree of freedom. Now make the same canonical transformation as for one degree of freedom: action variables and angle variables. The equations of motion say every action variable is constant, and every angle variable is its own frequency times the time plus a constant. A there-and-back of one coordinate raises only its own angle variable, and by two pi. So any one-valued function of the coordinates and momenta, written in canonical variables, is periodic in every angle variable with period two pi. Expand it as a multiple Fourier series and put in the angle variables as linear functions of time. The time dependence is then a sum of terms, each with a frequency built from integer multiples of the fundamental frequencies added together. These frequencies are in general incommensurable, so the sum is not a periodic function, and neither are the coordinates and momenta. The motion is not strictly periodic, either as a whole or in any single coordinate. Having passed through a given state, the system does not return to that state in any finite time. But in the course of a long enough time it passes arbitrarily close to it. A motion of this kind is called conditionally periodic. If several fundamental frequencies are commensurable, the motion is degenerate; if all of them are, it is completely degenerate, the motion is periodic and every path closes. Degeneracy also cuts down the number of independent action variables the energy depends on. Degeneracy also increases the number of one-valued integrals. Without it, only s of them are one-valued; the rest are differences of angle over frequency, which are not. With it, a combination of angles is fixed up to multiples of two pi, and its cosine is one more. The Coulomb field is the example: its extra one-valued integral is the vector peculiar to that field, and Kepler motion separates in spherical and in parabolic coordinates alike. One last remark: with many degrees of freedom, every action variable is again an adiabatic invariant. The video draws the two angle variables as a square joined on all four sides, and lets a line of irrational slope slowly blacken it without ever closing; switching to a ratio of small integers closes it at once, and the episode ends on the Kepler ellipse and the extra conserved vector that belongs to it.\n\nLesson 52 of the Landau–Lifshitz Classical Mechanics teaching series (English edition).",
+    "tags": [
+      "classical mechanics",
+      "conditionally periodic motion",
+      "action variables",
+      "angle variables",
+      "degeneracy",
+      "Kepler problem",
+      "Landau Lifshitz"
+    ],
+    "language": "en"
+  }
+]

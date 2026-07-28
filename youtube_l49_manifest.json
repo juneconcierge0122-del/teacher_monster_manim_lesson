@@ -1,0 +1,32 @@
+[
+  {
+    "file": "manim_lessons/samples/output/landau_l49_zh-TW.mp4",
+    "title": "第 49 課｜絕熱不變量：慢慢改變參數，相軌跡的面積不變｜Landau–Lifshitz 經典力學",
+    "description": "一個系統在一維裡做有限運動，而它的某個參數隨時間慢慢改變。這裡的「慢」是指：在運動的一個週期裡，這個參數只變了很小的一點點。 參數若固定，系統就是封閉的：能量守恆、運動嚴格週期，週期由能量決定。參數一旦會變，系統就不再封閉，能量也不再守恆。 但參數變得很慢，能量的變化率也很小。把它對一個週期取平均，抹掉快速的抖動，剩下的就是能量緩慢而穩定的漂移，而且正比於參數的變化率。 換句話說，這樣平均出來的能量其實是參數的一個函數。而這種依賴可以寫成：某個由能量和參數合成的量保持不變。這個量就叫絕熱不變量。 要找出它，先寫下能量的變化率：它等於哈密頓量對參數的偏導數乘上參數的變化率。右邊除了慢變的參數，還含有快變的座標和動量，所以要對週期取平均。 平均就是對時間積分再除以週期。用哈密頓方程可以把時間積分換成座標積分：時間的微元等於座標微元除以速度，而週期就是同一個積分繞行一圈。 積分要沿著參數固定時的軌道走。沿著它哈密頓量等於能量，動量就是座標的函數，只帶能量和參數兩個常數。把這個關係對參數微分，被平均的量就換成了動量對參數的偏導數。 代回去以後，分子和分母的積分合成一條很漂亮的式子：動量沿軌道的環積分除以二π，它的時間導數等於零。這個量就是絕熱不變量。 它有很清楚的幾何意義。一個自由度的相空間就是座標和動量張成的平面，週期運動在上面畫出一條封閉曲線，而這個量正是曲線圍出的面積除以二π。它對能量微分就得到週期。 倒過來，能量對它微分就是頻率。拿諧振子檢驗：相軌跡是一個橢圓，面積除以二π剛好等於能量除以頻率。所以參數慢慢改變時，能量會和頻率成正比地一起變。 影片先畫一個被慢慢拉短的單擺，再換成相平面：慢變化把橢圓拉得又高又窄，而畫面上即時顯示的「面積除以二π」始終不動。\n\n本影片為《Landau–Lifshitz 經典力學》教學系列第 49 課（繁體中文版）。",
+    "tags": [
+      "經典力學",
+      "絕熱不變量",
+      "相空間",
+      "作用變數",
+      "諧振子",
+      "慢變參數",
+      "Landau Lifshitz"
+    ],
+    "language": "zh-TW"
+  },
+  {
+    "file": "manim_lessons/samples/output/landau_l49_en.mp4",
+    "title": "Lesson 49 | Adiabatic Invariants: The Area of the Phase Path Does Not Change | Landau–Lifshitz",
+    "description": "A system performs a finite motion in one dimension, and one of its parameters changes slowly with time. By slowly we mean that the parameter varies only a little during one period of the motion. If the parameter were fixed, the system would be closed: energy conserved, motion strictly periodic, the period set by the energy. Once the parameter varies, the system is no longer closed and the energy is not conserved. But the parameter varies slowly, so the rate of change of the energy is small as well. Average that rate over one period, smoothing away the rapid fluctuations, and what is left is a steady slow drift proportional to the rate of change of the parameter. In other words, the energy taken in this averaged sense behaves as a function of the parameter. That dependence can be written as the constancy of some combination of the energy and the parameter, and this quantity is called an adiabatic invariant. To find it, start from the rate of change of the energy: it is the derivative of the Hamiltonian with respect to the parameter, times the rate of change of the parameter. The right-hand side still carries the fast coordinate and momentum, so we average over a period. The average is an integral over time divided by the period. Hamilton's equation lets us trade the time integral for one over the coordinate: an element of time is an element of coordinate divided by the velocity, and the period is that same integral taken once round. The integration follows the path for a fixed parameter. Along it the Hamiltonian equals the energy, so the momentum is a function of the coordinate with two constants in it. Differentiating that relation by the parameter turns the averaged quantity into a derivative of the momentum. Substituting, the numerator and the denominator combine into one clean statement: the loop integral of the momentum around the path, divided by two pi, has zero time derivative. That quantity is the adiabatic invariant. The meaning is geometrical. With one degree of freedom, phase space is the plane of coordinate and momentum, and a periodic motion draws a closed curve on it. The invariant is the area inside that curve divided by two pi, and differentiating it by the energy gives the period. The inverse derivative is the frequency. Test all this on the harmonic oscillator: its phase path is an ellipse, and the area inside divided by two pi is the energy over the frequency. So when the parameters change slowly, the energy stays proportional to the frequency. The video first shows a pendulum whose string is slowly drawn in, then switches to the phase plane: the slow change pulls the ellipse tall and thin while the area divided by two pi, printed live on screen, never moves.\n\nLesson 49 of the Landau–Lifshitz Classical Mechanics teaching series (English edition).",
+    "tags": [
+      "classical mechanics",
+      "adiabatic invariant",
+      "phase space",
+      "action variable",
+      "harmonic oscillator",
+      "slowly varying parameter",
+      "Landau Lifshitz"
+    ],
+    "language": "en"
+  }
+]

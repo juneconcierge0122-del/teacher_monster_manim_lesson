@@ -1,0 +1,34 @@
+[
+  {
+    "file": "manim_lessons/samples/output/landau_l53_zh-TW.mp4",
+    "title": "第 53 課｜《力學》全書總複習：一條原理長出整座力學｜Landau–Lifshitz 經典力學",
+    "description": "整本《力學》其實只從一件事開始：在所有可能的路徑裡，真實的運動讓作用量取極值；而作用量是拉格朗日量沿著路徑的積分。 把這個條件寫出來，就得到拉格朗日方程。再加上空間的均勻與各向同性、時間的均勻，就決定了自由粒子的拉格朗日量，也就決定了整個力學的形式。 第二章把對稱換成守恆：時間平移給出能量，空間平移給出動量，轉動給出角動量。作用量的形式甚至決定了同一個運動在放大縮小之下怎麼變。 第三章把方程積出來。一維運動可以直接化為求積；中心場裡用有效位能把問題壓成一維；克卜勒問題給出橢圓、拋物線與雙曲線三種軌道。 第四章看碰撞：粒子的衰變、彈性碰撞裡的角度關係、散射截面，最後是拉塞福公式。這些結論全部只靠守恆律和換一個參考系。 第五章是小振盪。位能極小附近一切都變成諧振子：受迫振盪與共振、多自由度的簡正模態、阻尼、參數共振，還有非線性帶來的頻率偏移與跳躍。 第六章是剛體：角速度與慣性張量、歐拉方程、歐拉角、對稱陀螺的進動；再加上非慣性參考系裡冒出來的科氏力與離心力。 第七章換一種語言。用勒讓德變換把速度換成動量，得到哈密頓方程；帕松括號寫出守恆量的代數；相空間的體積在運動下不變，這就是劉維定理。 再往前一步，把作用量本身看成座標的函數，就得到漢彌頓－雅可比方程。變數能分離時，整個問題化成一串一維積分，這是求通解最有力的工具。 最後是絕熱不變量：參數慢慢改變時，相軌跡圍出的面積不變；改用作用變數與角變數重寫，多自由度的有限運動就是條件週期運動。一條原理，加上空間與時間的對稱，長出了整座經典力學。 影片下方是七章的方塊依序亮起，上方的小舞台重播每一章真正的畫面：互相競爭的兩條路徑、守恆的箭頭、進動的軌道、彈性碰撞的兩個出射角、簡正模態、旋轉的剛體，以及相空間裡的封閉迴圈。\n\n本影片為《Landau–Lifshitz 經典力學》教學系列第 53 課（繁體中文版）。",
+    "tags": [
+      "經典力學",
+      "總複習",
+      "最小作用量原理",
+      "守恆定律",
+      "小振盪",
+      "剛體",
+      "哈密頓力學",
+      "Landau Lifshitz"
+    ],
+    "language": "zh-TW"
+  },
+  {
+    "file": "manim_lessons/samples/output/landau_l53_en.mp4",
+    "title": "Lesson 53 | Mechanics, the Whole Book: One Principle, One Subject | Landau–Lifshitz",
+    "description": "The whole of Mechanics starts from a single statement: among all possible paths, the real motion makes the action stationary, the action being the integral of the Lagrangian along the path. Writing that condition out gives Lagrange's equations. Adding the homogeneity and isotropy of space and the homogeneity of time fixes the Lagrangian of a free particle, and with it the form of the whole subject. Chapter two turns symmetry into conservation: translation in time gives energy, translation in space gives momentum, rotation gives angular momentum. The form of the action even fixes how one and the same motion behaves when it is scaled up or down. Chapter three integrates the equations. One-dimensional motion reduces straight to quadratures; a central field is squeezed down to one dimension by the effective potential; and the Kepler problem gives the ellipse, the parabola and the hyperbola. Chapter four is collisions: the disintegration of particles, the angles in an elastic collision, cross-sections, and finally Rutherford's formula. All of it rests on conservation laws and on changing the frame of reference. Chapter five is small oscillations. Near a minimum of the potential everything turns into an oscillator: forced motion and resonance, normal modes for many degrees of freedom, damping, parametric resonance, and the shifts and jumps that non-linearity brings. Chapter six is the rigid body: angular velocity and the inertia tensor, Euler's equations, the Eulerian angles, the precession of a symmetrical top, and the Coriolis and centrifugal forces that appear in a rotating frame. Chapter seven changes the language. A Legendre transformation trades velocities for momenta and gives Hamilton's equations; Poisson brackets write down the algebra of the constants of the motion; and phase volume is carried unchanged by the flow, which is Liouville's theorem. One step further, taking the action itself as a function of the coordinates, gives the Hamilton-Jacobi equation. When the variables separate, the whole problem falls apart into a chain of one-dimensional integrals: the most powerful route to a general solution. Last come the adiabatic invariants: when a parameter changes slowly, the area inside the phase path does not. In action and angle variables, finite motion with many degrees of freedom is conditionally periodic. One principle and a few symmetries: that is the whole subject. Along the bottom the seven chapters light up one at a time, while a small stage above replays what each chapter is really about: two competing paths, a conserved arrow, a precessing orbit, an elastic collision, a normal mode, a spinning rigid body, and a closed loop in phase space.\n\nLesson 53 of the Landau–Lifshitz Classical Mechanics teaching series (English edition).",
+    "tags": [
+      "classical mechanics",
+      "review",
+      "principle of least action",
+      "conservation laws",
+      "small oscillations",
+      "rigid body",
+      "Hamiltonian mechanics",
+      "Landau Lifshitz"
+    ],
+    "language": "en"
+  }
+]
