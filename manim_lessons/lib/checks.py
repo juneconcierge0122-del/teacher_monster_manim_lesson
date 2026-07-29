@@ -4,7 +4,7 @@ Checks
 渲染前防呆. 偵測 ensemble_feedback 裡看到的所有死亡 pattern.
 
 CLI usage:
-    python -m lib.checks lessons/triangle_centers_script.md \
+    python -m lib.checks lessons/sandbox/triangle_centers_script.md \
         --topic "Multi-scenario Applications of Triangle Centers" \
         --klps "Incenter,Circumcenter,Optimization,Modeling"
 

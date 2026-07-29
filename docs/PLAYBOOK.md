@@ -1,0 +1,145 @@
+# PLAYBOOK — 雙語教學動畫的製作規範與踩雷筆記
+
+**這份檔案是跨系列的。** 不管在做《力學》、《場論》還是特別篇，規範都一樣；
+各系列自己的進度、連結、命名慣例寫在 `series/<系列>/STATUS.md`。
+
+---
+
+## 1. 製作流程
+
+1. 先查看專案、Git 狀態與上一課設定；用 `pdftotext` 讀 `books/` 底下的 PDF 取得要做的內容。
+2. 撰寫繁體中文與英文腳本，寫進該系列的 localization 檔（見各系列 STATUS），公式寫進同檔的 `FORMULAS`。
+3. 每個版本控制在 5 分鐘以內（先用 `av` 估算配音總長）。
+4. **旁白＝字幕＝配音，用白話自然語言**（不要把 ∫、√、⊥ 等符號塞進旁白，TTS 會念錯）；
+   數學式用放大的 unicode `Text` 放在畫面上方（`FS_H2`、`ACCENT_A`）。
+   乘號用 ×、清楚的括號與上下標間距，二階導數用 Leibniz 記法 `d²x/dt²`
+   （避免組合雙點在大寫字母上變淡）。
+5. 英文字幕固定 22pt（`FS_BODY`），長句由 `self.text()` 自動 textwrap 換行，不縮太小。
+6. **盡量用真實動畫解釋物理** — 這是這系列的重點，細節見下面第 2 節。
+7. 產生中英文配音，渲染 1080p60、H.264/AAC。
+   **先用 `-ql --fps 15` 低畫質試算除錯、抽幾張關鍵幀確認動畫**，再用 `-qh --fps 60` 出正式版。
+8. 抽查中英文字幕、數學式、片長及畫面（用 imageio_ffmpeg 的 ffmpeg 抽幀；系統無 ffprobe/ffmpeg）：
+   `/home/r08849002/miniconda3/envs/teacher-monster/lib/python3.10/site-packages/imageio_ffmpeg/binaries/ffmpeg-linux-x86_64-v7.0.2`
+9. 畫面公式裡任何「語言相關的文字」（模態名稱等）用場景內的 `MODE_LABEL` 字典依語言切換，
+   **不要寫死在共用的 `FORMULAS` 裡**（否則英文版會出現中文）。
+10. 建 manifest 放到 `series/<系列>/manifests/youtube_<課號>_manifest.json`
+    （**簡介與標題不可含 `<`、`>`，YouTube 會擋 invalidDescription**；用「小於／大於」或 "smaller/larger than"）。
+    上傳（在 repo 根目錄執行，manifest 裡的 `file` 是相對於根目錄的路徑）：
+
+    ```bash
+    python youtube_upload.py \
+      --client-secret .secrets/youtube_client_secret.json \
+      --token .secrets/youtube_token.json \
+      --manifest series/<系列>/manifests/youtube_<課號>_manifest.json
+    ```
+
+11. 產生每課獨立雙語腳本 md（與場景檔同目錄，`<課名>_script.md`，含旁白、畫面公式、動畫說明）。
+12. 把程式碼、腳本、manifest 提交並推送到 GitHub。
+13. 把新課的連結、片長補進 `series/<系列>/STATUS.md`。
+14. 上一課確認後，清除該課的本機影片與 Manim 渲染快取
+    （`rm -rf manim_lessons/media/videos/<課名>` 及 `manim_lessons/samples/output/<課名>_*.mp4`），
+    但**保留程式碼與配音**（`manim_lessons/samples/audio_<課號>`）。
+
+---
+
+## 2. 場景架構
+
+- 簡單主題可用「公式舞台」（見 `manim_lessons/lessons/landau_l04_l10.py` 的 `_construct_formula_stage`）。
+- 有物理圖像的主題請新開客製場景檔，subclass `LandauBatchBase`，
+  用 `ValueTracker` 時間軸 + updater / `always_redraw` 做動畫。
+- **建議一律 subclass `manim_lessons/lessons/canonical_base.py` 的 `CanonicalBase`**：
+  它已經包含 `beat()`、`formula()`、`sub()`、`_row()`／`_mid()`（會自動縮到 x ≤ 6.3）、
+  `_arr()`／`_dash()`／`_curve()`（會自動降取樣）、`_axes()` 與 `construct()`。
+  新課只要設 `EPISODE`、`MODE_LABEL`，並實作 `stage()` 回傳十組 `(fin, fout)`，
+  最後用 `make(cls, NN)` 產生 ZH／EN 兩個場景類別。
+- `stage()` 的每一組可以加**第三個元素：一個在該拍開始前執行的 callable**。
+  `stage()` 只在一開始求值一次，所以要在拍與拍之間改變狀態（例如 `self.mode`，
+  或記下某個動畫自己的起始時間）只能用它 —— 寫在 `stage()` 裡面會在建構當下就全部執行完。
+- 一課裡若各拍要用不同的運動方式，可用一個 `self.mode` 屬性 + `_ang()` 之類的分派函數。
+  manim 是在 `play()` 當下才求值 updater，所以在每個 `run()` 之前設好 `self.mode` 與 `self.t0` 就會生效，
+  不必為每一拍複製整組 mobject。
+- 3D 感的場景可用軸測投影（`_proj()`：EX/EY/EZ 三個螢幕基向量），球面／圓錐用取樣點 + `set_points_as_corners` 畫。
+
+---
+
+## 3. 版面與碰撞（全部是實測值，不要用猜的）
+
+- 設計慣例：標題在上、公式在上方、白話字幕在下、動畫置中；
+  顏色用 `manim_lessons/lib/design_tokens.py`（`ACCENT_A` 橘黃、`ACCENT_B` 青、`ACCENT_C` 紫、`WARN` 紅、`DIM/GHOST` 灰）。
+- **英文字幕行數上限 4 行**：`self.text()` 對英文以 72 字元 textwrap，英文每句請控制在 ~285 字元內。
+- **字幕頂端要量、不要猜**：實測 4 行的頂端在 **y = −2.01 ~ −2.31**（中文更低，−2.6 ~ −2.9），
+  所以動畫元素可以壓到 **y ≥ −1.90**。量法見 `manim_lessons/tools/subtop.py`：
+  直接建出 `sub()` 的 `Text` 再印 `get_top()[1]`，不用渲染。
+- **公式區三行會撞到標題**：`formula()` 在行數大於 2 時自動下移；仍建議一課最多兩行。
+  **三行公式的下緣實測在 y = 1.40**（兩行是 1.93）。任何在該拍出現的動畫元素與標籤都要壓在 **y ≤ 1.30**，
+  包含箭頭尖端與它旁邊的文字。
+- **英文標籤比中文寬約兩倍**：畫面內的雙語標籤（`self.lab()`）要分別檢查英文版是否貼到邊緣（安全範圍 |x| ≤ 6.3）。
+- **英文標籤寬度要逐條量**：寫一個 subclass 覆寫產生面板文字的方法（`_row()` / `_txt()`）並印出 `get_right()`，
+  用 `-s` 跑一次就能一次抓出所有超出 x = 6.3 的行。
+- **同一張圖裡的兩個標籤也會互撞**，不是只有「公式 vs 動畫」：新加軸標籤時要順手檢查同高度有沒有別的字。
+- **同心的兩條曲線半徑差至少留 0.25**，而且要順手檢查環的下緣有沒有壓到底下的標籤。
+- **不要讓後半段的畫面空掉**：若後半段的內容偏代數，就另外設計一張圖，別把所有圖都 fade out。
+
+---
+
+## 4. Manim 的坑
+
+- **用 `type()` 動態產生場景類別時一定要設 `__module__`**：manim 只收集 `__module__` 與檔案相符的場景。
+  否則類別在 manim 眼中不存在，**它會安靜地改渲染 base class** —— 中英文兩次渲染會寫進同一個檔案、內容都是中文版。
+  `canonical_base.make()` 已經會把 `cls.__module__` 帶過去。
+  **渲染完務必核對 log 裡的 `Rendered <名字>` 與輸出檔名**，別只看有沒有 mp4。
+- **`always_redraw` 裡絕對不要用 `DashedLine`**：虛線段數由長度決定，長度一變 submobject 數就變，
+  會打亂同一個 VGroup 被 `FadeIn` 時的家族對齊，**相鄰 `Text` 的字母會被靜默吃掉**。
+  改用固定 `num_dashes` 的 `DashedVMobject`。同理，任何在 `always_redraw` 裡會改變 submobject 數量的物件都要避免。
+- **`beat()` 內的 `self.play()` 不要在 play 層傳 `rate_func`**，會覆蓋各動畫自己的 rate_func
+  （改用 `tracker.animate(rate_func=...)`）。
+- **`self._tau()` 在每一拍開頭都會歸零**（`construct()` 每拍重設 `self.t0`）。
+  單拍內的循環動畫用它剛好，但**跨拍要連續演化的動畫不能用**，否則每到下一拍就跳回起點。
+  改用絕對時間減去自己記下的起始值（由該拍的 callable 設定）。
+- **`_arr()` 在長度小於 0.05 時回傳空的 `VGroup`，不會報錯**。
+  兩個並排面板中間的連接箭頭最容易踩到：面板中心相距 3.5、座標軸半寬 1.5，扣掉之後只剩 0.5。
+  畫之前先把「中心距離 − 兩邊半寬」算出來，並且**把箭頭放在面板下方**（中心高度上有 x 軸和它的標籤）。
+- **不要同時跑多個 `manim -qh`**：`media/texts/*.svg` 是共用快取，
+  兩個 process 同時要同一個未快取的字串時會 `FileNotFoundError`。
+  用序列佇列 `bash tools/queue.sh 49:landau_l49_adiabatic.py …`（一次一支、失敗重試一次、順便核對 `Rendered <名字>`），
+  或至少錯開啟動時間。
+
+---
+
+## 5. 數值與曲線
+
+- 需要真實軌跡時，在 import 時用 RK4 積分一次存成陣列，updater 只查表：既可重現又不會有逐格積分的漂移。
+  選初始條件時要離分界線夠遠，否則軌跡會亂掃整個相空間。
+- **數值積分出來的曲線一定要先降取樣再畫**：軌跡動輒數千點，直接餵給 `set_points_as_corners()` 會讓渲染慢到不可用。
+  170 點以內就夠平滑；同一張圖上有二十幾條曲線時尤其要注意。
+- **先問「這條線是不是解析的」**：降取樣是補救。環面上的一條直線在每兩次繞回之間本來就是直的，
+  一段只要頭尾兩個點 —— 算出所有繞回的參數再存成線段，整張圖只剩幾十個點。
+- **畫折射／光線類比時要核對彎曲方向**：進入 √(E − U) 較大（位能較低）的區域時路徑要**偏向法線**，
+  所以第二個角要比第一個小；而且入射線要從交界的**另一側**畫過來。
+
+---
+
+## 6. 除錯工具（`manim_lessons/tools/`，用法寫在各檔開頭的 docstring）
+
+| 工具 | 用途 |
+|---|---|
+| `probe.py` | 快速 harness：覆寫 `dur()` 回固定秒數、`add_sound()` no-op，一分鐘內重跑整支影片。**每一課都建議先用它檢查十拍構圖再送 `-qh`**（1080p60 一支要 20~25 分鐘）。檢查慢動畫（斜坡、逐漸畫出來的曲線）時要把 `PROBE_DUR` 調大。 |
+| `grab.py` | 從 probe 影片每拍抽一幀。 |
+| `subtop.py` | 不渲染就印出每句字幕的頂端 y 座標。 |
+| `queue.sh` | 序列渲染佇列，會核對 `Rendered <名字>`。 |
+
+- **抽幀複查時不要抓在拍與拍的交界**：`-ss` 會 seek 到不小於指定時間的下一個影格，
+  抓 `dur*(i+1) − 0.12` 很容易落在**下一拍的第一格** —— 那時 callable 已經執行、動畫時間歸零，
+  看起來就像「畫面整個空掉的 bug」。往前留 0.5 秒以上（`grab.py` 已改成 0.6 秒）。
+
+---
+
+## 7. 文字與 TTS
+
+- **`FORMULAS` 必須是語言無關的**（不只適用於模態名稱）：想在公式裡寫「積分到 t₀」「不可公度」這種說明時，
+  很容易順手打中文或英文進去，結果另一個語言版本就混語。純符號寫不出來就把它移到 `MODE_LABEL`。
+- **大括號與 `^` 不會被當成排版指令**：`∫^{t₀}`、`e^{ilw}` 會原樣顯示成字面上的大括號，
+  要改寫成 `∫ ω dt ( t → t₀ )`、`Σ_l Λ_l · exp ( i l w )`。
+- **中文旁白裡的 π 是安全的**：實測 `zh-TW-HsiaoChenNeural` 會把「二π」唸成「二派」
+  （2.42 s vs「二派」2.40 s、「二」2.18 s），不會漏字。
+  要驗其他符號時就用這招 —— 生成兩三個只差一個字元的短句比長度即可。

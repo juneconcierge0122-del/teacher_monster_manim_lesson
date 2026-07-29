@@ -40,7 +40,7 @@ pip install manim
 ./render.sh -q h
 
 # 單獨跑某個 scene
-manim -pql lessons/triangle_centers.py S02_Circumcenter
+manim -pql lessons/sandbox/triangle_centers.py S02_Circumcenter
 ```
 
 ## 自我測試各模組

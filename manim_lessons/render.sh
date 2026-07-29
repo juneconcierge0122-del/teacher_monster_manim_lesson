@@ -5,7 +5,7 @@
 # Usage:
 #   ./render.sh                           # 渲染所有 lessons (低畫質預覽)
 #   ./render.sh -q h                      # 高畫質
-#   ./render.sh -l triangle_centers       # 只渲染指定 lesson
+#   ./render.sh -l triangle_centers       # 只渲染指定 lesson (自動在系列子目錄搜尋)
 #   ./render.sh --skip-checks             # 跳過 preflight (不建議)
 #
 # Exit codes:
@@ -59,9 +59,13 @@ cd "$(dirname "$0")"   # 切到 manim_lessons/ 根目錄
 
 # ─── 2. 找出要渲染的 lessons ──────────────────────────────────────
 if [[ -n "$ONLY_LESSON" ]]; then
-    LESSONS=("lessons/${ONLY_LESSON}.py")
-    if [[ ! -f "${LESSONS[0]}" ]]; then
-        echo -e "${RED}❌ 找不到 ${LESSONS[0]}${NC}" >&2
+    # lessons/ 依系列分了子目錄，所以用搜尋而不是直接接路徑
+    mapfile -t LESSONS < <(find lessons -name "${ONLY_LESSON}.py" -type f | sort)
+    if [[ ${#LESSONS[@]} -eq 0 ]]; then
+        echo -e "${RED}❌ lessons/ 底下找不到 ${ONLY_LESSON}.py${NC}" >&2
+        exit 1
+    elif [[ ${#LESSONS[@]} -gt 1 ]]; then
+        echo -e "${RED}❌ ${ONLY_LESSON}.py 在多個系列裡重名: ${LESSONS[*]}${NC}" >&2
         exit 1
     fi
 else
@@ -84,7 +88,7 @@ for lesson in "${LESSONS[@]}"; do
 
     # 3a. Preflight (找對應的 script.md)
     if [[ "$SKIP_CHECKS" -eq 0 ]]; then
-        script_md="lessons/${name}_script.md"
+        script_md="$(dirname "$lesson")/${name}_script.md"
         if [[ -f "$script_md" ]]; then
             echo -e "${YELLOW}▸ 跑 preflight: ${script_md}${NC}"
             if ! python3 -m manim_lessons.lib.checks "$script_md" -v; then

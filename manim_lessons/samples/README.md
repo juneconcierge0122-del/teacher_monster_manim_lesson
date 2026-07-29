@@ -1,7 +1,7 @@
 # Landau audiovisual samples
 
 The samples are approval gates, not completed lessons. Both languages share
-the scene class in `lessons/landau_l01_sample.py`; localized copy lives in
+the scene class in `lessons/t1_mechanics/landau_l01_sample.py`; localized copy lives in
 `localization/landau_l01_sample.py`.
 
 Expected outputs:
@@ -12,8 +12,8 @@ Expected outputs:
 Render the silent animation at low quality:
 
 ```bash
-manim -ql lessons/landau_l01_sample.py LandauL01SampleZH
-manim -ql lessons/landau_l01_sample.py LandauL01SampleEN
+manim -ql lessons/t1_mechanics/landau_l01_sample.py LandauL01SampleZH
+manim -ql lessons/t1_mechanics/landau_l01_sample.py LandauL01SampleEN
 ```
 
 The final sample build adds Edge TTS narration and muxes it with ffmpeg.
@@ -26,7 +26,7 @@ the real duration of its own audio clip before rendering.
 
 - `output/landau_l01_story_v2_zh-TW.mp4`
 - `output/landau_l01_story_v2_en.mp4`
-- Scene: `lessons/landau_l01_sample_v2.py`
+- Scene: `lessons/t1_mechanics/landau_l01_sample_v2.py`
 - Copy and narration: `localization/landau_l01_sample_v2.py`
 - Audio clips: `audio_v2/{zh-TW,en}/00.mp3` through `07.mp3`
 

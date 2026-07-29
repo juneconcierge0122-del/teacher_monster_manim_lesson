@@ -4,7 +4,7 @@ A whole lesson renders in well under a minute at -ql, so every one of the ten
 beats can be sampled as a frame and checked for collisions before committing to
 a -qh render (20-25 minutes per video). Run it from `manim_lessons/`:
 
-    PROBE_MOD=manim_lessons.lessons.landau_l49_adiabatic \
+    PROBE_MOD=manim_lessons.lessons.t1_mechanics.landau_l49_adiabatic \
     PROBE_CLS=AdiabaticBase PROBE_DUR=6 \
     manim -ql --fps 10 tools/probe.py ProbeEN
 
