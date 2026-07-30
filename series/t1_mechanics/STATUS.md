@@ -28,6 +28,7 @@
 
 | 課 | 主題 | 中文 | 英文 |
 |---|---|---|---|
+| 18 | 散射：從撞擊參數到截面 | （未記錄，見下方說明） | https://youtu.be/_pwVHOsrsCE |
 | 20 | 小角度散射 | https://youtu.be/aK-DwdW4rS8 | https://youtu.be/VbIcOEkqlCQ |
 | 21 | 一維自由振盪 | https://youtu.be/GmDzxL7PAcA | https://youtu.be/m-oxGVpTm7U |
 | 22 | 受迫振盪與共振 | https://youtu.be/qsK8XCD5gNw | https://youtu.be/OIl0t-W6li0 |
@@ -66,6 +67,12 @@
 **第 4–19 課**亦已完成並上傳，但連結沒有被記錄在這裡也不在 manifest 裡
 （manifest 只是上傳的輸入，不含回傳的 video id）。要找的話翻當時 session 的
 `UPLOAD_OK` 輸出，或直接到 YouTube Studio 的私人影片清單查。
+
+2026-07-29：發現第 18 課的英文版當初沒有上傳成功，已用 `LandauL18EN` 重新渲染
+（89.1s／1080p60）並補傳，連結記在上表。素材都還在（`samples/audio_l18/en/`、
+`localization/landau_l04_l10.py` 的 `TOPICS[18]`），要重來只需再跑一次
+`manim -qh --fps 60 lessons/landau_l04_l10.py LandauL18EN`。
+**第 4–19 課其餘各課的中英版是否都真的在 YouTube 上，沒有紀錄可佐證，值得逐一核對。**
 
 第 1–3 課（`landau_l01_sample*`、`landau_l02_action`、`landau_l03_galileo`）
 是早期的原型／樣片，格式與第 4 課之後不同，保留在同一個目錄裡作為紀錄。
