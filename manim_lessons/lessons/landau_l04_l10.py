@@ -6,17 +6,28 @@ from manim import Axes, Create, Dot, FadeIn, FadeOut, Line, Scene, Text, UP, DOW
 from manim_lessons.lib.design_tokens import ACCENT_A, ACCENT_B, ACCENT_C, DIM, FS_BODY, FS_H1, FS_H2, GHOST, INK, apply_global_config
 from manim_lessons.localization.landau_l04_l10 import TOPICS, FORMULAS
 class LandauBatchBase(Scene):
+ # A series overrides the three _SRC/PREFIX attributes to point the same
+ # machinery at its own copy and audio; the defaults keep T1 working untouched.
+ TOPICS_SRC=TOPICS; FORMULAS_SRC=FORMULAS; AUDIO_PREFIX="l"
  EPISODE=4; LANGUAGE="zh"
  def setup(self):
-  apply_global_config(); self.title,self.lines=TOPICS[self.EPISODE][self.LANGUAGE]; self.clock=ValueTracker(0); self.audio_dir=pathlib.Path(__file__).resolve().parents[1]/"samples"/f"audio_l{self.EPISODE:02d}"/("zh-TW" if self.LANGUAGE=="zh" else "en")
+  apply_global_config(); self.title,self.lines=self.TOPICS_SRC[self.EPISODE][self.LANGUAGE]; self.clock=ValueTracker(0); self.audio_dir=pathlib.Path(__file__).resolve().parents[1]/"samples"/f"audio_{self.AUDIO_PREFIX}{self.EPISODE:02d}"/("zh-TW" if self.LANGUAGE=="zh" else "en")
  def _wrap_cjk(self,s,width=72):
   # CJK has no spaces, so textwrap leaves one long line that scale_to_fit_width
   # then shrinks into illegibility. Break on display width (CJK counts double),
-  # never leaving closing punctuation stranded at the start of a line.
+  # never leaving closing punctuation stranded at the start of a line, and
+  # never mid-word inside a run of Latin letters or digits -- a Chinese line
+  # citing "Courant" used to break it as "Cou" / "rant".
   lines=[];cur="";w=0
   for ch in s:
    cw=1 if ch.isascii() else 2
-   if w+cw>width and cur:lines.append(cur);cur="";w=0
+   if w+cw>width and cur:
+    k=len(cur)
+    if ch.isascii() and ch.isalnum():
+     while k>0 and cur[k-1].isascii() and cur[k-1].isalnum():k-=1
+    if k==0:k=len(cur)          # a Latin run wider than a whole line: split it
+    carry=cur[k:];lines.append(cur[:k]);cur=carry
+    w=sum(1 if c.isascii() else 2 for c in carry)
    cur+=ch;w+=cw
   if cur:lines.append(cur)
   for i in range(1,len(lines)):
@@ -54,7 +65,7 @@ class LandauBatchBase(Scene):
   self.wait(.8)
  def construct(self):
   heading=self.text(self.title,FS_H1,ACCENT_A).to_edge(UP,buff=.45)
-  formulas=FORMULAS.get(self.EPISODE)
+  formulas=self.FORMULAS_SRC.get(self.EPISODE)
   if formulas:self._construct_formula_stage(heading,formulas);return
   axes=Axes(x_range=[-5,5,1],y_range=[-2,3,1],x_length=9,y_length=4,axis_config={"color":GHOST,"stroke_width":2})
   dot=Dot(axes.c2p(-3,0),color=ACCENT_A,radius=.18); trail=Line(axes.c2p(-3,0),axes.c2p(3,0),color=ACCENT_B,stroke_width=3)

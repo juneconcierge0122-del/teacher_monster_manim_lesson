@@ -13,7 +13,6 @@ from manim import (Arrow, Dot, FadeIn, FadeOut, Line, Text, VGroup, VMobject, Da
 from manim_lessons.lib.design_tokens import (ACCENT_A, ACCENT_B, ACCENT_C, DIM, GHOST, INK, WARN,
                                              FS_BODY, FS_H1, FS_H2, FS_SMALL)
 from manim_lessons.lessons.landau_l04_l10 import LandauBatchBase
-from manim_lessons.localization.landau_l04_l10 import FORMULAS
 
 FS_TAG = 19
 PX = 1.55                                   # left edge of the right-hand panel
@@ -21,7 +20,11 @@ RIGHT_EDGE = 6.30                           # nothing may cross this
 
 
 class CanonicalBase(LandauBatchBase):
- """Subclasses set EPISODE, MODE_LABEL and implement `stage`."""
+ """Subclasses set EPISODE, MODE_LABEL and implement `stage`.
+
+ A lesson outside the Landau series also overrides `TOPICS_SRC`,
+ `FORMULAS_SRC` and `AUDIO_PREFIX` (inherited from `LandauBatchBase`) to point
+ at its own copy, and passes its own `prefix` to `make`."""
  LANGUAGE = "zh"
  MODE_LABEL = {}
 
@@ -106,7 +109,7 @@ class CanonicalBase(LandauBatchBase):
 
  def construct(self):
   self.t = ValueTracker(0.0); self.t0 = 0.0
-  F = FORMULAS[self.EPISODE]
+  F = self.FORMULAS_SRC[self.EPISODE]
   heading = self.text(self.title, FS_H1, ACCENT_A).to_edge(UP, buff=.45)
   self.add(heading)
   plan = self.stage()
@@ -130,7 +133,7 @@ class CanonicalBase(LandauBatchBase):
   self.wait(.7)
 
 
-def make(cls, n):
+def make(cls, n, prefix="LandauL"):
  """Build the ZH and EN scene classes for lesson n.
 
  The classes have to claim the lesson's own module. Manim only collects
@@ -139,7 +142,12 @@ def make(cls, n):
  skipped, and leave manim rendering `cls` itself — which silently produces
  one file named after the base class, in the base class's language, for both
  the ZH and the EN run.
+
+ `n` is pasted into the name as given, so a series that wants zero-padded
+ scene names passes the string "00" rather than the integer 0. Whatever is
+ passed has to match the number handed to `tools/queue.sh`, which builds the
+ same name by concatenation (with SCENE_PREFIX set to `prefix`).
  """
  ns = {"__module__": cls.__module__}
- return (type(f"LandauL{n}ZH", (cls,), dict(ns, LANGUAGE="zh")),
-         type(f"LandauL{n}EN", (cls,), dict(ns, LANGUAGE="en")))
+ return (type(f"{prefix}{n}ZH", (cls,), dict(ns, LANGUAGE="zh")),
+         type(f"{prefix}{n}EN", (cls,), dict(ns, LANGUAGE="en")))
