@@ -14,14 +14,17 @@
 | `series/t1_mechanics/` | Landau《力學》第 1–53 課 | **已完結**（第 52 課是本書最後一節，第 53 課是總複習） |
 | `series/special/` | 特別篇 S01（Anthropic 全域工作空間論文） | 單集，可再加 |
 | `series/t2_fields/` | Landau《場論》 | **尚未開始**，開工前的決定寫在它的 STATUS.md |
+| `series/advcalc/` | Loomis & Sternberg《Advanced Calculus》 | **進行中**：骨架已建，尚未產出第一集 |
 
-**《力學》已經做完，沒有「下一節」可接。** 下一步需要先決定方向：
+**現在的方向是 `advcalc`。**《力學》已完結；《場論》仍是空殼。
+接手時先讀 `series/advcalc/STATUS.md` 與 `series/advcalc/OUTLINE.md`（全書解析與 155 集規劃）。
 
-- (a) 接《場論》T2 —— 見 `series/t2_fields/STATUS.md`，編號方式要先拍板；
-- (b) 針對《力學》挑主題做加深的專題集（例如把每章的習題做成一集）；
-- (c) 其他。
+`advcalc` 有兩件與其他系列不同、會踩雷的事：
 
-除非使用者已經指定，請先問清楚再動工。
+- **取材不要用 `pdftotext`**：那個 PDF 是掃描 OCR 版，數學符號幾乎全毀、插圖全失。
+  改用 Read 工具直接讀頁面影像（`pages="153-154"`，一次最多 20 頁）。**PDF 頁 = 書頁 + 12。**
+- **`queue.sh` 要覆寫場景前綴**：`SCENE_PREFIX=AdvCalcE bash tools/queue.sh …`，
+  預設的 `LandauL` 會找不到場景名而讓 manim 靜默改渲染 base class。
 
 ---
 
