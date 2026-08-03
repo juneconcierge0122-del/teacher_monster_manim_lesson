@@ -1,6 +1,6 @@
 # advcalc —《Advanced Calculus》(Loomis & Sternberg)
 
-**狀態：E00 已上傳（私人）。下一集 E01 從第 0 章第 1–3 節開始。**
+**狀態：E00–E03 已上傳（私人），第 0 章做完。下一集 E04 從第 1 章第 1 節開始。**
 全書解析與 155 集的分集規劃見 **[`OUTLINE.md`](OUTLINE.md)**。
 
 ## YouTube 連結（全部設為私人）
@@ -8,9 +8,24 @@
 | 集 | 主題 | 對應書頁 | 片長（中／英） | 中文 | 英文 |
 |---|---|---|---|---|---|
 | E00 | 導論：這本書是什麼 | 序言與目錄 | 3:23 ／ 3:04 | https://youtu.be/LWLQa7elNII | https://youtu.be/15GYH9MB05U |
+| E01 | 邏輯、量詞與連接詞 | 0.1–0.3（1–6） | 3:32 ／ 3:10 | https://youtu.be/5fo36U5Z5Js | https://youtu.be/Y0t9tJKJZYs |
+| E02 | 集合、受限變數與關係 | 0.4–0.6（6–10） | 3:46 ／ 3:23 | https://youtu.be/lV2MJgo0PtQ | https://youtu.be/GQGSpeuBGvA |
+| E03 | 函數、映射與合成 | 0.7–0.9（10–15） | 3:40 ／ 3:16 | https://youtu.be/f5ULzGZHEs0 | https://youtu.be/AE7ZSIrWG7E |
 
-E00 的成品在 `manim_lessons/samples/output/advcalc_e00_{zh-TW,en}.mp4`
-（1920×1080、60 fps、H.264 + AAC，已核對 log 的 `Rendered AdvCalcE00ZH/EN` 與兩支的實際語言）。
+成品在 `manim_lessons/samples/output/advcalc_eNN_{zh-TW,en}.mp4`
+（1920×1080、60 fps、H.264 + AAC）。每一支都核對過 log 的 `Rendered AdvCalcENNZH/EN`、
+中英片長各自對得上自己的配音（若誤渲染成 base class，兩支片長會一模一樣），以及抽幀確認語言。
+
+## 做這個系列時踩到的坑
+
+- **場景檔用到的 manim 類別沒 import，`import` 檢查抓不到**——那是方法內的執行期 `NameError`，
+  只有真的渲染才會爆。更糟的是渲染失敗時 `tools/grab.py` 會照樣從**上一支殘留的
+  `Probe*.mp4`** 抽幀，看起來像是新的構圖。probe 前先 `rm` 舊檔，並核對 `Rendered Probe<L>`；
+  另外用 `python -m pyflakes lessons/advcalc/*.py` 靜態掃一遍，這類錯誤一次抓完。
+- **畫面很容易變成把公式列再寫一次**。`formula()` 已經把 `MODE_LABEL` 與 `FORMULAS` 印在上方，
+  中間的圖如果只是重排同樣的式子，那一拍等於沒有畫面。抽幀複查時要特別看這件事——
+  E01 有三拍、E02 有兩拍、E03 有一拍都犯過。
+- **英文字幕的 4 行上限要用 `textwrap` 實算，不能只看字元數**：285 字元的句子照樣可能換到 5 行。
 
 | 項目 | 值 |
 |---|---|
