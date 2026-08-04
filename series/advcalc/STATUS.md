@@ -1,13 +1,12 @@
 # advcalc —《Advanced Calculus》(Loomis & Sternberg)
 
-**狀態：E00–E06 已上傳（私人）。第 0 章已完結（E00–E04）。
-下一集 E07 接第 1 章第 1 節的後半（書頁 29–36）。**
+**狀態：E00–E10 已上傳（私人）。第 0 章完結（E00–E04），第 1 章第 1、2 節做完（E05–E10）。
+下一集 E11 是第 1 章第 3 節「積空間與 Hom(V, W)」（書頁 43–52）。**
 全書解析與 169 集的分集規劃見 **[`OUTLINE.md`](OUTLINE.md)**。
 
-第 1 章第 1 節橫跨書頁 21–36，OUTLINE 排 4 集（E05–E08）。E05 做了 21–25（公理、
-函數空間、子空間）、E06 做了 26–29（線性組合、Theorem 1.1、線性擴張），所以
-**E07 與 E08 是書頁 29–36**：線性變換與 Theorem 1.2 的 skeleton、矩陣與 Theorem 1.3，
-再來是 Theorem 1.4、核與值域、同構與特徵向量。第 2 節從 E09 起。
+第 1 章第 1 節（書頁 21–36）用了 4 集：E05 公理與子空間、E06 線性組合與線性擴張、
+E07 線性變換與 skeleton、E08 矩陣與核。第 2 節（書頁 36–43）用了 2 集：E09 座標對應
+與純量積、E10 平面與仿射子空間。兩節都與 OUTLINE 的預估集數相符。
 
 ## YouTube 連結（全部設為私人）
 
@@ -19,7 +18,11 @@
 | E03 | 函數、映射與合成 | 0.7–0.9（10–15） | 3:40 ／ 3:16 | https://youtu.be/f5ULzGZHEs0 | https://youtu.be/AE7ZSIrWG7E |
 | E04 | 對偶、布林運算與等價關係 | 0.10–0.12（15–21） | 3:42 ／ 3:13 | https://youtu.be/14iigH1PXcU | https://youtu.be/UZ5csopPUsE |
 | E05 | 向量空間與子空間 | 1.1 上（21–25） | 3:28 ／ 3:06 | https://youtu.be/ug_OxLyQRWk | https://youtu.be/jUYtkZkLOqI |
-| E06 | 線性組合與線性擴張 | 1.1 下（26–29） | 3:27 ／ 2:53 | https://youtu.be/PbkXo4RNjt0 | https://youtu.be/STYT-u979eg |
+| E06 | 線性組合與線性擴張 | 1.1（26–29） | 3:27 ／ 2:53 | https://youtu.be/PbkXo4RNjt0 | https://youtu.be/STYT-u979eg |
+| E07 | 線性變換與 skeleton | 1.1（29–32） | 3:25 ／ 2:57 | https://youtu.be/9NkwCAFG84E | https://youtu.be/XmbrmHp0_b0 |
+| E08 | 矩陣、核與同構 | 1.1（32–36） | 3:14 ／ 2:57 | https://youtu.be/TZeVsDwVoB0 | https://youtu.be/9qV6BwOI3RY |
+| E09 | 座標對應與純量積 | 1.2（36–39） | 3:29 ／ 3:03 | https://youtu.be/XCIPjyRNqME | https://youtu.be/nCe_660y7uI |
+| E10 | 平面、平行移動與仿射子空間 | 1.2（39–43） | 3:39 ／ 3:06 | https://youtu.be/FN1ebQLgEz8 | https://youtu.be/g-TnTzck8Rw |
 
 成品在 `manim_lessons/samples/output/advcalc_eNN_{zh-TW,en}.mp4`
 （1920×1080、60 fps、H.264 + AAC）。每一支都核對過 log 的 `Rendered AdvCalcENNZH/EN`、
@@ -45,6 +48,12 @@
   `Difference` / `Intersection` 疊兩個補集才對。E06 有三個「線性組合」的點落在它該生成的平面
   外面，跟自己的圖說矛盾——現在係數會 `assert` 過畫出來的平面範圍。
   **凡是圖在宣稱一件數學事實，就要有一個機械檢查去釘住它。**
+- **座標在範圍內，不代表圖是好的**。E07–E10 那一批版面檢查是 0 個超框，抽幀還是找到四個問題：
+  矩陣的行框畫得比行距寬，相鄰的框共用邊線，整個陣列變成一格一格的表格；E09 的座標三元組貼在
+  各自的軸尖端，跟已經在那裡的標籤還有彼此重疊；E10 兩個三角形用同一個位移向量畫，疊在一起
+  看不出「滑動」。**元素之間的距離、以及「這張圖讀起來像什麼」，機械檢查測不到。**
+- **`GHOST` 是背景參考線的顏色，不是次要內容的顏色**（`#3A3A3A`，比 `DIM` 暗很多）。
+  用它畫被劃掉的零、連接用的細線、刪節號，在成品上等於沒畫。次要但要看得見的東西用 `DIM`。
 
 - **分集規劃的加總要用腳本核，不要用眼睛加**。OUTLINE 原本第一階段小計寫 41 集、
   總計寫 155 集，實際逐節加總是 55 與 169；HANDOFF 也一度寫「第 1 章共 8 集」，
