@@ -14,17 +14,23 @@
 | `series/t1_mechanics/` | Landau《力學》第 1–53 課 | **已完結**（第 52 課是本書最後一節，第 53 課是總複習） |
 | `series/special/` | 特別篇 S01（Anthropic 全域工作空間論文） | 單集，可再加 |
 | `series/t2_fields/` | Landau《場論》 | **尚未開始**，開工前的決定寫在它的 STATUS.md |
-| `series/advcalc/` | Loomis & Sternberg《Advanced Calculus》 | **進行中**：骨架已建，尚未產出第一集 |
+| `series/advcalc/` | Loomis & Sternberg《Advanced Calculus》 | **進行中**：E00–E03 已上傳，第 0 章做完 |
 
 **現在的方向是 `advcalc`。**《力學》已完結；《場論》仍是空殼。
-接手時先讀 `series/advcalc/STATUS.md` 與 `series/advcalc/OUTLINE.md`（全書解析與 155 集規劃）。
+接手時先讀 `series/advcalc/STATUS.md`（進度、連結、踩過的坑）與
+`series/advcalc/OUTLINE.md`（全書解析與 155 集規劃）。
 
-`advcalc` 有兩件與其他系列不同、會踩雷的事：
+**下一步是 E04**，第 1 章第 1 節「基本概念」（書頁 21–36，15 頁切成 4 集）。
+OUTLINE 裡第 1 章共 8 集（E04–E11）。
+
+`advcalc` 有三件與其他系列不同、會踩雷的事：
 
 - **取材不要用 `pdftotext`**：那個 PDF 是掃描 OCR 版，數學符號幾乎全毀、插圖全失。
   改用 Read 工具直接讀頁面影像（`pages="153-154"`，一次最多 20 頁）。**PDF 頁 = 書頁 + 12。**
 - **`queue.sh` 要覆寫場景前綴**：`SCENE_PREFIX=AdvCalcE bash tools/queue.sh …`，
   預設的 `LandauL` 會找不到場景名而讓 manim 靜默改渲染 base class。
+- **場景類別要用 `make(cls, "NN", prefix="AdvCalcE")`**，並在類別上覆寫
+  `TOPICS_SRC` / `FORMULAS_SRC` / `AUDIO_PREFIX = "e"`。細節見 advcalc 的 STATUS.md。
 
 ---
 
@@ -73,5 +79,31 @@ manifest 放進 `series/<新系列>/manifests/`，並建一份 STATUS.md。共�
 
 - Git metadata 在 `.git-backup`，所有 git 指令要用：
   `git --git-dir=.git-backup --work-tree=. …`（推送用 `GIT_ASKPASS=.secrets/github-askpass.sh`）。
+  提交直接進 `main`，這個 repo 一直是這樣。
 - YouTube、GitHub 憑證都在 `.secrets/`，**請勿顯示憑證內容**。
 - YouTube token 只有上傳權限、**無法刪片**；被取代的舊版需人工在 YouTube Studio 刪除。
+
+**兩個憑證都會定期失效，動工前先測，不要等到最後一步才發現：**
+
+```bash
+# YouTube：能 refresh 就可用
+.venv/bin/python -c "
+from pathlib import Path
+from google.oauth2.credentials import Credentials
+from google.auth.transport.requests import Request
+c=Credentials.from_authorized_user_file(Path('.secrets/youtube_token.json'),
+  ['https://www.googleapis.com/auth/youtube.upload'])
+c.refresh(Request()); Path('.secrets/youtube_token.json').write_text(c.to_json())
+print('YouTube OK', c.expiry)"
+
+# GitHub：200 才可用
+curl -s -o /dev/null -w '%{http_code}\n' -H "Authorization: Bearer $(tr -d '\n' < .secrets/github_juneconcierge0122-del_teacher_monster_manim_lesson)" https://api.github.com/user
+```
+
+- **YouTube 的 refresh token 每 7 天就失效**，因為那個 OAuth app 在 Google Cloud Console
+  的發布狀態還是「測試中」。失效時走兩段式重新授權（產生 authorization_url →
+  使用者貼回 `http://localhost/?code=...` → `fetch_token`），注意 PKCE 的 `code_verifier`
+  與 `state` 必須跨進程存下來，否則換不到 token。根治方式是把同意畫面改成「正式版」，
+  但那要使用者自己在 Console 操作。
+- GitHub 的 fine-grained PAT 也會過期（回 401）。需要使用者重發，權限是
+  Contents: Read and write。
