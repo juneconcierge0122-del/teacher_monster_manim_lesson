@@ -12,7 +12,7 @@ E07 線性變換與 skeleton、E08 矩陣與核。第 2 節（書頁 36–43）�
 
 | 集 | 主題 | 對應書頁 | 片長（中／英） | 中文 | 英文 |
 |---|---|---|---|---|---|
-| E00 | 導論：這本書是什麼 | 序言與目錄 | 3:23 ／ 3:04 | https://youtu.be/LWLQa7elNII | https://youtu.be/15GYH9MB05U |
+| E00 | 導論：這本書是什麼 | 序言與目錄 | 3:23 ／ 3:05 | https://youtu.be/R0FHp3lAEJI | https://youtu.be/MoEIY81VFE8 |
 | E01 | 邏輯、量詞與連接詞 | 0.1–0.3（1–6） | 3:32 ／ 3:10 | https://youtu.be/5fo36U5Z5Js | https://youtu.be/Y0t9tJKJZYs |
 | E02 | 集合、受限變數與關係 | 0.4–0.6（6–10） | 3:46 ／ 3:23 | https://youtu.be/lV2MJgo0PtQ | https://youtu.be/GQGSpeuBGvA |
 | E03 | 函數、映射與合成 | 0.7–0.9（10–15） | 3:40 ／ 3:16 | https://youtu.be/f5ULzGZHEs0 | https://youtu.be/AE7ZSIrWG7E |
@@ -28,16 +28,17 @@ E07 線性變換與 skeleton、E08 矩陣與核。第 2 節（書頁 36–43）�
 （1920×1080、60 fps、H.264 + AAC）。每一支都核對過 log 的 `Rendered AdvCalcENNZH/EN`、
 中英片長各自對得上自己的配音（若誤渲染成 base class，兩支片長會一模一樣），以及抽幀確認語言。
 
-## 待處理：E03 的線上描述寫錯了
-
-`youtube_e03_manifest.json` 的描述句尾寫「也是第 0 章的最後一集」／"finishing chapter 0"，
-但第 0 章有 12 節、到書頁 21，E03 只做到 §9（書頁 15）。manifest 檔案已改正，
-**但兩支影片已經上傳，線上描述還是舊的**。YouTube token 的 scope 只有
-`youtube.upload`，改描述要 `youtube` 或 `youtube.force-ssl`，所以腳本改不動——
-需要人工到 YouTube Studio 修這兩支的描述：
-中文 https://youtu.be/f5ULzGZHEs0 、英文 https://youtu.be/AE7ZSIrWG7E
+E00 在 2026-08-05 重新渲染上傳過一次（舊的兩支已刪，表上是新連結）。原因見下面
+「同一個數字散在四個地方」那一條。
 
 ## 做這個系列時踩到的坑
+
+- **同一個事實會散在四個地方，改一個地方不會讓其他三個看起來像錯的**。全書集數從 155 更正成
+  169 時，第一次只改到 `FORMULAS_ADVCALC[0][10]`，因為 grep `155` 只掃得到那一處——
+  中文旁白寫的是「一百五十五」、英文寫的是 "fifty five"，兩個都躲過了數字搜尋，
+  而場景檔 `_close()` 的收尾字幕又把數字硬寫了一次。**旁白是會被念出來的**，所以那一拍的
+  中英配音也得重新產生。動到這種跨檔案的常數時，四個地方一起搜：`FORMULAS`、場景檔的字面字串、
+  `TOPICS` 的中英旁白（含中文數字與英文數字拼寫）、manifest 描述。
 
 - **版面要用腳本逐拍走過每一個 mobject，不要用眼睛看**。建出兩種語言的場景、呼叫
   `stage()`、對每個 `get_family()` 成員比對 `|x| ≤ 6.3`、`y ≤ 1.30`、`y ≥ −1.90`，

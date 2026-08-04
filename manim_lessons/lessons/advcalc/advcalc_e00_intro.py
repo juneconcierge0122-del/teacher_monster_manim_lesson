@@ -170,7 +170,7 @@ class AdvCalcE00Base(CanonicalBase):
 
  def _close(self):
   return VGroup(
-   self._mid(0.72, "155 集　·　一集約兩到四個書頁", "155 episodes  ·  two to four pages each", ACCENT_A, FS_TAG, w=9.0),
+   self._mid(0.72, "169 集　·　一集約兩到四個書頁", "169 episodes  ·  two to four pages each", ACCENT_A, FS_TAG, w=9.0),
    self._mid(0.18, "加星號的進階節也不跳過", "the starred advanced sections are not skipped", INK, FS_TAG, w=9.0),
    self._mid(-0.40, "下一集：第 0 章第 1 到 3 節，邏輯與量詞",
              "next: chapter 0, sections 1 to 3, logic and quantifiers", ACCENT_B, FS_TAG, w=9.0))

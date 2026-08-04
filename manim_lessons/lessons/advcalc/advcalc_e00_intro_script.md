@@ -238,16 +238,16 @@ highlight 移到第 12 到 13 格。
 
 ```
 這個系列的計畫   |   the plan for this series
-155  ·  2 – 4 pp / ep  ·  Ch 0 § 1 – 3
+169  ·  2 – 4 pp / ep  ·  Ch 0 § 1 – 3
 ```
 
 **旁白（繁中）**
 
-> 這個系列會照著書的順序走，大約兩到四個書頁做成一集，加星號的進階節也不跳過，全書預計一百五十五集。下一集從第零章開始，講邏輯與量詞。
+> 這個系列會照著書的順序走，大約兩到四個書頁做成一集，加星號的進階節也不跳過，全書預計一百六十九集。下一集從第零章開始，講邏輯與量詞。
 
 **Narration (EN)**
 
-> This series follows the book in order, at roughly two to four printed pages per episode, and it does not skip the starred advanced sections. That comes to about one hundred and fifty five episodes. The next one starts at chapter zero, with logic and quantifiers.
+> This series follows the book in order, at roughly two to four printed pages per episode, and it does not skip the starred advanced sections. That comes to about one hundred and sixty nine episodes. The next one starts at chapter zero, with logic and quantifiers.
 
 **動畫**
 

@@ -32,7 +32,7 @@ TOPICS_ADVCALC: dict[int, dict[str, tuple[str, list[str]]]] = {
  "第七章是多重線性代數，交錯張量、行列式與外代數；作者自己說這章主要當作後面各章的參考。第八章建立黎曼積分的公理化理論，其中包含變數變換公式。",
  "第九章到第十一章是後半的主線。可微流形、切空間、向量場與李導數，接著是流形上的積分、單位分割與散度定理，最後匯集到外微積分與斯托克斯定理。序言提醒，第九章是學生最難吸收的一章。",
  "第十二章與第十三章彼此獨立，是示範性質的應用。前者是位勢論，包含格林公式、卜瓦松積分與狄利克雷問題；後者用辛幾何重講一次古典力學，從餘切叢一路做到正則變換。",
- "這個系列會照著書的順序走，大約兩到四個書頁做成一集，加星號的進階節也不跳過，全書預計一百五十五集。下一集從第零章開始，講邏輯與量詞。",
+ "這個系列會照著書的順序走，大約兩到四個書頁做成一集，加星號的進階節也不跳過，全書預計一百六十九集。下一集從第零章開始，講邏輯與量詞。",
 ]), "en": ("Advanced Calculus: What This Book Is", [
  "The cover says Advanced Calculus, but this is not the usual course in partial derivatives and multiple integrals. It is by Loomis and Sternberg, both of the Harvard mathematics department, and it grew out of an honors course they gave in the nineteen sixties.",
  "The preface states the prerequisites plainly. You need one variable calculus from a rigorous point of view, some linear algebra, comfort with limit and continuity arguments, and a little experience with partial derivatives. It suggests Courant, Apostol, Spivak and Hardy.",
@@ -44,7 +44,7 @@ TOPICS_ADVCALC: dict[int, dict[str, tuple[str, list[str]]]] = {
  "Chapter seven is multilinear algebra, with alternating tensors, the determinant and the exterior algebra; the authors call it a reference chapter. Chapter eight builds the axiomatic theory of Riemann integration, including the change of variables formula.",
  "Chapters nine through eleven carry the second half: manifolds, the tangent space, vector fields and Lie derivatives, then integration on manifolds and the divergence theorem, and finally exterior calculus and Stokes theorem. The preface warns that chapter nine is the hardest.",
  "Chapters twelve and thirteen are independent of each other and serve as illustrative applications. The first is potential theory, with Green's formulas, the Poisson integral and Dirichlet's problem. The second redoes classical mechanics using symplectic geometry.",
- "This series follows the book in order, at roughly two to four printed pages per episode, and it does not skip the starred advanced sections. That comes to about one hundred and fifty five episodes. The next one starts at chapter zero, with logic and quantifiers.",
+ "This series follows the book in order, at roughly two to four printed pages per episode, and it does not skip the starred advanced sections. That comes to about one hundred and sixty nine episodes. The next one starts at chapter zero, with logic and quantifiers.",
 ])},
 
 # E01 — Chapter 0, sections 1-3 (book pp. 1-6 = PDF pp. 13-18).
@@ -343,8 +343,9 @@ FORMULAS_ADVCALC: dict[int, dict[int, str]] = {
  7: "Ch 7 :  Λ V*  ,  det          Ch 8 :  ∫",
  8: "Ch 9 – 11 :  Tₚ M  ,  d          ∫ dω  =  ∫ ω",
  9: "Ch 12 :  Δu = 0          Ch 13 :  T* ( M )  ,  ω = dθ",
- # The uploaded E00 still shows 155 here; the count was recomputed to 169 on
- # 2026-08-04 (see series/advcalc/OUTLINE.md). Corrected for any re-render.
+ # The count was recomputed from 155 to 169 on 2026-08-04 (see OUTLINE.md).
+ # It appears in four places for this episode -- here, the scene's own closing
+ # caption, the narration (it is spoken aloud), and the manifest description.
  10: "169  ·  2 – 4 pp / ep  ·  Ch 0 § 1 – 3",
 },
 
