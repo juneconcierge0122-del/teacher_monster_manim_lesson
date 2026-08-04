@@ -128,6 +128,91 @@ TOPICS_ADVCALC: dict[int, dict[str, tuple[str, list[str]]]] = {
  "Finally composition. The composition of g with f sends x to g of f of x. It is perhaps the basic binary operation of mathematics, and it is associative. The identity map sends each element to itself, and a mapping has an inverse exactly when it is bijective.",
 ])},
 
+# E04 — chapter 0, sections 10-12 (book pp. 15-21 = PDF pp. 27-33). This is the
+# episode chapter 0 was missing: E03's description claimed to finish the
+# chapter, but §10-12 were never covered.
+4: {"zh": ("第 0 章：對偶、布林運算與等價關係", [
+ "先講對偶。設 F 是兩個變數的函數。把 x 固定住，剩下的就是一個只依賴 y 的函數。於是每一個 x 都給出一個函數，而這個對應本身又是一個映射，把 A 送到「所有從 B 到 C 的函數」所成的集合。",
+ "反過來也成立：給定一個從 A 到那個函數集合的映射，就能把值回填成兩個變數的函數。所以兩變數的函數、從 A 出發的映射、從 B 出發的映射，是同一件事的三種看法，而最外側那兩個互稱對偶。",
+ "第一個應用是矩陣。一個 m 乘 n 的矩陣，就是定義在「列指標與行指標的配對」上的函數。固定列指標就得到一整列，於是矩陣可以讀成若干個列所成的元組；對偶地，也可以讀成若干個行所成的元組。",
+ "同樣的道理，n 個從 A 到 B 的函數所成的元組，可以看成單一個函數，它的值是 B 裡的 n 元組。稍後還有一個更重要的例子：對偶讓有限維向量空間可以被看成它自己的第二共軛空間。",
+ "幾何裡也有。把點與線看成兩種原始對象，關聯函數在點落在線上時取一、否則取零。固定一條線，就得到線上所有點所成的集合；固定一個點，就得到通過它的所有線。線是點的集合，點也是線的集合，這是投影幾何的基本觀點。",
+ "固定變數時常用一個點記號：在變動的那個位置擺一個點。這個記法很方便，但有個缺陷——沒辦法一邊代入一邊保留意思，因為看到代入後的值，讀不回原來是哪個函數。書上後面的方向導數就會用到它。",
+ "接著是布林運算。固定一個定義域，取它的一族子集。這一族的聯集，是至少屬於其中一個集合的所有元素；交集則是落在每一個集合裡的元素。加上指標之後寫起來更方便，書上說這在技術上與心理上都有好處。",
+ "補集是定義域裡不屬於它的那部分。De Morgan 律說，交集的補集等於補集的聯集——這只是量詞否定規則的直接結果：不是每個都在，就等於有時候不在。各種分配律同樣來自量詞的性質。",
+ "還有一組重要的等式：函數的原像保持聯集、保持交集，也保持補集。注意只有第一條對一般的關係仍然成立，另外兩條會壞掉，因為兩個量詞交換次序之後意思就變了。",
+ "最後是分割。把一個集合切成互不相交的一族子集，聯集正好是原集合，這就是纖維化，每一塊叫一根纖維。把一個點送到它所在的那根纖維，這個映射叫投影。任何函數都自動把定義域纖維化成它取值不變的那些集合。",
+ "等價關係是自反、對稱又遞移的關係。每個纖維化都給出一個等價關係，而這一節的定理是反過來的那半：每一個等價關係，都恰好是某個纖維化的等價關係。有理數與模 p 的整數，都是這樣造出來的。",
+]), "en": ("Chapter 0: Duality, the Boolean Operations and Equivalence Relations", [
+ "First, duality. Let F be a function of two variables. Hold x fixed and what remains is a function of y alone. So each x yields a function, and that correspondence is itself a mapping, from A into the set of all functions from B to C.",
+ "The converse holds too. Given a mapping from A into that set of functions, we can fill the values back in to get a function of two variables. So the two-variable function and the two mappings are three ways of viewing one phenomenon; the outer two are said to be dual.",
+ "The first application is the matrix. An m by n matrix is a function defined on pairs of a row index and a column index. Fix the row index and you get a whole row, so the matrix can be read as a tuple of rows; dually, it can be read as a tuple of columns.",
+ "In the same vein, an n-tuple of functions from A to B can be regarded as a single function whose values are n-tuples in B. A more important case comes later: duality is what lets a finite-dimensional vector space be regarded as its own second conjugate space.",
+ "Geometry has it too. Take points and lines as two kinds of primitive object, with an incidence function that is one when the point lies on the line. Fix a line and you get the set of points on it; fix a point, the lines through it. This duality is basic to projective geometry.",
+ "When a variable is held fixed there is a convenient device: put a dot in the position of the varying one. The notation is useful but flawed, since we cannot indicate substitution without losing meaning; from the value we cannot read back which function was evaluated.",
+ "Now the Boolean operations. Fix a domain and take a family of its subsets. The union of the family is the set of elements belonging to at least one of them, and the intersection is the set of those lying in every one. Indexing the family makes all of this easier to write.",
+ "The complement of a subset is what is left of the domain. De Morgan's law says the complement of an intersection is the union of the complements, and this is an immediate consequence of the rule for negating quantifiers: not always in means the same as sometimes not in.",
+ "There are also identities for preimages: a preimage preserves unions, intersections and complements. Only the first survives when the function is replaced by a general relation; the other two fail, because swapping the order of two quantifiers changes the meaning.",
+ "Finally partitions. Cut a set into a disjoint family of subsets whose union is the whole set: that is a fibering, and each piece is a fiber. Sending a point to its own fiber is the projection. Any function automatically fibers its domain into the sets where it is constant.",
+ "An equivalence relation is reflexive, symmetric and transitive. Every fibering gives one, and the theorem of this section is the converse: every equivalence relation is the equivalence relation of a fibering. The rationals and the integers modulo p are both built this way.",
+])},
+
+# E05 — chapter 1, section 1, first half (book pp. 21-25 = PDF pp. 33-37):
+# the axioms, the standard function-space example, and subspaces.
+5: {"zh": ("第 1 章：向量空間與子空間", [
+ "第一章開始講向量空間。多變數的微積分把單變數的微積分與向量空間理論接在一起，而處理得好不好，直接取決於這套理論用得夠不夠徹底。所以書上花前兩章專講向量空間本身：這一章講一般的，下一章講有限維的。",
+ "先從讀者大概已經見過的幾何向量開始。它們是從一個選定的原點畫出的箭頭，相加用平行四邊形法則：以兩個箭頭為鄰邊作平行四邊形，從原點出發的那條對角線就是它們的和。",
+ "向量也可以乘上一個數。把一個箭頭乘上 x，得到的是同一條直線上的另一個箭頭，長度是原來的 x 倍的絕對值；x 是正的就在原點的同一側，是負的就在另一側。",
+ "這兩個運算滿足一些代數律。不過書上提醒，幾何的證明通常比較粗略，說服力有餘而嚴密不足。像加法結合律的標準證明，就是畫一個平行六面體，去看那條從原點出發的對角線。",
+ "另一個大家可能見過的系統是座標三元組。這裡的三維向量是三個數排成的有序組，加法與數乘都是逐項代數地定義的。向量律對這種對象好證得多，因為幾乎只是形式上的推演。",
+ "如果把三元組看成一個函數，定義域是一到三這三個整數，第 i 項就是函數在 i 的值，那麼這個例子就提示了一個更一般的型別，叫做函數空間。",
+ "現在給定義。設 V 是一個集合，上面給了一個加法與一個數乘。前四條公理只管加法：結合律、交換律、有一個零元素加上去不改變任何向量、而且每個向量都有一個加起來等於零的伙伴。",
+ "後四條把數乘接上來：兩個數連續乘等於乘上它們的積、和可以往兩邊分配、乘以一就是原來的向量。從這些公理立刻可以推出零元素唯一、每個向量的反元素唯一，而且零乘任何向量都是零向量。",
+ "書上的標準例子是這樣：取任何一個集合 A，看所有定義在 A 上的實值函數。兩個函數相加就是逐點相加，乘上一個數就是每一點的值都乘上去。A 取一到三就回到三元組，A 取整條實線就是一元實函數的空間。",
+ "接著是子空間。取 V 的一個非空子集，如果它對 V 的兩個運算封閉，那麼它自己就是一個向量空間。理由很短：那些對所有元素都成立的律在小集合裡自動成立，而封閉性保證零元素與反元素也都留在裡面。",
+ "所以閉區間上的連續函數，是該區間上所有實值函數的子空間，而這樣的子空間就叫函數空間。書上預設向量空間是實的，但把純量換成複數、甚至換成任何一個體，大部分內容都照樣成立。",
+]), "en": ("Chapter 1: Vector Spaces and Subspaces", [
+ "Chapter one begins vector spaces. The calculus of several variables unites the calculus of one variable with the theory of vector spaces, and how well it goes depends on how thoroughly that theory is used. So the first two chapters study vector spaces themselves.",
+ "We start from the geometric vectors the reader has probably met: arrows drawn from a chosen origin. Two of them are added by the parallelogram rule. Build the parallelogram having the two arrows as sides, and the diagonal from the origin is their sum.",
+ "Vectors can also be multiplied by numbers. Multiplying an arrow by x gives another arrow along the same line, whose length is the absolute value of x times the original. It lies on the same side of the origin when x is positive, the opposite side when x is negative.",
+ "These two operations satisfy certain laws of algebra. The book warns that geometric proofs of them are sketchy, more plausibility argument than airtight logic. The usual proof of the associative law is a picture of a parallelepiped and its diagonal from the origin.",
+ "Another system the reader may have seen is coordinate triples. Here a three-dimensional vector is an ordered triple of numbers, and both operations are defined algebraically, entry by entry. The vector laws are much easier to prove here, since they are almost formalities.",
+ "If we think of a triple as a function whose domain is the integers from one to three, with the ith entry the value at i, then this example suggests a much more general type, called a function space.",
+ "Now the definition. Let V be a set carrying an addition and a multiplication by numbers. The first four axioms concern addition alone: it is associative, it is commutative, there is a zero that changes nothing, and every vector has a partner summing to zero.",
+ "The last four tie in the scalars: multiplying by two numbers in turn is multiplying by their product, sums distribute both ways, and multiplying by one changes nothing. From these, the zero is unique, each negative is unique, and zero times any vector is zero.",
+ "The book's standard example: take any set A and look at all real-valued functions on it. Two are added pointwise, and one is scaled by scaling its value at every point. Taking A to be one to three returns the triples; taking A to be the line gives functions of one real variable.",
+ "Now subspaces. Take a nonempty subset of V closed under the two operations; then it is a vector space in its own right. The laws holding for all elements hold automatically in the smaller set, and closure keeps the zero and the negatives inside it.",
+ "So the continuous functions on a closed interval form a subspace of all real-valued functions there, and such a subspace is called a function space. The book takes vector spaces to be real, but replacing the scalars by complex numbers, or by any field, leaves most of it standing.",
+])},
+
+# E06 — chapter 1, section 1, second half (book pp. 26-29 = PDF pp. 38-41):
+# unordered sums, linear combinations, Theorem 1.1 and the linear span.
+6: {"zh": ("第 1 章：線性組合與線性擴張", [
+ "因為加法有交換律與結合律，一個有限集合的向量和，跟你用什麼順序、怎麼分組去加完全無關。書上舉的例子是三個向量，一共有十二種算法，結果都一樣。",
+ "既然如此，只要把指標集合寫出來，和就沒有歧義了。所以可以寫成對 I 裡的每個 i 把對應的向量加起來，完全不必說明是怎麼加的。一般來說，任何一個有限的、加了指標的向量集合，都唯一決定一個和向量。",
+ "指標集常常就是一到 n 這一段整數，這時向量排成一個 n 元組，沒特別交代就照自然順序相加。不過經常會用到沒有次序的指標集：兩個變數、次數不超過五的一般多項式，它的單項式所成的集合就沒有自然次序。",
+ "書上把那個形式證明標了星號，只給有興趣的讀者。做法是對元素個數做歸納：兩種算法各自的最後一次加法，把指標集分成兩塊；取兩組分法的交集得到四小塊，再用歸納假設把四塊的和重新結合，兩邊就相等了。",
+ "有了和，就可以定義線性組合。一個向量叫做集合 A 的線性組合，如果它是有限個「純量乘上 A 裡的向量」加起來的結果，而那些純量是任意的。",
+ "舉例來說，如果 A 是所有次方所成的集合，那麼線性組合就正好是多項式函數。如果 A 是正弦、餘弦與指數這三個函數，照這個順序排，那麼三倍正弦減掉指數，對應的係數三元組就是三、零、負一。",
+ "再看一個具體的。取三維空間裡的兩個向量，它們所有的線性組合所成的集合，一眼就看得出對加法與數乘封閉，所以是一個子空間；而任何含有那兩個向量的子空間，一定也含有它們所有的線性組合。",
+ "把這件事寫成定理：如果 A 是向量空間的一個非空子集，那麼 A 的所有線性組合所成的集合是一個子空間，而且是包含 A 的最小的那個子空間。",
+ "證明分兩半。封閉性：兩個線性組合相加，按指標合併同類項就還是線性組合；乘上一個純量，用分配律與歸納法也還是。至於最小：這個集合含有 A 的每一個元素，而任何含有 A 的子空間都得含有每一個線性組合。",
+ "如果 A 是無限集合，就沒辦法一次列完，但論證照樣走得通：兩個線性組合各自都是有限和，加起來仍然是有限個純量乘上 A 裡的向量，所以還是線性組合。",
+ "這個子空間叫做 A 的線性擴張。如果它就是整個空間，就說 A 生成這個空間，而有有限生成集的空間叫有限維。n 維座標空間，由那些只有一個位置是一、其他都是零的向量生成。閉區間上的連續函數則沒有有限生成集。",
+]), "en": ("Chapter 1: Linear Combinations and Linear Span", [
+ "Because addition is commutative and associative, the sum of a finite set of vectors is the same for all ways of adding them. The book's example is three vectors, which can be summed in twelve ways, all giving the same result.",
+ "So writing down the index set makes the sum unambiguous: we can write the sum over i in I without saying how we got it. In general any finite indexed set of vectors determines a unique sum vector.",
+ "The index set is often a block of integers from one to n, and then the vectors form an n-tuple, added in their natural order unless directed otherwise. But unordered index sets come up often: the monomials of a general polynomial in two variables have no natural order.",
+ "The book stars the formal proof and gives it only for the interested reader. It is an induction on the number of elements: the last addition in each computation splits the index set in two, intersecting the two splittings gives four pieces, and induction regroups them.",
+ "With sums in hand we can define a linear combination. A vector is a linear combination of a set A if it is a finite sum of scalars times vectors of A, where the scalars are arbitrary.",
+ "For example, if A is the set of all powers, the linear combinations are exactly the polynomial functions. If A is sine, cosine and the exponential in that listed order, then three sine minus the exponential has coefficient triple three, zero, minus one.",
+ "Here is a concrete one. Take two vectors in three-space. The set of all their linear combinations is plainly closed under addition and scaling, so it is a subspace; and any subspace containing the two vectors must contain all of their linear combinations.",
+ "As a theorem: if A is a nonempty subset of a vector space, then the set of all linear combinations of vectors of A is a subspace, and it is the smallest subspace which includes A.",
+ "The proof has two halves. Closure: adding two linear combinations and collecting terms gives another, and scaling gives another by distributivity and induction. Smallest: the set contains each element of A, and any subspace including A must contain every linear combination.",
+ "If A is infinite we cannot list it in one go, but the argument still runs: two linear combinations are each finite sums, so their sum is again a finite sum of scalars times vectors of A, hence again a linear combination.",
+ "This subspace is the linear span of A. If it is the whole space, A spans the space, and a space with a finite spanning set is finite-dimensional. Coordinate n-space is spanned by the vectors with a single one and zeros elsewhere. Continuous functions on an interval are not.",
+])},
+
 }
 
 # Language independent. Every word-like gloss lives in the scene's MODE_LABEL.
@@ -144,7 +229,9 @@ FORMULAS_ADVCALC: dict[int, dict[int, str]] = {
  7: "Ch 7 :  Λ V*  ,  det          Ch 8 :  ∫",
  8: "Ch 9 – 11 :  Tₚ M  ,  d          ∫ dω  =  ∫ ω",
  9: "Ch 12 :  Δu = 0          Ch 13 :  T* ( M )  ,  ω = dθ",
- 10: "155  ·  2 – 4 pp / ep  ·  Ch 0 § 1 – 3",
+ # The uploaded E00 still shows 155 here; the count was recomputed to 169 on
+ # 2026-08-04 (see series/advcalc/OUTLINE.md). Corrected for any re-render.
+ 10: "169  ·  2 – 4 pp / ep  ·  Ch 0 § 1 – 3",
 },
 
 1: {
@@ -187,6 +274,48 @@ FORMULAS_ADVCALC: dict[int, dict[int, str]] = {
  8: "{ xᵢ : i ∈ I }        i  ↦  xᵢ",
  9: "∏ Sᵢ  =  { f  :  dom f = I  ,  f ( i ) ∈ Sᵢ }",
  10: "( g ∘ f ) ( x ) = g ( f ( x ) )        f ∘ ( g ∘ h ) = ( f ∘ g ) ∘ h",
+},
+
+4: {
+ 0: "F : A × B → C        hˣ ( y )  =  F ( x , y )",
+ 1: "φ : A → Cᴮ        θ : B → Cᴬ        F : A × B → C",
+ 2: "t = { tᵢⱼ }        tᵢ  ↦  ⟨ tᵢ₁ , … , tᵢₙ ⟩        tⱼ  ↦  ⟨ t₁ⱼ , … , tₘⱼ ⟩",
+ 3: "⟨ f₁ , … , fₙ ⟩        a  ↦  ⟨ f₁ ( a ) , … , fₙ ( a ) ⟩  :  A → Bⁿ",
+ 4: "F ( p , l ) ∈ { 0 , 1 }        l  ↦  { p : F = 1 }        p  ↦  { l : F = 1 }",
+ 5: "hˣ  =  F ( x , · )        f  =  f ( · )        Dξ F ( · )",
+ 6: "⋃ ℱ  =  { x : ( ∃A ∈ ℱ ) ( x ∈ A ) }        x ∈ ⋂ᵢ Aᵢ  ⇔  ( ∀i ) ( x ∈ Aᵢ )",
+ 7: "A′ = { x ∈ S : x ∉ A }        ( ⋂ᵢ Aᵢ )′  =  ⋃ᵢ ( Aᵢ′ )",
+ 8: "f ⁻¹ [ ⋃ᵢ Bᵢ ] = ⋃ᵢ f ⁻¹ [ Bᵢ ]        f ⁻¹ [ B′ ] = ( f ⁻¹ [ B ] )′",
+ 9: "⋃ ℱ = A  ,  Aᵢ ∩ Aⱼ = ∅        π : A → ℱ  ,  x ↦ x̄",
+ 10: "x ∼ x    x ∼ y ⇒ y ∼ x    x ∼ y & y ∼ z ⇒ x ∼ z        g  =  ḡ ∘ π",
+},
+
+5: {
+ 0: "Ch 1 :  V          Ch 2 :  dim V < ∞",
+ 1: "OA  +  OB  =  OP",
+ 2: "x ( OA )  =  OB        | OB |  =  | x | · | OA |",
+ 3: "( OA + OB ) + OC  =  OA + ( OB + OC )  =  OX",
+ 4: "⟨ x₁ , x₂ , x₃ ⟩ + ⟨ y₁ , y₂ , y₃ ⟩ = ⟨ x₁+y₁ , x₂+y₂ , x₃+y₃ ⟩",
+ 5: "x  :  { 1 , 2 , 3 } → ℝ        xᵢ  =  x ( i )",
+ 6: "A1 ( α+β )+γ = α+( β+γ )   A2 α+β = β+α   A3 α+0 = α   A4 α+β = 0",
+ 7: "S1 ( xy )α = x( yα )   S2 ( x+y )α = xα+yα   S3 x( α+β ) = xα+xβ   S4 1α = α",
+ 8: "ℝᴬ  =  { f : A → ℝ }        ( f + g ) ( a )  =  f ( a ) + g ( a )",
+ 9: "W ⊂ V  ,  W ≠ ∅        α , β ∈ W  ⇒  α + β ∈ W   &   xα ∈ W",
+ 10: "𝒞 [ a , b ]  ⊂  ℝ [ a , b ]        { x : x₁ + x₂ = 0 }  ⊂  ℝ²",
+},
+
+6: {
+ 0: "( α₁ + α₂ ) + α₃  =  α₁ + ( α₂ + α₃ )  =  α₂ + ( α₃ + α₁ )  =  …",
+ 1: "Σ αᵢ    ( i ∈ I )",
+ 2: "I = { 1 , … , n }        Σ cᵢⱼ sⁱ tʲ    ( i + j ≤ 5 )",
+ 3: "Lⱼₖ  =  Jⱼ ∩ Kₖ        ξⱼₖ  =  Σ αᵢ    ( i ∈ Lⱼₖ )",
+ 4: "β  =  Σ xᵢ αᵢ    ,    αᵢ ∈ A",
+ 5: "Σ cᵢ tⁱ        3 · sin t + 0 · cos t + ( −1 ) · eᵗ    →    ⟨ 3 , 0 , −1 ⟩",
+ 6: "L  =  { ⟨ s , s + t , s − t ⟩  :  ⟨ s , t ⟩ ∈ ℝ² }",
+ 7: "L ( A )  ⊂  V        A ⊂ M  ⇒  L ( A ) ⊂ M",
+ 8: "( Σ xᵢαᵢ ) + ( Σ yᵢαᵢ ) = Σ ( xᵢ + yᵢ ) αᵢ        c ( Σ xᵢαᵢ ) = Σ ( cxᵢ ) αᵢ",
+ 9: "( Σ₁ⁿ xᵢαᵢ ) + ( Σ₁ᵐ yⱼβⱼ )  =  Σ₁ⁿ⁺ᵐ xᵢαᵢ",
+ 10: "δ ʲ  =  ⟨ 0 , … , 1 , … , 0 ⟩        x  =  Σ₁ⁿ xᵢ δ ⁱ",
 },
 
 }
