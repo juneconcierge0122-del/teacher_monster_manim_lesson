@@ -12,6 +12,15 @@
 # The file name is looked up under lessons/ rather than joined onto it, so the
 # same call works whichever series subdirectory the lesson lives in. Set
 # SCENE_PREFIX for a series that does not name its scenes LandauL<n>ZH/EN.
+#
+# --disable_caching is not optional. Scene.add_sound begins with
+#   if self.renderer.skip_animations: return
+# and skip_animations is exactly what manim sets when it reuses a cached
+# partial movie file. So re-rendering a lesson that has been rendered before
+# silently drops the narration for every beat that hits the cache: the video
+# comes out full length and correct, with an audio track that stops a few
+# seconds in. Caching only ever helps on a re-render, which is precisely the
+# case it breaks, so it is switched off outright.
 cd "$(dirname "$0")/.." || exit 1
 LOG="${RENDER_LOG:-/tmp/render.log}"
 PREFIX="${SCENE_PREFIX:-LandauL}"
@@ -32,7 +41,7 @@ run () {
   path=$(find_lesson "$1") || return 1
   for attempt in 1 2; do
     echo "=== $2 attempt $attempt $(date +%H:%M:%S)" >> "$LOG"
-    if manim -qh --fps 60 "$path" "$2" >> "$LOG" 2>&1; then
+    if manim -qh --fps 60 --disable_caching "$path" "$2" >> "$LOG" 2>&1; then
       if grep -q "Rendered $2\b" "$LOG"; then
         echo "OK $2 $(date +%H:%M:%S)" >> "$LOG"; return 0
       fi

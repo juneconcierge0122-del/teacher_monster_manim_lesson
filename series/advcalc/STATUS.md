@@ -26,12 +26,31 @@ E07 線性變換與 skeleton、E08 矩陣與核。第 2 節（書頁 36–43）�
 
 成品在 `manim_lessons/samples/output/advcalc_eNN_{zh-TW,en}.mp4`
 （1920×1080、60 fps、H.264 + AAC）。每一支都核對過 log 的 `Rendered AdvCalcENNZH/EN`、
-中英片長各自對得上自己的配音（若誤渲染成 base class，兩支片長會一模一樣），以及抽幀確認語言。
+中英片長各自對得上自己的配音（若誤渲染成 base class，兩支片長會一模一樣）、抽幀確認語言，
+以及**音軌實際覆蓋到影片結尾**（見下面重渲染那一條，光比長度抓不到）。
+
+```python
+# 音軌覆蓋率：解到最後一個 audio frame 的時間戳，除以影片長度，要 ≥ 95%
+import av
+with av.open(path) as c:
+    vd = float(c.duration / av.time_base)
+    last = max(float(fr.time or 0) for fr in c.decode(
+        [s for s in c.streams if s.type == "audio"][0]))
+```
 
 E00 在 2026-08-05 重新渲染上傳過一次（舊的兩支已刪，表上是新連結）。原因見下面
 「同一個數字散在四個地方」那一條。
 
 ## 做這個系列時踩到的坑
+
+- **重新渲染一支渲染過的課，配音會安靜地掉光**。`Scene.add_sound` 第一行就是
+  `if self.renderer.skip_animations: return`，而 `skip_animations` 正是 manim 重用快取的
+  partial movie file 時會設的旗標。所以第二次渲染時，凡是命中快取的那一拍，它的配音根本
+  沒被加進音軌。出來的影片**長度正確、畫面正確、也真的有一條 AAC 音軌**，只是音軌在前幾秒
+  就結束了——E00 重渲染後中文只剩 21 秒、英文只剩 15 秒有聲音，佔全片一成。
+  `tools/queue.sh` 現在固定帶 `--disable_caching`：快取只在重新渲染時有用，而那正是它會
+  出錯的場合，第一次渲染本來就沒快取可用，所以關掉沒有任何成本。
+  **比對「影片長度 vs 配音檔總長」抓不到這個**，那個檢查會通過；要量的是音軌覆蓋率。
 
 - **同一個事實會散在四個地方，改一個地方不會讓其他三個看起來像錯的**。全書集數從 155 更正成
   169 時，第一次只改到 `FORMULAS_ADVCALC[0][10]`，因為 grep `155` 只掃得到那一處——
