@@ -1,7 +1,8 @@
 # advcalc —《Advanced Calculus》(Loomis & Sternberg)
 
-**狀態：E00–E03 已上傳（私人），第 0 章做完。下一集 E04 從第 1 章第 1 節開始。**
-全書解析與 155 集的分集規劃見 **[`OUTLINE.md`](OUTLINE.md)**。
+**狀態：E00–E03 已上傳（私人），涵蓋第 0 章 §1–9（書頁 1–15）。
+下一集 E04 是第 0 章 §10–12（書頁 15–21），第 0 章還差這一集才算做完。**
+全書解析與 169 集的分集規劃見 **[`OUTLINE.md`](OUTLINE.md)**。
 
 ## YouTube 連結（全部設為私人）
 
@@ -16,7 +17,21 @@
 （1920×1080、60 fps、H.264 + AAC）。每一支都核對過 log 的 `Rendered AdvCalcENNZH/EN`、
 中英片長各自對得上自己的配音（若誤渲染成 base class，兩支片長會一模一樣），以及抽幀確認語言。
 
+## 待處理：E03 的線上描述寫錯了
+
+`youtube_e03_manifest.json` 的描述句尾寫「也是第 0 章的最後一集」／"finishing chapter 0"，
+但第 0 章有 12 節、到書頁 21，E03 只做到 §9（書頁 15）。manifest 檔案已改正，
+**但兩支影片已經上傳，線上描述還是舊的**。YouTube token 的 scope 只有
+`youtube.upload`，改描述要 `youtube` 或 `youtube.force-ssl`，所以腳本改不動——
+需要人工到 YouTube Studio 修這兩支的描述：
+中文 https://youtu.be/f5ULzGZHEs0 、英文 https://youtu.be/AE7ZSIrWG7E
+
 ## 做這個系列時踩到的坑
+
+- **分集規劃的加總要用腳本核，不要用眼睛加**。OUTLINE 原本第一階段小計寫 41 集、
+  總計寫 155 集，實際逐節加總是 55 與 169；HANDOFF 也一度寫「第 1 章共 8 集」，
+  實際是 13 集。連帶讓「第 0 章做完」這個錯誤說法一路寫進了 E03 的影片描述。
+  改集數時，OUTLINE 的 E 編號欄、小計、總計三處要一起重排。
 
 - **場景檔用到的 manim 類別沒 import，`import` 檢查抓不到**——那是方法內的執行期 `NameError`，
   只有真的渲染才會爆。更糟的是渲染失敗時 `tools/grab.py` 會照樣從**上一支殘留的
