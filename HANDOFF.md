@@ -14,15 +14,17 @@
 | `series/t1_mechanics/` | Landau《力學》第 1–53 課 | **已完結**（第 52 課是本書最後一節，第 53 課是總複習） |
 | `series/special/` | 特別篇 S01（Anthropic 全域工作空間論文） | 單集，可再加 |
 | `series/t2_fields/` | Landau《場論》 | **尚未開始**，開工前的決定寫在它的 STATUS.md |
-| `series/advcalc/` | Loomis & Sternberg《Advanced Calculus》 | **進行中**：E00–E03 已上傳（第 0 章 §1–9，書頁 1–15） |
+| `series/advcalc/` | Loomis & Sternberg《Advanced Calculus》 | **進行中**：E00–E06 已上傳（第 0 章完結，第 1 章第 1 節做完） |
 
 **現在的方向是 `advcalc`。**《力學》已完結；《場論》仍是空殼。
 接手時先讀 `series/advcalc/STATUS.md`（進度、連結、踩過的坑）與
 `series/advcalc/OUTLINE.md`（全書解析與 169 集規劃）。
 
-**下一步是 E04**，第 0 章第 10–12 節「對偶、布林運算、分割與等價關係」（書頁 15–21）。
-第 0 章**還沒做完**——課本目錄裡第 0 章有 12 節、到書頁 21 為止，而 E03 只做到 §9（書頁 15）。
-第 1 章從 **E05** 開始，共 13 集（E05–E17），其中第 1 節「基本概念」書頁 21–36 佔 4 集。
+**下一步是 E07**，接著做第 1 章第 1 節的後半（書頁 29–36）：線性變換、Theorem 1.2 與 skeleton、
+矩陣與 Theorem 1.3，然後 Theorem 1.4、核與值域、同構與特徵向量。OUTLINE 給 §1.1 排 4 集
+（E05–E08），E05、E06 已經吃掉書頁 21–29，所以剩下的 29–36 正好是 E07 與 E08。
+第 1 章第 2 節「向量空間與幾何」（書頁 36–43）從 **E09** 開始。
+**OUTLINE 的集數是估的，動工前先照書核一次**——那張表已經錯過一次（見 advcalc 的 STATUS.md）。
 
 `advcalc` 有三件與其他系列不同、會踩雷的事：
 

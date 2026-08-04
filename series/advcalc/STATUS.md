@@ -1,8 +1,13 @@
 # advcalc —《Advanced Calculus》(Loomis & Sternberg)
 
-**狀態：E00–E03 已上傳（私人），涵蓋第 0 章 §1–9（書頁 1–15）。
-下一集 E04 是第 0 章 §10–12（書頁 15–21），第 0 章還差這一集才算做完。**
+**狀態：E00–E06 已上傳（私人）。第 0 章已完結（E00–E04）。
+下一集 E07 接第 1 章第 1 節的後半（書頁 29–36）。**
 全書解析與 169 集的分集規劃見 **[`OUTLINE.md`](OUTLINE.md)**。
+
+第 1 章第 1 節橫跨書頁 21–36，OUTLINE 排 4 集（E05–E08）。E05 做了 21–25（公理、
+函數空間、子空間）、E06 做了 26–29（線性組合、Theorem 1.1、線性擴張），所以
+**E07 與 E08 是書頁 29–36**：線性變換與 Theorem 1.2 的 skeleton、矩陣與 Theorem 1.3，
+再來是 Theorem 1.4、核與值域、同構與特徵向量。第 2 節從 E09 起。
 
 ## YouTube 連結（全部設為私人）
 
@@ -12,6 +17,9 @@
 | E01 | 邏輯、量詞與連接詞 | 0.1–0.3（1–6） | 3:32 ／ 3:10 | https://youtu.be/5fo36U5Z5Js | https://youtu.be/Y0t9tJKJZYs |
 | E02 | 集合、受限變數與關係 | 0.4–0.6（6–10） | 3:46 ／ 3:23 | https://youtu.be/lV2MJgo0PtQ | https://youtu.be/GQGSpeuBGvA |
 | E03 | 函數、映射與合成 | 0.7–0.9（10–15） | 3:40 ／ 3:16 | https://youtu.be/f5ULzGZHEs0 | https://youtu.be/AE7ZSIrWG7E |
+| E04 | 對偶、布林運算與等價關係 | 0.10–0.12（15–21） | 3:42 ／ 3:13 | https://youtu.be/14iigH1PXcU | https://youtu.be/UZ5csopPUsE |
+| E05 | 向量空間與子空間 | 1.1 上（21–25） | 3:28 ／ 3:06 | https://youtu.be/ug_OxLyQRWk | https://youtu.be/jUYtkZkLOqI |
+| E06 | 線性組合與線性擴張 | 1.1 下（26–29） | 3:27 ／ 2:53 | https://youtu.be/PbkXo4RNjt0 | https://youtu.be/STYT-u979eg |
 
 成品在 `manim_lessons/samples/output/advcalc_eNN_{zh-TW,en}.mp4`
 （1920×1080、60 fps、H.264 + AAC）。每一支都核對過 log 的 `Rendered AdvCalcENNZH/EN`、
@@ -27,6 +35,16 @@
 中文 https://youtu.be/f5ULzGZHEs0 、英文 https://youtu.be/AE7ZSIrWG7E
 
 ## 做這個系列時踩到的坑
+
+- **版面要用腳本逐拍走過每一個 mobject，不要用眼睛看**。建出兩種語言的場景、呼叫
+  `stage()`、對每個 `get_family()` 成員比對 `|x| ≤ 6.3`、`y ≤ 1.30`、`y ≥ −1.90`，
+  一次就把全部超框的抓出來。E05 的平行六面體就是這樣才發現的：`EZ` 朝正上、`EY` 也往上斜，
+  所以投影後**最高的角是 B+C，不是遠角 A+B+C**——盒子要照投影後的高度調，不是照邊長。
+- **畫錯的圖，公式列看不出來，只有抽幀會抓到**。E04 的 De Morgan 原本把兩個橢圓都從右邊框裡
+  挖掉，那畫的是**聯集的補集**而不是補集的聯集，正好是這條律要澄清的混淆；改用 manim 的
+  `Difference` / `Intersection` 疊兩個補集才對。E06 有三個「線性組合」的點落在它該生成的平面
+  外面，跟自己的圖說矛盾——現在係數會 `assert` 過畫出來的平面範圍。
+  **凡是圖在宣稱一件數學事實，就要有一個機械檢查去釘住它。**
 
 - **分集規劃的加總要用腳本核，不要用眼睛加**。OUTLINE 原本第一階段小計寫 41 集、
   總計寫 155 集，實際逐節加總是 55 與 169；HANDOFF 也一度寫「第 1 章共 8 集」，
