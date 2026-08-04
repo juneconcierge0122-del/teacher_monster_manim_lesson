@@ -213,6 +213,120 @@ TOPICS_ADVCALC: dict[int, dict[str, tuple[str, list[str]]]] = {
  "This subspace is the linear span of A. If it is the whole space, A spans the space, and a space with a finite spanning set is finite-dimensional. Coordinate n-space is spanned by the vectors with a single one and zeros elsewhere. Continuous functions on an interval are not.",
 ])},
 
+# E07 — chapter 1, section 1, third part (book pp. 29-32 = PDF pp. 41-44):
+# linear transformations, Theorem 1.2 and the skeleton.
+7: {"zh": ("第 1 章：線性變換與 skeleton", [
+ "先問一個問題。A 上的實值函數，除了相加與數乘之外，其實還可以逐點相乘；連續函數也一樣。既然有三個運算，為什麼還要特地談只有兩個運算的向量空間？",
+ "答案是：最重要的那些映射，保持的正好是這兩個向量運算。書上的例子是積分：閉區間上連續函數的積分，把和送到和、把倍數送到倍數，但它完全不保持乘積，兩個函數乘起來的積分不等於各自積分的乘積。",
+ "另一個例子是把三元組送到二元組的那種對應，每個分量都是原來三個座標的一次組合。線性方程組能不能解，本質上就是這種映射的理論。所以我們研究向量空間，有一部分正是為了研究保持向量運算的映射。",
+ "定義因此是這樣：從 V 到 W 的一個映射叫線性變換，如果它把和送到和、把純量倍數送到純量倍數。這兩個條件可以併成一條：把「x 倍的 α 加上 y 倍的 β」送到「x 倍的 T α 加上 y 倍的 T β」。",
+ "用歸納法，這件事馬上推廣到任意有限和：任何線性組合經過 T 之後，還是原來那些像的線性組合，係數一模一樣。積分的性質正是這個式子的特例。",
+ "現在來找出所有以 n 維座標空間為定義域的線性映射。先看一個具體的：固定三個函數，把一個三元組送到「以它的三個分量為係數」的那個線性組合。這顯然是線性的。",
+ "有趣的是，從這個映射可以把那三個函數讀回來。把只有第 j 個位置是一的那個向量餵進去，出來的正好是第 j 個函數。這一組像所成的 n 元組，書上叫做 T 的 skeleton。",
+ "定理是這樣說的。給定 W 裡任何一個 n 元組，對應的線性組合映射是線性的，而且它的 skeleton 正好就是那個 n 元組。反過來，任何一個從 n 維座標空間出發的線性映射，都等於它自己 skeleton 的線性組合映射。",
+ "證明兩半都很短。線性用的是跟前一集那個定理一樣的論證。至於 skeleton，把第 j 個單位向量餵進線性組合映射，只有第 j 項活下來。反過來，任何向量都是單位向量的線性組合，套上 T 再用線性，就回到線性組合映射。",
+ "換個說法：從「W 裡的 n 元組」到「所有從 n 維座標空間到 W 的線性映射」，這個對應是一個雙射，而它的反函數就是取 skeleton。兩邊的資訊量完全一樣。",
+ "書上說這是一個極其重要的定理，雖然看起來簡單，並且要讀者把它牢牢記住。skeleton 這個詞會一直用到第三章。下一集就從它最簡單的特例開始：上域是實數線的時候。",
+]), "en": ("Chapter 1: Linear Transformations and the Skeleton", [
+ "Start with a question. Real-valued functions on a set can be multiplied pointwise as well as added and scaled, and so can the continuous ones. With three operations available, why bother with vector spaces, which have only two?",
+ "Because the most important mappings are exactly the ones that preserve those two. The book's example is the integral: it sends sums to sums and multiples to multiples, but it does not preserve products at all, since the integral of a product is not the product of the integrals.",
+ "Another is the map sending a triple to a pair, each entry a combination of the three coordinates. Whether a linear system can be solved is essentially the theory of such maps. So we study vector spaces partly to study the maps that preserve their operations.",
+ "The definition follows: a mapping from V to W is a linear transformation if it sends sums to sums and scalar multiples to scalar multiples. The two conditions combine into one: x times alpha plus y times beta goes to x times T alpha plus y times T beta.",
+ "By induction this extends at once to any finite sum: a linear combination goes to the linear combination of the images, with exactly the same coefficients. The property of the integral is a special case of this equation.",
+ "Now to find every linear map whose domain is coordinate n-space. Take a concrete one first: fix three functions and send a triple to the combination having its three entries as coefficients. This is plainly linear.",
+ "What is interesting is that the three functions can be read back off the map. Feed in the vector with a one in the jth place and zeros elsewhere, and out comes the jth function. That n-tuple of images is what the book calls the skeleton of T.",
+ "The theorem runs as follows. Given any n-tuple in W, the corresponding linear combination mapping is linear, and its skeleton is exactly that n-tuple. Conversely, every linear map out of coordinate n-space equals the linear combination mapping of its own skeleton.",
+ "Both halves are short. Linearity repeats the previous episode's argument. For the skeleton, feeding in the jth unit vector leaves only the jth term. Conversely any vector is a combination of unit vectors, so applying T and using linearity gets us back.",
+ "Put another way: the correspondence from n-tuples in W to linear maps from coordinate n-space into W is a bijection, and its inverse is taking the skeleton. The two sides carry exactly the same information.",
+ "The book calls this a tremendously important theorem, simple though it may seem, and urges the reader to fix it in mind. The word skeleton stays with us for the first three chapters. The next episode starts from its simplest case, when the codomain is the real line.",
+])},
+
+# E08 — chapter 1, section 1, last part (book pp. 32-36 = PDF pp. 44-48):
+# matrices, Theorem 1.3 and 1.4, the kernel, isomorphism, eigenvectors.
+8: {"zh": ("第 1 章：矩陣、核與同構", [
+ "先看最簡單的情形：上域是實數線。這時 skeleton 的每一個元素都只是一個數，所以整個 skeleton 就是一個數字 n 元組。把它寫成係數放在變數前面，這個線性泛函就是「係數乘座標再加起來」。",
+ "所以 n 維座標空間上所有線性泛函，與這個空間自己有一個自然的一一對應：由泛函去取它在各個單位向量的值就得到那組係數，由係數去做加權和就得到泛函。",
+ "接著看上域是 m 維座標空間的情形。這時 skeleton 的每一個元素都是一個 m 元組。把每個 m 元組畫成一直行，n 個 m 元組並排，就得到一個長方形的數字陣列。",
+ "這個帶兩個指標的數組就叫 T 的矩陣，是 m 乘 n 的——m 列 n 行。矩陣唯一決定了 T，因為它的各行正好就是 T 的 skeleton。",
+ "把線性組合映射攤開來算，就得到 m 個純量方程：第 i 個輸出等於「第 i 列的係數，分別乘上對應的輸入座標，再加起來」。這就是書上的定理，也是一般線性方程組的來歷。",
+ "反過來，每一個 m 乘 n 的矩陣都決定一個線性映射，所以矩陣與線性映射之間也是雙射。線性泛函對應到只有一列的矩陣，也就是一列 n 行。",
+ "還有一類特別的線性泛函叫座標泛函：在指標集上的函數空間裡，取第 i 個位置的值。它顯然是線性的——事實上，函數上的向量運算當初就是為了讓這些取值映射變成線性的，才那樣定義的。",
+ "接下來是幾個結構上的結果。線性把線性擴張送到像的線性擴張，所以子空間的像還是子空間；而且子空間的原像也還是子空間。這兩件事之後會一直用到。",
+ "被 T 送到零向量的那些向量，自己構成一個子空間，叫做零空間或核；T 的值域則是整個定義域的像。有了核就有一個很方便的判準：T 是嵌射，若且唯若它的核只有零向量。這比逐一去比對兩個向量省事得多。",
+ "既線性又雙射的映射叫同構。兩個空間同構，意思是它們「有相同的形式」，作為抽象的向量空間根本就是同一個，只能靠它們有沒有的向量性質來區分。書上的例子是：n 維座標空間，與次數小於 n 的多項式所成的空間，是同構的。",
+ "最後，當線性映射是從 V 到它自己的時候，會發生一些特別的事。可能有某個向量被送到自己的倍數，這時這個向量叫做特徵向量，那個倍數叫做特徵值。這條線索到第二章與第五章會再展開。",
+]), "en": ("Chapter 1: Matrices, the Kernel and Isomorphism", [
+ "Take the simplest case first: the codomain is the real line. Then every element of the skeleton is just a number, so the skeleton is an n-tuple of numbers. Written as coefficients in front of the variables, the functional is coefficients times coordinates, summed.",
+ "So the linear functionals on coordinate n-space are in natural one-to-one correspondence with that space itself: evaluating a functional at the unit vectors gives the coefficients, and forming the weighted sum from the coefficients gives back the functional.",
+ "Now let the codomain be coordinate m-space. Each element of the skeleton is then an m-tuple. Picture each m-tuple as a column, set the n of them side by side, and what appears is a rectangular array of numbers.",
+ "That doubly indexed array is called the matrix of T, an m by n matrix, with m rows and n columns. The matrix determines T uniquely, because its columns are exactly the skeleton of T.",
+ "Writing the combination mapping out gives m scalar equations: the ith output is the coefficients in the ith row, each multiplied by the matching input coordinate, and summed. That is the book's theorem, and it is where a general system of linear equations comes from.",
+ "Conversely every m by n matrix determines a linear map, so matrices and linear maps correspond bijectively too. A linear functional matches a matrix with a single row, that is one row and n columns.",
+ "Another special family is the coordinate functionals: on a function space over an index set, take the value at the ith place. These are plainly linear. In fact the vector operations on functions were defined precisely to make these evaluations linear.",
+ "Now some structural results. A linear map carries a linear span onto the span of the images, so the image of a subspace is a subspace; and the preimage of a subspace is a subspace as well. Both facts get used constantly later.",
+ "The vectors sent to zero form a subspace, the null space or kernel, and the range of T is the image of the whole domain. The kernel gives a test: T is injective exactly when its kernel is only the zero vector, far less work than comparing vectors in pairs.",
+ "A map both linear and bijective is an isomorphism. Isomorphic spaces have the same form: as abstract spaces they are the same, told apart only by vector properties they do or do not have. The book pairs coordinate n-space with the polynomials of degree less than n.",
+ "Finally, when a linear map goes from V to itself, special things can happen. Some vector may be carried to a multiple of itself, and then that vector is called an eigenvector and the multiple an eigenvalue. This thread is picked up again in chapters two and five.",
+])},
+
+# E09 — chapter 1, section 2, first half (book pp. 36-39 = PDF pp. 48-51):
+# the coordinate correspondence, the four assumed geometric theorems, the
+# scalar product, and the equation of a line.
+9: {"zh": ("第 1 章：座標對應與純量積", [
+ "這一節要把解析幾何的座標系接回向量空間。座標系讓我們能用向量的語言談直線與平面這些幾何對象，而這些幾何直觀反過來也會幫我們理解向量空間。所以先複習一下座標對應是怎麼建立的。",
+ "先看直線。在一條直線上任選一個零點與一個相異的單位點，那麼線上每個點都對應到一個數：它的絕對值是該點到零點的距離，以零點到單位點那一段為單位；正負則看它與單位點在不在零點的同一側。",
+ "三維的作法一樣。任選一個原點與三個單位點，四個點不共平面。每個單位點決定一條過原點的直線，這三條就是座標軸，而且每條軸上都已經有了剛才那種座標對應。",
+ "現在給空間中任何一個點。過它、平行於第二與第三軸的那個平面，會交第一軸於一點，於是給出第一個座標；同樣的作法給出另外兩個。所以每個點決定一個三元組，這個對應就叫做這組軸系定義的座標對應。",
+ "值得注意的是，三個單位點的座標三元組，正好就是那三個「只有一個位置是一、其他都是零」的向量。這一點等一下會反覆用到。",
+ "接下來有四件關於座標對應的基本事實。嚴格說，它們要先當成幾何定理證出來，才能拿座標去處理幾何問題。但書上說這些幾何定理相當棘手，用中學那套幾何幾乎沒辦法講清楚，所以直接假設它們成立。",
+ "第一件：這個座標對應是空間到三維座標空間的雙射。第二件：兩條線段等長、平行而且方向相同，若且唯若它們終點座標減起點座標的結果相同。把有向線段這個概念形式化之後，第二件事就寫成「兩條有向線段等價」。",
+ "第三件：如果一個點不是原點，那麼另一個點落在過原點與它的那條直線上，若且唯若後者的座標是前者的純量倍數；而且那個純量正好就是後者在這條線上、以前者為單位點時的座標。",
+ "第四件要求軸系是笛卡兒的，也就是三軸互相垂直、而且共用同一個長度單位。這時一段從原點出發的線段長度，就由歐氏範數給出——各座標平方和再開根號。這直接來自畢氏定理。",
+ "把畢氏定理再用一次到原點與兩個點所成的三角形，就得到另一件事：兩段從原點出發的線段互相垂直，若且唯若它們座標的純量積等於零。純量積就是對應座標相乘再加起來。",
+ "還有一個很好用的性質：把純量積的其中一個變數固定住，它對另一個變數是線性的。有了這個，直線的方程就出來了：過某一點、平行於某個方向的直線包含一個點，若且唯若座標差是那個方向的純量倍數。",
+]), "en": ("Chapter 1: The Coordinate Correspondence and the Scalar Product", [
+ "This section connects the coordinate systems of analytic geometry back to vector spaces. Coordinates let us treat lines and planes in vector terms, and the geometry repays us in intuition about vector spaces. We begin by reviewing how the correspondence is set up.",
+ "Start with a line. Choose on it a zero point and a distinct unit point. Then each point gets a number: its size is the distance from the zero point, measured in units of the segment to the unit point, and its sign says which side it lies on.",
+ "Three dimensions go the same way. Choose an origin and three unit points, the four not lying in a plane. Each unit point determines a line through the origin, and these three are the coordinate axes, each already carrying a correspondence of the kind just described.",
+ "Now take any point of space. The plane through it parallel to the second and third axes meets the first axis, giving the first coordinate; the same construction gives the other two. So every point determines a triple, and that is the correspondence defined by the axis system.",
+ "Worth noticing: the coordinate triples of the three unit points are exactly the vectors with a single one and zeros elsewhere. That fact gets used again and again shortly.",
+ "There are four basic facts about the correspondence. Strictly they must be proved as geometry before coordinates can be used on geometric questions. But the book calls them tricky and almost impossible to discuss on the usual school treatment, so it simply assumes them.",
+ "First: the correspondence is a bijection from space onto coordinate three-space. Second: two segments are equal in length, parallel and similarly directed exactly when endpoint minus starting coordinates agree. Formalized, that says the two directed segments are equivalent.",
+ "Third: if a point is not the origin, then another point lies on the line through the origin and it exactly when the second set of coordinates is a scalar multiple of the first. Moreover that scalar is the coordinate of the second point on that line, taking the first as its unit point.",
+ "The fourth assumes the axes are Cartesian: mutually perpendicular, with a common unit of distance. Then the length of a segment from the origin is the Euclidean norm, the square root of the sum of the squared coordinates. This follows directly from the Pythagorean theorem.",
+ "Applying Pythagoras again, to the triangle on the origin and two points, gives another fact: two segments from the origin are perpendicular exactly when the scalar product of their coordinates is zero, that product being corresponding coordinates multiplied and summed.",
+ "One more property is useful: hold either variable of the scalar product fixed and it is linear in the other. Then the equation of a line drops out: the line through a point parallel to a direction contains a point exactly when the coordinate difference is a multiple of that direction.",
+])},
+
+# E10 — chapter 1, section 2, second half (book pp. 39-43 = PDF pp. 51-55):
+# the equation of a plane, dropping the scalar product for a linear
+# functional, parallel translation, affine subspaces and hyperplanes.
+10: {"zh": ("第 1 章：平面、平行移動與仿射子空間", [
+ "現在換平面。過某一點、而且垂直於某個方向的平面，包含另一個點，若且唯若連接這兩點的線段垂直於那個方向。用上一集的第二與第四件事翻譯過來，就是「座標差與那個方向的純量積等於零」。",
+ "把純量積對第一個變數的線性拿來展開，再把定值那一項記成一個數，平面的方程就變成「座標與方向的純量積等於某個常數」，也就是三個係數分別乘上三個座標再加起來等於常數。反過來，只要方向不是零向量，滿足這個方程的點集就是一個平面。",
+ "但這裡有個問題。三維座標空間有一個自然的純量積，這在代數與幾何上都非常重要；可是大部分的向量空間並沒有自然的純量積。書上因此刻意在早期的向量理論裡完全不用它，要到第五章才回頭處理。",
+ "所以要換一個解讀方式。係數乘座標再加起來這個東西，第一節已經講過：它就是三維座標空間上最一般的線性泛函。於是平面的方程可以完全不提純量積，改寫成「一個非零線性泛函在該點的值等於某個常數」。",
+ "反過來也成立：給定任何一個非零線性泛函與任何一個數，滿足那個方程的點集都是一個平面。而係數三元組隨時可以從泛函讀回來——把三個單位向量分別餵進去就是了。",
+ "接著找平行移動的向量形式。平面幾何裡談兩個平行而且同向的全等圖形時，常說把其中一個「沿著平面滑動」得到另一個，滑動時所有直線都保持與原來平行。",
+ "這個描述可以講得更漂亮：所謂平行移動，就是每一條有向線段都滑到與它等價的線段。如果某個點滑到另一個點、原點滑到某個點，那麼由等價的條件，座標之間差的就是一個固定的向量。",
+ "所以平行移動的座標形式，就是「加上一個常向量」。反過來，任何一個常向量給出的這種映射，都確實是一個平行移動。這件事在平面與空間都一樣成立。",
+ "幾何上很明顯，平行移動把平面送到平面、直線送到直線；現在也可以給一個純代數的證明。方程是某個泛函等於常數的那個平面，經過平移之後，方程變成同一個泛函等於「原來的常數加上泛函在位移向量的值」，還是一個平面。",
+ "現在把這些幾何名詞搬到座標空間上。方程是泛函等於某個常數的那個平面，通過原點若且唯若那個常數是零——而這時它正好是泛函的零空間，是一個子空間。所以座標空間裡的平面與直線，都是子空間的平移。",
+ "這些推廣到任意實向量空間，就叫做仿射子空間——子空間的平移。非零線性泛函的零空間永遠是 n 減一維的，這種東西叫超平面。在三維座標空間裡超平面就是普通的幾何平面，但在平面裡，超平面是直線。",
+]), "en": ("Chapter 1: Planes, Parallel Translation and Affine Subspaces", [
+ "Now for planes. The plane through a point and perpendicular to a direction contains another point exactly when the segment joining them is perpendicular to that direction. By the second and fourth facts of the last episode, that means one scalar product is zero.",
+ "Expanding by linearity in the first variable and naming the constant, the equation becomes the scalar product of coordinates with direction equal to that constant: three coefficients times three coordinates, summed. Conversely, if the direction is nonzero, that locus is a plane.",
+ "But there is a problem. Coordinate three-space has a natural scalar product, extremely important both algebraically and geometrically; most vector spaces have none at all. The book therefore deliberately neglects it in the early vector theory, returning to it only in chapter five.",
+ "So we look for another reading. Coefficients times coordinates, summed, is what section one identified as the most general linear functional on coordinate three-space. So the equation of a plane can drop the scalar product and become a functional taking a constant value.",
+ "The converse holds too: given any nonzero linear functional and any number, the locus of that equation is a plane. And the coefficient triple can always be read back off the functional, by feeding in the three unit vectors.",
+ "Next, the vector form of parallel translation. In plane geometry, when two congruent figures are parallel and similarly oriented, we often speak of obtaining one from the other by sliding the plane along itself so that every line stays parallel to where it was.",
+ "That description can be put more elegantly: a parallel translation is one in which every directed segment slides to an equivalent segment. If one point slides to another and the origin slides to some point, then by the equivalence condition the coordinates differ by one fixed vector.",
+ "So in coordinates a parallel translation is simply adding a constant vector. Conversely, the mapping given by any constant vector really is a parallel translation. This holds equally for the plane and for space.",
+ "Geometrically it is clear that translations carry planes to planes, and now we can prove it algebraically. Take the plane whose equation is a functional equal to a constant; translating gives the same functional equal to that constant plus the functional at the shift vector.",
+ "Now carry the terminology over to coordinate space. A plane whose equation is a functional equal to a constant passes through the origin exactly when that constant is zero, and then it is the null space of the functional. So planes and lines are translates of subspaces.",
+ "In any real vector space these are the affine subspaces, translates of subspaces. The null space of a nonzero functional always has dimension n minus one, and such a set is a hyperplane. In coordinate three-space a hyperplane is an ordinary plane, but in the plane it is a line.",
+])},
+
 }
 
 # Language independent. Every word-like gloss lives in the scene's MODE_LABEL.
@@ -316,6 +430,62 @@ FORMULAS_ADVCALC: dict[int, dict[int, str]] = {
  8: "( Σ xᵢαᵢ ) + ( Σ yᵢαᵢ ) = Σ ( xᵢ + yᵢ ) αᵢ        c ( Σ xᵢαᵢ ) = Σ ( cxᵢ ) αᵢ",
  9: "( Σ₁ⁿ xᵢαᵢ ) + ( Σ₁ᵐ yⱼβⱼ )  =  Σ₁ⁿ⁺ᵐ xᵢαᵢ",
  10: "δ ʲ  =  ⟨ 0 , … , 1 , … , 0 ⟩        x  =  Σ₁ⁿ xᵢ δ ⁱ",
+},
+
+7: {
+ 0: "ℝᴬ  :  f + g  ,  x f  ,  f g          V  :  α + β  ,  x α",
+ 1: "T ( f ) = ∫ f        T ( f + g ) = T f + T g        T ( f g )  ≠  T f · T g",
+ 2: "y₁ = 2x₁ − x₂ + x₃        y₂ = x₁ + 3x₂ − 5x₃",
+ 3: "T ( α + β ) = T α + T β    T ( xα ) = x T α        T ( xα + yβ ) = x Tα + y Tβ",
+ 4: "T ( Σ xᵢ αᵢ )  =  Σ xᵢ T ( αᵢ )",
+ 5: "x  ↦  Σ₁³ xᵢ fᵢ        f₁ = sin  ,  f₂ = cos  ,  f₃ = exp",
+ 6: "T ( δ ʲ )  =  fⱼ        skeleton  =  { T ( δ ⁱ ) }₁ⁿ",
+ 7: "Lα ( x )  =  Σ₁ⁿ xᵢ αᵢ        skeleton ( Lα )  =  α        T  =  L β",
+ 8: "T ( δ ʲ ) = Σ δ ʲᵢ βᵢ = βⱼ        T ( x ) = T ( Σ xᵢ δ ⁱ ) = Σ xᵢ βᵢ",
+ 9: "α  ↦  Lα  :  Wⁿ  ⟷  { T : ℝⁿ → W }        T  ↦  skeleton ( T )",
+ 10: "W = ℝ    ⇒    skeleton  ∈  ℝⁿ",
+},
+
+8: {
+ 0: "bᵢ = F ( δ ⁱ )        F ( x )  =  Σ₁ⁿ bᵢ xᵢ",
+ 1: "{ F : ℝⁿ → ℝ }   ⟷   ℝⁿ",
+ 2: "βⱼ  =  T ( δ ʲ )  ∈  ℝᵐ        t  =  { tᵢⱼ }",
+ 3: "t  :  m × n        columns ( t )  =  skeleton ( T )",
+ 4: "yᵢ  =  Σⱼ₌₁ⁿ tᵢⱼ xⱼ        ( i = 1 , … , m )",
+ 5: "{ t : m × n }  ⟷  { T : ℝⁿ → ℝᵐ }        F  :  1 × n",
+ 6: "πᵢ ( f )  =  f ( i )        πᵢ ( s f + t g ) = s πᵢ ( f ) + t πᵢ ( g )",
+ 7: "T [ L ( A ) ]  =  L ( T [ A ] )        T ⁻¹ [ Y ]  ⊂  V",
+ 8: "N ( T ) = T ⁻¹ ( 0 )        R ( T ) = T [ V ]        T  inj  ⇔  N ( T ) = { 0 }",
+ 9: "⟨ c₁ , … , cₙ ⟩  ↦  Σ₀ⁿ⁻¹ cᵢ₊₁ xⁱ        ℝⁿ  ≅  { deg < n }",
+ 10: "T ( α )  =  x α        α  :  eigenvector        x  :  eigenvalue",
+},
+
+9: {
+ 0: "𝔼³   ⟷   ℝ³",
+ 1: "O  ,  Q        X  ↦  x        | x |  =  | OX | / | OQ |",
+ 2: "O , Q₁ , Q₂ , Q₃        L₁ , L₂ , L₃",
+ 3: "θ  :  X  ↦  x  =  ⟨ x₁ , x₂ , x₃ ⟩",
+ 4: "θ ( Q₁ ) = δ ¹    θ ( Q₂ ) = δ ²    θ ( Q₃ ) = δ ³",
+ 5: "1 )  θ  :  𝔼³ → ℝ³",
+ 6: "2 )   AB ∼ XY   ⇔   b − a  =  y − x",
+ 7: "3 )   Y ∈ OX   ⇔   y  =  t x        t  =  coord ( Y )",
+ 8: "4 )   | OX |  =  ( Σ₁³ xᵢ² ) ¹ᐟ²",
+ 9: "OX ⊥ OY   ⇔   ( x , y ) = 0        ( x , y )  =  Σ₁³ xᵢ yᵢ",
+ 10: "( c x + d y , z ) = c ( x , z ) + d ( y , z )        x  =  t a + b",
+},
+
+10: {
+ 0: "( x − b , a )  =  0",
+ 1: "( x , a )  =  l        Σ₁³ aᵢ xᵢ  =  l",
+ 2: "ℝ³  :  ( x , y )          V  :  —",
+ 3: "f ( x )  =  l        f  :  ℝ³ → ℝ  ,  f ≠ 0",
+ 4: "aᵢ  =  f ( δ ⁱ )        f ( x ) = f ( Σ xᵢ δ ⁱ ) = Σ xᵢ aᵢ",
+ 5: "OX  ∼  BY",
+ 6: "x  =  y − b",
+ 7: "x  ↦  y  =  x + b",
+ 8: "f ( y − b ) = l   ⇔   f ( y ) = l + f ( b )        N  =  M + b",
+ 9: "l = 0   ⇔   0 ∈ M        M  =  N ( f )  +  b        { t a + b }  =  { t a } + b",
+ 10: "dim N ( f )  =  n − 1        ℝ³  :  plane          ℝ²  :  line",
 },
 
 }
