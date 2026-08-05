@@ -14,14 +14,15 @@
 | `series/t1_mechanics/` | Landau《力學》第 1–53 課 | **已完結**（第 52 課是本書最後一節，第 53 課是總複習） |
 | `series/special/` | 特別篇 S01（Anthropic 全域工作空間論文） | 單集，可再加 |
 | `series/t2_fields/` | Landau《場論》 | **尚未開始**，開工前的決定寫在它的 STATUS.md |
-| `series/advcalc/` | Loomis & Sternberg《Advanced Calculus》 | **進行中**：E00–E10 已上傳（第 0 章完結，第 1 章第 1、2 節做完） |
+| `series/advcalc/` | Loomis & Sternberg《Advanced Calculus》 | **進行中**：E00–E15 已上傳（第 0 章完結，第 1 章做到第 5 節中段） |
 
 **現在的方向是 `advcalc`。**《力學》已完結；《場論》仍是空殼。
 接手時先讀 `series/advcalc/STATUS.md`（進度、連結、踩過的坑）與
 `series/advcalc/OUTLINE.md`（全書解析與 169 集規劃）。
 
-**下一步是 E11**，第 1 章第 3 節「積空間與 Hom(V, W)」（書頁 43–52，OUTLINE 排 2 集 E11–E12）。
-第 1 章第 1 節用了 E05–E08、第 2 節用了 E09–E10，都與 OUTLINE 的預估相符。
+**下一步是 E16**，第 1 章第 5 節的最後一段（書頁 61–67）：解線性方程與 Theorem 5.3、
+T 的多項式、Theorem 5.4 與 5.5。做完第 5 節之後，第 6 節「雙線性」（書頁 67–71）是 E17。
+到 E15 為止，實際集數都與 OUTLINE 的預估相符。
 **OUTLINE 的集數仍然是估的，動工前先照書核一次**——那張表錯過一次（見 advcalc 的 STATUS.md）。
 
 `advcalc` 有三件與其他系列不同、會踩雷的事：

@@ -1,12 +1,12 @@
 # advcalc —《Advanced Calculus》(Loomis & Sternberg)
 
-**狀態：E00–E10 已上傳（私人）。第 0 章完結（E00–E04），第 1 章第 1、2 節做完（E05–E10）。
-下一集 E11 是第 1 章第 3 節「積空間與 Hom(V, W)」（書頁 43–52）。**
+**狀態：E00–E15 已上傳（私人）。第 0 章完結，第 1 章第 1–4 節做完，第 5 節做了前兩集。
+下一集 E16 是第 1 章第 5 節的最後一段（書頁 61–67）：解線性方程、Theorem 5.3、T 的多項式。**
 全書解析與 169 集的分集規劃見 **[`OUTLINE.md`](OUTLINE.md)**。
 
-第 1 章第 1 節（書頁 21–36）用了 4 集：E05 公理與子空間、E06 線性組合與線性擴張、
-E07 線性變換與 skeleton、E08 矩陣與核。第 2 節（書頁 36–43）用了 2 集：E09 座標對應
-與純量積、E10 平面與仿射子空間。兩節都與 OUTLINE 的預估集數相符。
+第 1 章目前的實際切法：§1 用 E05–E08（書頁 21–36）、§2 用 E09–E10（36–43）、
+§3 用 E11–E12（43–52）、§4 用 E13（52–56）、§5 用 E14–E16（56–67，E16 未做）。
+到這裡為止都與 OUTLINE 的預估集數相符。E16 之後接 §6 雙線性（67–71，OUTLINE 排 1 集 E17）。
 
 ## YouTube 連結（全部設為私人）
 
@@ -23,6 +23,11 @@ E07 線性變換與 skeleton、E08 矩陣與核。第 2 節（書頁 36–43）�
 | E08 | 矩陣、核與同構 | 1.1（32–36） | 3:14 ／ 2:57 | https://youtu.be/TZeVsDwVoB0 | https://youtu.be/9qV6BwOI3RY |
 | E09 | 座標對應與純量積 | 1.2（36–39） | 3:29 ／ 3:03 | https://youtu.be/XCIPjyRNqME | https://youtu.be/nCe_660y7uI |
 | E10 | 平面、平行移動與仿射子空間 | 1.2（39–43） | 3:39 ／ 3:06 | https://youtu.be/FN1ebQLgEz8 | https://youtu.be/g-TnTzck8Rw |
+| E11 | 積空間與 Hom(V, W) | 1.3（43–46） | 3:03 ／ 2:46 | https://youtu.be/LtoSapbY7ds | https://youtu.be/w-yDNkMhXDk |
+| E12 | 投影、注入與線性映射的拆裝 | 1.3（46–52） | 2:59 ／ 2:41 | https://youtu.be/qkPLSR3Zs8E | https://youtu.be/YhiKhibIg8E |
+| E13 | 仿射子空間與商空間 | 1.4（52–56） | 3:08 ／ 2:48 | https://youtu.be/sa-fsj3E0j8 | https://youtu.be/ImzcAk_rpd0 |
+| E14 | 直和與補空間 | 1.5（56–58） | 2:57 ／ 2:42 | https://youtu.be/11WXzQyclfg | https://youtu.be/uXEUHOmY9Ek |
+| E15 | 直和與投影算子 | 1.5（58–61） | 2:58 ／ 2:48 | https://youtu.be/ggI0679J79c | https://youtu.be/__En0AouS84 |
 
 成品在 `manim_lessons/samples/output/advcalc_eNN_{zh-TW,en}.mp4`
 （1920×1080、60 fps、H.264 + AAC）。每一支都核對過 log 的 `Rendered AdvCalcENNZH/EN`、
