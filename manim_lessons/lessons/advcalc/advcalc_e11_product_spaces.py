@@ -14,7 +14,7 @@ than reading.
 import pathlib, sys
 sys.path.insert(0, str(pathlib.Path(__file__).resolve().parents[3]))
 import numpy as np
-from manim import Dot, Ellipse, Line, Polygon, Rectangle, Text, VGroup
+from manim import Circle, Dot, Ellipse, Line, PI, Rectangle, Text, VGroup
 from manim_lessons.lib.design_tokens import (ACCENT_A, ACCENT_B, ACCENT_C, DIM, GHOST, INK, WARN)
 from manim_lessons.lessons.canonical_base import CanonicalBase, make
 from manim_lessons.localization.advcalc import TOPICS_ADVCALC, FORMULAS_ADVCALC
@@ -80,8 +80,8 @@ class AdvCalcE11Base(CanonicalBase):
  def _same_w(self):
   return self._fan(True).add(
    self._mid(0.95, "定義域是任意集合", "the domain is any set at all",
-             DIM, FS_TAG, x=4.15, w=3.9),
-   self._mid(0.15, "值都落在同一個 W", "all the values in one W", ACCENT_B, FS_TAG, x=4.15, w=3.9),
+             DIM, FS_TAG, x=4.55, w=3.2),
+   self._mid(0.15, "值都落在同一個 W", "all the values in one W", ACCENT_B, FS_TAG, x=4.55, w=3.2),
    self._mid(-1.55, "加法逐點做，數乘也逐點做，理由跟實值函數空間一模一樣",
              "addition and scaling are pointwise, for exactly the same reasons as before",
              DIM, FS_TAG, w=11.8))
@@ -89,38 +89,37 @@ class AdvCalcE11Base(CanonicalBase):
  def _diff_w(self):
   return self._fan(False).add(
    self._mid(0.95, "每個指標配自己的空間", "each index gets its own space",
-             ACCENT_A, FS_TAG, x=4.15, w=3.9),
+             ACCENT_A, FS_TAG, x=4.55, w=3.2),
    self._mid(0.15, "這就是笛卡兒積", "and that is the Cartesian product",
-             DIM, FS_TAG, x=4.15, w=3.9),
+             DIM, FS_TAG, x=4.55, w=3.2),
    self._mid(-1.55, "元素是定義域為 I 的函數，在每個 i 的值落在第 i 個空間裡",
              "an element is a function on I whose value at each i lies in the ith space",
              DIM, FS_TAG, w=11.8))
 
  # ── beat 2: the book's Fig. 1.8 ──────────────────────────────────
  def _sphere(self):
-  """A sphere with tangent planes at a few points and a vector in each: one
-  element of the product over all points of the sphere."""
-  org = np.array([-2.30, -0.25, 0.0])
-  s = 1.05
-  g = VGroup()
-  for a in np.linspace(0, np.pi / 2, 4):
-   pts = [_p([np.cos(a) * np.cos(b), np.cos(a) * np.sin(b), np.sin(a)], org, s)
-          for b in np.linspace(0, np.pi / 2, 26)]
-   g.add(self._curve(pts, GHOST, sw=2))
-  for b in np.linspace(0, np.pi / 2, 4):
-   pts = [_p([np.cos(a) * np.cos(b), np.cos(a) * np.sin(b), np.sin(a)], org, s)
-          for a in np.linspace(0, np.pi / 2, 26)]
-   g.add(self._curve(pts, GHOST, sw=2))
-  for (a, b), col in (((0.55, 0.55), ACCENT_A), ((0.95, 1.15), ACCENT_C), ((0.22, 1.20), ACCENT_B)):
-   n = np.array([np.cos(a) * np.cos(b), np.cos(a) * np.sin(b), np.sin(a)])
-   u = np.array([-np.sin(b), np.cos(b), 0.0])
-   v = np.cross(n, u)
-   c = _p(n, org, s)
-   quad = [_p(n + 0.42 * (sx * u + sy * v), org, s)
-           for sx, sy in ((-1, -1), (1, -1), (1, 1), (-1, 1))]
-   g.add(Polygon(*quad, color=col, stroke_width=2, fill_color=col, fill_opacity=0.16),
-         Dot(c, radius=0.055, color=INK),
-         self._arr(c, _p(n + 0.52 * u, org, s), col, sw=3, tl=0.13))
+  """A sphere with a tangent plane and a vector at three of its points: one
+  element of the product over all points of the sphere.
+
+  Drawn as the flat idiom -- outline circle, one equator ellipse, one meridian
+  ellipse -- rather than as a projected mesh of the octant. The mesh version
+  came out as a crumpled fan, because the axonometric basis is not orthonormal
+  on screen and the octant folds over itself."""
+  c = np.array([-3.30, -0.20, 0.0])
+  R = 1.30
+  g = VGroup(Circle(radius=R, color=GHOST, stroke_width=2.5).move_to(c),
+             Ellipse(width=2 * R, height=0.66 * R, color=GHOST, stroke_width=2).move_to(c),
+             Ellipse(width=0.66 * R, height=2 * R, color=GHOST, stroke_width=2).move_to(c))
+  for (ang, rr), col in (((0.95, 0.74), ACCENT_A), ((2.35, 0.66), ACCENT_C),
+                         ((-0.75, 0.80), ACCENT_B)):
+   n = np.array([np.cos(ang), np.sin(ang), 0.0])
+   tg = np.array([-n[1], n[0], 0.0])
+   pt = c + rr * R * n
+   g.add(Ellipse(width=0.92, height=0.30, color=col, stroke_width=2,
+                 fill_color=col, fill_opacity=0.20)
+         .move_to(pt).rotate(ang + PI / 2, about_point=pt),
+         Dot(pt, radius=0.055, color=INK),
+         self._arr(pt, pt + 0.74 * tg, col, sw=3, tl=0.14))
   return g.add(self._mid(0.95, "每一點的切平面是一個子空間",
                          "the tangent plane at each point is a subspace",
                          DIM, FS_TAG, x=3.15, w=5.6),
@@ -264,16 +263,16 @@ class AdvCalcE11Base(CanonicalBase):
   cols = (ACCENT_B, ACCENT_C, ACCENT_A)
   g = VGroup()
   for x, lab, col in zip(xs, labs, cols):
-   g.add(Ellipse(width=1.85, height=2.10, color=col, stroke_width=2.5,
-                 fill_color=col, fill_opacity=0.08).move_to([x, -0.05, 0]),
-         Text(lab, font_size=FS_TAG + 2, color=col).move_to([x, 1.15, 0]))
+   g.add(Ellipse(width=1.85, height=1.90, color=col, stroke_width=2.5,
+                 fill_color=col, fill_opacity=0.08).move_to([x, 0.15, 0]),
+         Text(lab, font_size=FS_TAG + 2, color=col).move_to([x, 1.16, 0]))
   for k, (a, b, lab) in enumerate(((0, 1, "T"), (1, 2, "S"))):
-   g.add(self._arr([xs[a] + 1.00, -0.05, 0], [xs[b] - 1.00, -0.05, 0],
+   g.add(self._arr([xs[a] + 1.00, 0.15, 0], [xs[b] - 1.00, 0.15, 0],
                    ACCENT_A, sw=3, tl=0.15),
          Text(lab, font_size=FS_TAG, color=ACCENT_A)
-         .move_to([(xs[a] + xs[b]) / 2, 0.30, 0]))
-  g.add(self._arr([xs[0], -1.35, 0], [xs[2], -1.35, 0], ACCENT_C, sw=3.5, tl=0.17),
-        Text("S ∘ T", font_size=FS_TAG, color=ACCENT_C).move_to([xs[1], -1.10, 0]))
+         .move_to([(xs[a] + xs[b]) / 2, 0.50, 0]))
+  g.add(self._arr([xs[0], -1.38, 0], [xs[2], -1.38, 0], ACCENT_C, sw=3.5, tl=0.17),
+        Text("S ∘ T", font_size=FS_TAG, color=ACCENT_C).move_to([xs[1], -1.12, 0]))
   return g.add(self._mid(-1.78, "很基本，但需要定義域與上域對得上",
                          "elementary, but it needs the domains and codomains to match",
                          DIM, FS_TAG, w=11.6))

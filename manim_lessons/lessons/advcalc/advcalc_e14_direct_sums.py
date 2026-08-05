@@ -57,18 +57,18 @@ class AdvCalcE14Base(CanonicalBase):
                  fill_color=color, fill_opacity=op)
 
  def _iso(self):
-  g = VGroup(Ellipse(width=2.55, height=1.95, color=ACCENT_A, stroke_width=2.5,
-                     fill_color=ACCENT_A, fill_opacity=0.10).move_to([-3.45, 0.10, 0]),
-             Text("V", font_size=FS_TAG + 3, color=ACCENT_A).move_to([-3.45, 0.10, 0]))
-  for k, y in enumerate((0.80, 0.10, -0.60)):
-   g.add(Rectangle(width=1.35, height=0.52, color=(ACCENT_B, ACCENT_C, WARN)[k],
+  g = VGroup(Ellipse(width=2.55, height=1.80, color=ACCENT_A, stroke_width=2.5,
+                     fill_color=ACCENT_A, fill_opacity=0.10).move_to([-3.45, 0.30, 0]),
+             Text("V", font_size=FS_TAG + 3, color=ACCENT_A).move_to([-3.45, 0.30, 0]))
+  for k, y in enumerate((0.95, 0.30, -0.35)):
+   g.add(Rectangle(width=1.35, height=0.50, color=(ACCENT_B, ACCENT_C, WARN)[k],
                    stroke_width=2.5).move_to([1.85, y, 0]),
          Text(f"V{k + 1}", font_size=FS_TAG - 2, color=(ACCENT_B, ACCENT_C, WARN)[k])
          .move_to([1.85, y, 0]))
-  g.add(Rectangle(width=1.95, height=2.15, color=DIM, stroke_width=2).move_to([1.85, 0.10, 0]),
-        self._arr([-2.10, 0.30, 0], [0.75, 0.30, 0], ACCENT_A, sw=3, tl=0.15),
-        self._arr([0.75, -0.10, 0], [-2.10, -0.10, 0], ACCENT_A, sw=3, tl=0.15),
-        Text("≅", font_size=FS_TAG + 5, color=ACCENT_A).move_to([-0.68, 0.62, 0]))
+  g.add(Rectangle(width=1.95, height=1.95, color=DIM, stroke_width=2).move_to([1.85, 0.30, 0]),
+        self._arr([-2.10, 0.50, 0], [0.75, 0.50, 0], ACCENT_A, sw=3, tl=0.15),
+        self._arr([0.75, 0.10, 0], [-2.10, 0.10, 0], ACCENT_A, sw=3, tl=0.15),
+        Text("≅", font_size=FS_TAG + 5, color=ACCENT_A).move_to([-0.68, 0.82, 0]))
   return g.add(self._mid(-1.05, "研究某個現象時，冒出一族有限多個子空間",
                          "studying a phenomenon turns up a finite family of subspaces",
                          DIM, FS_TAG, w=11.6),
@@ -94,10 +94,10 @@ class AdvCalcE14Base(CanonicalBase):
                          DIM, FS_TAG, w=11.8))
 
  def _sum_map(self):
-  g = VGroup(Rectangle(width=2.05, height=2.20, color=DIM, stroke_width=2)
-             .move_to([-3.55, 0.05, 0]))
+  g = VGroup(Rectangle(width=2.05, height=2.00, color=DIM, stroke_width=2)
+             .move_to([-3.55, 0.25, 0]))
   cols = (ACCENT_B, ACCENT_C, WARN)
-  for k, y in enumerate((0.75, 0.05, -0.65)):
+  for k, y in enumerate((0.90, 0.25, -0.40)):
    g.add(Rectangle(width=1.55, height=0.52, color=cols[k], stroke_width=2.5)
          .move_to([-3.55, y, 0]),
          Text(f"α{k + 1}", font_size=FS_TAG - 2, color=cols[k]).move_to([-3.55, y, 0]))
@@ -107,8 +107,8 @@ class AdvCalcE14Base(CanonicalBase):
   for k, v in enumerate(vs):
    g.add(self._arr(p, p + v, cols[k], sw=2.5, tl=0.12)); p = p + v
   g.add(self._arr(o, p, ACCENT_A, sw=4, tl=0.18), Dot(o, radius=0.055, color=INK),
-        self._arr([-2.35, 0.05, 0], [0.55, 0.05, 0], ACCENT_A, sw=3, tl=0.15),
-        Text("π", font_size=FS_TAG + 1, color=ACCENT_A).move_to([-0.90, 0.40, 0]))
+        self._arr([-2.35, 0.25, 0], [0.55, 0.25, 0], ACCENT_A, sw=3, tl=0.15),
+        Text("π", font_size=FS_TAG + 1, color=ACCENT_A).move_to([-0.90, 0.60, 0]))
   return g.add(self._mid(-1.05, "每個子空間各取一個向量，送到它們的和",
                          "one vector from each subspace, sent to their sum",
                          DIM, FS_TAG, w=11.4),
@@ -156,9 +156,11 @@ class AdvCalcE14Base(CanonicalBase):
                          ACCENT_A, FS_TAG, w=11.4))
 
  # ── beats 5-6: the even-odd decomposition ────────────────────────
- AX, W, BASE = -1.35, 5.60, -0.25
+ # amplitude sized so the trough clears the caption below it: the curve
+ # reaches BASE - amp * max|f|, and max|f| here is about 1.4
+ AX, W, BASE = -1.35, 5.60, -0.10
 
- def _curve_of(self, fn, col, sw=3, amp=0.62):
+ def _curve_of(self, fn, col, sw=3, amp=0.46):
   ts = np.linspace(-1, 1, 90)
   return self._curve([[self.AX + t * self.W / 2, self.BASE + amp * fn(2.0 * t), 0]
                       for t in ts], col, sw=sw)

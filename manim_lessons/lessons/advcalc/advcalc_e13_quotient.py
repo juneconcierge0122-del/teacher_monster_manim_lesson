@@ -44,8 +44,9 @@ class AdvCalcE13Base(CanonicalBase):
  D = np.array([1.70, 0.28, 0.0])
  OFF = np.array([-0.12, 0.55, 0.0])              # one step between parallel lines
 
- def _line(self, o, k, color, sw=3, half=1.10, dashed=False):
-  a, b = o + k * self.OFF - half * self.D, o + k * self.OFF + half * self.D
+ def _line(self, o, k, color, sw=3, half=1.10, dashed=False, off=None):
+  off = self.OFF if off is None else off
+  a, b = o + k * off - half * self.D, o + k * off + half * self.D
   return self._dash(a, b, color, n=13) if dashed else Line(a, b, color=color, stroke_width=sw)
 
  def _planes(self):
@@ -137,16 +138,16 @@ class AdvCalcE13Base(CanonicalBase):
  def _under_T(self):
   g = VGroup()
   o1 = np.array([-3.85, -0.20, 0.0])
-  g.add(Ellipse(width=3.05, height=2.30, color=DIM, stroke_width=2).move_to([-3.85, -0.05, 0]),
+  g.add(Ellipse(width=3.05, height=1.85, color=DIM, stroke_width=2).move_to([-3.85, 0.12, 0]),
         Line(o1 - 0.75 * self.D, o1 + 0.75 * self.D, color=ACCENT_A, stroke_width=3.5),
-        Text("V", font_size=FS_TAG, color=DIM).move_to([-3.85, 1.15, 0]))
+        Text("V", font_size=FS_TAG, color=DIM).move_to([-3.85, 1.18, 0]))
   o2 = np.array([2.35, -0.20, 0.0])
   d = np.array([1.30, -0.20, 0.0])
-  g.add(Ellipse(width=3.05, height=2.30, color=DIM, stroke_width=2).move_to([2.35, -0.05, 0]),
+  g.add(Ellipse(width=3.05, height=1.85, color=DIM, stroke_width=2).move_to([2.35, 0.12, 0]),
         Line(o2 - 0.72 * d, o2 + 0.72 * d, color=ACCENT_A, stroke_width=3.5),
-        Text("W", font_size=FS_TAG, color=DIM).move_to([2.35, 1.15, 0]),
-        self._arr([-2.15, -0.05, 0], [0.65, -0.05, 0], ACCENT_A, sw=3, tl=0.16),
-        Text("T", font_size=FS_TAG + 2, color=ACCENT_A).move_to([-0.75, 0.28, 0]))
+        Text("W", font_size=FS_TAG, color=DIM).move_to([2.35, 1.18, 0]),
+        self._arr([-2.15, 0.12, 0], [0.65, 0.12, 0], ACCENT_A, sw=3, tl=0.16),
+        Text("T", font_size=FS_TAG + 2, color=ACCENT_A).move_to([-0.75, 0.45, 0]))
   return g.add(self._mid(-1.05, "線性映射把仿射子空間送到仿射子空間",
                          "a linear map carries an affine subspace to an affine subspace",
                          ACCENT_A, FS_TAG, w=11.6),
@@ -179,8 +180,10 @@ class AdvCalcE13Base(CanonicalBase):
  def _family(self):
   o = np.array([-2.15, -0.30, 0.0])
   g = VGroup()
+  off = 0.80 * self.OFF
   for k in self.FAM:
-   g.add(self._line(o, k, ACCENT_B if k == 0 else DIM, sw=3.5 if k == 0 else 2.5, half=1.15))
+   g.add(self._line(o, k, ACCENT_B if k == 0 else DIM,
+                    sw=3.5 if k == 0 else 2.5, half=1.15, off=off))
   g.add(Dot(o, radius=0.065, color=INK),
         Text("N", font_size=FS_TAG, color=ACCENT_B)
         .move_to(o - 0.95 * self.D + np.array([-0.14, -0.26, 0])))
@@ -201,12 +204,13 @@ class AdvCalcE13Base(CanonicalBase):
   ks = ka + kb
   assert ks in self.FAM, "the sum must land on a line that is actually drawn"
   o = np.array([-2.15, -0.30, 0.0])
+  off = 0.80 * self.OFF
   g = VGroup()
   for k in self.FAM:
    col = {ka: ACCENT_B, kb: ACCENT_C, ks: ACCENT_A}.get(k, GHOST)
-   g.add(self._line(o, k, col, sw=3.5 if k in (ka, kb, ks) else 1.8, half=1.15))
-  pa = o + ka * self.OFF - 0.35 * self.D
-  pb = o + kb * self.OFF + 0.15 * self.D
+   g.add(self._line(o, k, col, sw=3.5 if k in (ka, kb, ks) else 1.8, half=1.15, off=off))
+  pa = o + ka * off - 0.35 * self.D
+  pb = o + kb * off + 0.15 * self.D
   ps = pa + (pb - o)
   g.add(Dot(pa, radius=0.08, color=ACCENT_B), Dot(pb, radius=0.08, color=ACCENT_C),
         Dot(ps, radius=0.09, color=ACCENT_A),
@@ -224,12 +228,15 @@ class AdvCalcE13Base(CanonicalBase):
   o = np.array([-3.30, -0.30, 0.0])
   g = VGroup()
   cols = (ACCENT_C, ACCENT_A, ACCENT_B, WARN, ACCENT_C)
+  off = 0.80 * self.OFF
   for j, k in enumerate(self.FAM):
-   g.add(self._line(o, k, cols[j], sw=3, half=0.95),
-         Dot([1.85, o[1] + k * 0.40, 0], radius=0.075, color=cols[j]),
-         self._arr([o[0] + 0.95 * self.D[0] + k * self.OFF[0] + 0.16,
-                    o[1] + 0.95 * self.D[1] + k * self.OFF[1], 0],
-                   [1.65, o[1] + k * 0.40, 0], cols[j], sw=1.8, tl=0.09))
+   # the column pitch matches the step between lines, so the arrows come out
+   # parallel instead of fanning across each other
+   g.add(self._line(o, k, cols[j], sw=3, half=0.95, off=off),
+         Dot([1.85, o[1] + k * off[1], 0], radius=0.075, color=cols[j]),
+         self._arr([o[0] + 0.95 * self.D[0] + k * off[0] + 0.16,
+                    o[1] + 0.95 * self.D[1] + k * off[1], 0],
+                   [1.65, o[1] + k * off[1], 0], cols[j], sw=1.8, tl=0.09))
   g.add(Text("V", font_size=FS_TAG, color=DIM).move_to([-3.60, 1.08, 0]),
         Text("V / N", font_size=FS_TAG, color=DIM).move_to([1.85, 1.08, 0]))
   return g.add(self._mid(0.35, "每個向量送到它所在的那條線",
@@ -243,13 +250,13 @@ class AdvCalcE13Base(CanonicalBase):
                          DIM, FS_TAG, w=11.6))
 
  def _thm41(self):
-  g = VGroup(Ellipse(width=2.60, height=1.85, color=ACCENT_B, stroke_width=2.5,
+  g = VGroup(Ellipse(width=2.60, height=1.45, color=ACCENT_B, stroke_width=2.5,
                      fill_color=ACCENT_B, fill_opacity=0.10).move_to([-3.35, 0.10, 0]),
              self._mid(0.10, "向量空間", "a vector space", ACCENT_B, FS_TAG, x=-3.35, w=2.3),
              self._arr([-1.95, 0.10, 0], [-0.35, 0.10, 0], ACCENT_A, sw=3, tl=0.15),
-             self._mid(0.55, "滿射，而且保持運算", "onto, and preserving the operations",
+             self._mid(1.05, "滿射，而且保持運算", "onto, and preserving the operations",
                        ACCENT_A, FS_TAG, x=-1.15, w=3.4),
-             Ellipse(width=2.60, height=1.85, color=DIM, stroke_width=2.5)
+             Ellipse(width=2.60, height=1.45, color=DIM, stroke_width=2.5)
              .move_to([1.05, 0.10, 0]),
              self._mid(0.10, "兩個像運算的運算", "two vectorlike operations",
                        DIM, FS_TAG, x=1.05, w=2.4),

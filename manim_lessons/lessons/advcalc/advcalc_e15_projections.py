@@ -202,7 +202,7 @@ class AdvCalcE15Base(CanonicalBase):
 
  def _forward(self):
   return self._thm(True).add(
-   self._mid(-1.05, "直和給出的那些投影，滿足這三條",
+   self._mid(-1.25, "直和給出的那些投影，滿足這三條",
              "the projections coming from a direct sum satisfy all three",
              DIM, FS_TAG, w=11.6),
    self._mid(-1.68, "正是積空間那組等式在 V 裡的倒影",
@@ -211,7 +211,7 @@ class AdvCalcE15Base(CanonicalBase):
 
  def _converse(self):
   return self._thm(False).add(
-   self._mid(-1.05, "反過來：只要滿足後兩條，把值域取出來",
+   self._mid(-1.25, "反過來：只要滿足後兩條，把值域取出來",
              "conversely: assume the last two, and take the ranges",
              DIM, FS_TAG, w=11.6),
    self._mid(-1.68, "V 就是這些值域的直和，而它們正好是對應的投影",
