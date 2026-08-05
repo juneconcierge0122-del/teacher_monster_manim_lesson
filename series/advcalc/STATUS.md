@@ -12,7 +12,7 @@ E07 線性變換與 skeleton、E08 矩陣與核。第 2 節（書頁 36–43）�
 
 | 集 | 主題 | 對應書頁 | 片長（中／英） | 中文 | 英文 |
 |---|---|---|---|---|---|
-| E00 | 導論：這本書是什麼 | 序言與目錄 | 3:23 ／ 3:05 | https://youtu.be/R0FHp3lAEJI | https://youtu.be/MoEIY81VFE8 |
+| E00 | 導論：這本書是什麼 | 序言與目錄 | 3:23 ／ 3:05 | https://youtu.be/qvmdDGXx4rY | https://youtu.be/r2wBtMK5nyM |
 | E01 | 邏輯、量詞與連接詞 | 0.1–0.3（1–6） | 3:32 ／ 3:10 | https://youtu.be/5fo36U5Z5Js | https://youtu.be/Y0t9tJKJZYs |
 | E02 | 集合、受限變數與關係 | 0.4–0.6（6–10） | 3:46 ／ 3:23 | https://youtu.be/lV2MJgo0PtQ | https://youtu.be/GQGSpeuBGvA |
 | E03 | 函數、映射與合成 | 0.7–0.9（10–15） | 3:40 ／ 3:16 | https://youtu.be/f5ULzGZHEs0 | https://youtu.be/AE7ZSIrWG7E |
@@ -38,8 +38,9 @@ with av.open(path) as c:
         [s for s in c.streams if s.type == "audio"][0]))
 ```
 
-E00 在 2026-08-05 重新渲染上傳過一次（舊的兩支已刪，表上是新連結）。原因見下面
-「同一個數字散在四個地方」那一條。
+E00 在 2026-08-05 重新渲染上傳過**兩次**（前面的都已刪，表上是最後那組連結）。
+第一次是為了把集數從 155 改成 169，見下面「同一個數字散在四個地方」；
+那一版因為快取而掉了配音，第二次才是好的，見「重新渲染會掉配音」那一條。
 
 ## 做這個系列時踩到的坑
 
