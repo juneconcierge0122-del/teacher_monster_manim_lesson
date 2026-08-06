@@ -1,0 +1,38 @@
+[
+  {
+    "file": "manim_lessons/samples/output/advcalc_e18_zh-TW.mp4",
+    "title": "《高等微積分》第 18 集｜基底與座標同構｜Loomis & Sternberg 第 2 章 §1",
+    "description": "本集對應 Loomis 與 Sternberg《Advanced Calculus》第 2 章第 1 節（書頁 71 到 74）。\n\n第二章把注意力放在有限維的空間。核心的事情是：可以給每一個有限維空間指定一個整數，叫做維數；它符合我們對維度的直覺，而且是後面深入探討的主要工具。\n\n有限維空間可以刻畫成「與某個座標空間同構」。而這樣一個同構，讓一個算子被搬到座標空間上，在那裡它取得一個矩陣。所以有限維空間上的線性變換理論，完全被矩陣的理論映照出來。\n\n回到第一章那個線性組合映射。定義：一個有限的、加了指標的向量集合叫做獨立，如果那個映射是嵌射；而如果那個映射是同構，就叫做 V 的一個基底。指標集是一到 n 的時候，就叫有序基底，或者框架。\n\n所以是基底，若且唯若 V 裡每一個向量都有唯一一組係數。係數存在，是因為這些向量生成 V；係數唯一，是因為它們獨立。\n\n書上舉了個例子：平面上兩個具體的向量。要驗它們是基底，就是驗那條向量方程對每個目標都有唯一解——拆成兩條純量方程，用中學的消去法解出來就行。\n\n比較常見的那個獨立性定義，在這裡其實是個推論：這組向量獨立，若且唯若係數乘向量加起來等於零時，每個係數都必須是零。因為那正好是說零空間只有零向量。\n\n有序基底給每個向量一組唯一的係數，叫做它的座標元組。線性組合映射叫基底同構，它的反函數叫座標同構。而「取第 j 個座標」是一個線性泛函，叫座標泛函。\n\n現在要證每個有限維空間都有基底。先注意兩件小事：一個加了指標的集合要獨立，指標本身必須是嵌射的；另外，獨立集合的子集也還是獨立的。\n\n引理：如果 B 是獨立的、而某個向量不在 B 的線性擴張裡，那麼把它加進 B 之後還是獨立的。證明是：若有非零組合等於零，那個新向量的係數不能是零，否則會跟 B 的獨立性矛盾；於是可以解出它落在擴張裡，矛盾。\n\n有了這個引理，就能從一個有限生成集裡挑出基底：一個一個看過去，留下那些讓線性擴張真的變大的。這個作法很直觀，但要嚴格寫下來相當麻煩，所以書上換了個方式。\n\n定理：任何極小的有限生成集就是基底，所以任何有限維空間都有基底。更一般地，有限維空間的任何有限獨立子集，都能擴充成基底。而座標空間自己有一組很特別的基底：Kronecker 的 delta 函數；它的基底同構正好就是恆等，所以叫標準基底。\n\n本影片為雙語教學動畫系列（繁體中文版）。\n\n本影片為獨立製作的學習導讀，非官方教材，與原書作者及出版社無關。\n講解為自行撰寫，動畫為自行繪製，不含原書頁面，也不提供原書的取得管道。",
+    "tags": [
+      "高等微積分",
+      "Advanced Calculus",
+      "Loomis",
+      "Sternberg",
+      "基底",
+      "線性獨立",
+      "座標同構",
+      "標準基底",
+      "有限維",
+      "大學數學"
+    ],
+    "language": "zh-TW"
+  },
+  {
+    "file": "manim_lessons/samples/output/advcalc_e18_en.mp4",
+    "title": "Advanced Calculus, Episode 18 | Bases and the Coordinate Isomorphism | Ch. 2, §1",
+    "description": "This episode covers chapter 2, section 1 (pages 71 to 74) of Loomis and Sternberg's Advanced Calculus.\n\nChapter two turns attention to finite-dimensional spaces. The central thing is that each such space can be assigned a unique integer, its dimension, which satisfies our intuitive requirements about dimensionality and becomes the principal tool for what follows.\n\nA finite-dimensional space can be characterized as one isomorphic to some coordinate space. Such an isomorphism transfers an operator there, where it acquires a matrix. So linear transformations on such spaces are mirrored completely by matrices.\n\nBack to the linear combination map of chapter one. The definition: a finite indexed set of vectors is independent if that map is injective, and is a basis for V if that map is an isomorphism. When the index set is one to n it is called an ordered basis, or a frame.\n\nSo it is a basis exactly when every vector of V has a unique set of coefficients. The coefficients exist because the vectors span V, and they are unique because the vectors are independent.\n\nThe book gives an example: two concrete vectors in the plane. Checking that they form a basis is checking that the vector equation has a unique solution for every target, which splits into two scalar equations and yields to secondary school elimination.\n\nThe more usual definition of independence is here a corollary: the vectors are independent exactly when coefficients times vectors summing to zero forces every coefficient to be zero. That says precisely that the null space contains only zero.\n\nAn ordered basis gives each vector a unique set of coefficients, called its coordinate tuple. The combination map is called the basis isomorphism and its inverse the coordinate isomorphism. Taking the jth coordinate is a linear functional, the jth coordinate functional.\n\nNow to show every finite-dimensional space has a basis. Two small remarks first: an indexed set can be independent only if the indexing is injective; and any subset of an independent set is independent.\n\nThe lemma: if a set is independent and some vector is not in its span, adjoining that vector leaves it independent. For if a nontrivial combination vanished, the new vector's coefficient could not be zero, and then it could be solved for, putting it in the span.\n\nWith that lemma one can pick a basis out of a finite spanning set by running through it and keeping the members that actually enlarge the linear span. That is intuitive but messy to set up rigorously, so the book proceeds differently.\n\nThe theorem: any minimal finite spanning set is a basis, so any finite-dimensional space has one, and any finite independent subset can be extended to a basis. Coordinate space has one special basis, the Kronecker delta functions, whose basis isomorphism is the identity.\n\nPart of a bilingual animated teaching series (English edition).\n\nThis is an independently produced study guide. It is not official course material and is not affiliated with the authors or publisher of the book. The narration and animations are original work; no pages of the book are reproduced, and no copy of it is provided.",
+    "tags": [
+      "Advanced Calculus",
+      "Loomis",
+      "Sternberg",
+      "basis",
+      "linear independence",
+      "coordinate isomorphism",
+      "standard basis",
+      "finite dimensional",
+      "linear algebra",
+      "university mathematics"
+    ],
+    "language": "en"
+  }
+]

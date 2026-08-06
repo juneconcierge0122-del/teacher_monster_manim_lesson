@@ -1,0 +1,38 @@
+[
+  {
+    "file": "manim_lessons/samples/output/advcalc_e19_zh-TW.mp4",
+    "title": "《高等微積分》第 19 集｜基底之間的搬移｜Loomis & Sternberg 第 2 章 §1",
+    "description": "本集對應 Loomis 與 Sternberg《Advanced Calculus》第 2 章第 1 節（書頁 74 到 77）。\n\n從基底存在這件事，可以推出幾個簡單但常用的結論。第一個是：同構把基底送到基底。\n\n證明很短：基底同構後面接上那個同構，還是一個同構，而它的 skeleton 正好就是那些像。所以任何一組基底，都可以看成標準基底在某個基底同構之下的像。\n\n反過來也對：任何一個從座標空間到 V 的同構，都會變成某一組基底的基底同構——只要把它作用在標準基底上，得到的那組向量就是。\n\n接著是一個關於互補子空間的定理：X 與 Y 互補時，X 的一組基底與 Y 的一組基底聯集起來，就是 V 的基底。反過來，把 V 的一組基底分成兩份，那兩份的線性擴張就是互補的子空間。\n\n證明分兩半。聯集生成 V，因為它的線性擴張同時包含 X 與 Y；而如果有一個零組合，把它拆成落在 X 的那部分與落在 Y 的那部分，兩邊都必須是零，於是每個係數都是零。\n\n推論用歸納推上去：V 是一族子空間的直和時，各個子空間的基底聯集起來，就是 V 的一組基底。\n\n再來是一個存在性定理。給定 V 的一組有序基底，以及 W 裡任意一個同樣長度的向量元組，那麼恰好有一個線性映射，把基底的第 i 個向量送到那個元組的第 i 項。\n\n證明就是把座標同構接上線性組合映射。這件事之所以成立，關鍵是基底同構可逆——先把向量翻成座標，再照新的元組組回去。\n\n自然要問：那個唯一的映射，會怎麼隨著 W 裡的那個元組變化？答案是「線性地，而且是同構地」。\n\n定理：固定 V 的一組有序基底，把 W 裡的元組送到對應的那個唯一映射，這是從 W 的 n 次冪到所有線性映射所成空間的同構。證明就是把第一章那兩個同構合起來。\n\n最後書上補了無限基底，那一段標了星號。Kronecker 函數的定義照舊，但它們不再生成整個函數空間，只生成「除了有限多個位置以外都是零」的那個子空間。用選擇公理可以證明每個向量空間都有基底，不過無限基底在分析上不太好用，所以現在先專注在有限維。\n\n本影片為雙語教學動畫系列（繁體中文版）。\n\n本影片為獨立製作的學習導讀，非官方教材，與原書作者及出版社無關。\n講解為自行撰寫，動畫為自行繪製，不含原書頁面，也不提供原書的取得管道。",
+    "tags": [
+      "高等微積分",
+      "Advanced Calculus",
+      "Loomis",
+      "Sternberg",
+      "基底",
+      "同構",
+      "互補子空間",
+      "直和",
+      "無限基底",
+      "大學數學"
+    ],
+    "language": "zh-TW"
+  },
+  {
+    "file": "manim_lessons/samples/output/advcalc_e19_en.mp4",
+    "title": "Advanced Calculus, Episode 19 | Moving Between Bases | Ch. 2, §1",
+    "description": "This episode covers chapter 2, section 1 (pages 74 to 77) of Loomis and Sternberg's Advanced Calculus.\n\nFrom the existence of bases follow a few elementary but much-used conclusions. The first: an isomorphism carries a basis to a basis.\n\nThe proof is short. A basis isomorphism followed by the isomorphism is again an isomorphism, and its skeleton is exactly the family of images. So any basis can be seen as the image of the standard basis under some basis isomorphism.\n\nThe converse holds too: any isomorphism from coordinate space onto V becomes the basis isomorphism of some basis, namely the family obtained by applying it to the standard basis.\n\nNext a theorem about complements. If two subspaces are complementary, then a basis for one together with a basis for the other is a basis for V. Conversely, partition a basis for V into two sets and their linear spans are complementary subspaces.\n\nThe proof has two halves. The union spans V because its span contains both subspaces. And if some combination vanishes, split it into the part lying in one subspace and the part lying in the other; both must be zero, and then every coefficient is zero.\n\nA corollary carries this up by induction: when V is the direct sum of a family of subspaces, the union of bases for those subspaces is a basis for V.\n\nThen an existence theorem. Given an ordered basis for V and any tuple of vectors of the same length in W, there is exactly one linear map sending the ith basis vector to the ith entry of that tuple.\n\nThe proof is the coordinate isomorphism followed by a combination map. What makes it work is that the basis isomorphism is invertible: translate the vector into coordinates, then rebuild it against the new tuple.\n\nIt is natural to ask how that unique map varies with the tuple chosen in W. The answer is linearly, and in fact isomorphically.\n\nThe theorem: fix an ordered basis for V, and send each tuple in W to its unique map. That is an isomorphism from the nth power of W onto the space of all linear maps. The proof composes the two isomorphisms from chapter one.\n\nThe book closes with infinite bases, in a starred passage. The Kronecker functions no longer span the whole function space, only the functions that are zero except at finitely many places. The axiom of choice gives every space a basis, but such bases are of little use in analysis.\n\nPart of a bilingual animated teaching series (English edition).\n\nThis is an independently produced study guide. It is not official course material and is not affiliated with the authors or publisher of the book. The narration and animations are original work; no pages of the book are reproduced, and no copy of it is provided.",
+    "tags": [
+      "Advanced Calculus",
+      "Loomis",
+      "Sternberg",
+      "basis",
+      "isomorphism",
+      "complementary subspaces",
+      "direct sum",
+      "infinite basis",
+      "linear algebra",
+      "university mathematics"
+    ],
+    "language": "en"
+  }
+]

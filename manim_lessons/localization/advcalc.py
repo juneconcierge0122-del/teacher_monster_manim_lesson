@@ -870,11 +870,11 @@ FORMULAS_ADVCALC: dict[int, dict[int, str]] = {
 18: {
  0: "dim V  =  n",
  1: "V  ≅  ℝⁿ        T  ↦  t",
- 2: "L a : x ↦ Σ xᵢ αᵢ        inj : independent        iso : basis",
+ 2: "L α : x ↦ Σ xᵢ αᵢ        inj : independent        iso : basis",
  3: "ξ  =  Σ xᵢ αᵢ   ,   x   unique",
  4: "b ¹ = ⟨ 2 , 1 ⟩  ,  b ² = ⟨ 1 , −3 ⟩        y = ⟨ 2x₁+x₂ , x₁−3x₂ ⟩",
  5: "Σ xᵢ αᵢ = 0   ⇒   xᵢ = 0   ( ∀i )",
- 6: "L a  :  basis iso        L a ⁻¹  :  coordinate iso        ξ ↦ xⱼ",
+ 6: "L α  :  basis iso        L α ⁻¹  :  coordinate iso        ξ ↦ xⱼ",
  7: "αₖ = αₗ  ⇒  dependent        J ⊂ I ,  { αᵢ }ᵢ ind .  ⇒  { αᵢ }ⱼ ind .",
  8: "β  ∉  L ( B )    ⇒    B ∪ { β }   independent",
  9: "L ( α₁ ) ⊊ L ( α₁ , α₂ ) ⊊ …",
@@ -883,15 +883,15 @@ FORMULAS_ADVCALC: dict[int, dict[int, str]] = {
 
 19: {
  0: "α   basis for  V  ,  T   iso    ⇒    { T ( αᵢ ) }   basis for  W",
- 1: "T ∘ L a   iso        skeleton  =  { T ( αᵢ ) }",
+ 1: "T ∘ L α   iso        skeleton  =  { T ( αᵢ ) }",
  2: "θ  :  ℝᴵ → V   iso    ⇒    αⱼ  =  θ ( δ ʲ )",
  3: "V  =  X ⊕ Y    ⇒    basis ( X )  ∪  basis ( Y )  =  basis ( V )",
  4: "Σ𝘑∪𝘒 xᵢ αᵢ = 0    ⇒    ξ = η = 0    ⇒    xᵢ = 0",
  5: "V = ⊕₁ⁿ Vᵢ    ⇒    B = ⋃₁ⁿ Bᵢ   basis",
  6: "β   basis  ,  α ∈ Wⁿ    ⇒    ∃ ! S ,   S ( βᵢ ) = αᵢ",
- 7: "S  =  L a  ∘  ( L β ) ⁻¹",
- 8: "α  ↦  S a",
- 9: "α  ↦  S a   :   Wⁿ  ≅  Hom ( V , W )",
+ 7: "S  =  L α  ∘  ( L β ) ⁻¹",
+ 8: "α  ↦  S α",
+ 9: "α  ↦  S α   :   Wⁿ  ≅  Hom ( V , W )",
  10: "ℝ𝘐  =  L ( { δ ⁱ : i ∈ I } )   ⊂   ℝᴵ",
 },
 
