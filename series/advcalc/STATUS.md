@@ -1,6 +1,6 @@
 # advcalc —《Advanced Calculus》(Loomis & Sternberg)
 
-**狀態：E00–E15 已上傳（私人）。E16–E20 已渲染、驗收完畢，**尚未上傳**（manifest 已備好）。
+**狀態：E00–E20 已上傳（私人）。
 第 0 章與第 1 章完結，第 2 章做到第 2 節。
 下一集 E21 是第 2 章第 3 節「對偶空間」（書頁 81–88，OUTLINE 排 2 集 E21–E22）。**
 全書解析與 169 集的分集規劃見 **[`OUTLINE.md`](OUTLINE.md)**。
@@ -30,18 +30,14 @@
 | E13 | 仿射子空間與商空間 | 1.4（52–56） | 3:08 ／ 2:48 | https://youtu.be/sa-fsj3E0j8 | https://youtu.be/ImzcAk_rpd0 |
 | E14 | 直和與補空間 | 1.5（56–58） | 2:57 ／ 2:42 | https://youtu.be/11WXzQyclfg | https://youtu.be/uXEUHOmY9Ek |
 | E15 | 直和與投影算子 | 1.5（58–61） | 2:58 ／ 2:48 | https://youtu.be/ggI0679J79c | https://youtu.be/__En0AouS84 |
+| E16 | 解線性方程與 T 的多項式 | 1.5（61–67） | 3:00 ／ 2:43 | https://youtu.be/ZmULfgylxRg | https://youtu.be/jM-uxdK7Ad4 |
+| E17 | 雙線性與自然同構 | 1.6（67–71） | 2:54 ／ 2:45 | https://youtu.be/IKiD5ln1CIk | https://youtu.be/gOcwr7dd4Zg |
+| E18 | 基底與座標同構 | 2.1（71–74） | 3:17 ／ 2:57 | https://youtu.be/IFUeB5x6rtc | https://youtu.be/XMw3oEiXywY |
+| E19 | 基底之間的搬移 | 2.1（74–77） | 2:44 ／ 2:35 | https://youtu.be/BnWUev0fT-k | https://youtu.be/bGAhNjWLkrA |
+| E20 | 維數 | 2.2（77–81） | 2:56 ／ 2:52 | https://youtu.be/qMb6a9RfPfw | https://youtu.be/1y-tTbAgNtA |
 
-**E16–E20 已渲染、驗收完畢，尚未上傳。** manifest 在 `manifests/youtube_e{16..20}_manifest.json`，
-描述結尾都帶了 PLAYBOOK 第 8 節那段免責聲明（E00–E15 是在此之前上傳的，沒有那段，
+**E16 起的描述結尾都帶了 PLAYBOOK 第 8 節那段免責聲明**（E00–E15 是在此之前上傳的，沒有那段，
 而 YouTube token 只有上傳權限、改不了已上傳影片的描述，要補只能在 YouTube Studio 手動編輯）。
-
-| 集 | 主題 | 對應書頁 | 片長（中／英） | 狀態 |
-|---|---|---|---|---|
-| E16 | 解線性方程與 T 的多項式 | 1.5（61–67） | 3:00 ／ 2:43 | 待上傳 |
-| E17 | 雙線性與自然同構 | 1.6（67–71） | 2:54 ／ 2:45 | 待上傳 |
-| E18 | 基底與座標同構 | 2.1（71–74） | 3:17 ／ 2:57 | 待上傳 |
-| E19 | 基底之間的搬移 | 2.1（74–77） | 2:44 ／ 2:35 | 待上傳 |
-| E20 | 維數 | 2.2（77–81） | 2:56 ／ 2:52 | 待上傳 |
 
 成品在 `manim_lessons/samples/output/advcalc_eNN_{zh-TW,en}.mp4`
 （1920×1080、60 fps、H.264 + AAC）。每一支都核對過 log 的 `Rendered AdvCalcENNZH/EN`、
