@@ -77,6 +77,10 @@ manifest 放進 `series/<新系列>/manifests/`，並建一份 STATUS.md。共�
   `manim -qh --fps 60 lessons/<系列>/<課名>.py <場景類別>`
   或 `bash tools/queue.sh NN:<課名>.py`（會自動在系列子目錄裡找檔案；
   換系列時用 `SCENE_PREFIX=` 換場景名前綴）。
+  **`queue.sh` 是用 `bash` 開新 shell 跑的，不會繼承 venv**——沒有先 activate 的話
+  它會兩個場景都 `FAIL`，log 裡只有一行「manim：命令找不到」，看起來很像場景名錯了。
+  在非互動環境（背景執行）裡直接帶：
+  `PATH="$PWD/../.venv/bin:$PATH" SCENE_PREFIX=… bash tools/queue.sh …`。
 - 上傳指令在 **repo 根目錄**執行（manifest 裡的 `file` 是相對於根目錄的路徑）。
 - 系統無 ffprobe/ffmpeg，用 imageio_ffmpeg 附的：
   `/home/r08849002/miniconda3/envs/teacher-monster/lib/python3.10/site-packages/imageio_ffmpeg/binaries/ffmpeg-linux-x86_64-v7.0.2`

@@ -1,0 +1,41 @@
+[
+  {
+    "file": "manim_lessons/samples/output/advcalc_e21_zh-TW.mp4",
+    "title": "《高等微積分》第 21 集｜對偶空間與第二共軛空間｜Loomis & Sternberg 第 2 章 §3",
+    "description": "本集對應 Loomis 與 Sternberg《Advanced Calculus》第 2 章第 3 節（書頁 81 到 83）。\n\n我們已經遇過不少特別的線性泛函，尤其是座標泛函。把一個空間上所有的線性泛函收集起來，得到的向量空間就叫做它的對偶空間，也叫共軛空間。這一節全部假設有限維——好處正是沒有連續性那層麻煩。\n\n第一個想問的是：對偶空間有多大。定理立刻回答了。取一組有序基底，讓第 j 個座標泛函把向量送到它的第 j 個座標，那麼這些座標泛函就構成對偶空間的一組有序基底。\n\n獨立性的看法是：假設它們的某個線性組合是零泛函，就把它作用在第 i 個基底向量上。那個向量的座標除了第 i 位是一以外全是零，於是整條式子只剩第 i 個係數等於零。\n\n生成性的看法是：基底展開可以改寫成，向量等於各個座標泛函在它身上的值乘上對應的基底向量。於是任何泛函作用上去，就等於它在基底上的值乘上對應的座標泛函。\n\n這組基底就叫原來那組基底的對偶基底，馬上得到推論：對偶空間的維數等於原空間的維數。這裡有三條式子值得停下來看，前兩條互為鏡像，第三條本身就在向量與泛函之間對稱。\n\n既然維數相同，兩邊當然同構，而且每一組基底都給出一個同構。可是那個同構會隨著選的基底改變——一般來說，一個空間跟它的對偶空間之間，沒有自然的同構。影片裡把這件事實際算了一遍：同一個向量、兩組基底，做出來的兩個泛函拿同一個測試向量去測，答案不一樣。\n\n座標空間是另一回事，因為它本來就有標準基底，所以跟自己的對偶空間之間有一個標準同構，於是可以放心把兩邊看成同一個。\n\n不過一個空間跟第二共軛空間——也就是對偶的對偶——確實是自然同構的。那個配對是雙線性的，而嵌射的檢查只要把非零向量排成基底的第一個，再取對偶基底的第一個泛函即可。\n\n這樣認同之後，一個空間跟它的對偶空間就對稱地互為對偶，兩個符號都該當成變數。下一集接零化子與伴隨算子。\n\n本影片為雙語教學動畫系列（繁體中文版）。\n\n本影片為獨立製作的學習導讀，非官方教材，與原書作者及出版社無關。\n講解為自行撰寫，動畫為自行繪製，不含原書頁面，也不提供原書的取得管道。",
+    "tags": [
+      "高等微積分",
+      "Advanced Calculus",
+      "Loomis",
+      "Sternberg",
+      "對偶空間",
+      "共軛空間",
+      "線性泛函",
+      "對偶基底",
+      "第二共軛空間",
+      "自然同構",
+      "線性代數",
+      "大學數學"
+    ],
+    "language": "zh-TW"
+  },
+  {
+    "file": "manim_lessons/samples/output/advcalc_e21_en.mp4",
+    "title": "Advanced Calculus, Episode 21 | The Dual Space and the Second Conjugate | Ch. 2, §3",
+    "description": "This episode covers chapter 2, section 3 (pages 81 to 83) of Loomis and Sternberg's Advanced Calculus.\n\nWe have already met a good many special linear functionals, the coordinate ones in particular. Collecting all the linear functionals on a space gives a vector space called its dual, or conjugate, space. This section assumes finite dimensions throughout, and the blessing of that is one fewer complication.\n\nThe first thing to ask is how big the dual space is, and a theorem settles it at once. Take an ordered basis and let the jth coordinate functional send a vector to its jth coordinate. Those functionals form an ordered basis for the dual space.\n\nFor independence: suppose some combination of them is the zero functional, and evaluate it on the ith basis vector. That vector has coordinates zero everywhere but a one in the ith place, so the equation collapses to the ith coefficient being zero.\n\nFor spanning: the basis expansion can be rewritten to say a vector equals the values of the coordinate functionals on it, times the matching basis vectors. So any functional applied to it equals its values on the basis, times those coordinate functionals.\n\nThis basis is called the dual of the original one, and a corollary follows at once: the dual space has the same dimension as the space it came from. Three equations are worth pausing on, the first two mirroring each other and the third symmetric in the vector and the functional by itself.\n\nSince the dimensions agree the two are of course isomorphic, and each basis defines an isomorphism. But that isomorphism varies with the basis chosen, and in general there is no natural isomorphism between a space and its dual. The video carries this out concretely: one vector, two bases, and the two resulting functionals disagree on the same test vector.\n\nCoordinate space is another matter, because it comes with a standard basis and so with a standard isomorphism onto its own dual, so the two may freely be identified.\n\nA space is, however, naturally isomorphic to its second conjugate space, the dual of the dual. The pairing involved is bilinear, and injectivity needs only that a nonzero vector be made the first vector of an ordered basis, with the first functional of the dual basis taken.\n\nOnce that identification is made, a space and its dual are symmetrically related, each the dual of the other, and both symbols are to be read as variables. Next time: annihilators and the adjoint.\n\nPart of a bilingual animated teaching series (English edition).\n\nThis is an independently produced study guide. It is not official course material and is not affiliated with the authors or publisher of the book. The narration and animations are original work; no pages of the book are reproduced, and no copy of it is provided.",
+    "tags": [
+      "Advanced Calculus",
+      "Loomis",
+      "Sternberg",
+      "dual space",
+      "conjugate space",
+      "linear functional",
+      "dual basis",
+      "second conjugate space",
+      "natural isomorphism",
+      "linear algebra",
+      "university mathematics"
+    ],
+    "language": "en"
+  }
+]
