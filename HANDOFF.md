@@ -19,14 +19,15 @@
 | `series/t1_mechanics/` | Landau《力學》第 1–53 課 | **已完結**（第 52 課是本書最後一節，第 53 課是總複習） |
 | `series/special/` | 特別篇 S01（Anthropic 全域工作空間論文） | 單集，可再加 |
 | `series/t2_fields/` | Landau《場論》 | **尚未開始**，開工前的決定寫在它的 STATUS.md |
-| `series/advcalc/` | Loomis & Sternberg《Advanced Calculus》 | **進行中**：E00–E20 已上傳（第 0、1 章完結，第 2 章做到第 2 節） |
+| `series/advcalc/` | Loomis & Sternberg《Advanced Calculus》 | **進行中**：E00–E21 已上傳（第 0、1 章完結，第 2 章做到第 3 節前半） |
 
 **現在的方向是 `advcalc`。**《力學》已完結；《場論》仍是空殼。
 接手時先讀 `series/advcalc/STATUS.md`（進度、連結、踩過的坑）與
 `series/advcalc/OUTLINE.md`（全書解析與 169 集規劃）。
 
-**眼前第一件事是 E21**，第 2 章第 3 節「對偶空間」（書頁 81–88，OUTLINE 排 2 集 E21–E22）。
-到 E20 為止，實際集數都與 OUTLINE 的預估相符。
+**眼前第一件事是 E22**，接第 2 章第 3 節的後半（書頁 83–88）：零化子、伴隨算子 T*、
+定理 3.3 到 3.5、dyad，以及自然性的交換圖。E21 已經把 §3 的前半（81–83）做完上傳了。
+到 E21 為止，實際集數都與 OUTLINE 的預估相符。
 **OUTLINE 的集數仍然是估的，動工前先照書核一次**——那張表錯過一次（見 advcalc 的 STATUS.md）。
 
 `advcalc` 有三件與其他系列不同、會踩雷的事：
