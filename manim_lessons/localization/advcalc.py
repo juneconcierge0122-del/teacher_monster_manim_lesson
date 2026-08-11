@@ -633,6 +633,36 @@ TOPICS_ADVCALC: dict[int, dict[str, tuple[str, list[str]]]] = {
  "Once that identification is made, a space and its dual are symmetrically related, each the dual of the other. So in the expression for a functional applied to a vector, both symbols are variables, and it is often rewritten with a symmetric bracket. A last lemma says the dual basis relation reads the same way round.",
 ])},
 
+# E22 — chapter 2, section 3, second half (book pp. 83-86): annihilator
+# subspaces, Theorem 3.3 and its corollary, the adjoint, Theorems 3.4 and 3.5,
+# rank, dyads with Lemma 3.2, and the commutative square that says what
+# 'natural' means. Book pp. 87-88 are exercises and are not covered.
+22: {"zh": ("第 2 章：零化子與伴隨算子", [
+ "上一集建立了對偶空間。現在問：給一個子集，對偶空間裡哪些泛函在它上面整個取零？這些泛函的集合，書上叫做它的零化子。正交第一次自然出現就在這裡，那個詞留到第 5 章。",
+ "定義也有反過來的方向：對偶空間裡一個子集，被它每個泛函都送到零的向量，同樣構成零化子。五條性質留作習題，兩條等一下要用：換成線性擴張零化子不變，集合都包在雙重零化子裡。",
+ "接著是一條維數等式。W 是 V 的子空間的話，V 的維數等於 W 的維數加上零化子的維數。證明是把 W 的基底延長成 V 的，再看對偶基底：延長那一段對應的泛函正好是零化子的基底。",
+ "推論馬上跟著來：任何子集的雙重零化子就是它的線性擴張。維數等式用兩次夾出兩邊維數相同，而線性擴張本來就包在裡面，只好一樣。",
+ "換到伴隨算子。取一個從 V 到 W 的線性映射，再取 W 上的一個泛函，一合成就得到 V 上的泛函。這個對應是從 W 的對偶到 V 的對偶，書上叫它伴隨算子。注意箭頭反過來了。",
+ "第一條定理說，把映射送到伴隨算子，這個對應本身就是同構。線性來自合成的雙線性。映射不是零的話，找個向量讓它在上面不是零，再找個泛函在像上不取零，就有嵌射。維數又相同。",
+ "同一條定理還有第二半：兩個映射先後合成，取伴隨算子時順序反過來。這不是巧合。伴隨算子是把泛函沿著映射往回拉，往回走時最後施加的那一步最先被遇到。",
+ "第二條定理把零空間與值域對調。伴隨算子的零空間正好是原映射值域的零化子，反過來，伴隨算子值域的零化子正好是原映射的零空間。證明只是把定義一層層拆開。",
+ "線性變換的值域維數叫做它的秩。兩條定理合起來就得到伴隨算子的秩等於原映射的秩。這後面會變成矩陣的著名事實：橫列生成的空間跟直行生成的空間維數相同。",
+ "再看一個特別情形：值域只有一維的映射。取值域裡一個非零向量，映射就把每個輸入送到某個係數乘它，而係數對輸入是線性的，就是一個泛函。書上叫這種映射 dyad，伴隨算子也是。",
+ "最後把自然這個詞講清楚。每個空間都有通往第二共軛空間的同構。取一個從 V 到 W 的映射畫成方框：上面是它，下面是伴隨算子的伴隨算子，兩邊是同構。自然就是這方框永遠可交換。",
+]), "en": ("Chapter 2: Annihilators and the Adjoint", [
+ "The last episode built the dual space. Next question: given a subset, which functionals in the dual vanish on all of it? The book calls that set the annihilator of the subset. Orthogonality first appears in this dual setting, but the word waits for chapter five.",
+ "The definition runs the other way too: the vectors that every functional in a subset of the dual sends to zero also form an annihilator. Two of the five exercises matter here: the span changes nothing, and every set sits inside its double annihilator.",
+ "Then a dimension identity. If W is a subspace of V, the dimension of V is that of W plus that of its annihilator. The proof extends a basis for W to a basis for V and looks at the dual basis: the functionals matching the added vectors span the annihilator.",
+ "A corollary follows at once: the double annihilator of any subset is its linear span. Apply the identity twice and the two have the same dimension. The span already sits inside the double annihilator, and with equal dimensions they must coincide.",
+ "Now the adjoint. Take a linear map from V to W and a functional on W. Compose them and you have a functional on V. The correspondence this defines is a linear map from the dual of W to the dual of V, and it is called the adjoint. Notice the arrow has reversed.",
+ "The first theorem: sending a map to its adjoint is itself an isomorphism. Linearity comes from composition being bilinear. If the map is not zero, find a vector it does not kill and a functional nonzero on the image. That gives injectivity, and the dimensions match.",
+ "The same theorem has a second half: for two maps composed in turn, taking adjoints reverses the order. That is no accident. The adjoint pulls functionals backwards along the map, and going backwards, the step applied last is the one met first.",
+ "The second theorem trades null spaces for ranges. The null space of the adjoint is exactly the annihilator of the range of the original map, and the annihilator of the range of the adjoint is exactly its null space. The proof only unwinds the definitions.",
+ "The dimension of the range of a linear transformation is its rank. Putting the last two theorems together, the adjoint has the same rank as the map it came from. Later this becomes a known fact about matrices: rows and columns span spaces of the same dimension.",
+ "A special case: a map with a one dimensional range. Pick a nonzero vector in it. The map sends each input to a coefficient times that vector, and the coefficient is linear in the input, so it is a functional. The book calls this a dyad, and its adjoint is one too.",
+ "Finally, what natural means. Every space has its own isomorphism onto its second conjugate. Take any map from V to W and draw a square: the map along the top, the adjoint of its adjoint along the bottom, the isomorphisms down the sides. It always commutes.",
+])},
+
 }
 
 # Language independent. Every word-like gloss lives in the scene's MODE_LABEL.
@@ -947,6 +977,25 @@ FORMULAS_ADVCALC: dict[int, dict[int, str]] = {
  8: "ω ( ξ , f ) = f ( ξ )        ξ ↦ ξ * *   :   V  ≅  V * *",
  9: "α ≠ 0    ⇒    f ( α ) = 1    ⇒    α * * ≠ 0",
  10: "⟨ ξ , f ⟩ = f ( ξ )        αᵢ * * ( λⱼ ) = λⱼ ( αᵢ ) = δ ᵢⱼ",
+},
+
+# Carried over from E21 on purpose: β for a basis of V, ε for its dual basis,
+# λ for a functional. The book writes the dual basis of Theorem 3.3 as λ, which
+# would collide with the λ of the dyad four beats later. The dyad's vector in W
+# is η rather than the book's β, for the same reason -- β is already spoken for
+# here as a basis vector of V.
+22: {
+ 0: "A ⊂ V        A °  =  { f ∈ V * :  f ( α ) = 0   ∀ α ∈ A }",
+ 1: "A ⊂ V *   ⇒   A °  =  { α ∈ V :  f ( α ) = 0   ∀ f ∈ A }        ( L ( A ) ) ° = A °        A ⊂ A ° °",
+ 2: "β₁ … βₘ   :   W        β₁ … βₙ   :   V        εₘ₊₁ … εₙ   :   W °        d ( V ) = d ( W ) + d ( W ° )",
+ 3: "A ° °  =  L ( A )",
+ 4: "l ∈ W *   ⇒   l ∘ T ∈ V *        T * ( l ) = l ∘ T   :   Hom ( W * , V * )",
+ 5: "T  ↦  T *   :   Hom ( V , W )  ≅  Hom ( W * , V * )        d = m n",
+ 6: "( T ∘ S ) *  =  S *  ∘  T *",
+ 7: "N ( T * )  =  ( R ( T ) ) °        ( R ( T * ) ) °  =  N ( T )",
+ 8: "d ( R ( T * ) )  =  d ( R ( T ) )",
+ 9: "T ( ξ ) = λ ( ξ ) η        T = λ ( · ) η        T * = η * * ( · ) λ",
+ 10: "ψ ∘ T  =  T * * ∘ φ        φ : V ≅ V * *  ,  ψ : W ≅ W * *",
 },
 
 }

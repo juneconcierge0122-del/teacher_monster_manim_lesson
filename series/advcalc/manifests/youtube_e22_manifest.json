@@ -1,0 +1,43 @@
+[
+  {
+    "file": "manim_lessons/samples/output/advcalc_e22_zh-TW.mp4",
+    "title": "《高等微積分》第 22 集｜零化子與伴隨算子｜Loomis & Sternberg 第 2 章 §3",
+    "description": "本集對應 Loomis 與 Sternberg《Advanced Calculus》第 2 章第 3 節的後半（書頁 83 到 86），接續上一集的對偶空間。\n\n給一個子集，對偶空間裡有哪些泛函在它上面整個取零？這些泛函所成的集合，書上叫做這個子集的零化子。正交這個概念其實就是在對偶的情境裡第一次自然出現的，不過正交這個詞要留到第 5 章有了純量積再用。定義也有反過來的方向，而把一個空間跟它的第二共軛空間認同之後，第二個定義其實就是第一個的特例。\n\n接著是一條維數等式：如果 W 是 V 的子空間，那麼 V 的維數等於 W 的維數加上 W 的零化子的維數。證明是把 W 的一組基底延長成 V 的基底，再看對應的對偶基底——延長出來的那一段所對應的泛函，正好構成零化子的基底。影片把這個證明畫成一條基底列，在 W 停下來的地方切一刀，兩段的長度就是那條等式。推論是：任何子集的雙重零化子，就是它的線性擴張。\n\n下半集換到伴隨算子。取一個從 V 到 W 的線性映射，再取 W 上的一個線性泛函，兩個一合成就得到 V 上的泛函；這樣定出來的對應是從 W 的對偶空間到 V 的對偶空間，注意箭頭的方向反過來了。第一條定理說這個對應本身就是同構，而且兩個映射先後合成時，取伴隨算子的順序會整個反過來——因為伴隨算子就是把泛函沿著映射往回拉。\n\n第二條定理把零空間與值域對調：伴隨算子的零空間正好是原映射值域的零化子，反過來也對稱地成立。合起來就得到伴隨算子的秩等於原映射的秩，這件事後面會變成矩陣的一個著名事實：橫列生成的空間跟直行生成的空間，維數是相同的。\n\n最後兩段是值域只有一維的映射，也就是書上說的 dyad，它的伴隨算子也是 dyad 而兩個角色恰好互換；以及一張交換圖，把上一集說的自然同構的自然兩個字講清楚——方框的兩條路走出來永遠一樣。\n\n下一集進第 4 節，矩陣。\n\n本影片為雙語教學動畫系列（繁體中文版）。\n\n本影片為獨立製作的學習導讀，非官方教材，與原書作者及出版社無關。\n講解為自行撰寫，動畫為自行繪製，不含原書頁面，也不提供原書的取得管道。",
+    "tags": [
+      "高等微積分",
+      "Advanced Calculus",
+      "Loomis",
+      "Sternberg",
+      "零化子",
+      "伴隨算子",
+      "對偶空間",
+      "秩",
+      "dyad",
+      "交換圖",
+      "自然同構",
+      "線性代數",
+      "大學數學"
+    ],
+    "language": "zh-TW"
+  },
+  {
+    "file": "manim_lessons/samples/output/advcalc_e22_en.mp4",
+    "title": "Advanced Calculus, Episode 22 | Annihilators and the Adjoint | Ch. 2, §3",
+    "description": "This episode covers the second half of chapter 2, section 3 (pages 83 to 86) of Loomis and Sternberg's Advanced Calculus, continuing the dual space from last time.\n\nGiven a subset, which functionals in the dual vanish on all of it? The book calls that set the annihilator of the subset. Orthogonality really does first appear naturally in this dual setting, but the word orthogonal is saved for chapter five, where a scalar product is available. The definition runs the other way too, and once a space is identified with its second conjugate, the second definition is just a case of the first.\n\nThen a dimension identity: if W is a subspace of V, the dimension of V is that of W plus that of its annihilator. The proof extends a basis for W to a basis for V and looks at the dual basis, where the functionals matching the added vectors turn out to span the annihilator. The video draws that proof as a single strip of basis vectors, cut where W stops, so the counting is visible rather than asserted. The corollary: the double annihilator of any subset is its linear span.\n\nThe second half turns to the adjoint. Take a linear map from V to W and a functional on W; composing them gives a functional on V, and the correspondence this defines runs from the dual of W to the dual of V, with the arrow reversed. The first theorem says that correspondence is itself an isomorphism, and that composing two maps reverses the order when adjoints are taken, because the adjoint pulls functionals backwards along the map.\n\nThe second theorem trades null spaces for ranges: the null space of the adjoint is exactly the annihilator of the range of the original map, and symmetrically the other way round. Together these give that the adjoint has the same rank as the map it came from, which later becomes a well known fact about matrices: the rows and the columns span spaces of the same dimension.\n\nThe last two beats are maps whose range is one dimensional, the dyads, whose adjoints are dyads with the two roles exchanged; and a commutative square that finally says what the word natural meant in the previous episode, namely that both ways around the square always agree.\n\nNext time: section four, matrices.\n\nPart of a bilingual animated teaching series (English edition).\n\nThis is an independently produced study guide. It is not official course material and is not affiliated with the authors or publisher of the book. The narration and animations are original work; no pages of the book are reproduced, and no copy of it is provided.",
+    "tags": [
+      "Advanced Calculus",
+      "Loomis",
+      "Sternberg",
+      "annihilator",
+      "adjoint",
+      "dual space",
+      "rank",
+      "dyad",
+      "commutative diagram",
+      "natural isomorphism",
+      "linear algebra",
+      "university mathematics"
+    ],
+    "language": "en"
+  }
+]
