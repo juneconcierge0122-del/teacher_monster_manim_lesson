@@ -1,0 +1,43 @@
+[
+  {
+    "file": "manim_lessons/samples/output/advcalc_e23_zh-TW.mp4",
+    "title": "《高等微積分》第 23 集｜矩陣與線性變換的字典｜Loomis & Sternberg 第 2 章 §4",
+    "description": "本集對應 Loomis 與 Sternberg《Advanced Calculus》第 2 章第 4 節的前段（書頁 88 到 90），開始講矩陣。\n\n第一件事是把印象修正過來。矩陣在大家印象裡是一個長方形的數字陣列，但陣列只是畫法。矩陣其實是一個函數，定義在「列指標配行指標」這個指標集上，就像數列也是定義在自然數上的函數。既然是函數，矩陣的加法就是函數的加法、逐格相加，所以所有同樣形狀的矩陣自己構成一個向量空間，維數是列數乘行數——它就是一個座標空間，只是指標集長得花俏一點。\n\n定理四點一先處理座標空間的情形。把矩陣的第 j 直行看成一個 m 元組，那麼恰好有一個線性映射，它的骨架就是這一串行向量，也就是把標準基底的第 j 個向量送到第 j 直行；這個映射就是線性組合映射，逐個座標寫開就是大家最熟悉的那組純量方程。影片把這一拍畫成真的幾何圖：兩個行向量畫成箭頭，各自乘上係數，用平行四邊形加起來。\n\n反過來每個線性映射都這樣出現，所以矩陣與映射之間是自然同構。橫列還有另一種讀法：第 i 條純量方程本身就是一個線性泛函，所以 m 條橫列就是與那個多值映射等價的 m 個泛函。直行看到的是骨架，橫列看到的是方程，同一個陣列。\n\n定理四點二離開座標空間。一般的空間沒有現成的座標，要先選定有序基底；兩邊基底選好之後，每個矩陣對應唯一一個映射。證明只是把兩個同構接起來。推論說輸出等於映射作用在輸入上，充要條件就是那組純量方程成立——選好基底之後，抽象的映射被那組方程完全取代。\n\n但有一件事一定要記住：矩陣永遠是相對於選定的基底。座標空間上矩陣是映射的天然分身，一般空間上的映射自己並沒有矩陣，是選了基底才有；換一組基底，同一個映射就換一個矩陣。最後一條引理說明怎麼把矩陣元素從映射本身讀回來：用 W 的對偶基底去量第 j 個基底向量的像。\n\n書頁 96 到 98 整整兩頁多是習題，依製作原則不做解答。下一集講轉置、秩與矩陣乘法。\n\n本影片為雙語教學動畫系列（繁體中文版）。\n\n本影片為獨立製作的學習導讀，非官方教材，與原書作者及出版社無關。\n講解為自行撰寫，動畫為自行繪製，不含原書頁面，也不提供原書的取得管道。",
+    "tags": [
+      "高等微積分",
+      "Advanced Calculus",
+      "Loomis",
+      "Sternberg",
+      "矩陣",
+      "線性變換",
+      "骨架",
+      "基底",
+      "座標同構",
+      "對偶基底",
+      "自然同構",
+      "線性代數",
+      "大學數學"
+    ],
+    "language": "zh-TW"
+  },
+  {
+    "file": "manim_lessons/samples/output/advcalc_e23_en.mp4",
+    "title": "Advanced Calculus, Episode 23 | Matrices and Linear Transformations | Ch. 2, §4",
+    "description": "This episode covers the first part of chapter 2, section 4 (pages 88 to 90) of Loomis and Sternberg's Advanced Calculus, where matrices begin.\n\nThe first job is to correct the picture. A matrix is usually imagined as a rectangular array of numbers, but the array is only a way of drawing it. A matrix is really a function on the index set of row and column pairs, just as a sequence is a function on the integers. Being a function, matrices add place by place, which is simply the addition of functions, so all matrices of one shape form a vector space whose dimension is rows times columns: a Cartesian space with a rather fancy finite index set.\n\nTheorem four point one handles the Cartesian case. Read the jth column as an m-tuple, and there is exactly one linear map whose skeleton is that list of columns, one that sends the jth standard basis vector to the jth column. That map is the linear combination map, and written out coordinate by coordinate it gives the familiar scalar equations. The video draws this beat geometrically: the columns as arrows, each scaled by a coordinate, added by a parallelogram.\n\nEvery linear map arises this way, so matrices and maps correspond by a natural isomorphism. The rows admit another reading: the ith scalar equation is itself a linear functional, so the m rows are the m functionals equivalent to the one vector valued map. The columns show the skeleton, the rows show the equations, and it is the same array.\n\nTheorem four point two leaves the Cartesian spaces. A general space has no ready made coordinates, so ordered bases have to be chosen; with a basis fixed on each side, every matrix gives a unique map. The proof only composes two isomorphisms. The corollary says the output equals the map applied to the input exactly when those scalar equations hold, so with bases chosen the abstract map is entirely replaced by the equations.\n\nBut one thing has to be remembered: a matrix is always with respect to chosen bases. On Cartesian spaces a matrix is a map's natural alter ego, but a map on a general space has no matrix of its own until bases are picked, and different bases give the same map a different matrix. A last lemma shows how to recover an entry from the map itself, by measuring the image of the jth basis vector with the dual basis of W.\n\nPages 96 to 98 are exercises and are not solved here. Next time: the transpose, rank and matrix products.\n\nPart of a bilingual animated teaching series (English edition).\n\nThis is an independently produced study guide. It is not official course material and is not affiliated with the authors or publisher of the book. The narration and animations are original work; no pages of the book are reproduced, and no copy of it is provided.",
+    "tags": [
+      "Advanced Calculus",
+      "Loomis",
+      "Sternberg",
+      "matrices",
+      "linear transformations",
+      "skeleton",
+      "basis",
+      "coordinate isomorphism",
+      "dual basis",
+      "natural isomorphism",
+      "linear algebra",
+      "university mathematics"
+    ],
+    "language": "en"
+  }
+]
