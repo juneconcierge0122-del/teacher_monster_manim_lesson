@@ -24,7 +24,8 @@ import pathlib, sys
 sys.path.insert(0, str(pathlib.Path(__file__).resolve().parents[3]))
 import numpy as np
 from manim import Dot, Ellipse, Line, Rectangle, Text, VGroup
-from manim_lessons.lib.design_tokens import (ACCENT_A, ACCENT_B, ACCENT_C, DIM, INK, WARN)
+from manim_lessons.lib.design_tokens import (ACCENT_A, ACCENT_B, ACCENT_C, DIM, WARN)
+from manim_lessons.lessons.advcalc.arrays import ArrayArt
 from manim_lessons.lessons.canonical_base import CanonicalBase, make
 from manim_lessons.localization.advcalc import TOPICS_ADVCALC, FORMULAS_ADVCALC
 
@@ -53,7 +54,7 @@ SUP = ("¹", "²", "³")                        # the same range, as superscript
 assert len(ISUBS) == M and len(JSUBS) == len(SUP) == N
 
 
-class AdvCalcE23Base(CanonicalBase):
+class AdvCalcE23Base(ArrayArt, CanonicalBase):
  TOPICS_SRC = TOPICS_ADVCALC
  FORMULAS_SRC = FORMULAS_ADVCALC
  AUDIO_PREFIX = "e"
@@ -72,47 +73,6 @@ class AdvCalcE23Base(CanonicalBase):
   9: {"zh": "矩陣永遠是相對於基底的", "en": "a matrix is always with respect to bases"},
   10: {"zh": "怎麼把矩陣元素讀出來", "en": "how to read an entry off the map"},
  }
-
- def _sym(self, y, s, color, size=FS_TAG, x=0.0, w=11.0):
-  """A language independent line of symbols, scaled to fit like a caption."""
-  return self._mid(y, s, s, color, size, x, w)
-
- def _brackets(self, x0, x1, y0, y1, color=DIM, d=0.16, sw=2.5):
-  """The two square brackets around an array, drawn as three strokes each."""
-  g = VGroup()
-  for x, s in ((x0, d), (x1, -d)):
-   g.add(Line([x, y0, 0], [x, y1, 0], color=color, stroke_width=sw),
-         Line([x, y0, 0], [x + s, y0, 0], color=color, stroke_width=sw),
-         Line([x, y1, 0], [x + s, y1, 0], color=color, stroke_width=sw))
-  return g
-
- def _array(self, cx, cy, rows, cols, dx=0.55, dy=0.45, color=INK, r=0.055):
-  """A dot array centred on (cx, cy), plus the brackets around it.
-
-  Returns (group, pos) where pos(i, j) is the centre of the (i, j) dot, so a
-  beat that wants to mark a row, a column or a single entry asks for the same
-  coordinates the dots were drawn at instead of recomputing them."""
-  x0 = cx - (cols - 1) * dx / 2
-  y0 = cy + (rows - 1) * dy / 2
-  pos = lambda i, j: [x0 + j * dx, y0 - i * dy, 0]
-  g = VGroup(*[Dot(pos(i, j), radius=r, color=color)
-               for i in range(rows) for j in range(cols)])
-  g.add(self._brackets(x0 - 0.32, x0 + (cols - 1) * dx + 0.32,
-                       y0 - (rows - 1) * dy - 0.22, y0 + 0.22))
-  return g, pos
-
- def _column(self, cx, cy, entries, color=INK, dy=0.42, size=FS_TAG - 3):
-  """A bracketed column of text cells, top entry first."""
-  y0 = cy + (len(entries) - 1) * dy / 2
-  g = VGroup(*[Text(s, font_size=size, color=c).move_to([cx, y0 - k * dy, 0])
-               for k, (s, c) in enumerate((e if isinstance(e, tuple) else (e, color))
-                                          for e in entries)])
-  return g.add(self._brackets(cx - 0.34, cx + 0.34,
-                              y0 - (len(entries) - 1) * dy - 0.20, y0 + 0.20))
-
- def _box(self, x, y, s, color, w=1.40, h=0.60, size=FS_TAG + 1):
-  return VGroup(Rectangle(width=w, height=h, color=color, stroke_width=2.5).move_to([x, y, 0]),
-                Text(s, font_size=size, color=color).move_to([x, y, 0]))
 
  # ── beats ─────────────────────────────────────────────────────────
  def _is_a_function(self):

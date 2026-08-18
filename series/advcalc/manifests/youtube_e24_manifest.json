@@ -1,0 +1,43 @@
+[
+  {
+    "file": "manim_lessons/samples/output/advcalc_e24_zh-TW.mp4",
+    "title": "《高等微積分》第 24 集｜轉置、秩與矩陣乘法｜Loomis & Sternberg 第 2 章 §4",
+    "description": "本集對應 Loomis 與 Sternberg《Advanced Calculus》第 2 章第 4 節的中段（書頁 90 到 93），接續上一集的矩陣與線性變換。\n\n先看轉置：把矩陣的橫列與直行對調，第 i 列第 j 行那一格搬到第 j 列第 i 行。定理四點三說了一件漂亮的事——如果兩邊都用對偶基底來讀，伴隨算子的矩陣就是原矩陣的轉置。也就是說，轉置不是為了方便才定義的運算，它是伴隨算子在矩陣世界裡的長相。證明只是把上一集那條引理用在伴隨算子身上，再用第二共軛空間把括號拆開；影片把這個證明畫成兩條路走到同一個數，因為書上那一串四個等號本來就是這個意思。\n\n接著定義兩個子空間。矩陣的 m 條橫列各自是一個 n 元組，生成的叫橫列空間；n 個直行各自是一個 m 元組，生成的叫直行空間。兩者住在不同的空間裡，維數卻總是相同。原因是：第 j 直行正好是標準基底第 j 個向量的像，而基底的像生成整個值域，所以直行空間就是值域本身；另一邊，轉置的直行就是原來的橫列，而轉置是伴隨算子的矩陣，再加上第 22 集證過的「伴隨算子與原映射同秩」，兩端就被夾成同一個數。這個共同的維數就叫矩陣的秩。\n\n下半集講乘法。取兩個可以先後合成的線性映射，把各自的純量方程代進去，把兩個和的順序對調再整理，一組新的係數就自己冒出來——那就是乘積矩陣。第 k 列第 j 行那一格，是左邊矩陣第 k 橫列跟右邊矩陣第 j 直行的純量積，所以形狀必須對得上。\n\n真正的重點是：矩陣乘法不是先定義再回頭驗證性質，它根本就定義成「合成的那個矩陣」。既然對應保持乘法，合成滿足的代數律就自動被繼承，結合律不必計算。定理四點四把這件事說完：所有方陣構成一個代數，自然同構於那個空間上所有線性變換所成的代數；單位映射的矩陣主對角線上是一，而方陣可逆若且唯若秩是滿的。最後定理四點五把結果推廣到一般空間，定理四點六說乘積的轉置等於兩個轉置反過來相乘。\n\n下一集講行向量、換基底與 Hom 的標準基底。\n\n本影片為雙語教學動畫系列（繁體中文版）。\n\n本影片為獨立製作的學習導讀，非官方教材，與原書作者及出版社無關。\n講解為自行撰寫，動畫為自行繪製，不含原書頁面，也不提供原書的取得管道。",
+    "tags": [
+      "高等微積分",
+      "Advanced Calculus",
+      "Loomis",
+      "Sternberg",
+      "轉置",
+      "秩",
+      "矩陣乘法",
+      "橫列空間",
+      "直行空間",
+      "伴隨算子",
+      "代數同構",
+      "線性代數",
+      "大學數學"
+    ],
+    "language": "zh-TW"
+  },
+  {
+    "file": "manim_lessons/samples/output/advcalc_e24_en.mp4",
+    "title": "Advanced Calculus, Episode 24 | The Transpose, Rank and Matrix Products | Ch. 2, §4",
+    "description": "This episode covers the middle of chapter 2, section 4 (pages 90 to 93) of Loomis and Sternberg's Advanced Calculus, continuing the matrices of the previous episode.\n\nFirst the transpose: exchange rows and columns, so the entry in row i and column j moves to row j and column i. Theorem four point three then says something rather nice. Read against the dual bases on both sides, the matrix of the adjoint is the transpose of the original matrix. The transpose is not an operation invented for convenience; it is what the adjoint looks like in matrix form. The proof only applies the previous episode's lemma to the adjoint and uses the second conjugate space to unwrap the brackets, and the video draws it as two routes arriving at one number, which is what the book's chain of four equalities really is.\n\nThen two subspaces. The m rows of a matrix are each an n-tuple and span the row space; the n columns are each an m-tuple and span the column space. They live in different spaces and yet always have the same dimension. The reason: the jth column is the image of the jth standard basis vector, and the images of a basis span the range, so the column space is the range itself. On the other side, the columns of the transpose are the original rows, the transpose is the matrix of the adjoint, and episode 22 showed the adjoint has the same rank, so both ends are squeezed onto one number. That common dimension is the rank of the matrix.\n\nThe second half is multiplication. Take two maps that compose, substitute one set of scalar equations into the other, swap the order of summation and tidy up, and a new set of coefficients appears: the product matrix. The entry in row k and column j is the scalar product of the kth row of the left factor with the jth column of the right one, so the shapes have to agree.\n\nThe real point is that matrix multiplication is not defined first and checked afterwards. It is defined to be the matrix of the composite, so since the correspondence preserves products, every algebraic law composition obeys is inherited and associativity needs no computation. Theorem four point four completes this: the square matrices form an algebra naturally isomorphic to all linear transformations of the space, the identity map gives ones down the diagonal, and a square matrix is invertible exactly when its rank is full. Theorem four point five generalises to arbitrary spaces, and four point six says the transpose of a product is the product of the transposes in the opposite order.\n\nNext time: column vectors, change of basis, and a basis for Hom.\n\nPart of a bilingual animated teaching series (English edition).\n\nThis is an independently produced study guide. It is not official course material and is not affiliated with the authors or publisher of the book. The narration and animations are original work; no pages of the book are reproduced, and no copy of it is provided.",
+    "tags": [
+      "Advanced Calculus",
+      "Loomis",
+      "Sternberg",
+      "transpose",
+      "rank",
+      "matrix products",
+      "row space",
+      "column space",
+      "adjoint",
+      "algebra isomorphism",
+      "linear algebra",
+      "university mathematics"
+    ],
+    "language": "en"
+  }
+]

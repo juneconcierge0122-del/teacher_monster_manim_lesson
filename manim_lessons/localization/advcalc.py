@@ -691,6 +691,33 @@ TOPICS_ADVCALC: dict[int, dict[str, tuple[str, list[str]]]] = {
  "A last lemma says how to read an entry off the map. Measure with the dual basis of W: apply the kth dual basis functional to the image of the jth basis vector, and the number you get is the entry in row k, column j. Next time: the transpose, rank and products.",
 ])},
 
+# E24 -- chapter 2, section 4, middle part (book pp. 90-93).
+24: {"zh": ("第 2 章：轉置、秩與矩陣乘法", [
+ "上一集把矩陣與線性映射對應起來了。這一集先看轉置：把橫列與直行對調，第 i 列第 j 行那一格，搬到第 j 列第 i 行。原來的橫列變成新的直行，反過來也一樣。",
+ "定理四點三說了一件漂亮的事。如果兩邊都用對偶基底來看，伴隨算子的矩陣就是原矩陣的轉置。轉置不是為了方便才定義的運算，它是伴隨算子在矩陣世界裡的長相。",
+ "證明只是把兩條引理接起來。上一集那條說，矩陣元素等於對偶基底作用在基底向量的像上。把它用在伴隨算子身上，再用第二共軛空間那條把括號拆開，兩個指標就自己互換了。",
+ "接著定義兩個空間。矩陣的 m 條橫列各自是一個 n 元組，它們生成的叫橫列空間；n 個直行各自是一個 m 元組，生成的叫直行空間。兩個空間住在不同的地方，維數卻相同。",
+ "為什麼相同？先看直行空間。第 j 直行正好是標準基底第 j 個向量的像，而基底的像會生成整個值域，所以直行空間根本就是映射的值域，維數就是映射的秩。",
+ "另一邊，轉置是伴隨算子的矩陣，所以轉置的直行空間維數就是伴隨算子的秩。但轉置的直行就是原矩陣的橫列。上一集之前證過伴隨算子與原映射同秩，兩邊就被夾成同一個數。",
+ "這個共同的維數就叫矩陣的秩。接下來看乘法。取兩個可以先後合成的線性映射，把各自的純量方程代進去，把和的順序調換再整理，一組新的係數就自己冒出來。",
+ "那組係數就是乘積矩陣。第 k 列第 j 行那一格，是左邊矩陣第 k 橫列跟右邊矩陣第 j 直行的純量積。所以形狀必須對得上：左邊的行數要等於右邊的列數，否則配不起來。",
+ "重點在這裡：矩陣乘法不是先定義再回頭驗證性質，它根本就定義成「合成的那個矩陣」。既然對應保持乘法，合成滿足的代數律就自動被繼承。結合律不必算，它就是合成的結合律。",
+ "定理四點四把這件事說完：所有方陣構成一個代數，自然同構於那個空間上所有線性變換所成的代數。單位映射的矩陣主對角線上是一、其他是零。而方陣可逆，若且唯若秩是滿的。",
+ "最後兩條把結果推廣。定理四點五說，在一般空間上選好三組基底之後，合成的矩陣仍然是兩個矩陣的乘積。定理四點六說，乘積的轉置等於兩個轉置反過來相乘。下一集講行向量與換基底。",
+]), "en": ("Chapter 2: The Transpose, Rank and Matrix Products", [
+ "The last episode matched matrices with linear maps. This one starts with the transpose: exchange the rows and the columns, so the entry in row i and column j moves to row j and column i. The old rows become the new columns and the other way round.",
+ "Theorem four point three says something rather nice. Read against the dual bases on both sides, the matrix of the adjoint is the transpose of the original matrix. The transpose is not an operation invented for convenience; it is what the adjoint looks like in matrix form.",
+ "The proof only joins two lemmas. Last episode's says an entry is a dual basis vector applied to the image of a basis vector. Apply it to the adjoint, then use the second conjugate space to unwrap the brackets, and the two indices exchange themselves.",
+ "Now two subspaces. The m rows of a matrix are each an n-tuple, and what they span is the row space. The n columns are each an m-tuple, and what they span is the column space. They live in different spaces and yet have the same dimension.",
+ "Why the same? Take the column space first. The jth column is exactly the image of the jth standard basis vector, and the images of a basis span the whole range, so the column space simply is the range of the map, and its dimension is the rank.",
+ "On the other side, the transpose is the matrix of the adjoint, so the dimension of its column space is the rank of the adjoint. But the columns of the transpose are the rows of the original. The adjoint has the same rank, so both sides are squeezed onto one number.",
+ "That common dimension is the rank of the matrix. Now multiplication. Take two linear maps that compose, substitute one set of scalar equations into the other, swap the order of summation and tidy up, and a new set of coefficients appears on its own.",
+ "Those coefficients are the product matrix. The entry in row k and column j is the scalar product of the kth row of the left factor with the jth column of the right one. So the shapes have to agree: the left factor's columns must match the right factor's rows.",
+ "Here is the point. Matrix multiplication is not defined first and then checked. It is defined to be the matrix of the composite. Since the correspondence preserves products, every algebraic law composition obeys is inherited at once. Associativity needs no computation.",
+ "Theorem four point four finishes this. The square matrices form an algebra naturally isomorphic to all linear transformations of the space. The identity gives the matrix with ones down the main diagonal, and a square matrix is invertible exactly when its rank is full.",
+ "Two last theorems generalise. Theorem four point five: with three bases chosen in general spaces, the matrix of a composite is still the product of the two matrices. Theorem four point six: the transpose of a product is the product of the transposes in the opposite order.",
+])},
+
 }
 
 # Language independent. Every word-like gloss lives in the scene's MODE_LABEL.
@@ -1045,6 +1072,25 @@ FORMULAS_ADVCALC: dict[int, dict[int, str]] = {
  8: "η  =  T ( ξ )      ⇔      yᵢ  =  Σ₁ⁿ tᵢⱼ xⱼ    ( i = 1 , … , m )",
  9: "( T , β , γ )  ↦  { tᵢⱼ }        ( T , β ′ , γ ′ )  ↦  { t ′ᵢⱼ }  ≠  { tᵢⱼ }",
  10: "t ₖⱼ  =  ε ₖ ( T ( βⱼ ) )        ε ₖ ( γᵢ )  =  δ ᵢₖ",
+},
+
+# Continues E23: β for a basis of V, γ for a basis of W, ε for the dual basis
+# of γ in W*. Theorem 4.3 also needs the dual basis of V* inside V**, and by the
+# lemma of E21 that is just β * *, so no new letter is needed. Lower case t, s, r
+# are matrices and upper case T, S, R the maps they came from -- so t * is the
+# transpose and T * the adjoint, which is exactly what Theorem 4.3 relates.
+24: {
+ 0: "t * ᵢⱼ  =  t ⱼᵢ        t  :  m × n        t *  :  n × m",
+ 1: "T : V → W    ↦    t        T * : W * → V *    ↦    t *        ε ᵢ ( γⱼ ) = δ ᵢⱼ",
+ 2: "s ⱼᵢ  =  β ⱼ * * ( T * ( ε ᵢ ) )  =  ( ε ᵢ ∘ T ) ( βⱼ )  =  ε ᵢ ( T ( βⱼ ) )  =  t ᵢⱼ",
+ 3: "t ʲ  ∈  ℝᵐ   ( j = 1 … n )        t ᵢ  ∈  ℝⁿ   ( i = 1 … m )",
+ 4: "T ( δ ʲ )  =  t ʲ        L ( t ¹ , … , t ⁿ )  =  R ( T )",
+ 5: "d ( L ( t ₁ … t ₘ ) )  =  d ( R ( T * ) )  =  d ( R ( T ) )  =  d ( L ( t ¹ … t ⁿ ) )",
+ 6: "y ᵢ = Σ ₕ t ᵢₕ x ₕ        z ₖ = Σ ᵢ s ₖᵢ y ᵢ        z ₖ = Σ ₕ ( Σ ᵢ s ₖᵢ t ᵢₕ ) x ₕ",
+ 7: "r ₖⱼ  =  Σ ᵢ s ₖᵢ t ᵢⱼ        ( l × m ) · ( m × n )  =  ( l × n )",
+ 8: "S ∘ T   ↦   s · t        ( R ∘ S ) ∘ T = R ∘ ( S ∘ T )    ⇒    ( r s ) t = r ( s t )",
+ 9: "M ₙ  ≅  Hom ( ℝⁿ )        e ᵢⱼ  =  δ ᵢⱼ        ∃ t ⁻¹   ⇔   d ( R ( T ) ) = n",
+ 10: "S ∘ T   ↦   s · t        ( s t ) *  =  t * s *",
 },
 
 }
