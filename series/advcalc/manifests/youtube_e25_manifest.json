@@ -1,0 +1,43 @@
+[
+  {
+    "file": "manim_lessons/samples/output/advcalc_e25_zh-TW.mp4",
+    "title": "《高等微積分》第 25 集｜行向量、換基底與 Hom 的標準基底｜Loomis & Sternberg 第 2 章 §4",
+    "description": "本集對應 Loomis 與 Sternberg《Advanced Calculus》第 2 章第 4 節的最後一段（書頁 93 到 96），第 4 節到此完結。\n\n先是一個看似瑣碎、其實很有用的認同：一個 n 元組可以看成 n 列一行的矩陣，叫行向量，也可以看成一列 n 行的，叫列向量，兩種都是自然同構。書上取行向量為標準。這麼一來，上一集那組純量方程正好是說「輸出的行向量等於矩陣乘上輸入的行向量」，於是座標空間之間的線性映射就變成左乘一個固定矩陣，映射與乘法合而為一。\n\n泛函那邊，一個泛函的矩陣是一列 n 行，所以泛函就是列向量；作用在輸入上就是列向量乘行向量，得到一乘一的矩陣，也就是一個數。順著這個看伴隨算子：泛函寫成列向量時，伴隨算子是從右邊乘上去的，取轉置換回行向量就變成左乘轉置矩陣——這是「伴隨算子的矩陣是轉置」的第二個證明。\n\n接著是換基底。同一個空間取兩組基底就有兩個基底同構，一個接上另一個的反函數，得到的是座標之間的換算；書上特地提醒別跟另一個長得很像的映射搞混，那一個把第一組基底送到第二組，住在空間本身上。為此書上畫了一張圖，上下兩層是座標空間，中間夾著抽象的兩個空間，四個基底同構把它們接起來，兩個換座標的映射站在兩側，一共九個映射。這張圖是可交換的，所以任何兩點之間的兩條路都代表同一個映射，挑一對路徑就直接讀出新舊矩陣之間的關係式。照定義硬推也會得到同一條，但中間會有一堆走過又折回的步驟。\n\n兩個特例接著出現：兩端是同一個空間時，式子變成相似變換；值域是實數時，那一側沒有基底要換，於是泛函的座標乘的是換座標矩陣的反矩陣的轉置。跟向量的座標比一比，兩者往相反的方向變——這就是古典張量分析把泛函叫做共變向量、把空間裡的向量叫做逆變向量的由來，這兩個詞在微分幾何裡會一直出現。\n\n最後，矩陣空間的標準基底透過同構搬過去，就是所有線性映射所成空間的標準基底：第 k l 個把第 l 個基底向量送到第 k 個，其餘全送到零。把一個映射用這組基底展開，係數自己跑出來，正好就是它的矩陣元素——所以矩陣元素從頭到尾都是這組基底下的座標，而前幾集的對偶基底只是其中的特例。\n\n書頁 96 到 98 是習題，依製作原則不做解答。下一集講跡與行列式。\n\n本影片為雙語教學動畫系列（繁體中文版）。\n\n本影片為獨立製作的學習導讀，非官方教材，與原書作者及出版社無關。\n講解為自行撰寫，動畫為自行繪製，不含原書頁面，也不提供原書的取得管道。",
+    "tags": [
+      "高等微積分",
+      "Advanced Calculus",
+      "Loomis",
+      "Sternberg",
+      "行向量",
+      "列向量",
+      "換基底",
+      "交換圖",
+      "共變",
+      "逆變",
+      "相似變換",
+      "線性代數",
+      "大學數學"
+    ],
+    "language": "zh-TW"
+  },
+  {
+    "file": "manim_lessons/samples/output/advcalc_e25_en.mp4",
+    "title": "Advanced Calculus, Episode 25 | Column Vectors, Change of Basis, a Basis for Hom | Ch. 2, §4",
+    "description": "This episode covers the last part of chapter 2, section 4 (pages 93 to 96) of Loomis and Sternberg's Advanced Calculus, which completes the section.\n\nIt opens with an identification that looks trivial and is not: an n-tuple can be read as an n by 1 matrix, a column vector, or as a 1 by n matrix, a row vector, and both are natural isomorphisms. The book takes the column as standard. With that, the previous episode's scalar equations say exactly that the output column is the matrix times the input column, so a linear map between Cartesian spaces becomes left multiplication by one fixed matrix, and map and product coincide.\n\nA functional has a 1 by n matrix, so a functional is a row vector, and applying it is a row times a column, giving a 1 by 1 matrix, which is a number. Following this through for the adjoint: with functionals written as rows, the adjoint multiplies from the right, and transposing back to columns makes it left multiplication by the transpose. That is a second proof that the matrix of the adjoint is the transpose.\n\nThen change of basis. Two bases for one space give two basis isomorphisms, and following one with the inverse of the other changes coordinates into coordinates. The book warns against confusing this with the similar looking map that sends the first basis to the second, which acts on the space itself. For all this the book draws a diagram: two storeys of Cartesian spaces with the abstract pair between them, four basis isomorphisms joining them, and the two changes of coordinates at the sides, nine maps in all. The diagram commutes, so any two paths between two points are the same map, and picking a pair reads off the relation between the old and new matrices. The definitions give the same identity, with retraced steps the diagram removes.\n\nTwo special cases follow. When both ends are the same space the formula becomes a similarity. When the range is the real line nothing changes on that side, so a functional's coordinates get the transpose of the inverse change matrix. Compared with a vector's coordinates, the two run in opposite directions, which is why classical tensor analysis calls functionals covariant and the vectors of the space contravariant, words that recur throughout differential geometry.\n\nFinally, carrying the standard basis of the matrix space across the isomorphism gives a standard basis for the space of all linear maps: the k l th one sends the l th basis vector to the k th and everything else to zero. Expand a map in it and the coefficients come out as its matrix entries, so the entries were the coordinates in this basis all along, and the dual basis of earlier episodes is one special case.\n\nPages 96 to 98 are exercises and are not solved here. Next time: trace and determinant.\n\nPart of a bilingual animated teaching series (English edition).\n\nThis is an independently produced study guide. It is not official course material and is not affiliated with the authors or publisher of the book. The narration and animations are original work; no pages of the book are reproduced, and no copy of it is provided.",
+    "tags": [
+      "Advanced Calculus",
+      "Loomis",
+      "Sternberg",
+      "column vector",
+      "row vector",
+      "change of basis",
+      "commutative diagram",
+      "covariant",
+      "contravariant",
+      "similarity",
+      "linear algebra",
+      "university mathematics"
+    ],
+    "language": "en"
+  }
+]

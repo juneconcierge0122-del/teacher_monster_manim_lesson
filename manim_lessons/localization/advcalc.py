@@ -718,6 +718,35 @@ TOPICS_ADVCALC: dict[int, dict[str, tuple[str, list[str]]]] = {
  "Two last theorems generalise. Theorem four point five: with three bases chosen in general spaces, the matrix of a composite is still the product of the two matrices. Theorem four point six: the transpose of a product is the product of the transposes in the opposite order.",
 ])},
 
+
+# E25 -- chapter 2, section 4, last part (book pp. 93-96). Section 4 ends at
+# p. 96; pp. 96-98 are exercises and p. 99 begins section 5.
+25: {"zh": ("第 2 章：行向量、換基底與 Hom 的標準基底", [
+ "先講一個看似瑣碎、其實很有用的認同。一個 n 元組可以看成 n 列一行的矩陣，叫行向量；也可以看成一列 n 行的，叫列向量。兩種都是自然同構，書上取行向量為標準。",
+ "這麼一來，上一集那組純量方程正好是說：輸出的行向量等於矩陣乘上輸入的行向量。於是座標空間之間的線性映射，就變成左乘一個固定的矩陣，映射與乘法完全合一。",
+ "泛函那邊呢？一個泛函的矩陣是一列 n 行，所以泛函就是列向量。把它作用在輸入上，就是列向量乘行向量，得到一乘一的矩陣，也就是一個數。",
+ "再看伴隨算子。泛函先走映射再取值，對應到的是列向量右乘矩陣。所以泛函寫成列向量時，伴隨算子是右乘；轉置換回行向量，就變成左乘轉置矩陣。這是那條定理的第二個證明。",
+ "接著換基底。同一個空間取兩組基底就有兩個基底同構，一個接上另一個的反函數，得到的是座標之間的換算。小心別跟另一個像的映射搞混：那一個把第一組基底送到第二組，是空間上的映射。",
+ "書上為此畫了一張兩層的圖。上下兩層都是座標空間，中間夾著抽象的兩個空間，四個基底同構把它們接起來，兩個換座標的映射站在兩側。九個映射，彼此牽制。",
+ "這張圖可交換，意思是任何兩點之間的兩條路都代表同一個映射。挑一對路徑就讀出一條等式：新矩陣等於右側的換座標矩陣，乘上舊矩陣，再乘左側那個的反矩陣。",
+ "如果兩端是同一個空間，只有一組基底要換，式子就變成相似變換。再看泛函：實數那邊沒有基底要換，所以泛函的座標是乘上換座標矩陣的反矩陣的轉置——跟向量比，兩者往相反方向變。",
+ "因為這個緣故，古典張量分析把泛函叫做共變向量，把空間裡的向量叫做逆變向量。這兩個詞在微分幾何裡會一直出現，而它們的來歷就是剛剛那兩條方向相反的式子。",
+ "最後一件事。矩陣空間有它的標準基底，透過同構搬過去，就是所有線性映射所成空間的標準基底。第 k l 個做的事很單純：把第 l 個基底向量送到第 k 個，其他送到零。",
+ "把一個映射用這組基底展開，係數自己跑出來，正好就是它的矩陣元素——矩陣元素本來就是這組基底下的座標。對偶基底只是特例。第 4 節到此結束，下一集講跡與行列式。",
+]), "en": ("Chapter 2: Column Vectors, Change of Basis and a Basis for Hom", [
+ "First an identification that looks trivial and is not. An n-tuple can be read as an n by 1 matrix, called a column vector, or as a 1 by n matrix, called a row vector. Both are natural isomorphisms, and the book takes the column vector as standard.",
+ "With that, last episode's scalar equations say exactly this: the output column vector is the matrix times the input column vector. So a linear map between Cartesian spaces becomes left multiplication by one fixed matrix, and map and product coincide.",
+ "What about functionals? The matrix of a functional is 1 by n, so a functional is a row vector. Applying it to an input is a row vector times a column vector, giving a 1 by 1 matrix, which is to say a number.",
+ "Now the adjoint. A functional composed with the map corresponds to that row vector multiplied on the right by the matrix. So with functionals as rows the adjoint is right multiplication, and transposing back to columns makes it left multiplication by the transpose.",
+ "Now change of basis. Two bases for one space give two basis isomorphisms, and following one with the inverse of the other changes coordinates into coordinates. Do not confuse it with the map sending the first basis to the second, which acts on the space itself.",
+ "For this the book draws a two-storey diagram. Both storeys are Cartesian spaces, the abstract spaces sit between them, four basis isomorphisms join them up, and the two changes of coordinates stand at the sides. Nine maps, all constraining each other.",
+ "The diagram commutes: any two paths between two points are the same map. Pick a pair and read off an identity. The new matrix is the change matrix on the right, times the old matrix, times the inverse of the one on the left.",
+ "If both ends are the same space there is one basis change and the formula becomes a similarity. For functionals nothing changes on the real line, so their coordinates get the transpose of the inverse change matrix. Compare a vector: the two go opposite ways.",
+ "For this reason classical tensor analysis calls functionals covariant vectors and calls the vectors of the space contravariant. Both words recur throughout differential geometry, and their whole origin is those two formulas running in opposite directions.",
+ "One last thing. The space of matrices has a standard basis, and carrying it across the isomorphism gives a standard basis for the space of all linear maps. The k l th one does something simple: it sends the l th basis vector to the k th and the rest to zero.",
+ "Expand a map in that basis and the coefficients come out on their own as its matrix entries, so the entries were the coordinates in this basis all along. The dual basis is one special case. Section four ends here; next time, trace and determinant.",
+])},
+
 }
 
 # Language independent. Every word-like gloss lives in the scene's MODE_LABEL.
@@ -1091,6 +1120,26 @@ FORMULAS_ADVCALC: dict[int, dict[int, str]] = {
  8: "S ∘ T   ↦   s · t        ( R ∘ S ) ∘ T = R ∘ ( S ∘ T )    ⇒    ( r s ) t = r ( s t )",
  9: "M ₙ  ≅  Hom ( ℝⁿ )        e ᵢⱼ  =  δ ᵢⱼ        ∃ t ⁻¹   ⇔   d ( R ( T ) ) = n",
  10: "S ∘ T   ↦   s · t        ( s t ) *  =  t * s *",
+},
+
+
+# Continues E23 and E24: β and β′ are the two bases of V, γ and γ′ the two of W,
+# ε the dual basis. φ and ψ are the basis isomorphisms, as in E23, now numbered
+# for the two choices; a and b are the change of coordinate matrices, t′ and t″
+# the matrices of T against the two pairs of bases. T′ and T″ are the Cartesian
+# transcriptions of T, which is the same role the prime played in E23.
+25: {
+ 0: "x  =  ⟨ x₁ , … , xₙ ⟩        x  :  n × 1        x *  :  1 × n",
+ 1: "y ᵢ  =  Σ₁ⁿ t ᵢⱼ x ⱼ        y  =  t · x        T   :   x  ↦  t x",
+ 2: "L a ( x )  =  Σ₁ⁿ a ᵢ x ᵢ  =  a * · x        a *  :  1 × n        a * x  :  1 × 1",
+ 3: "L a ( T ( x ) )  =  a * t x        T * ( L a )  =  a * t        T *  :  t *",
+ 4: "φ : x ↦ Σ xᵢ βᵢ        θ : y ↦ Σ yᵢ βᵢ′        A = θ ⁻¹ ∘ φ   :   y = a x",
+ 5: "T ′ = ψ₁ ⁻¹ ∘ T ∘ φ₁        T ″ = ψ₂ ⁻¹ ∘ T ∘ φ₂        A = φ₂ ⁻¹ ∘ φ₁  ,  B = ψ₂ ⁻¹ ∘ ψ₁",
+ 6: "T ″  =  B ∘ T ′ ∘ A ⁻¹        t ″  =  b t ′ a ⁻¹",
+ 7: "W = V   ⇒   t ″ = a t ′ a ⁻¹        b = e   ⇒   f ″ = ( a ⁻¹ ) * f ′        x ″ = a x ′",
+ 8: "ξ ∈ V   :   x ″ = a x ′        F ∈ V *   :   f ″ = ( a ⁻¹ ) * f ′",
+ 9: "δ ᵏˡ ( i , j ) = 0  ,  δ ᵏˡ ( k , l ) = 1        D ₖₗ ( βⱼ ) = 0   ( j ≠ l )  ,  D ₖₗ ( βₗ ) = γₖ",
+ 10: "T ( ξ )  =  Σ ᵢⱼ t ᵢⱼ D ᵢⱼ ( ξ )        T  =  Σ ᵢⱼ t ᵢⱼ D ᵢⱼ        D ₗ  =  ε ₗ",
 },
 
 }
