@@ -1,0 +1,41 @@
+[
+  {
+    "file": "manim_lessons/samples/output/advcalc_e26_zh-TW.mp4",
+    "title": "《高等微積分》第 26 集｜跡與行列式｜Loomis & Sternberg 第 2 章 §5",
+    "description": "本集對應 Loomis 與 Sternberg《Advanced Calculus》第 2 章第 5 節（書頁 99 到 101），第 5 節到此完結。\n\n這一節很短，目標是所有線性變換所成空間上的兩個特別的實數值函數：跡與行列式。兩個都把一個變換送到一個數，而且都與基底的選擇無關；但兩者的處境不同，這件事影片特別講清楚。\n\n先看跡。定理五點一說：在 n 維空間上恰好有一個線性泛函，交換兩個變換的合成順序時值不變，並且在單位變換上取值 n；而它在任何基底下都等於矩陣主對角線上元素的和。存在性很好證，選一組基底把泛函定義成主對角線的和就行；至於交換順序值不變這件事，影片把它畫成一整格的乘積用兩種順序去加——同一堆乘積，只是先沿橫列加或先沿直行加，所以兩邊當然相等。唯一性則是透過矩陣與變換的同構，把泛函寫成一組係數，交換的條件把對角線外的係數逼成零、對角線上的逼成相等，再用單位變換那條定住大小，細節書上留作習題。\n\n值得注意的是：定義跡的時候選了基底，但定理說它不依賴那個選擇。影片用同一個變換配兩組不同基底的兩個矩陣把這件事畫出來——兩個矩陣不一樣，主對角線的和卻一樣。\n\n接著是行列式。它複雜得多，而且書上明說它的存在性要到第 7 章才證，這一節只是假設有這樣一個函數並列出五條性質，影片一律照這個說法。幾何意義現在就能講：絕對值是這個變換把體積放大的倍率，正負號則記錄定向。五條性質是：合成的行列式等於兩個相乘；剪切的行列式是一；空間拆成不變子空間的直和時行列式是兩塊的乘積；一維時就是那個常數；二維時互換一對獨立向量得到負一。\n\n定理五點二給出二維的公式，也就是主對角線的乘積減去另一條對角線的乘積，這是一般公式的特例。最後三條：轉置不改變行列式，用同構把變換搬到另一個空間也不改變；變換可逆若且唯若行列式不是零；以及 Cramer 法則。\n\n書頁 101 到 102 是習題，依製作原則不做解答。下一集講矩陣計算。\n\n本影片為雙語教學動畫系列（繁體中文版）。\n\n本影片為獨立製作的學習導讀，非官方教材，與原書作者及出版社無關。\n講解為自行撰寫，動畫為自行繪製，不含原書頁面，也不提供原書的取得管道。",
+    "tags": [
+      "高等微積分",
+      "Advanced Calculus",
+      "Loomis",
+      "Sternberg",
+      "跡",
+      "行列式",
+      "定向",
+      "剪切",
+      "Cramer 法則",
+      "線性變換",
+      "線性代數",
+      "大學數學"
+    ],
+    "language": "zh-TW"
+  },
+  {
+    "file": "manim_lessons/samples/output/advcalc_e26_en.mp4",
+    "title": "Advanced Calculus, Episode 26 | Trace and Determinant | Ch. 2, §5",
+    "description": "This episode covers chapter 2, section 5 (pages 99 to 101) of Loomis and Sternberg's Advanced Calculus, which completes the section.\n\nThe section is short, and its aim is two special real-valued functions on the space of linear transformations: the trace and the determinant. Both send a transformation to a number and both are independent of the choice of basis, but their standing differs, and the video is careful about that.\n\nThe trace first. Theorem five point one says that on an n-dimensional space there is exactly one linear functional that is unchanged when two transformations swap places in a composite and that gives n on the identity, and that in any basis it is the sum down the main diagonal. Existence is easy: choose a basis and define the functional as the diagonal sum. For the swapping property the video draws one grid of products added in two orders, along the rows and along the columns; the same products either way, so the two sides agree. Uniqueness passes through the isomorphism with matrices, writing the functional as a set of coefficients that the swapping condition forces off the diagonal to vanish and on the diagonal to agree, with the identity condition fixing the size. The book leaves the details as exercises.\n\nNote what happened: a basis was chosen to define the trace, and the theorem says it does not depend on that choice. The video draws this as one transformation with two different matrices under it, whose diagonal sums nonetheless agree.\n\nThen the determinant. It is much more complicated, and the book states plainly that its existence is not proved until chapter seven; this section only assumes such a function exists and lists five properties of it, and the video says so throughout. The geometric meaning can be given now: the absolute value is the factor by which volume is multiplied, and the sign records orientation. The five properties are that the determinant of a composite is the product, that a shearing gives one, that a direct sum of invariant subspaces gives the product over the pieces, that one dimension gives the constant, and that swapping two independent vectors in the plane gives minus one.\n\nTheorem five point two gives the two-dimensional formula, the product down the diagonal minus the product up the other, a special case of a general formula. Three last results: transposing does not change the determinant and neither does carrying the map elsewhere by an isomorphism; a map is invertible exactly when its determinant is not zero; and Cramer's rule.\n\nPages 101 to 102 are exercises and are not solved here. Next time: matrix computations.\n\nPart of a bilingual animated teaching series (English edition).\n\nThis is an independently produced study guide. It is not official course material and is not affiliated with the authors or publisher of the book. The narration and animations are original work; no pages of the book are reproduced, and no copy of it is provided.",
+    "tags": [
+      "Advanced Calculus",
+      "Loomis",
+      "Sternberg",
+      "trace",
+      "determinant",
+      "orientation",
+      "shearing",
+      "Cramer's rule",
+      "linear transformations",
+      "linear algebra",
+      "university mathematics"
+    ],
+    "language": "en"
+  }
+]
