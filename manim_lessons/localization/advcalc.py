@@ -776,6 +776,37 @@ TOPICS_ADVCALC: dict[int, dict[str, tuple[str, list[str]]]] = {
  "Three last results. Transposing leaves the determinant alone, and so does carrying the map elsewhere by an isomorphism. A map is invertible exactly when its determinant is not zero. Finally Cramer's rule: replace the jth column by the right hand side and take a ratio.",
 ])},
 
+
+# E27 -- chapter 2, section 6, first part (book pp. 102-105): the elimination
+# process, Lemma 6.1, the order of a tuple, the reduction algorithm, the
+# structure it produces, and row-reduced echelon form. Section 6's content runs
+# to p. 109; pp. 109 onward are exercises. E28 takes pp. 105-109.
+27: {"zh": ("第 2 章：消去法與列簡化階梯形", [
+ "第 6 節的氣質跟前面幾節很不一樣。它從一個大家中學就學過的程序開始：把未知數一個一個消掉。而這個程序一次解決四個問題——線性擴張的基底、子空間的維數、行列式，還有反矩陣。",
+ "先立一條引理。對一串向量做三種運算：把兩個對調、把某一個乘上非零的數、把某一個減去另一個的倍數——注意是另一個，不能減自己。這三種都不會改變它們生成的空間。",
+ "理由很簡單：每一種運算都做得回去。對調再對調就回來，乘上非零的數就再除回去，減掉倍數就再加回來。既然兩串互相做得到對方，就互相落在對方的線性擴張裡，生成的空間只好一樣。",
+ "把這三種運算用在矩陣的橫列上，就叫初等列運算。接著定義一個詞：一個非零元組的階，是它第一個非零座標的位置。像零零零二負一零，階就是四。階越小，代表左邊的零越少。",
+ "演算法是這樣。在所有橫列裡找階最小的那一條搬到最上面，把它的首項除成一，再把它的倍數從其他每一列減掉，讓那一直行只剩最上面那個一，其他位置全是零。",
+ "然後對剩下的列重複同一件事：鎖定下一個出現的階，把那一列搬到第二列，同樣把它的直行清乾淨。我們看一個實際的三乘四例子從頭走到尾。這個例子剛好不需要對調，因為第一列的階本來就最小。",
+ "做完之後的矩陣有三個性質。前 k 條橫列裡，第 j 條的階是第 j 小的那個；如果 k 比列數少，剩下的列全是零；而第 nⱼ 個直行，正好是標準基底的第 j 個向量。",
+ "為什麼前 k 列是基底？取它們的一個線性組合。因為第 nⱼ 直行只有第 j 列是一，這個組合在第 nⱼ 個位置就正好等於第 j 個係數。要整個是零，每個係數只好都是零。",
+ "所以那 k 條橫列彼此獨立，又生成整個列空間，就是它的一組基底。一開始說的四個問題裡，第一個與第二個就同時解決了：基底可以直接讀出來，維數就是 k。",
+ "剛剛那個例子還說明了一件事。原來的三條列裡，有一條其實是另外兩條的組合，肉眼看不出來；消去之後它變成一整列的零，維數是二而不是三。",
+ "最後的矩陣叫做列簡化階梯形。可以證明它完全由列空間決定，跟從哪個矩陣開始、按什麼順序做都無關；它的那些橫列就叫這個空間的典範基底。下一集把這些運算翻譯成矩陣乘法。",
+]), "en": ("Chapter 2: Elimination and Row-Reduced Echelon Form", [
+ "Section six has a different character from the ones before it. It starts from a procedure everyone learned at school, eliminating unknowns one at a time, and that one procedure solves four problems at once: a basis for a span, the dimension of a subspace, determinants and inverses.",
+ "First a lemma. Take a list of vectors and do one of three things: interchange two of them, multiply one by a nonzero number, or subtract a multiple of one from another one, not from itself. None of the three changes the space they span.",
+ "The reason is simple: every one of them can be undone. Interchange twice and you are back; multiply by a nonzero number and divide again; subtract a multiple and add it back. Since each list can be reached from the other, each sits inside the other's span.",
+ "Applied to the rows of a matrix these are the elementary row operations. Then a definition: the order of a nonzero tuple is the position of its first nonzero entry. For zero, zero, zero, two, minus one, zero the order is four. Smaller order means fewer zeros on the left.",
+ "The algorithm runs like this. Among all the rows find one of least order, move it to the top, divide it by its leading entry, and subtract multiples of it from every other row, so that its column is left with that leading one and nothing but zeros.",
+ "Then repeat on what is left: fix on the next order that occurs, bring that row into second place, and clear its column the same way. Let us watch one three by four example run start to finish. This one needs no interchange, since the first row already has least order.",
+ "The matrix you end with has three properties. Among the first k rows, the jth has the jth smallest order; if k is less than the number of rows, the remaining rows are all zero; and the n-j-th column is exactly the jth standard basis vector.",
+ "Why are those k rows a basis? Take a linear combination of them. Since the n-j-th column has a one only in row j, the combination has exactly the jth coefficient in that position. For the whole thing to vanish, every coefficient must be zero.",
+ "So those k rows are independent and they span the row space, which makes them a basis for it. Of the four problems named at the start, the first two are now settled at once: the basis reads straight off, and the dimension is k.",
+ "The example showed something else too. One of the three original rows was a combination of the other two, which the eye cannot see; after the elimination it became a row of zeros, and the dimension turned out to be two rather than three.",
+ "The final matrix is called row-reduced echelon form. It can be shown to be determined by the row space alone, whatever matrix you started from and in whatever order you worked. Its rows are called the canonical basis of that space.",
+])},
+
 }
 
 # Language independent. Every word-like gloss lives in the scene's MODE_LABEL.
@@ -1188,6 +1219,26 @@ FORMULAS_ADVCALC: dict[int, dict[int, str]] = {
  8: "V = M ⊕ N   ⇒   Δ ᵥ ( T ) = Δ ᴹ ( R ) Δ ᴺ ( S )        d ( V ) = 1  ⇒  Δ ( T ) = c ᴛ        Δ = − 1",
  9: "Δ ( T )  =  t ₁₁ t ₂₂  −  t ₁₂ t ₂₁        n × n   :   n !",
  10: "Δ ( T * ) = Δ ( T )        Δ ( θ ∘ T ∘ θ ⁻¹ ) = Δ ( T )        Δ ( T ) ≠ 0  ⇔  ∃ T ⁻¹        D ( t ) x ⱼ = D ( t | ⱼ y )",
+},
+
+
+# The worked example is this episode's own, not the book's: a 3 by 4 matrix of
+# rank 2 whose orders are 1 and 3, so the three structural properties -- rising
+# orders, a zero row left over, and delta in the pivot columns -- are all
+# visible in one run. Every intermediate matrix was produced by running the
+# reduction in exact arithmetic, not written out by hand.
+27: {
+ 0: "L ( α₁ , … , α ₘ )  ,  d ( V )  ,  Δ  ,  a ⁻¹",
+ 1: "α ᵢ  ↔  α ⱼ        α ᵢ  →  x α ᵢ   ( x ≠ 0 )        α ᵢ  →  α ᵢ − x α ⱼ   ( j ≠ i )",
+ 2: "L ( { β ᵢ } )  =  L ( { α ᵢ } )",
+ 3: "x  =  ⟨ 0 , 0 , 0 , 2 , − 1 , 0 ⟩        n ( x )  =  4",
+ 4: "α ₁  →  α ₁ / c ₁        α ᵢ  →  α ᵢ − a ᵢ₁ α ₁",
+ 5: "n ₁ < n ₂ < … < n ₖ",
+ 6: "n ( α ⱼ ) = n ⱼ        α ⱼ = 0   ( j > k )        δ ʲ   :   n ⱼ",
+ 7: "Σ ₁ᵏ c ⱼ α ⱼ  =  0        ⇒   c ⱼ  =  0   ( ∀ j )",
+ 8: "{ α ₁ , … , α ₖ }  ⊂  V        d ( V )  =  k",
+ 9: "α ₃  =  − 2 α ₁ − 2 α ₂        ⇒    d ( V ) = 2",
+ 10: "r  =  r ( V )",
 },
 
 }

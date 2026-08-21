@@ -57,3 +57,25 @@ class ArrayArt:
  def _box(self, x, y, s, color, w=1.40, h=0.60, size=FS_TAG + 1):
   return VGroup(Rectangle(width=w, height=h, color=color, stroke_width=2.5).move_to([x, y, 0]),
                 Text(s, font_size=size, color=color).move_to([x, y, 0]))
+
+ def _numgrid(self, cx, cy, rows, dx=0.44, dy=0.38, size=FS_TAG - 5,
+              color=INK, hot=(), hotcolor=None, hotrow=None, hotcol=None):
+  """A bracketed grid of numbers, plus the position function it drew with.
+
+  `rows` is a list of lists of anything str() accepts, so a matrix computed
+  by the lesson can be handed straight in -- an episode that shows a
+  calculation should show the one it actually ran. `hot` marks individual
+  (i, j) cells; `hotrow` and `hotcol` mark a whole line of them."""
+  n = len(rows[0])
+  x0 = cx - (n - 1) * dx / 2
+  y0 = cy + (len(rows) - 1) * dy / 2
+  pos = lambda i, j: [x0 + j * dx, y0 - i * dy, 0]
+  hc = hotcolor or color
+  g = VGroup()
+  for i, row in enumerate(rows):
+   for j, v in enumerate(row):
+    on = (i, j) in hot or i == hotrow or j == hotcol
+    g.add(Text(str(v), font_size=size, color=hc if on else color).move_to(pos(i, j)))
+  g.add(self._brackets(x0 - 0.30, x0 + (n - 1) * dx + 0.30,
+                       y0 - (len(rows) - 1) * dy - 0.20, y0 + 0.20))
+  return g, pos

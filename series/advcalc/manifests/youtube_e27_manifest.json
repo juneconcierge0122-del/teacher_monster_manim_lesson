@@ -1,0 +1,41 @@
+[
+  {
+    "file": "manim_lessons/samples/output/advcalc_e27_zh-TW.mp4",
+    "title": "《高等微積分》第 27 集｜消去法與列簡化階梯形｜Loomis & Sternberg 第 2 章 §6",
+    "description": "本集對應 Loomis 與 Sternberg《Advanced Calculus》第 2 章第 6 節的前段（書頁 102 到 105）。\n\n第 6 節的氣質跟前面幾節很不一樣。前面談的是結構，這一節從一個大家中學就學過的程序開始：把未知數一個一個消掉。而這同一個程序一次解決四個問題——線性擴張的基底、子空間的維數、行列式，還有反矩陣。前兩個這一集就解決，後兩個留給下一集。\n\n先立引理六點一。對一串向量做三種運算：把兩個對調、把某一個乘上非零的數、把某一個減去另一個的倍數，這三種都不改變它們生成的空間。理由是每一種運算都做得回去：對調再對調就回來，乘上非零的數就再除回去，減掉倍數就再加回來。既然兩串向量互相做得到對方，就互相落在對方的線性擴張裡，生成的空間只好一樣。把這三種運算用在矩陣的橫列上，就叫初等列運算。\n\n接著定義一個詞：一個非零元組的階，是它第一個非零座標的位置。演算法是：在所有橫列裡找階最小的那一條搬到最上面，把首項除成一，再把它的倍數從其他每一列減掉，讓那一直行只剩最上面那個一；然後對剩下的列重複同一件事。\n\n做完之後的矩陣有三個性質：前 k 條橫列的階遞增；如果 k 比列數少，剩下的列全是零；而第 j 個樞紐所在的直行，正好是標準基底的第 j 個向量。這三條合起來就說明那 k 條橫列是獨立的——取一個線性組合，因為樞紐直行只有對應那一列是一，組合在那個位置就正好等於該列的係數，要整個是零，每個係數只好都是零。它們又生成整個列空間，所以是列空間的一組基底：基底直接讀出來，維數就是 k。\n\n影片用一個自己設計的三乘四例子從頭走到尾。它的秩是二、階是一與三（中間跳過一個），做完之後第三列變成一整列的零——因為那一列本來就是另外兩列的組合，只是肉眼看不出來。影片裡每一個中間矩陣都是用精確整數實際算出來的，不是手寫的。\n\n最後的矩陣叫做列簡化階梯形。可以證明它完全由列空間決定，跟從哪個矩陣開始、按什麼順序做都無關；它的那些橫列就叫這個空間的典範基底。\n\n下一集把這些列運算翻譯成矩陣乘法，並用來算反矩陣與行列式。\n\n本影片為雙語教學動畫系列（繁體中文版）。\n\n本影片為獨立製作的學習導讀，非官方教材，與原書作者及出版社無關。\n講解為自行撰寫，動畫為自行繪製，不含原書頁面，也不提供原書的取得管道。",
+    "tags": [
+      "高等微積分",
+      "Advanced Calculus",
+      "Loomis",
+      "Sternberg",
+      "消去法",
+      "初等列運算",
+      "列簡化階梯形",
+      "典範基底",
+      "線性擴張",
+      "維數",
+      "線性代數",
+      "大學數學"
+    ],
+    "language": "zh-TW"
+  },
+  {
+    "file": "manim_lessons/samples/output/advcalc_e27_en.mp4",
+    "title": "Advanced Calculus, Episode 27 | Elimination and Row-Reduced Echelon Form | Ch. 2, §6",
+    "description": "This episode covers the first part of chapter 2, section 6 (pages 102 to 105) of Loomis and Sternberg's Advanced Calculus.\n\nSection six has a different character from the ones before it. Those were about structure; this one starts from a procedure everyone learned at school, eliminating unknowns one at a time. That single procedure settles four problems: a basis for a linear span, the dimension of a subspace, determinants, and inverses. The first two are settled here and the last two in the next episode.\n\nFirst Lemma 6.1. Take a list of vectors and do one of three things: interchange two of them, multiply one by a nonzero number, or subtract a multiple of one from another. None of the three changes the space they span, because every one of them can be undone: interchange twice and you are back, multiply and divide again, subtract a multiple and add it back. Since each list can be reached from the other, each sits inside the other's span. Applied to the rows of a matrix these are the elementary row operations.\n\nThen a definition: the order of a nonzero tuple is the position of its first nonzero entry. The algorithm is to find a row of least order, move it to the top, divide it by its leading entry, subtract multiples of it from every other row so that its column keeps only the leading one, and then repeat on what is left.\n\nThe matrix you end with has three properties: the orders of the first k rows rise; if k is less than the number of rows, the rest are zero rows; and each pivot column is exactly a standard basis vector. Together these show the k rows are independent. Take a linear combination: since a pivot column has a one only in its own row, the combination equals that row's coefficient in that position, so for the whole thing to vanish every coefficient must be zero. They also span the row space, so they are a basis for it: the basis reads straight off and the dimension is k.\n\nThe video runs one example of its own from start to finish, a three by four of rank two whose orders are one and three, skipping one in between. Its third row becomes a row of zeros, because that row was a combination of the other two all along and the eye could not see it. Every intermediate matrix shown was actually computed in exact arithmetic rather than written out.\n\nThe final matrix is called row-reduced echelon form. It is determined by the row space alone, whatever matrix you started from and in whatever order you worked, and its rows are the canonical basis of that space.\n\nNext time: translating these row operations into matrix multiplication, and using them for inverses and determinants.\n\nPart of a bilingual animated teaching series (English edition).\n\nThis is an independently produced study guide. It is not official course material and is not affiliated with the authors or publisher of the book. The narration and animations are original work; no pages of the book are reproduced, and no copy of it is provided.",
+    "tags": [
+      "Advanced Calculus",
+      "Loomis",
+      "Sternberg",
+      "elimination",
+      "elementary row operations",
+      "row-reduced echelon form",
+      "canonical basis",
+      "linear span",
+      "dimension",
+      "linear algebra",
+      "university mathematics"
+    ],
+    "language": "en"
+  }
+]
