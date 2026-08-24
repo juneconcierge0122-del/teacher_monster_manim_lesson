@@ -807,6 +807,32 @@ TOPICS_ADVCALC: dict[int, dict[str, tuple[str, list[str]]]] = {
  "The final matrix is called row-reduced echelon form. It can be shown to be determined by the row space alone, whatever matrix you started from and in whatever order you worked. Its rows are called the canonical basis of that space.",
 ])},
 
+28: {"zh": ("第 2 章：初等矩陣、反矩陣與行列式", [
+ "上一集用消去法解決了基底與維數，還剩行列式與反矩陣。這一節先換個看法：把元組寫成一條直行，線性變換就是左乘矩陣。那麼列運算在這個看法下是什麼？",
+ "答案是：每一個初等列運算都等於左乘一個初等矩陣 u。怎麼找出 u？因為 u 乘 a 等於 u 乘 e 再乘 a，只要把那個運算施在單位矩陣 e 上，跑出來的就是 u。",
+ "三種運算給出三種初等矩陣。對調兩列，就是把 e 的那兩列對調；某一列乘上 c，就是把對角線上那個一換成 c；加上第 j 列的 x 倍，就是在 i 列 j 行填進 x。",
+ "這些初等矩陣都是非奇異的，反矩陣還是同一型。對調自己就是自己的反；乘上 c 的反是乘上 c 分之一；加 x 倍的反是加負 x 倍。影片乘出其中一對，三對程式都驗過。",
+ "一整串運算就對應一整串左乘。把這些初等矩陣按順序乘起來寫成 b，b 乘 a 就是整串運算做在 a 上的結果；若這串運算把 a 化成階梯形 r，那 r 就等於 b 乘 a。",
+ "現在讓 a 是方陣而且非奇異。列空間的維數是 m，於是有 m 個階，嚴格遞增又落在一到 m 之間，只能排成一二三到 m。每個樞紐直行都是標準基底，所以 r 就是 e。",
+ "既然 b 乘 a 等於 e，b 就是 a 的反矩陣。消去法把 a 化成 e 的同時，也把反矩陣造了出來。影片用一個自己挑的二乘二例子：三步化到 e，三個初等矩陣乘起來就是它。",
+ "不過真要算有更省事的做法：因為 b 乘 e 就是 b，把同一串運算施在 e 上就直接得到 b。把 e 貼在 a 右邊一路化簡，左半邊變成 e 時，右半邊就是反矩陣。",
+ "最後是行列式。這裡改用兩種運算：對調兩列、同時把搬下去的那一列變號；以及減去別列的倍數。這兩種都不改變行列式。注意這回不把首項除成一，那個運算會把行列式乘上一個數。",
+ "做到底得到的矩陣叫半簡化形：每個樞紐直行只剩自己那個首項係數。它的行列式跟原來一樣，而它幾乎是對角的，行列式就是對角線上那些數相乘。影片的例子真的用上了一次對調。",
+ "如果 a 是奇異的，維數小於 m，半簡化形最後一列全是零，對角線上出現零，乘積是零。合起來就是這一節的結論：方陣可逆，當且僅當行列式不是零。下一集進第 7 節。",
+]), "en": ("Chapter 2: Elementary Matrices, Inverses and Determinants", [
+ "Last time elimination settled a basis and a dimension; determinants and inverses are still open. This section changes the picture first: write a tuple as a column and a linear transformation is multiplication by a matrix. So what is a row operation in that picture?",
+ "The answer: every elementary row operation is premultiplication by an elementary matrix u. How do you find u? Since u times a is u times e, times a, you can simply perform the operation on the identity matrix e, and what comes out is u itself.",
+ "Three operations, three elementary matrices. Interchanging two rows interchanges those rows of e; multiplying a row by c replaces that one on the diagonal by c; adding x times row j to row i puts x into the i, j place. Everywhere else they agree with e.",
+ "These elementary matrices are all nonsingular, and each inverse is elementary of the same kind. An interchange is its own inverse; multiplying by c is undone by multiplying by one over c; adding x times a row is undone by adding minus x times it.",
+ "A sequence of operations corresponds to a sequence of premultiplications. Multiply those elementary matrices in order and call the product b; then b times a is the whole sequence done to a. If the sequence row reduces a, then r equals b times a.",
+ "Now let a be square and nonsingular. Its row space has dimension m, so there are m orders, increasing and all between one and m, which leaves only one, two, three up to m. Every pivot column is a standard basis vector, so r is the identity matrix e.",
+ "Since b times a is e, b is the inverse of a. In reducing a to e, elimination has built the inverse along the way. The video runs a two by two example of its own: three steps down to e, and the three elementary matrices multiplied together are exactly the inverse.",
+ "For actual work there is a tidier way. Since b times e is b, performing the same sequence on e alone already delivers b. Put e to the right of a as one matrix and row reduce; by the time the left half is e, the right half is the inverse, ready to read off.",
+ "Finally determinants. Here we use two operations: interchange two rows and at the same time change the sign of the one moved down; and, as before, subtract a multiple of another row. Neither changes the determinant. We do not divide by leading entries now.",
+ "Carried through, that leaves a matrix called semireduced: each pivot column keeps only its own leading coefficient. Its determinant is the one we started with, and being nearly diagonal, that determinant is the product of the numbers down the diagonal.",
+ "If a is singular the dimension is less than m, the last row of the semireduced matrix is zero, a zero appears on the diagonal and the product vanishes. So: a square matrix is invertible if and only if its determinant is not zero. Next time, section seven.",
+])},
+
 }
 
 # Language independent. Every word-like gloss lives in the scene's MODE_LABEL.
@@ -1239,6 +1265,20 @@ FORMULAS_ADVCALC: dict[int, dict[int, str]] = {
  8: "{ α ₁ , … , α ₖ }  ⊂  V        d ( V )  =  k",
  9: "α ₃  =  − 2 α ₁ − 2 α ₂        ⇒    d ( V ) = 2",
  10: "r  =  r ( V )",
+},
+
+28: {
+ 0: "y  =  a · x        A  ∈  Hom ( ℝⁿ , ℝᵐ )        y ᵢ  =  Σ ⱼ a ᵢⱼ x ⱼ",
+ 1: "u · a  =  ( u · e ) · a        ⇒        u  =  u · e",
+ 2: "u ᵢ₀ⱼ₀ = u ⱼ₀ᵢ₀ = 1        u ᵢ₀ᵢ₀ = c        u ᵢ₀ⱼ₀ = x",
+ 3: "( 1 ) ⁻¹ = ( 1 )        c  ↔  1 / c        x  ↔  − x",
+ 4: "b  =  u ᵖ · u ᵖ⁻¹ · … · u ¹        r  =  b · a",
+ 5: "d ( V ) = m        1 ≤ n ₁ < … < n ₘ ≤ m        ⇒   n ᵢ = i",
+ 6: "b · a  =  e        b  =  a ⁻¹",
+ 7: "a | e        →        e | b",
+ 8: "( 1′ )  α ᵢ ↔ α ⱼ  ,  α ⱼ → − α ⱼ            ( 3 )  α ᵢ → α ᵢ − x α ⱼ",
+ 9: "Δ ( a )  =  Δ ( s )  =  Π ᵢ₌₁ᵐ  s ᵢᵢ",
+ 10: "a · a ⁻¹  =  e        ⇔        Δ ( a )  ≠  0",
 },
 
 }

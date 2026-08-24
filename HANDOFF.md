@@ -19,16 +19,17 @@
 | `series/t1_mechanics/` | Landau《力學》第 1–53 課 | **已完結**（第 52 課是本書最後一節，第 53 課是總複習） |
 | `series/special/` | 特別篇 S01（Anthropic 全域工作空間論文） | 單集，可再加 |
 | `series/t2_fields/` | Landau《場論》 | **尚未開始**，開工前的決定寫在它的 STATUS.md |
-| `series/advcalc/` | Loomis & Sternberg《Advanced Calculus》 | **進行中**：E00–E22 已上傳（第 0、1 章完結，第 2 章做到第 3 節完） |
+| `series/advcalc/` | Loomis & Sternberg《Advanced Calculus》 | **進行中**：E00–E28 已上傳（第 0、1 章完結，第 2 章做到第 6 節完） |
 
 **現在的方向是 `advcalc`。**《力學》已完結；《場論》仍是空殼。
 接手時先讀 `series/advcalc/STATUS.md`（進度、連結、踩過的坑）與
 `series/advcalc/OUTLINE.md`（全書解析與 169 集規劃）。
 
-**眼前第一件事是 E23**，接第 2 章第 4 節「矩陣」（書頁 88–99），OUTLINE 排 E23–E25 三集。
-E22 已經把 §3 收完上傳了（實際收在書頁 86，因為 87–88 兩頁全是習題，依第 8 節不做解答）。
-到 E22 為止，實際集數都與 OUTLINE 的預估相符。
-**OUTLINE 的集數仍然是估的，動工前先照書核一次**——那張表錯過一次（見 advcalc 的 STATUS.md）。
+**眼前第一件事是 E29**，接第 2 章第 7 節「二次型的對角化」（書頁 111 起）。
+E28 已經把 §6 收完上傳了（實際收在書頁 109 上半，109–111 是習題 6.1–6.20，依第 8 節不做解答）。
+到 E28 為止，實際集數都與 OUTLINE 的預估相符。
+**OUTLINE 的集數仍然是估的，動工前先照書核一次**——那張表錯過兩次（見 advcalc 的 STATUS.md）：
+它的「書頁」欄含各節的習題頁，實際內容比表上少。
 
 `advcalc` 有三件與其他系列不同、會踩雷的事：
 

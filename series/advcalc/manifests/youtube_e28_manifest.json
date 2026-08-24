@@ -1,0 +1,41 @@
+[
+  {
+    "file": "manim_lessons/samples/output/advcalc_e28_zh-TW.mp4",
+    "title": "《高等微積分》第 28 集｜初等矩陣、反矩陣與行列式｜Loomis & Sternberg 第 2 章 §6",
+    "description": "本集把 Loomis 與 Sternberg《Advanced Calculus》第 2 章第 6 節收完（書頁 105 到 109）。\n\n上一集用消去法解決了線性擴張的基底與子空間的維數，還剩行列式與反矩陣。這一集先換個看法：把元組寫成一條直行，線性變換就是左乘矩陣，y 等於 a 乘 x。在這個看法下，列運算又是什麼？\n\n答案是：每一個初等列運算都等於左乘某一個初等矩陣 u。找 u 的辦法很漂亮——因為 u 乘 a 等於 u 乘 e 之後再乘 a，只要把那個運算施在單位矩陣 e 上，跑出來的就是 u 本身。三種運算就給出三種初等矩陣：對調兩列、某一列乘上 c、把某一列的 x 倍加到另一列，各自只動到幾格，其餘位置跟 e 一樣。影片裡這三個矩陣都是照著這個定義實際算出來的，而且程式驗過「左乘它」確實等於「做那個運算」。\n\n這些初等矩陣都是非奇異的，反矩陣還是同一型：對調自己就是自己的反，乘上 c 的反是乘上 c 分之一，加 x 倍的反是加負 x 倍。於是一整串運算就對應一整串左乘，把它們按順序乘起來寫成 b，b 乘 a 就是整串運算做在 a 上的結果。\n\n接著是關鍵的一步：如果 a 是方陣而且非奇異，列空間的維數就是 m，於是有 m 個階，嚴格遞增又都落在一到 m 之間，只能排成一二三到 m。每個樞紐直行都是標準基底向量，所以化簡的終點只能是單位矩陣。b 乘 a 等於 e，b 就是反矩陣——消去法在把 a 化成 e 的同時，順手把反矩陣造了出來。影片用一個自己挑的二乘二例子走完全程，這個例子從頭到尾不出現分數。\n\n真要計算還有更省事的做法：因為 b 乘 e 就是 b，把 e 貼在 a 的右邊一起化簡，左半邊變成 e 的時候，右半邊就是反矩陣。\n\n最後是行列式。改用兩種運算：對調兩列並把搬下去的那一列變號，以及減去別列的倍數；這兩種都不改變行列式，代價是不把首項除成一，最後停在「半簡化形」。它幾乎是對角的，行列式就是對角線相乘。影片的三乘三例子第一列的階是二，所以那個帶變號的對調是真的必須用上，不是講講而已。奇異的情形下最後一列全是零，對角線上出現零，乘積是零。合起來就是這一節的結論：一個方陣可逆，當且僅當它的行列式不是零。\n\n第 6 節到此結束，下一集進第 7 節：二次型的對角化。\n\n本影片為雙語教學動畫系列（繁體中文版）。\n\n本影片為獨立製作的學習導讀，非官方教材，與原書作者及出版社無關。\n講解為自行撰寫，動畫為自行繪製，不含原書頁面，也不提供原書的取得管道。",
+    "tags": [
+      "高等微積分",
+      "Advanced Calculus",
+      "Loomis",
+      "Sternberg",
+      "初等矩陣",
+      "反矩陣",
+      "行列式",
+      "列運算",
+      "半簡化形",
+      "高斯消去法",
+      "線性代數",
+      "大學數學"
+    ],
+    "language": "zh-TW"
+  },
+  {
+    "file": "manim_lessons/samples/output/advcalc_e28_en.mp4",
+    "title": "Advanced Calculus, Episode 28 | Elementary Matrices, Inverses and Determinants | Ch. 2, §6",
+    "description": "This episode finishes chapter 2, section 6 (pages 105 to 109) of Loomis and Sternberg's Advanced Calculus.\n\nLast time elimination settled a basis for a linear span and the dimension of a subspace; determinants and inverses were still open. This episode changes the picture first: write a tuple as a column and a linear transformation becomes multiplication by a matrix, y equals a times x. So what is a row operation in that picture?\n\nThe answer is that every elementary row operation is premultiplication by an elementary matrix u. The way to find u is a nice one: since u times a is u times e, times a, you can simply perform the operation on the identity matrix e, and what comes out is u itself. Three operations give three elementary matrices — interchange two rows, multiply a row by c, add x times one row to another — each touching only a few places and agreeing with e everywhere else. All three matrices in the video were computed from that definition, and the code checks that premultiplying by one really does perform its operation.\n\nThese elementary matrices are all nonsingular, and each inverse is elementary of the same kind: an interchange is its own inverse, multiplying by c is undone by multiplying by one over c, and adding x times a row is undone by adding minus x times it. So a whole sequence of operations is a whole sequence of premultiplications; call their ordered product b, and b times a is the sequence carried out on a.\n\nThen the key step. If a is square and nonsingular its row space has dimension m, so there are m orders, strictly increasing and all between one and m, which leaves only one, two, three up to m. Every pivot column is a standard basis vector, so the reduction can only end at the identity. Then b times a is e and b is the inverse — in reducing a to e, elimination has built the inverse along the way. The video runs a two by two example of its own from start to finish, chosen so that no fraction ever appears.\n\nFor actual computation there is a tidier device: since b times e is b, put e to the right of a and reduce them together; by the time the left half is e, the right half is the inverse.\n\nFinally determinants. Two operations are used: interchange two rows and change the sign of the one moved down, and subtract a multiple of another row. Neither changes the determinant, and the price is that leading entries are not divided down to one, so the process stops at a semireduced matrix. Being nearly diagonal, its determinant is the product down the diagonal. The three by three example has a first row of order two, so the sign-changing interchange is genuinely forced rather than merely mentioned. In the singular case the last row comes out zero, a zero lands on the diagonal, and the product vanishes. Together: a square matrix is invertible if and only if its determinant is not zero.\n\nThat finishes section six; next time, section seven and the diagonalization of a quadratic form.\n\nPart of a bilingual animated teaching series (English edition).\n\nThis is an independently produced study guide. It is not official course material and is not affiliated with the authors or publisher of the book. The narration and animations are original work; no pages of the book are reproduced, and no copy of it is provided.",
+    "tags": [
+      "Advanced Calculus",
+      "Loomis",
+      "Sternberg",
+      "elementary matrices",
+      "matrix inverse",
+      "determinant",
+      "row operations",
+      "semireduced matrix",
+      "Gaussian elimination",
+      "linear algebra",
+      "university mathematics"
+    ],
+    "language": "en"
+  }
+]
