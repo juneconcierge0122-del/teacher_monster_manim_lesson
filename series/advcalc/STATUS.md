@@ -1,7 +1,7 @@
 # advcalc —《Advanced Calculus》(Loomis & Sternberg)
 
-**狀態：E00–E32 已上傳（私人）；E33 已渲染完成、checkvideo 全過，卡在 YouTube token 過期，等重新授權後上傳。**
-**第 0、1、2 章完結，第 3 章做到第 2 節完（書頁 125）。
+**狀態：E00–E33 已上傳（私人）。
+第 0、1、2 章完結，第 3 章做到第 2 節完（書頁 125）。
 下一集 E34 開第 3 章第 3 節「連續」（書頁 126 起）：ε-δ 換成範數的寫法、
 Lipschitz 連續與有界線性映射，以及定理 3.1（線性映射的連續與有界是同一件事）。
 書頁 125–126 是習題 2.1–2.15，依 PLAYBOOK 第 8 節不做解答。**
@@ -60,6 +60,7 @@ E22 從「零化子」起（83–86）。自然性那張交換圖雖然講的是
 | E30 | 把二次型算成對角形 | *2.7（113–115） | 3:03 ／ 3:14 | https://youtu.be/RqkrGWTLKP8 | https://youtu.be/E6vpTKepJyw |
 | E31 | 微分學的起點與 ε-δ | 3.1（116–120） | 3:08 ／ 3:07 | https://youtu.be/o_qCxOCFhp4 | https://youtu.be/YQr66V8py6w |
 | E32 | 範數 | 3.2（121–123） | 3:13 ／ 2:58 | https://youtu.be/vP5LhbMr9As | https://youtu.be/4RTAugQWWsw |
+| E33 | 球、開集與閉集 | 3.2（123–125） | 3:20 ／ 2:59 | https://youtu.be/Ug-Z_08W8GA | https://youtu.be/r9Wr_3WzHUI |
 
 **E16 起的描述結尾都帶了 PLAYBOOK 第 8 節那段免責聲明**（E00–E15 是在此之前上傳的，沒有那段，
 而 YouTube token 只有上傳權限、改不了已上傳影片的描述，要補只能在 YouTube Studio 手動編輯）。
