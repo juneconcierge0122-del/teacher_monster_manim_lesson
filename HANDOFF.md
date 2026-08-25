@@ -19,17 +19,31 @@
 | `series/t1_mechanics/` | Landau《力學》第 1–53 課 | **已完結**（第 52 課是本書最後一節，第 53 課是總複習） |
 | `series/special/` | 特別篇 S01（Anthropic 全域工作空間論文） | 單集，可再加 |
 | `series/t2_fields/` | Landau《場論》 | **尚未開始**，開工前的決定寫在它的 STATUS.md |
-| `series/advcalc/` | Loomis & Sternberg《Advanced Calculus》 | **進行中**：E00–E28 已上傳（第 0、1 章完結，第 2 章做到第 6 節完） |
+| `series/advcalc/` | Loomis & Sternberg《Advanced Calculus》 | **進行中**：E00–E33 已上傳（第 0、1、2 章完結，第 3 章做到第 2 節完） |
 
 **現在的方向是 `advcalc`。**《力學》已完結；《場論》仍是空殼。
 接手時先讀 `series/advcalc/STATUS.md`（進度、連結、踩過的坑）與
 `series/advcalc/OUTLINE.md`（全書解析與 169 集規劃）。
 
-**眼前第一件事是 E29**，接第 2 章第 7 節「二次型的對角化」（書頁 111 起）。
-E28 已經把 §6 收完上傳了（實際收在書頁 109 上半，109–111 是習題 6.1–6.20，依第 8 節不做解答）。
-到 E28 為止，實際集數都與 OUTLINE 的預估相符。
-**OUTLINE 的集數仍然是估的，動工前先照書核一次**——那張表錯過兩次（見 advcalc 的 STATUS.md）：
+**眼前第一件事是 E34**，接第 3 章第 3 節「連續」（書頁 126 起）。
+E33 已經把 §2 收完上傳了（實際收在書頁 125，125–126 是習題 2.1–2.15，依第 8 節不做解答）。
+到 E33 為止，實際集數都與 OUTLINE 的預估相符。
+**OUTLINE 的集數仍然是估的，動工前先照書核一次**——那張表的頁碼錯過四次（見 advcalc 的 STATUS.md）：
 它的「書頁」欄含各節的習題頁，實際內容比表上少。
+
+**版面有兩道檢查，兩道都要跑，而且要跑到 0：**
+
+```bash
+cd manim_lessons
+../.venv/bin/python tools/bounds.py  lessons/advcalc/<檔名>.py AdvCalcE<NN>   # 跑出畫面外
+../.venv/bin/python tools/collide.py lessons/advcalc/<檔名>.py AdvCalcE<NN>   # 疊在一起
+```
+
+`collide.py` 是 2026-08-25 加的，補 `bounds.py` 看不到的那一半（線壓在字上、字疊字）。
+E27 與 E28 各為這類錯重渲過一次，一次 50 分鐘。
+
+**probe 渲染要加 `--media_dir` 指到別的地方**，否則會跟正在跑的 1080p 搶 `media/texts` 這個
+共用的字型快取。加了之後就能一邊渲染上一集、一邊 probe 下一集。
 
 `advcalc` 有三件與其他系列不同、會踩雷的事：
 

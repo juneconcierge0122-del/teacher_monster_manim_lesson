@@ -1,0 +1,41 @@
+[
+  {
+    "file": "manim_lessons/samples/output/advcalc_e32_zh-TW.mp4",
+    "title": "《高等微積分》第 32 集｜範數｜Loomis & Sternberg 第 3 章 §2",
+    "description": "本集對應 Loomis 與 Sternberg《Advanced Calculus》第 3 章第 2 節的前段（書頁 121 到 123）。\n\n上一節的每一個估計裡，絕對值只被用到三件事：不是零的東西絕對值為正、乘積的絕對值是絕對值的乘積、以及三角不等式。這一節把這三條抽出來，搬到向量空間上。\n\n但高維度有個新問題：大小不只一種說法。拿一個定義在區間上的正連續函數，問它「多大」，至少有兩個合理的答案——曲線的最高點，還有曲線底下的面積。而這兩個答案不會一起變小：影片用兩條自己造的折線示範，一個又高又細的尖峰最高點是一、面積只有十分之一；一條低而長的平台最高點是四分之一、面積也是四分之一。兩個數都是照著畫出來的那兩條折線實際算的，而且程式先驗過這個對比真的成立，才畫下去。\n\n範數的定義只要求三條：非零向量的範數是正的；乘上一個數，範數就乘上那個數的絕對值；兩個向量相加，範數不超過各自範數的和。一個向量空間配上一個範數，叫賦範線性空間。把 α 減 β 的範數當成兩點的距離，第三條就變成幾何裡熟悉的三角不等式。\n\n座標空間上最常用的有三個：所有座標的絕對值相加、平方和開根號、以及只取最大的那一個，分別記成下標一、下標二、下標無窮。同一組寫法搬到連續函數空間也成立，只要把求和換成積分。難易差很多：下標一直接就能驗，下標二最麻煩（它的三角不等式要靠內積，那是第 5 章的事）。至於實數線上，絕對值是唯一的範數，差一個常數倍。\n\n引理 2.1 是個省事的工具：如果 p 是 W 上的範數、T 是從 V 到 W 的單射線性映射，那麼先做 T 再取 p 就是 V 上的一個範數。單射是必要的，否則非零向量會量出零。有了它，任何有限維空間都可以借一個現成的範數來用。\n\n最後看均勻範數。取任意一個非空集合 A，考慮 A 上所有有界的實值函數；它們構成一個向量空間，因為兩個有界函數的線性組合還是有界的。在上面定義 f 的範數是所有函數值絕對值的最小上界。三角不等式的驗證很典型：先逐點放大成兩個範數的和，那個和就成了一個界，而最小上界比任何界都小或相等。這個兩步的手法後面會一再出現。\n\n下一集：球與開集。\n\n本影片為雙語教學動畫系列（繁體中文版）。\n\n本影片為獨立製作的學習導讀，非官方教材，與原書作者及出版社無關。\n講解為自行撰寫，動畫為自行繪製，不含原書頁面，也不提供原書的取得管道。",
+    "tags": [
+      "高等微積分",
+      "Advanced Calculus",
+      "Loomis",
+      "Sternberg",
+      "範數",
+      "賦範線性空間",
+      "三角不等式",
+      "均勻範數",
+      "最小上界",
+      "數學分析",
+      "泛函分析",
+      "大學數學"
+    ],
+    "language": "zh-TW"
+  },
+  {
+    "file": "manim_lessons/samples/output/advcalc_e32_en.mp4",
+    "title": "Advanced Calculus, Episode 32 | Norms | Ch. 3, §2",
+    "description": "This episode covers the first part of chapter 3, section 2 (pages 121 to 123) of Loomis and Sternberg's Advanced Calculus.\n\nIn the proofs of the last section the absolute value was used for exactly three things: a nonzero number has positive absolute value, the absolute value of a product is the product of the absolute values, and the triangle inequality. This section lifts those three onto a vector space.\n\nBut dimension brings a new problem: size has more than one meaning. Take a positive continuous function on an interval and ask how large it is. At least two answers are reasonable — the highest point of the curve, and the area underneath — and the two do not shrink together. The video shows two piecewise linear functions of its own: a tall thin spike with maximum one and area one tenth, and a low broad plateau with maximum one quarter and area one quarter. Both numbers are computed from the graphs actually drawn, and the contrast is checked in code before it is drawn.\n\nThe definition of a norm asks for three things: a nonzero vector has positive norm; multiplying by a number multiplies the norm by the size of that number; and the norm of a sum is at most the sum of the norms. A vector space with a norm is a normed linear space. Read the norm of a difference as a distance and the third axiom becomes the triangle inequality of ordinary geometry.\n\nOn a Cartesian space three norms are in common use: add the sizes of the coordinates, add their squares and take the root, or take the largest — subscript one, two and infinity. The same three transfer to a space of continuous functions with integrals in place of sums. They differ in difficulty: subscript one is checked directly, while subscript two is the awkward one, since its triangle inequality rests on scalar products, which wait for chapter five. On the line the absolute value is the only norm, up to a constant.\n\nLemma 2.1 is a labour-saving tool: if p is a norm on W and T is an injective linear map from V to W, then doing T first and p second is a norm on V. Injectivity is needed, or a nonzero vector would be measured as zero. With it, any finite dimensional space can borrow a ready-made norm.\n\nFinally the uniform norm. Take any nonempty set A and the bounded real-valued functions on it; they form a vector space, since a combination of bounded functions is bounded. Define the norm of f as the least upper bound of the sizes of its values. Checking the triangle inequality is typical of the subject: enlarge pointwise to the sum of the two norms, so that sum is a bound, and the least upper bound is at most any bound. That two-step move recurs throughout what follows.\n\nNext time: balls and open sets.\n\nPart of a bilingual animated teaching series (English edition).\n\nThis is an independently produced study guide. It is not official course material and is not affiliated with the authors or publisher of the book. The narration and animations are original work; no pages of the book are reproduced, and no copy of it is provided.",
+    "tags": [
+      "Advanced Calculus",
+      "Loomis",
+      "Sternberg",
+      "norm",
+      "normed linear space",
+      "triangle inequality",
+      "uniform norm",
+      "least upper bound",
+      "real analysis",
+      "functional analysis",
+      "university mathematics"
+    ],
+    "language": "en"
+  }
+]

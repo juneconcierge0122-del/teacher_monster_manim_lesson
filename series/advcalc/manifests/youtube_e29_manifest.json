@@ -1,0 +1,41 @@
+[
+  {
+    "file": "manim_lessons/samples/output/advcalc_e29_zh-TW.mp4",
+    "title": "《高等微積分》第 29 集｜二次型與慣性定理｜Loomis & Sternberg 第 2 章 *§7",
+    "description": "本集對應 Loomis 與 Sternberg《Advanced Calculus》第 2 章第 7 節的前段（書頁 111 到 113）。這一節帶星號。\n\n線性代數真正想做的，是挑一組基底讓一個變換的矩陣變簡單。那件事很難，這本書只碰到一角。第 7 節換一個做得成的目標：讓 Hom ( V , V* ) 裡的變換變簡單。\n\n這種變換等價於 V 上的一個雙線性泛函 ω。選定基底之後，ω 就決定一個矩陣：第 i 列第 j 行那一格是 ω 吃第 i 與第 j 個基底向量給出的數。把兩個向量用座標展開，雙線性把 ω 拆成一個雙重和；兩個槽放同一個向量，得到的就是座標的齊次二次多項式，叫二次型。\n\n接著假設 ω 對稱。這時 q 反過來也決定 ω：ξ 加 η 的 q 減掉 ξ 減 η 的 q，再除以四。所以談二次型跟談對稱雙線性泛函是同一件事。\n\n目標是找一組基底，讓不同的基底向量互相取零，而每個對自己只給零、一或負一。借內積的講法，這叫 ω 正交規範基底。定理 7.1 說它一定存在，證明是對維數作歸納：一維時把值縮放成正負一；一般情形先找一個對自己不取零的向量當最後一個基底向量，再看「拿 ξ 去配它」這個泛函，它的核空間剛好少一維，歸納假設就在那裡接上。\n\n有了這種基底，二次型只剩帶正負號的平方項：前 p 個座標的平方和，減掉接下來 n 個座標的平方和。這是定理 7.2。關鍵是 p 與 n 不依賴基底——值為正的那塊跟另外兩塊的直和只交於零向量，因為交集裡的非零向量會同時滿足兩個互相矛盾的不等式。p 減 n 叫符號差，p 加 n 叫秩。\n\n影片的例子是自己造的，而且是倒著造的：先挑定對角線 ( 1 , 1 , − 1 , 0 )，再用一個整數的換基底矩陣把它變成一個看起來普通的對稱矩陣；然後用一個獨立寫的程序從那個矩陣重新算回對角線，驗證兩者相符。極化公式與縮放那一步也都在同一個例子上實際算過。\n\n下一集講怎麼真的把一個矩陣算成這個形狀——只用加減乘除，不必解多項式方程。\n\n本影片為雙語教學動畫系列（繁體中文版）。\n\n本影片為獨立製作的學習導讀，非官方教材，與原書作者及出版社無關。\n講解為自行撰寫，動畫為自行繪製，不含原書頁面，也不提供原書的取得管道。",
+    "tags": [
+      "高等微積分",
+      "Advanced Calculus",
+      "Loomis",
+      "Sternberg",
+      "二次型",
+      "雙線性泛函",
+      "慣性定理",
+      "符號差",
+      "正交規範基底",
+      "對稱矩陣",
+      "線性代數",
+      "大學數學"
+    ],
+    "language": "zh-TW"
+  },
+  {
+    "file": "manim_lessons/samples/output/advcalc_e29_en.mp4",
+    "title": "Advanced Calculus, Episode 29 | Quadratic Forms and the Law of Inertia | Ch. 2, *§7",
+    "description": "This episode covers the first part of chapter 2, starred section 7 (pages 111 to 113) of Loomis and Sternberg's Advanced Calculus.\n\nWhat linear algebra really wants is a basis making the matrix of a transformation simple. That is hard, and this book only touches a corner of it. Section seven takes a smaller target that can be settled completely: a transformation in Hom of V and V star.\n\nSuch a transformation is equivalent to a bilinear functional omega on V. Once a basis is chosen, omega has a matrix whose i, j entry is the value of omega on the ith and jth basis vectors. Expanding two vectors in coordinates splits omega into a double sum, and putting the same vector in both slots gives a homogeneous quadratic polynomial in the coordinates: a quadratic form.\n\nFrom there omega is assumed symmetric, and then q determines omega in return: take q of xi plus eta, subtract q of xi minus eta, and divide by four. So quadratic forms and symmetric bilinear functionals are one subject.\n\nThe goal is a basis on which distinct vectors give zero against each other and each gives itself only zero, one or minus one — orthonormal for omega, borrowing the language of scalar products. Theorem 7.1 says such a basis always exists, by induction on dimension: in dimension one a vector is scaled until its value is plus or minus one; in general a vector that does not vanish on itself becomes the last basis vector, and the functional pairing against it has a null space exactly one dimension down, which is where the induction continues.\n\nOn such a basis the form keeps only signed squares: the sum of the first p coordinates squared minus the sum of the next n. That is Theorem 7.2. What matters is that p and n do not depend on the basis, since the positive part meets the sum of the other two only at zero — a nonzero vector there would satisfy two contradictory inequalities at once. The number p minus n is the signature and p plus n is the rank.\n\nThe example is the episode's own and is built backwards: a diagonal of ( 1 , 1 , − 1 , 0 ) is chosen first and carried by an integer change of basis into an ordinary looking symmetric matrix; then an independently written routine recovers the diagonal from that matrix alone, and the two are checked against each other. The polarization identity and the scaling step are also evaluated on the same example.\n\nNext time: how to actually compute a matrix into this shape, using only arithmetic, with no polynomial equations to solve.\n\nPart of a bilingual animated teaching series (English edition).\n\nThis is an independently produced study guide. It is not official course material and is not affiliated with the authors or publisher of the book. The narration and animations are original work; no pages of the book are reproduced, and no copy of it is provided.",
+    "tags": [
+      "Advanced Calculus",
+      "Loomis",
+      "Sternberg",
+      "quadratic form",
+      "bilinear functional",
+      "law of inertia",
+      "signature",
+      "orthonormal basis",
+      "symmetric matrix",
+      "linear algebra",
+      "university mathematics"
+    ],
+    "language": "en"
+  }
+]

@@ -1,0 +1,41 @@
+[
+  {
+    "file": "manim_lessons/samples/output/advcalc_e30_zh-TW.mp4",
+    "title": "《高等微積分》第 30 集｜把二次型算成對角形｜Loomis & Sternberg 第 2 章 *§7",
+    "description": "本集收掉 Loomis 與 Sternberg《Advanced Calculus》第 2 章第 7 節（書頁 113 到 115）。第 7 節整節沒有習題，第 3 章從書頁 116 開始。\n\n上一集證明了 ω 正交規範基底一定存在，但那是歸納證明，不告訴你怎麼找。這一集給實際的算法，而它有一個很好的性質：在最後正規化之前，全程只用加減乘除，不必解任何多項式方程。\n\n先把目標降一級，只求正交：不同的基底向量互相取零，值是多少先不管。拿到正交基底之後，把每一個除以自己那個值的絕對值開根號，正規化就完成了。\n\n第一步是找一個對自己不取零的向量。如果矩陣對角線上有一格不是零，那個基底向量直接可以用，因為對角線上的 t ᵢᵢ 就是 q ( α ᵢ )。麻煩的是對角線全是零的情形——這時只要 ω 不是零形式，就有某個非對角線的格子不是零，取 γ ₁ 等於 α ₁ 加 α ₂，新的左上角就是兩倍 t ₁₂，不是零。\n\n第二步是把其餘的基底向量推進「拿 ξ 去配 γ ₁」這個泛函的核空間：把 γ ⱼ 換成 γ ⱼ 加 c 倍的 γ ₁，解出 c 等於負的 s ₁ⱼ 除以 s ₁₁。第一步就是為了讓這個除法合法。做完之後第一列與第一行除了左上角全變成零，剩下的是一個少一維的同樣問題。\n\n影片的例子是自己挑的，挑的條件有四個：對角線一開始全是零（所以補救那一步真的必須用上）、中間那塊做完還不是對角的（所以遞迴真的會跑）、過程全程整數、結果對角線有正有負。走到底是對角線四、負一、一，所以 p 是二、n 是一，符號差是一。畫面也把算法真正交出來的東西寫出來：三個新的基底向量用原本的基底表示。\n\n這些步驟很像列運算，但因為 T 是從 V 到 V*，定義域與值域的基底同時在換，每一步等於同時左乘與右乘一個初等矩陣——列與行一起做。要讓對稱矩陣做完還是對稱，本來也只能這樣。\n\n最後是奇偶性：換基底只把行列式乘上一個平方數，所以正負號永遠不變。影片裡四個矩陣的行列式全都是負四，這件事直接看得見。二維時這讓你不必正交化就讀出符號差——只要看 t ₁₁ t ₂₂ 減 t ₁₂ 平方的正負。\n\n下一集離開線性代數，進第 3 章的極限與範數。\n\n本影片為雙語教學動畫系列（繁體中文版）。\n\n本影片為獨立製作的學習導讀，非官方教材，與原書作者及出版社無關。\n講解為自行撰寫，動畫為自行繪製，不含原書頁面，也不提供原書的取得管道。",
+    "tags": [
+      "高等微積分",
+      "Advanced Calculus",
+      "Loomis",
+      "Sternberg",
+      "二次型",
+      "對角化",
+      "符號差",
+      "合同變換",
+      "對稱矩陣",
+      "初等矩陣",
+      "線性代數",
+      "大學數學"
+    ],
+    "language": "zh-TW"
+  },
+  {
+    "file": "manim_lessons/samples/output/advcalc_e30_en.mp4",
+    "title": "Advanced Calculus, Episode 30 | Computing a Quadratic Form into Diagonal Shape | Ch. 2, *§7",
+    "description": "This episode finishes chapter 2, starred section 7 (pages 113 to 115) of Loomis and Sternberg's Advanced Calculus. Section 7 has no exercise set; chapter 3 opens on page 116.\n\nLast time proved that an omega-orthonormal basis exists, but the proof was an induction and does not tell you how to find one. This episode gives the algorithm, and it has a pleasant property: until the final normalization it uses nothing but arithmetic, with no polynomial equations to solve.\n\nFirst lower the target and settle for an orthogonal basis, distinct vectors giving zero against each other, never mind what values they give themselves. Once that is in hand, divide each by the square root of the size of its own value and normalization is done.\n\nThe first step is a vector that does not vanish on itself. If some diagonal entry is nonzero, that basis vector will do, since the diagonal entry t-i-i is just q of alpha-i. The awkward case is a diagonal of zeros: there, as long as omega is not the zero form some off-diagonal entry is nonzero, and taking gamma one to be alpha one plus alpha two puts twice t-1-2 in the corner, which is not zero.\n\nThe second step pushes the remaining basis vectors into the null space of the functional pairing against gamma one: replace gamma j by gamma j plus c times gamma one, and c comes out as minus s-1-j over s-1-1. The first step is what made that division legal. Afterwards the first row and column are zero apart from the corner, and what is left is the same problem one dimension smaller.\n\nThe example is the episode's own, chosen by search against four conditions: the diagonal starts all zero, so the repair is forced; the trailing block is not yet diagonal, so the recursion really fires; every intermediate entry stays a whole number; and the result carries both signs. It ends on a diagonal of four, minus one, one, so p is two, n is one and the signature is one. The frame also writes out what the procedure actually hands you: the three new basis vectors in terms of the old ones.\n\nThese steps look like row reduction with one difference. Since T runs from V to V star, the bases of domain and range change together, so each step multiplies by an elementary matrix on both sides: rows and columns at once, which is the only way a symmetric matrix comes out symmetric.\n\nFinally, parity. Changing basis multiplies the determinant by a square, so its sign never moves; all four matrices in the video have determinant minus four, which is visible on screen. In two dimensions that lets you read the signature without orthonormalizing: look at the sign of t-1-1 t-2-2 minus t-1-2 squared.\n\nNext time we leave linear algebra for chapter three, limits and norms.\n\nPart of a bilingual animated teaching series (English edition).\n\nThis is an independently produced study guide. It is not official course material and is not affiliated with the authors or publisher of the book. The narration and animations are original work; no pages of the book are reproduced, and no copy of it is provided.",
+    "tags": [
+      "Advanced Calculus",
+      "Loomis",
+      "Sternberg",
+      "quadratic form",
+      "diagonalization",
+      "signature",
+      "congruence",
+      "symmetric matrix",
+      "elementary matrices",
+      "linear algebra",
+      "university mathematics"
+    ],
+    "language": "en"
+  }
+]

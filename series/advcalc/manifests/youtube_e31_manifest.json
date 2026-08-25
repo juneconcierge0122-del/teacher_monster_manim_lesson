@@ -1,0 +1,40 @@
+[
+  {
+    "file": "manim_lessons/samples/output/advcalc_e31_zh-TW.mp4",
+    "title": "《高等微積分》第 31 集｜微分學的起點與 ε-δ｜Loomis & Sternberg 第 3 章 §1",
+    "description": "本集是 Loomis 與 Sternberg《Advanced Calculus》第 3 章的開場（書頁 116）與第 1 節「實數上的複習」（書頁 117 到 120）。\n\n第 3 章的主旨一句話講得完：微分學是「用線性映射去逼近非線性映射」的理論。前兩章已經把線性映射弄清楚了，現在要的是「逼近」這個詞的精確意思。\n\n所以這一章從長度開始。要說一個逼近好不好，得先能量誤差有多大——誤差是一個向量，不是一個數。向量空間上量長度的東西叫範數。有了範數才能談切近，談完切近才能定義微分。整章的路線是：範數、連續、無窮小、微分與它的計算規則、方向導數與偏導數，最後在座標空間裡，微分就是一個偏導數排成的矩陣，叫 Jacobian 矩陣。章末的反函數定理與隱函數定理要用到實數的完備性，那要等到第 4 章。\n\n第 1 節先回到實數上複習極限。定義是：f ( x ) 趨近 l，如果對每一個正的 ε 都存在一個正的 δ，使得 x 跟 a 的距離落在 0 與 δ 之間時，f ( x ) 跟 l 的距離就小於 ε。注意 x 等於 a 那一點被排除在外——微積分裡的差商在那一點根本沒定義，我們關心的正是它在附近的行為。\n\n這個句子真正的開頭是三個量詞：對所有 ε、存在 δ、對所有 x。順序不能動；把「存在 δ」搬到「對所有 x」後面，就變成 δ 可以隨 x 改，那幾乎對每個函數都成立，等於什麼也沒說。\n\n影片的 ε-δ 圖不是示意圖：畫的是 f ( x ) = x 平方在 a = 1，δ 由 |x 平方減 1| 等於 |x 減 1| 乘 |x 加 1| 這條界實際算出來（ε = 3/10 給 δ = 3/25，ε = 1/10 給 δ = 1/25），而且在區間上取樣驗過整段圖形真的沒有跑出 ε 帶。「ε 縮成三分之一，δ 也縮成三分之一」那一拍是兩張照著算出來的數字畫的圖。\n\n接著是兩個典型用法。和的極限：把差拆成兩塊，每塊壓到 ε 的一半，兩個 δ 取小的那一個。倒數的極限比較有意思，因為分母裡有會動的 f ( x )：先花掉一個 δ 把 f 逼到 u 的一半以外，分母就有了下界，再估就穩了。\n\n最後是實數的最小上界性質。它看起來平凡，卻是後面所有事情的地基——根號二就是「平方小於二的有理數」這個集合的最小上界，而有理數本身沒有這個性質。\n\n下一集：範數。\n\n本影片為雙語教學動畫系列（繁體中文版）。\n\n本影片為獨立製作的學習導讀，非官方教材，與原書作者及出版社無關。\n講解為自行撰寫，動畫為自行繪製，不含原書頁面，也不提供原書的取得管道。",
+    "tags": [
+      "高等微積分",
+      "Advanced Calculus",
+      "Loomis",
+      "Sternberg",
+      "微分學",
+      "極限",
+      "epsilon delta",
+      "量詞",
+      "最小上界",
+      "實數",
+      "數學分析",
+      "大學數學"
+    ],
+    "language": "zh-TW"
+  },
+  {
+    "file": "manim_lessons/samples/output/advcalc_e31_en.mp4",
+    "title": "Advanced Calculus, Episode 31 | Where the Calculus Starts, and Epsilon-Delta | Ch. 3, §1",
+    "description": "This episode covers the opening of chapter 3 (page 116) and section 1, the review in R (pages 117 to 120), of Loomis and Sternberg's Advanced Calculus.\n\nThe subject of chapter three fits in one sentence: the differential calculus is the theory of linear approximations to nonlinear mappings. The first two chapters settled what linear mappings are; what is needed now is a precise meaning for approximation.\n\nSo the chapter starts with length. To say an approximation is good you must measure how large the error is, and the error is a vector, not a number. What measures length on a vector space is a norm. Norms come first, then tangency, and only then can a differential be defined. The route runs: norms, continuity, infinitesimals, the differential and the rules for computing it, directional and partial derivatives, and finally, in a Cartesian space, the differential as a matrix of partial derivatives — the Jacobian matrix. The inverse-mapping and implicit-function theorems at the end of the chapter lean on completeness, which chapter four takes up.\n\nSection one goes back to the real line. The definition: f of x approaches l if for every positive epsilon there is a positive delta such that whenever the distance from x to a lies strictly between zero and delta, the distance from f of x to l is less than epsilon. The point x equal to a is excluded, and not out of fussiness: the difference quotients of calculus are undefined there, and their behaviour nearby is exactly what matters.\n\nThe sentence really begins with three quantifiers: for every epsilon, there exists a delta, for every x. The order cannot move. Put the existence of delta after the quantifier on x and delta may depend on x, which holds for almost any function and therefore says nothing.\n\nThe epsilon-delta pictures are not sketches. They are drawn for f of x equal to x squared at a equal to one, with delta computed from the bound that the size of x squared minus one is the size of x minus one times the size of x plus one: epsilon three tenths gives delta three twenty-fifths, epsilon one tenth gives delta one twenty-fifth. The interval is then sampled to check that the graph really stays inside the epsilon band, so the beat where a narrower epsilon forces a narrower delta shows two pictures drawn from computed numbers.\n\nThen the two typical uses. For a sum, split the difference in two, push each below half of epsilon, and take the smaller of the two deltas. For a reciprocal the denominator moves, so one delta is spent keeping f away from zero, which gives the denominator a floor and makes the estimate safe.\n\nFinally the least upper bound property of the reals. It looks unremarkable and it is the foundation of what follows: the square root of two is the least upper bound of the rationals whose square is under two, and the rationals themselves do not have the property.\n\nNext time: norms.\n\nPart of a bilingual animated teaching series (English edition).\n\nThis is an independently produced study guide. It is not official course material and is not affiliated with the authors or publisher of the book. The narration and animations are original work; no pages of the book are reproduced, and no copy of it is provided.",
+    "tags": [
+      "Advanced Calculus",
+      "Loomis",
+      "Sternberg",
+      "differential calculus",
+      "limits",
+      "epsilon delta",
+      "quantifiers",
+      "least upper bound",
+      "real analysis",
+      "university mathematics"
+    ],
+    "language": "en"
+  }
+]

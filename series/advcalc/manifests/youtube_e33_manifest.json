@@ -1,0 +1,41 @@
+[
+  {
+    "file": "manim_lessons/samples/output/advcalc_e33_zh-TW.mp4",
+    "title": "《高等微積分》第 33 集｜球、開集與閉集｜Loomis & Sternberg 第 3 章 §2",
+    "description": "本集收掉 Loomis 與 Sternberg《Advanced Calculus》第 3 章第 2 節（書頁 123 到 125）。書頁 125 起是習題 2.1 到 2.15。\n\n有了範數就有距離，有了距離就可以講「附近」。以 α 為心、半徑 r 的開球，就是所有跟 α 的距離嚴格小於 r 的點——這是上一集那條 δ 帶搬到向量空間的說法。球對平移與縮放的反應很乾淨：平移時球心跟著走、半徑不動；乘上一個數 c，半徑就乘上 c 的絕對值。兩件事都只是把範數的公理代進定義。\n\n但「球」這個字會騙人。同一個空間、三種範數，單位球長得完全不一樣：下標二那個是圓的，下標一那個是斜的正方形，下標無窮那個是正的正方形。影片裡這三個形狀是同一段程式照著範數的定義畫出來的——對每個方向問「這個範數的單位球在這個方向走多遠」——而且程式驗過它們確實一個包一個。沿對角線量，三顆球分別到 1/√2、1、√2。這後面會變成「有限維上所有範數等價」那個定理的具體樣子。\n\n接著是有界集合、點到集合的距離（用最小下界，因為最近的點不一定存在），然後是這一節真正的目標：開集與閉集。α 叫集合 A 的內點，如果有一顆以 α 為心的球整個落在 A 裡面；每一點都是內點的集合就叫開集。\n\n既然叫開球，開球最好真的是開集——這要證。取球裡的一點 β，剩下的空間就是 r 減掉它到球心的距離，以這個為半徑的小球整個留在裡面。證的方法就是三角不等式：小球裡的點到球心的距離不超過它到 β 的距離加上 β 到球心的距離，兩段加起來還是小於 r。直覺很可靠，但還是要算一次。\n\n開集的聯集還是開集，而任何開集都是一堆開球的聯集——這大概是想像開集最舒服的方式。影片裡那些鋪在形狀裡的球，半徑是程式用二分法算出「還留在形狀裡的最大值」，並驗過每一顆確實都在裡面。至於交集則不保證：無窮多顆開球的交集可以縮成一個點。\n\n補集是開集的集合叫閉集，等價地說：外面的每一點離它都有正的距離。閉球是閉集，證明又是三角不等式。要注意開與閉既不互斥也不窮盡，有些集合兩者都不是。\n\n下一集：連續。\n\n本影片為雙語教學動畫系列（繁體中文版）。\n\n本影片為獨立製作的學習導讀，非官方教材，與原書作者及出版社無關。\n講解為自行撰寫，動畫為自行繪製，不含原書頁面，也不提供原書的取得管道。",
+    "tags": [
+      "高等微積分",
+      "Advanced Calculus",
+      "Loomis",
+      "Sternberg",
+      "開球",
+      "開集",
+      "閉集",
+      "單位球",
+      "範數",
+      "三角不等式",
+      "數學分析",
+      "大學數學"
+    ],
+    "language": "zh-TW"
+  },
+  {
+    "file": "manim_lessons/samples/output/advcalc_e33_en.mp4",
+    "title": "Advanced Calculus, Episode 33 | Balls, Open Sets and Closed Sets | Ch. 3, §2",
+    "description": "This episode finishes chapter 3, section 2 (pages 123 to 125) of Loomis and Sternberg's Advanced Calculus. Page 125 onward is exercises 2.1 to 2.15.\n\nA norm gives distances, and distances let us speak of nearby. The open ball of radius r about alpha is every point whose distance to alpha is strictly less than r — the delta band of the last episode, moved onto a vector space. Balls behave cleanly under translation and scaling: translate and the centre moves while the radius does not; multiply by c and the radius is multiplied by the size of c. Both are the axioms substituted into the definition.\n\nBut the word ball is misleading. On one space with three norms the unit balls look nothing alike: the subscript two one is round, the subscript one one is a tilted square, and the subscript infinity one is an upright square. The three shapes in the video were drawn by one routine from the definitions themselves — asking each norm how far its unit ball reaches in each direction — and the code checks that they really do nest. Along the diagonal the three reach one over root two, one, and root two. Later that nesting becomes the concrete face of the theorem that all norms on a finite dimensional space are equivalent.\n\nThen bounded sets, the distance from a point to a set (a greatest lower bound, since a nearest point need not exist), and the real target of the section: open and closed sets. A point is interior to A if some ball about it lies wholly inside A, and a set all of whose points are interior is called open.\n\nSince they are called open balls, an open ball had better be open, and that needs proof. Take a point beta inside; the room left over is r minus its distance to the centre, and a ball of that radius about beta stays inside. The proof is the triangle inequality: a point of the small ball is no further from the centre than its distance to beta plus beta's distance to the centre, and those two still add to less than r. The intuition is reliable and it still gets checked.\n\nA union of open sets is open, and every open set is a union of open balls, which is the most comfortable way to picture one. The balls paving the shape in the video have radii computed by bisection as the largest that stay inside, and each one is verified to be inside. Intersections carry no such guarantee: infinitely many open balls can meet in a single point.\n\nA set whose complement is open is called closed; equivalently, every point outside lies at a positive distance from it. A closed ball is closed, by the triangle inequality again. Open and closed are neither exclusive nor exhaustive: some sets are neither.\n\nNext time: continuity.\n\nPart of a bilingual animated teaching series (English edition).\n\nThis is an independently produced study guide. It is not official course material and is not affiliated with the authors or publisher of the book. The narration and animations are original work; no pages of the book are reproduced, and no copy of it is provided.",
+    "tags": [
+      "Advanced Calculus",
+      "Loomis",
+      "Sternberg",
+      "open ball",
+      "open set",
+      "closed set",
+      "unit ball",
+      "norm",
+      "triangle inequality",
+      "real analysis",
+      "university mathematics"
+    ],
+    "language": "en"
+  }
+]
