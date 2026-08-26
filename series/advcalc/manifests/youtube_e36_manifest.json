@@ -1,0 +1,39 @@
+[
+  {
+    "file": "manim_lessons/samples/output/advcalc_e36_zh-TW.mp4",
+    "title": "《高等微積分》第 36 集｜等價範數與乘積範數｜Loomis & Sternberg 第 3 章 §4",
+    "description": "本集是 Loomis 與 Sternberg《Advanced Calculus》第 3 章第 4 節「等價範數」（書頁 132 到 134）。書頁 135 到 136 是習題 4.1 到 4.18。\n\n兩個賦範空間如果有一個線性雙射，而且它跟它的反映射都有界，就說這兩個空間範數同構。同一個空間上的兩個範數要怎麼算「一樣」，就從這裡引出來：兩個範數 p 與 q 等價，如果找得到常數 a 與 b，使得 p 不超過 a 倍的 q，而且 q 也不超過 b 倍的 p。兩個方向都要成立，只有一邊不算數。把兩式合起來，任何一個都被另一個的兩個倍數夾住，也就是恆等映射從一個範數看到另一個，兩個方向都有界。\n\n幾何上就是單位球互相包住。平面上一範數的球是斜正方形、二範數是圓、無窮範數是正方形。影片裡那三個常數是掃過整個圓量出來的最緊值：一範數不超過二範數的根號二倍、二範數不超過無窮範數的根號二倍、一範數不超過無窮範數的兩倍，而反方向三個都不必乘任何東西。\n\n但無窮維會壞掉。取閉區間上的連續函數，t 的 n 次方的一致範數永遠是一，一範數卻是 n 加一分之一，比值就是 n 加一，要多大有多大。影片裡的三個面積是數值積分算的，跟那個公式核對過。\n\n定理 4.1 說有限維向量空間上所有範數都等價。這條要到第 4 章才證得動，但它是後面很多地方可以安心換範數的根據。直接後果是定理 4.2：有限維之間的線性映射一定有界——挑一組座標寫成矩陣，取矩陣元絕對值的最大值當常數就成了，影片裡那個例子是 3，而且掃描顯示它剛好是最緊的。定理 4.3 再說換成等價範數，Hom 這個集合完全不變，兩個誘導的算子範數也彼此等價。\n\n後半段講乘積空間。要求只有一條：兩個投影與兩個嵌入都要連續。光是這條就把乘積範數決定到等價為止，它一定跟「兩邊的範數相加」那個等價。定理 4.4 說常用的三種乘積範數（相加、歐氏、取最大）彼此等價；在平面上它們就是前面畫過的一、二、無窮範數。最後是引理 4.1，加法是有界線性映射、界正好是一（因為那就是三角不等式），以及定理 4.5，一個空間是範數直和當且僅當所有投影都有界。\n\n下一集：無窮小、大 O 與小 o。\n\n本影片為雙語教學動畫系列（繁體中文版）。\n\n本影片為獨立製作的學習導讀，非官方教材，與原書作者及出版社無關。\n講解為自行撰寫，動畫為自行繪製，不含原書頁面，也不提供原書的取得管道。",
+    "tags": [
+      "高等微積分",
+      "Advanced Calculus",
+      "Loomis",
+      "Sternberg",
+      "等價範數",
+      "乘積範數",
+      "範數同構",
+      "有界線性映射",
+      "直和",
+      "數學分析",
+      "大學數學"
+    ],
+    "language": "zh-TW"
+  },
+  {
+    "file": "manim_lessons/samples/output/advcalc_e36_en.mp4",
+    "title": "Advanced Calculus, Episode 36 | Equivalent Norms and Product Norms | Ch. 3, §4",
+    "description": "This episode is section 4 of chapter 3, on equivalent norms (pages 132 to 134), in Loomis and Sternberg's Advanced Calculus. Pages 135 to 136 are exercises 4.1 to 4.18.\n\nTwo normed spaces are norm isomorphic if there is a linear bijection between them with both the map and its inverse bounded. What it should mean for two norms on one space to agree grows out of that: p and q are equivalent if there are constants a and b with p at most a times q and q at most b times p. Both directions are required. Put together, either is bracketed by two multiples of the other, which says the identity map read from one norm to the other is bounded both ways.\n\nGeometrically the unit balls contain one another. On the plane the one norm ball is a tilted square, the two norm ball is round, and the uniform one is an upright square. The three constants in the video were measured by sweeping the whole circle and each is the tightest: root two between one and two, root two between two and uniform, and a factor of two between one and uniform, while the other direction needs no factor at all.\n\nInfinite dimensions break this. Take continuous functions on an interval: t to the n has uniform norm one forever, while its one norm is one over n plus one, so the ratio is n plus one and grows without ceiling. The three areas in the video were integrated numerically and checked against that formula.\n\nTheorem 4.1 says all norms on a finite dimensional vector space are equivalent. It cannot be proved until chapter 4, but it is what lets later chapters swap norms freely. Theorem 4.2 follows at once: a linear map between finite dimensional spaces is always bounded, since picking coordinates turns it into a matrix and the largest entry in size serves as the constant. For the example in the video that is three, and the sweep shows it is exactly sharp. Theorem 4.3 adds that replacing a norm by an equivalent one leaves Hom untouched and the two induced operator norms equivalent.\n\nThe second half is about product spaces. There is one requirement: both projections and both injections should be continuous. That alone pins the product norm down to within equivalence, and it must be equivalent to adding the two norms. Theorem 4.4 says the three usual product norms, the sum, the Euclidean and the maximum, are equivalent to one another; on the plane they are exactly the one, two and uniform norms drawn earlier. Finally Lemma 4.1, that addition is bounded with bound exactly one because that is the triangle inequality, and Theorem 4.5, that a space is a norm direct sum precisely when its projections are bounded.\n\nNext time: infinitesimals, big oh and little oh.\n\nPart of a bilingual animated teaching series (English edition).\n\nThis is an independently produced study guide. It is not official course material and is not affiliated with the authors or publisher of the book. The narration and animations are original work; no pages of the book are reproduced, and no copy of it is provided.",
+    "tags": [
+      "Advanced Calculus",
+      "Loomis",
+      "Sternberg",
+      "equivalent norms",
+      "product norm",
+      "norm isomorphism",
+      "bounded linear map",
+      "direct sum",
+      "real analysis",
+      "university mathematics"
+    ],
+    "language": "en"
+  }
+]

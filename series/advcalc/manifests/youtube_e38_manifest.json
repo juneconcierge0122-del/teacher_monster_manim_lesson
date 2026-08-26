@@ -1,0 +1,41 @@
+[
+  {
+    "file": "manim_lessons/samples/output/advcalc_e38_zh-TW.mp4",
+    "title": "《高等微積分》第 38 集｜微分｜Loomis & Sternberg 第 3 章 §6",
+    "description": "本集是 Loomis 與 Sternberg《Advanced Calculus》第 3 章第 6 節「微分」（書頁 140 到 144）。書頁 145 到 146 是習題 6.1 到 6.18。\n\n先回到最普通的一元微積分。函數在一點的導數是切線的斜率。把切點平移到原點之後，切線就變成一條過原點的直線，也就是一個線性泛函的圖形。這個換座標的動作是整節唯一的技巧。平移之後，曲線變成變化量，而切線是那條最貼近它的直線，兩者的差落在小 o 裡。影片裡那個差除以增量，確實一路掉到零。\n\n兩個變數也一樣，只是切線換成切平面，線性泛函的骨架就是兩個偏導數。影片裡那個例子的骨架是三與一，而且程式用差商反查過，確認那兩個數字就是這個函數真的有的。\n\n於是定義寫得出來了：F 在 α 可微，如果存在一個有界線性映射 T，使得變化量等於 T 加上一個小 o。就這一句，沒有極限、沒有分母，也不必假設有限維。這個 T 是唯一的，理由就是上一集最後那一條：兩個候選的差同時屬於 Hom 與小 o，而這兩個只交於零映射。這個唯一的 T 就叫 F 在 α 的微分；它是一個映射，不是一個數，定義域是無窮維時習慣叫它第一變分。\n\n定理 6.1 收下常用的規則。可微一定推得出變化量落在大 O 裡；常數函數的微分是零映射；有界線性映射處處可微而且微分就是它自己。加法規則只是把兩個「線性部分加小 o」相加。乘積規則是「函數值乘微分」加上「微分乘函數值」，第二項是一個並矢。\n\n定理 6.2 是鏈鎖規則：合成的微分等於兩個微分的合成。影片裡是兩個平面到平面的映射，兩個雅可比矩陣乘出來得到一個具體的矩陣，再拿它去減合成的實際變化量，餘項的商一路掉到 0.0015——也就是說這一拍的鏈鎖規則是驗過的，不是宣告的。證明本身就是把上一集那條定理逐條用一遍：小 o 接大 O 是小 o、大 O 接小 o 也是小 o，最後只剩下兩個線性部分的合成。\n\n第 3 章的核心到這裡講完。下一集：方向導數與均值定理。\n\n本影片為雙語教學動畫系列（繁體中文版）。\n\n本影片為獨立製作的學習導讀，非官方教材，與原書作者及出版社無關。\n講解為自行撰寫，動畫為自行繪製，不含原書頁面，也不提供原書的取得管道。",
+    "tags": [
+      "高等微積分",
+      "Advanced Calculus",
+      "Loomis",
+      "Sternberg",
+      "微分",
+      "鏈鎖規則",
+      "乘積規則",
+      "切平面",
+      "第一變分",
+      "小o",
+      "數學分析",
+      "大學數學"
+    ],
+    "language": "zh-TW"
+  },
+  {
+    "file": "manim_lessons/samples/output/advcalc_e38_en.mp4",
+    "title": "Advanced Calculus, Episode 38 | The Differential | Ch. 3, §6",
+    "description": "This episode is section 6 of chapter 3, on the differential (pages 140 to 144), in Loomis and Sternberg's Advanced Calculus. Pages 145 to 146 are exercises 6.1 to 6.18.\n\nStart from ordinary one variable calculus. The derivative at a point is the slope of the tangent line. Translate the point of tangency to the origin and the tangent becomes a line through the origin, the graph of a linear functional. That change of coordinates is the only trick in the section. After it the curve becomes the change, the tangent is the line that hugs it most closely, and the gap between them lies in little oh. In the video that gap over the increment falls steadily to zero.\n\nTwo variables work the same way with a tangent plane instead of a line, and the skeleton of the linear functional is the two partial derivatives. For the example on screen the skeleton is three and one, and the code recovers both by difference quotients to confirm the function really has them.\n\nThe definition now writes itself. F is differentiable at alpha if there is a bounded linear map T with the change equal to T plus a little oh. That is the whole sentence: no limit, no denominator, no assumption of finite dimension. That T is unique, and the reason is the previous episode's closing result: the difference of two candidates lies in Hom and in little oh at once, and those meet only at the zero map. The unique T is the differential of F at alpha; it is a map rather than a number, and when the domain is infinite dimensional it is traditionally called the first variation.\n\nTheorem 6.1 gathers the familiar rules. Differentiable forces the change into big oh; a constant function has the zero map as its differential; a bounded linear map is differentiable everywhere with itself as differential. The sum rule just adds two copies of linear part plus little oh. The product rule is the value times the differential plus the differential times the value, that second term being a dyad.\n\nTheorem 6.2 is the chain rule: the differential of a composite is the composite of the differentials. The video uses two maps of the plane to itself, multiplies the two Jacobians into a concrete matrix, and then subtracts it from the composite's actual change; the remainder quotient falls to 0.0015, so the chain rule in that beat is verified rather than announced. The proof itself applies the previous episode's theorem line by line: little oh after big oh is little oh, big oh after little oh is little oh, and what survives is the composite of the two linear parts.\n\nThat completes the core of chapter 3. Next time: directional derivatives and the mean value theorem.\n\nPart of a bilingual animated teaching series (English edition).\n\nThis is an independently produced study guide. It is not official course material and is not affiliated with the authors or publisher of the book. The narration and animations are original work; no pages of the book are reproduced, and no copy of it is provided.",
+    "tags": [
+      "Advanced Calculus",
+      "Loomis",
+      "Sternberg",
+      "differential",
+      "chain rule",
+      "product rule",
+      "tangent plane",
+      "first variation",
+      "little oh",
+      "real analysis",
+      "university mathematics"
+    ],
+    "language": "en"
+  }
+]

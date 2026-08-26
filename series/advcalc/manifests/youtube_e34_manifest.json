@@ -1,0 +1,41 @@
+[
+  {
+    "file": "manim_lessons/samples/output/advcalc_e34_zh-TW.mp4",
+    "title": "《高等微積分》第 34 集｜連續、Lipschitz 與有界線性映射｜Loomis & Sternberg 第 3 章 §3",
+    "description": "本集開始 Loomis 與 Sternberg《Advanced Calculus》第 3 章第 3 節「連續」（書頁 126 到 128）。書頁 129 起是習題 3.1 到 3.22。\n\n第 1 節在實數上做過的 ε-δ，這一節整段搬到賦範空間：把絕對值符號換成範數符號，其他一個字都不用改。順便還把定義域放寬了，f 定義在 V 的任意一個子集上就行，不必是整個空間。極限的定義裡那個「距離大於零」是把 α 自己挖掉，因為極限問的是靠近時的行為，不是在那一點的值；影片裡那條有洞的曲線就是在講這件事，洞補起來就是「在 α 連續」。\n\n接著是一個比連續更強、也好用得多的性質：Lipschitz 連續。如果兩個函數值的距離不超過一個常數乘上兩個自變數的距離，δ 就不必再湊，直接取 ε 除以那個常數。E31 為了 x 平方在 1 附近湊了半天的 δ，這裡只要看出常數可以取 3——影片裡那個錐形的斜率就是它，而且程式量過它是最小的可用值。但不是每個連續函數都做得到：根號 x 在零點連續，比值卻等於根號 x 分之一，沒有任何常數撐得住。\n\n碰到線性映射，Lipschitz 條件會塌下來變得很簡單，因為兩點的值相減就是差向量的像。這種映射習慣上叫「有界」，可是這個詞很容易誤會：它不是說值域是有界集。非零的線性映射不可能那樣有界，因為把向量放大幾倍，像就放大同樣幾倍；真正有界的是那個商。影片裡兩個面板畫的就是這件事：像跑得出任何一顆球，商卻一直是 3。\n\n真的例子：連續函數配上一致範數，取定積分就是一個有界線性泛函，界是區間長度。\n\n最後是定理 3.1——對線性映射而言，「在某一點連續」、「處處連續」、「有界」是同一件事。證明從一點連續出發，取 ε 等於一拿到一個 δ，再用線性撐成整個空間的界。不過那個界只保證存在，不保證最省：影片裡這個例子真正的最小界是 3，證明給出來的是 6。收尾補一個引理，範數自己就是 Lipschitz 常數為一的函數。\n\n影片裡每個數字都是程式算出來的：δ 是二分法解的，Lipschitz 常數是掃過區間量的，算子的界是掃單位球面掃出來的，反向三角不等式在兩萬多對向量上驗過。\n\n下一集：算子範數與 Hom(V, W)。\n\n本影片為雙語教學動畫系列（繁體中文版）。\n\n本影片為獨立製作的學習導讀，非官方教材，與原書作者及出版社無關。\n講解為自行撰寫，動畫為自行繪製，不含原書頁面，也不提供原書的取得管道。",
+    "tags": [
+      "高等微積分",
+      "Advanced Calculus",
+      "Loomis",
+      "Sternberg",
+      "連續",
+      "Lipschitz",
+      "有界線性映射",
+      "算子",
+      "範數",
+      "epsilon delta",
+      "數學分析",
+      "大學數學"
+    ],
+    "language": "zh-TW"
+  },
+  {
+    "file": "manim_lessons/samples/output/advcalc_e34_en.mp4",
+    "title": "Advanced Calculus, Episode 34 | Continuity, Lipschitz and Bounded Linear Maps | Ch. 3, §3",
+    "description": "This episode opens section 3 of chapter 3, on continuity (pages 126 to 128), in Loomis and Sternberg's Advanced Calculus. Page 129 onward is exercises 3.1 to 3.22.\n\nThe epsilon delta definition of section 1 carries over to normed spaces unchanged: replace the absolute value sign by the norm sign and no other word moves. The domain is relaxed too, so f may live on any subset of V rather than the whole space. The requirement that the distance exceed zero removes alpha itself, because a limit asks what happens on the way in rather than what the value is on arrival. The curve with a hole in the video is exactly that point, and filling the hole is continuity at alpha.\n\nThen comes a property stronger than continuity and far easier to use: Lipschitz continuity. If the gap between two values is at most a constant times the gap between the two arguments, delta no longer has to be hunted for — take epsilon over that constant. Episode 31 worked to find a delta for x squared near one; here it is enough to notice that three works, which is the slope of the cone in the video, and the code measures that three is the smallest constant that does. Not every continuous function manages this: the square root is continuous at zero, yet the quotient is one over the square root of x, and no constant survives.\n\nFor a linear map the condition collapses, since the difference of two values is the image of the difference vector. Such a map is conventionally called bounded, a word that misleads: it does not say the range is a bounded set. No nonzero linear map is bounded that way, because scaling a vector scales its image by the same factor. What is bounded is the quotient. The two panels in the video show precisely this: the images escape every ball, while the quotient reads three every time.\n\nA real example: continuous functions with the uniform norm, where the definite integral is a bounded linear functional with the length of the interval as a bound.\n\nFinally Theorem 3.1 — for a linear map, continuous at one point, continuous everywhere, and bounded are the same thing. The proof starts from one point, takes epsilon equal to one to get a delta, then uses linearity to stretch it into a bound over the whole space. That bound is only guaranteed to exist, not to be smallest: for the example in the video the smallest bound is three and the proof hands us six. A closing lemma: the norm is itself Lipschitz with constant one.\n\nEvery number in the video was computed. The delta was solved for by bisection, the Lipschitz constant measured across the drawn interval, the operator's bound found by sweeping the unit sphere, and the reverse triangle inequality checked on tens of thousands of pairs.\n\nNext time: the operator norm and Hom(V, W).\n\nPart of a bilingual animated teaching series (English edition).\n\nThis is an independently produced study guide. It is not official course material and is not affiliated with the authors or publisher of the book. The narration and animations are original work; no pages of the book are reproduced, and no copy of it is provided.",
+    "tags": [
+      "Advanced Calculus",
+      "Loomis",
+      "Sternberg",
+      "continuity",
+      "Lipschitz",
+      "bounded linear map",
+      "operator",
+      "norm",
+      "epsilon delta",
+      "real analysis",
+      "university mathematics"
+    ],
+    "language": "en"
+  }
+]

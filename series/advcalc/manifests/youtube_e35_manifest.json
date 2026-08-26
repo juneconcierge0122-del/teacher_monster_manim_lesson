@@ -1,0 +1,41 @@
+[
+  {
+    "file": "manim_lessons/samples/output/advcalc_e35_zh-TW.mp4",
+    "title": "《高等微積分》第 35 集｜算子範數與 Hom(V, W)｜Loomis & Sternberg 第 3 章 §3",
+    "description": "本集收掉 Loomis 與 Sternberg《Advanced Calculus》第 3 章第 3 節（書頁 128 到 129）。書頁 129 起是習題 3.1 到 3.22，第 4 節「等價範數」從書頁 132 起。\n\n上一集說有界線性映射的界不只一個，任何比它大的數也是界，所以真正該記住的是最小的那一個。把它定義成所有商的最小上界，這個數就叫 T 的算子範數。影片一開場那條曲線是把方向繞一圈、每個方向算一個商真的掃出來的，最高處就是算子範數，最低處是後半段要講的下界。\n\n積分那個例子可以算出精確值：界是區間長度，而常數函數一剛好把它取到，所以沒有更小的界。影片裡另外兩個函數的商分別是 1.00 與 0.25，都比 2 小，這就是最小上界的意思。\n\n定義裡的分母其實可以消掉。線性映射是齊次的，把向量先除以自己的範數再送進去，得到的正好是那個商，所以只要在單位球面上取最小上界。還可以再放寬到整顆閉單位球，因為球裡的向量都是「大小不超過一的數乘上單位向量」，像只會更短。這三種寫法在程式裡分別算過，三個數字完全相同。\n\n這兩種寫法其實是一致範數：算子範數就是 T 限制在閉單位球上的一致範數。繞了一圈，「有界」又回到最原始的意思——值域是有界集——只是要先把定義域切到那顆球上。\n\n反過來也有一個概念：如果像的範數不小於某個正數乘上向量的範數，就說 T 有下界，而且有有界反映射時，下界可以取成反映射算子範數的倒數。影片裡同一張圖同時給出上界 3（外接的球）與下界 1（內接的球）。但有下界不保證可逆：把數列整條往右推一格，長度完全不變，可是第一格永遠是零，值域整整漏掉一個方向。有限維才有「有下界就可逆」。\n\n把所有有界線性映射收在一起就是 Hom(V, W)。定理 3.2 說它自己就是賦範線性空間；定理 3.3 說合成的算子範數不超過兩個算子範數的乘積，而且是不等式不是等式，影片裡這一對是 3 對 6。最後 V 星成為所有有界線性泛函的空間，而在一致範數的平面上，用一個固定向量作內積得到的泛函，算子範數正好是那個向量的一範數。\n\n下一集：等價範數。\n\n本影片為雙語教學動畫系列（繁體中文版）。\n\n本影片為獨立製作的學習導讀，非官方教材，與原書作者及出版社無關。\n講解為自行撰寫，動畫為自行繪製，不含原書頁面，也不提供原書的取得管道。",
+    "tags": [
+      "高等微積分",
+      "Advanced Calculus",
+      "Loomis",
+      "Sternberg",
+      "算子範數",
+      "Hom",
+      "有界線性映射",
+      "對偶空間",
+      "範數",
+      "最小上界",
+      "數學分析",
+      "大學數學"
+    ],
+    "language": "zh-TW"
+  },
+  {
+    "file": "manim_lessons/samples/output/advcalc_e35_en.mp4",
+    "title": "Advanced Calculus, Episode 35 | The Operator Norm and Hom(V, W) | Ch. 3, §3",
+    "description": "This episode finishes section 3 of chapter 3 (pages 128 to 129) in Loomis and Sternberg's Advanced Calculus. Page 129 onward is exercises 3.1 to 3.22, and section 4, on equivalent norms, begins at page 132.\n\nLast time a bounded linear map had many bounds, since anything larger is a bound too, so the one worth remembering is the smallest. Defined as the least upper bound of all those quotients, that number is the operator norm of T. The curve that opens the video was swept out by walking the directions once round and computing one quotient for each: its highest point is the operator norm, and its lowest is the bound below that the second half of the episode is about.\n\nThe integral example can be computed exactly. The bound is the length of the interval, and the constant function one attains it, so no smaller bound exists. The other two functions in the video give quotients of 1.00 and 0.25, both under 2, which is what least upper bound means.\n\nThe denominator can be removed. A linear map is homogeneous, so dividing the vector by its own norm before feeding it in produces exactly that quotient, and it is enough to take the lub over the unit sphere. It can be relaxed further to the whole closed ball, since every vector there is a factor of size at most one times a unit vector and its image can only be shorter. All three versions were computed separately in the code and came out identical.\n\nThose last two are uniform norms: the operator norm is the uniform norm of T restricted to the closed unit ball. The word bounded has come full circle and means what it always did, that a range is a bounded set, once the domain has been cut down to that ball.\n\nThere is a notion the other way round: if the image has norm at least some positive number times the vector's norm, T is bounded below, and when T has a bounded inverse that number may be taken to be one over the inverse's operator norm. One picture in the video carries both — the circumscribed ball giving the upper bound 3, the inscribed one the lower bound 1. But bounded below does not force invertibility: push a sequence one slot to the right and the norm is unchanged, yet the first slot is always zero and the range misses a whole direction. Only in finite dimensions does bounded below imply invertible.\n\nCollecting all the bounded linear maps gives Hom(V, W). Theorem 3.2 says it is itself a normed linear space; Theorem 3.3 says the operator norm of a composite is at most the product of the two norms, and it is an inequality rather than an equality — the pair in the video reads three against six. Finally V star becomes the space of bounded linear functionals, and on the plane with the uniform norm the functional given by the inner product with a fixed vector has operator norm exactly the one norm of that vector.\n\nNext time: equivalent norms.\n\nPart of a bilingual animated teaching series (English edition).\n\nThis is an independently produced study guide. It is not official course material and is not affiliated with the authors or publisher of the book. The narration and animations are original work; no pages of the book are reproduced, and no copy of it is provided.",
+    "tags": [
+      "Advanced Calculus",
+      "Loomis",
+      "Sternberg",
+      "operator norm",
+      "Hom",
+      "bounded linear map",
+      "conjugate space",
+      "norm",
+      "least upper bound",
+      "real analysis",
+      "university mathematics"
+    ],
+    "language": "en"
+  }
+]

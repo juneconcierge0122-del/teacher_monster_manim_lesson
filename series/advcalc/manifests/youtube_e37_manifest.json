@@ -1,0 +1,41 @@
+[
+  {
+    "file": "manim_lessons/samples/output/advcalc_e37_zh-TW.mp4",
+    "title": "《高等微積分》第 37 集｜無窮小、大 O 與小 o｜Loomis & Sternberg 第 3 章 §5",
+    "description": "本集是 Loomis 與 Sternberg《Advanced Calculus》第 3 章第 5 節「無窮小」（書頁 136 到 139）。書頁 140 是習題 5.1 到 5.11。\n\n早期的書把無窮小講得像邏輯上的胡話，很多現代教科書乾脆避開，但想法本身很有用。先定好兩個詞：包含以某點為心的一顆開球的集合，叫那一點的鄰域；去心鄰域就是鄰域挖掉那一點。\n\n為什麼要它？導數的定義裡，分子的變化量與分母的增量都趨於零，真正有內容的是「差商減掉導數之後還是趨於零」；把它乘回增量，就得到一個比增量更快趨於零的函數。整個微分學就是在研究趨於零的速度，所以速度需要一套詞。\n\n三個類的函數都從零的一個鄰域映到另一個賦範空間。第一個是無窮小 S：在零的值是零而且在零連續，它只要求會趨於零，沒有要求趨得多快。第二個是大 O：在零是 Lipschitz 連續，也就是被一個楔形壓住。第三個是小 o：像的範數除以向量的範數趨於零，也就是比向量本身更快趨於零，楔形不管開多小最後都關得住它。\n\n三個很短的例子就把三個類分開：根號絕對值 x 在 S 裡但不在大 O 裡，比值會爆炸；x 自己在大 O 裡但不在小 o 裡，比值永遠是一；x 平方三個都在。影片裡的數字是算出來的。\n\n定理 5.1 把代數性質收在一起。三個類一個套一個，各自對加法與係數倍封閉，所以都是向量空間。合成方面，大 O 接大 O 還是大 O，而只要兩個裡面有一個是小 o，合成就掉進小 o。乘積方面，一個大 O 乘上一個無窮小，結果落在小 o 裡。\n\n最關鍵的是最後兩項：每個有界線性映射都在大 O 裡，而 Hom 跟小 o 只交於零映射。理由很簡單——非零的線性映射沿著一條射線走，比值是固定的常數，影片裡永遠是三，不可能趨於零。這一條就是下一集「微分唯一」的全部理由。書上另外附一句：證明只用到齊次性，所以一次齊次的函數裡除了零沒有小 o。\n\n最後，三個類換成等價範數完全不變，因為常數只差有限的倍數。影片用兩種範數算同一個比值來說明這件事。\n\n下一集：微分。\n\n本影片為雙語教學動畫系列（繁體中文版）。\n\n本影片為獨立製作的學習導讀，非官方教材，與原書作者及出版社無關。\n講解為自行撰寫，動畫為自行繪製，不含原書頁面，也不提供原書的取得管道。",
+    "tags": [
+      "高等微積分",
+      "Advanced Calculus",
+      "Loomis",
+      "Sternberg",
+      "無窮小",
+      "大O",
+      "小o",
+      "Lipschitz",
+      "鄰域",
+      "微分學",
+      "數學分析",
+      "大學數學"
+    ],
+    "language": "zh-TW"
+  },
+  {
+    "file": "manim_lessons/samples/output/advcalc_e37_en.mp4",
+    "title": "Advanced Calculus, Episode 37 | Infinitesimals, Big Oh and Little Oh | Ch. 3, §5",
+    "description": "This episode is section 5 of chapter 3, on infinitesimals (pages 136 to 139), in Loomis and Sternberg's Advanced Calculus. Page 140 is exercises 5.1 to 5.11.\n\nEarly treatments made the word infinitesimal look like logical nonsense and many modern books avoid it, yet the idea is useful. Two words first: a set containing an open ball about a point is a neighborhood of it, and deleting the point gives a deleted neighborhood.\n\nWhy bother? In the definition of a derivative both the change on top and the increment underneath go to zero; what carries content is that the difference quotient minus the derivative still goes to zero. Multiplied back by the increment, that gives a function vanishing faster than the increment. The whole differential calculus studies rates of vanishing, so rates need names.\n\nThe three classes all consist of maps from a neighborhood of zero into another normed space. The first is S, the infinitesimals: the value at zero is zero and the map is continuous there, with no demand on how fast. The second is big oh: Lipschitz continuous at zero, which is to say held inside a wedge. The third is little oh: the image's norm over the vector's norm goes to zero, so it vanishes faster than the vector itself and is caught however narrow the wedge.\n\nThree very short examples separate them. The square root of the size of x is in S but not big oh, since its quotient explodes. x itself is in big oh but not little oh, its quotient being one forever. x squared is in all three. The numbers in the video were computed.\n\nTheorem 5.1 collects the algebra. The three classes nest, each is closed under addition and scalar multiples, so all three are vector spaces. Big oh after big oh is big oh, and if either factor is little oh the composite is little oh. A big oh times an infinitesimal lands in little oh.\n\nThe last two parts matter most: every bounded linear map is in big oh, and Hom meets little oh only at the zero map. The reason is simple — walk a nonzero linear map along a ray and the quotient is a fixed constant, three in the video, which cannot go to zero. That single fact is the whole reason a differential is unique, as the next episode shows. The book adds a remark: only homogeneity is used, so no degree one homogeneous map but zero lies in little oh.\n\nFinally, the three classes survive a change to an equivalent norm, since the constants differ only by a bounded factor. The video makes the point by computing one quotient under two different norms.\n\nNext time: the differential.\n\nPart of a bilingual animated teaching series (English edition).\n\nThis is an independently produced study guide. It is not official course material and is not affiliated with the authors or publisher of the book. The narration and animations are original work; no pages of the book are reproduced, and no copy of it is provided.",
+    "tags": [
+      "Advanced Calculus",
+      "Loomis",
+      "Sternberg",
+      "infinitesimal",
+      "big oh",
+      "little oh",
+      "Lipschitz",
+      "neighborhood",
+      "differential calculus",
+      "real analysis",
+      "university mathematics"
+    ],
+    "language": "en"
+  }
+]
