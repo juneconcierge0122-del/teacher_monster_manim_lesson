@@ -66,6 +66,10 @@ E22 從「零化子」起（83–86）。自然性那張交換圖雖然講的是
 | E32 | 範數 | 3.2（121–123） | 3:13 ／ 2:58 | https://youtu.be/vP5LhbMr9As | https://youtu.be/4RTAugQWWsw |
 | E33 | 球、開集與閉集 | 3.2（123–125） | 3:20 ／ 2:59 | https://youtu.be/Ug-Z_08W8GA | https://youtu.be/r9Wr_3WzHUI |
 | E34 | 連續、Lipschitz 與有界線性映射 | 3.3（126–128） | 3:15 ／ 3:16 | https://youtu.be/dVaEAKC7YXQ | https://youtu.be/B4u82fscCcY |
+| E35 | 算子範數與 Hom(V, W) | 3.3（128–129） | 3:23 ／ 3:08 | https://youtu.be/k6IrON7QYfM | https://youtu.be/KZxCsTbOz78 |
+| E36 | 等價範數與乘積範數 | 3.4（132–134） | 3:14 ／ 3:03 | https://youtu.be/YMDxa4lTRuE | https://youtu.be/FamwA-4piJ4 |
+| E37 | 無窮小、大 O 與小 o | 3.5（136–139） | 3:33 ／ 3:24 | https://youtu.be/gbsPT1DWtUQ | https://youtu.be/Aypr54J1fv4 |
+| E38 | 微分 | 3.6（140–144） | 3:08 ／ 3:02 | https://youtu.be/3XSOJBv5Abg | https://youtu.be/VlpjJKlnWsA |
 
 **E16 起的描述結尾都帶了 PLAYBOOK 第 8 節那段免責聲明**（E00–E15 是在此之前上傳的，沒有那段，
 而 YouTube token 只有上傳權限、改不了已上傳影片的描述，要補只能在 YouTube Studio 手動編輯）。
@@ -313,6 +317,11 @@ E00 在 2026-08-05 重新渲染上傳過**兩次**（前面的都已刪，表上
 - **面板的座標軸十字會壓到底下的符號列**。這一輪 `collide.py` 報最多的一類（E36 三拍、E34 兩拍）：
   `_frame(cx, cy, w, h)` 的縱軸往下延伸 h，而符號列擺在 y ≈ −0.86，兩者高度重疊。
   排版時要先算縱軸的下緣（`cy − h`），再把符號列排在它下面。
+
+- **標在同心環上的名字，要離自己那條線遠一點**。E37 beat 6 畫三個同心橢圓標 `S`、`O`、`o`，
+  `O` 與 `x` 兩個標籤剛好落在橢圓的邊上。`collide.py` 沒報（它對文字盒做 INSET 內縮，
+  擦邊不算），1080p 看起來也讀得懂，但不好看。**放環標籤時，把它擺在兩條環的中間，
+  不要貼著任何一條。**（這一集沒為它重渲，因為 token 只能上傳不能刪片。）
 
 | 項目 | 值 |
 |---|---|
