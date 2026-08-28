@@ -75,6 +75,10 @@ E22 從「零化子」起（83–86）。自然性那張交換圖雖然講的是
 | E37 | 無窮小、大 O 與小 o | 3.5（136–139） | 3:33 ／ 3:24 | https://youtu.be/gbsPT1DWtUQ | https://youtu.be/Aypr54J1fv4 |
 | E38 | 微分 | 3.6（140–144） | 3:08 ／ 3:02 | https://youtu.be/3XSOJBv5Abg | https://youtu.be/VlpjJKlnWsA |
 | E39 | 方向導數 | 3.7（146–148） | 3:16 ／ 3:07 | https://youtu.be/lT0W2DWWj04 | https://youtu.be/uwmqaGA28C4 |
+| E40 | 均值定理 | 3.7（148–150） | 3:12 ／ 3:10 | https://youtu.be/Z3Rrc6i2JDE | https://youtu.be/YGDNjK8SHtI |
+| E41 | 微分與乘積空間 | 3.8（152–153） | 3:02 ／ 2:53 | https://youtu.be/2c3FB6jSwLk | https://youtu.be/7mXaxRNz37o |
+| E42 | 連續偏微分與乘積規則 | 3.8（154–155） | 3:06 ／ 3:00 | https://youtu.be/Ni50pkTDtfo | https://youtu.be/Dq_bo5g5eg8 |
+| E43 | 微分與 ℝⁿ、雅可比矩陣 | 3.9（156–159） | 3:04 ／ 2:58 | https://youtu.be/AdHaIsno_t0 | https://youtu.be/ViG1m1Icn_8 |
 
 **E16 起的描述結尾都帶了 PLAYBOOK 第 8 節那段免責聲明**（E00–E15 是在此之前上傳的，沒有那段，
 而 YouTube token 只有上傳權限、改不了已上傳影片的描述，要補只能在 YouTube Studio 手動編輯）。
