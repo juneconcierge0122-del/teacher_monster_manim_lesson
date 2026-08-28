@@ -1,6 +1,6 @@
 # advcalc —《Advanced Calculus》(Loomis & Sternberg)
 
-**狀態：E00–E43 已上傳（私人）；E44–E48 已寫完、檢查完、配音完，正在渲染。
+**狀態：E00–E48 已上傳（私人）。
 第 0、1、2 章完結，第 3 章做到第 11 節完（書頁 169）——微分學的骨幹、初等應用、
 以及隱函數定理與反映射定理全部講完。
 下一集 E49 開第 3 章第 12 節「子流形與 Lagrange 乘子」（書頁 172 起）。
@@ -88,6 +88,11 @@ E22 從「零化子」起（83–86）。自然性那張交換圖雖然講的是
 | E41 | 微分與乘積空間 | 3.8（152–153） | 3:02 ／ 2:53 | https://youtu.be/2c3FB6jSwLk | https://youtu.be/7mXaxRNz37o |
 | E42 | 連續偏微分與乘積規則 | 3.8（154–155） | 3:06 ／ 3:00 | https://youtu.be/Ni50pkTDtfo | https://youtu.be/Dq_bo5g5eg8 |
 | E43 | 微分與 ℝⁿ、雅可比矩陣 | 3.9（156–159） | 3:04 ／ 2:58 | https://youtu.be/AdHaIsno_t0 | https://youtu.be/ViG1m1Icn_8 |
+| E44 | 極值與臨界點 | 3.10（161–162） | 3:14 ／ 3:02 | https://youtu.be/LvHdUUHoa4s | https://youtu.be/Uuri_HuHd5Y |
+| E45 | 切平面與定理 10.2 | 3.10（162–163） | 3:08 ／ 3:00 | https://youtu.be/WUoyR0vaZPg | https://youtu.be/Dk0Z3mUBJPA |
+| E46 | 隱函數的微分（定理 11.1） | 3.11（164–166） | 3:16 ／ 3:08 | https://youtu.be/S64QXKpp6aM | https://youtu.be/q54nihWh8mw |
+| E47 | 反映射定理（定理 11.2、11.3） | 3.11（166–167） | 3:02 ／ 2:57 | https://youtu.be/2CT_8U7fvsM | https://youtu.be/ltJmB4GQc6A |
+| E48 | 笛卡兒形式（定理 11.4、11.5） | 3.11（167–169） | 3:01 ／ 2:59 | https://youtu.be/vqSKofBYlKU | https://youtu.be/g6cfe1VW1_E |
 
 **E16 起的描述結尾都帶了 PLAYBOOK 第 8 節那段免責聲明**（E00–E15 是在此之前上傳的，沒有那段，
 而 YouTube token 只有上傳權限、改不了已上傳影片的描述，要補只能在 YouTube Studio 手動編輯）。
