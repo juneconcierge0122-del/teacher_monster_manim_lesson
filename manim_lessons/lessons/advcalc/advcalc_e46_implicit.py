@@ -301,7 +301,9 @@ class AdvCalcE46Base(ArrayArt, CanonicalBase):
   for k, (lab, col) in enumerate(lines):
    g.add(self._rect(-3.55, 0.55 - k * 0.80, 2.35, 0.32, col),
          self._sym(0.55 - k * 0.80, lab, col, FS_TAG + 1, x=-3.55, w=4.50))
-  g.add(self._sym(-0.72, "f ′ ( a )   =   −  ( ∂g/∂y ) ⁻¹ ( ∂g/∂x )", DIM,
+  # this grey line used to sit at -0.72, close enough to the box above it that
+  # the box's lower border read as an underline on the text
+  g.add(self._sym(-0.88, "f ′ ( a )   =   −  ( ∂g/∂y ) ⁻¹ ( ∂g/∂x )", DIM,
                   FS_TAG, x=-3.55, w=4.50))
   g.add(self._panel(((0.86, "只要第二個偏微分可逆",
                       "provided the second partial differential is invertible", ACCENT_B),

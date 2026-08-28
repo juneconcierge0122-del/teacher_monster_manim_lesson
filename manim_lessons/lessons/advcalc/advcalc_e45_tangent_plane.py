@@ -159,7 +159,7 @@ class AdvCalcE45Base(ArrayArt, CanonicalBase):
                       for v in range(-8, 9)], col, sw=sw))
   return g
 
- def _plane(self, ox, oy, px, py, col=WARN, sw=2.0, r=0.62):
+ def _plane(self, ox, oy, px, py, col=WARN, sw=3.0, r=0.62):
   """The tangent plane to the stand-in surface at (px, py), drawn as a patch."""
   h0 = self._height(px, py)
   hx = (self._height(px + H, py) - self._height(px - H, py)) / (2 * H)
