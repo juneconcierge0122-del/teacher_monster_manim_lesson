@@ -1,0 +1,41 @@
+[
+  {
+    "file": "manim_lessons/samples/output/advcalc_e40_zh-TW.mp4",
+    "title": "《高等微積分》第 40 集｜均值定理｜Loomis & Sternberg 第 3 章 §7",
+    "description": "本集收掉 Loomis 與 Sternberg《Advanced Calculus》第 3 章第 7 節（書頁 148 到 150）。書頁 151 到 152 是習題 7.1 到 7.15。\n\n一元微積分的均值定理說，兩端的差等於區間長度乘上某一點的導數。這句話在向量值的情形是錯的，而且錯得很乾脆：影片裡那條弧的速率恆等於一，所以每一個候選向量的長度都是 2.2，而兩端的直線距離只有 1.78——長度就對不上，那個點根本不可能存在。掃過四千個候選，最接近的一個還差 0.31。\n\n所以這裡改證一個不等式。定理 7.3：如果導數的範數處處不超過 m，那麼兩端的距離就不超過 m 乘上區間長度。幾何上很直觀：走得多快乘上走了多久，一定不小於頭尾的直線距離。證明是實分析裡「用最小上界逼到底」的標準寫法——固定一個 ε，把滿足放寬過的不等式的點收成一個集合，取它的最小上界，再證那個上界只能是右端點，否則還能往前推一小段而產生矛盾。影片把這兩步都畫出來。\n\n定理 7.4 是多變數的說法，也是後面真正會用到的形式：如果 F 在一顆球上可微而且每一點的微分算子範數都不超過 ε，那麼球裡任兩點之間的變化量，範數就不超過 ε 乘上位移的範數。證明只是把上一集接上來——從一點走到另一點的線段本身是一條參數化弧，定理 7.2 給出它的切向量，定理 7.3 收尾。影片裡的兩個數字都是掃出來的：球上算子範數的上確界是 0.68，畫出來那一對點的實際變化量填掉允許範圍的 78%。\n\n書上接著補一句：證明裡用到球的性質只有一條，就是「任兩點之間的線段整條都在裡面」。那正是凸性的定義，所以同一句話對任何凸集都成立。推論再把一個固定的線性映射減掉，得到下一節真正會用的形式。\n\n最後是記號：方向導數與微分寫的是同一個數，可是固定住的變數剛好對調；還有把函數本身放進下標的第三種寫法。而 dF 自己是一個映射，所以可以再問它可不可微——那就是二階微分，照對偶來看等價於一個雙線性映射。\n\n下一集：微分與乘積空間。\n\n本影片為雙語教學動畫系列（繁體中文版）。\n\n本影片為獨立製作的學習導讀，非官方教材，與原書作者及出版社無關。\n講解為自行撰寫，動畫為自行繪製，不含原書頁面，也不提供原書的取得管道。",
+    "tags": [
+      "高等微積分",
+      "Advanced Calculus",
+      "Loomis",
+      "Sternberg",
+      "均值定理",
+      "凸集",
+      "參數化弧",
+      "微分",
+      "不等式",
+      "二階微分",
+      "數學分析",
+      "大學數學"
+    ],
+    "language": "zh-TW"
+  },
+  {
+    "file": "manim_lessons/samples/output/advcalc_e40_en.mp4",
+    "title": "Advanced Calculus, Episode 40 | The Mean Value Theorem | Ch. 3, §7",
+    "description": "This episode finishes section 7 of chapter 3 (pages 148 to 150) in Loomis and Sternberg's Advanced Calculus. Pages 151 to 152 are exercises 7.1 to 7.15.\n\nThe mean value theorem of one variable calculus says the difference of the endpoints equals the length of the interval times the derivative somewhere. For vector values that is false, and cleanly so: the arc in the video has speed exactly one, so every candidate vector has length 2.2 while the straight gap between the endpoints is only 1.78. The lengths disagree, so no such point can exist; sweeping four thousand candidates, the closest still misses by 0.31.\n\nAn inequality is proved instead. Theorem 7.3: if the norm of the derivative never exceeds m, the distance between the endpoints never exceeds m times the length of the interval. Geometrically that is plain — how fast you go times how long you go for is at least the straight line distance. The proof is the standard least upper bound argument of real analysis: fix an epsilon, collect the points satisfying a relaxed inequality into a set, take its least upper bound, and show that bound can only be the right endpoint, since otherwise one could push a little further and contradict it. The video draws both steps.\n\nTheorem 7.4 is the many variable version and the form actually used later: if F is differentiable on a ball with the operator norm of its differential never exceeding epsilon, then the change between any two points has norm at most epsilon times the displacement. The proof attaches the previous episode — the segment between the points is a parametrized arc, Theorem 7.2 gives its tangent vector, Theorem 7.3 finishes. Both numbers in the video were swept out: the supremum of the operator norm on the ball is 0.68, and the pair drawn fills 78 percent of the allowed circle.\n\nThe book then remarks that only one property of the ball was used: the segment joining any two of its points stays inside. That is the definition of convexity, so the statement holds for any convex set. A corollary subtracts a fixed linear map, giving the form the next section actually needs.\n\nFinally the notation: the directional derivative and the differential write the same number with the fixed variable swapped, and a third notation puts the function itself in the subscript. And dF is itself a map, so one can ask whether it too is differentiable — that is the second differential, equivalent by duality to a bilinear map.\n\nNext time: the differential and product spaces.\n\nPart of a bilingual animated teaching series (English edition).\n\nThis is an independently produced study guide. It is not official course material and is not affiliated with the authors or publisher of the book. The narration and animations are original work; no pages of the book are reproduced, and no copy of it is provided.",
+    "tags": [
+      "Advanced Calculus",
+      "Loomis",
+      "Sternberg",
+      "mean value theorem",
+      "convex set",
+      "parametrized arc",
+      "differential",
+      "inequality",
+      "second differential",
+      "real analysis",
+      "university mathematics"
+    ],
+    "language": "en"
+  }
+]

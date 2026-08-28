@@ -1,0 +1,41 @@
+[
+  {
+    "file": "manim_lessons/samples/output/advcalc_e39_zh-TW.mp4",
+    "title": "《高等微積分》第 39 集｜方向導數｜Loomis & Sternberg 第 3 章 §7",
+    "description": "本集開始 Loomis 與 Sternberg《Advanced Calculus》第 3 章第 7 節（書頁 146 到 148）。書頁 151 到 152 是習題 7.1 到 7.15。\n\n這一節把前面幾集建立的微分接回一元微積分的導數。先看最簡單的情形：從一個區間映到賦範空間的連續函數。導數的定義一個字都不用改，只是分子現在是向量。這種函數的值域是一條曲線，習慣叫參數化弧，導數就叫弧在那一點的切向量。定理 7.1 說弧可微恰好等於切向量存在，而且切向量就是微分的骨架——一維的定義域讓微分退化成一個乘法。\n\n接著是這一節的主角。要研究 F 在 α 附近的行為，一個辦法是每次只看一條穿過 α 的直線；把 F 限制上去就得到一條弧，它在原點的切向量就叫方向導數。書上特別指出「方向」是用錯的字：把向量乘上一個正數，指的方向沒變，導數卻跟著乘上同一個數。真正成立的是「對那個向量線性」。影片裡三個共線的取樣點就是在說這件事。\n\n定理 7.2 說：可微的話，沿任何一條穿過 α 的光滑弧走過去，得到的還是光滑弧，切向量就是原來的切向量丟進微分裡——這只是鏈鎖規則換一個說法。取直線當那條弧，就得到最常用的特例：每一個方向導數都存在，而且等於微分作用在那個向量上。所以微分可以一個方向一個方向地讀出來。\n\n反過來就不成立了。齊次函數在原點沿每一個方向都有導數，而且那個導數正好等於函數本身的值，因為限制到直線上它就是一條直線。可是如果它同時可微，微分就必須等於函數本身，於是函數只能是線性的。所以任何非線性的齊次函數都是反例。最短的例子是 x 三次方除以 x 平方加 y 平方，在原點補上零：它連續、齊次、每個方向導數都存在，卻不是線性的。影片把它在單位圓上的值畫出來，再疊上「如果它線性該長什麼樣」的那條曲線——兩條在四個座標軸方向重合，中間差距最大 0.38，那個差距就是不可加的量。\n\n正面的結果要用均值定理，下一集講。\n\n本影片為雙語教學動畫系列（繁體中文版）。\n\n本影片為獨立製作的學習導讀，非官方教材，與原書作者及出版社無關。\n講解為自行撰寫，動畫為自行繪製，不含原書頁面，也不提供原書的取得管道。",
+    "tags": [
+      "高等微積分",
+      "Advanced Calculus",
+      "Loomis",
+      "Sternberg",
+      "方向導數",
+      "參數化弧",
+      "切向量",
+      "齊次函數",
+      "微分",
+      "反例",
+      "數學分析",
+      "大學數學"
+    ],
+    "language": "zh-TW"
+  },
+  {
+    "file": "manim_lessons/samples/output/advcalc_e39_en.mp4",
+    "title": "Advanced Calculus, Episode 39 | Directional Derivatives | Ch. 3, §7",
+    "description": "This episode opens section 7 of chapter 3 (pages 146 to 148) in Loomis and Sternberg's Advanced Calculus. Pages 151 to 152 are exercises 7.1 to 7.15.\n\nThe section connects the differential built up over the last few episodes back to the derivative of one variable calculus. Start with the simplest case, a continuous function from an interval into a normed space: the definition of the derivative needs no change, and only the numerator is now a vector. The range is a curve, conventionally a parametrized arc, and the derivative is its tangent vector. Theorem 7.1 says the arc is differentiable exactly when the tangent vector exists, and the tangent vector is the skeleton, since a one dimensional domain collapses a differential into a product.\n\nThen the main object. To study F near alpha, look at one straight line through alpha at a time; restricting F to it gives an arc whose tangent vector at the origin is the directional derivative. The book points out that direction is a misuse of the word: scaling the vector by a positive number does not change where it points, yet the derivative is scaled by the same factor. What holds is linearity in that vector, which is what the three collinear sample points in the video show.\n\nTheorem 7.2 says that if F is differentiable then travelling along any smooth arc through alpha gives another smooth arc, whose tangent vector is the original one fed into the differential — the chain rule in different clothing. Taking the arc to be a line gives the case everyone uses: every directional derivative exists and equals the differential applied to the vector, so a differential can be read off one direction at a time.\n\nThe converse fails. A homogeneous function has a derivative at the origin in every direction, equal to its own value there, because restricted to a line it is a line. But if it is also differentiable then the differential equals the function, so the function must be linear. Hence every nonlinear homogeneous function is a counterexample. The shortest is x cubed over x squared plus y squared, set to zero at the origin: continuous, homogeneous, every directional derivative present, and not linear. The video plots its values on the unit circle against what a linear map through the same four axis directions would give; the two agree at those four points and part company by up to 0.38 in between, and that gap is exactly the failure of additivity.\n\nThe positive result needs the mean value theorem, which is next time.\n\nPart of a bilingual animated teaching series (English edition).\n\nThis is an independently produced study guide. It is not official course material and is not affiliated with the authors or publisher of the book. The narration and animations are original work; no pages of the book are reproduced, and no copy of it is provided.",
+    "tags": [
+      "Advanced Calculus",
+      "Loomis",
+      "Sternberg",
+      "directional derivative",
+      "parametrized arc",
+      "tangent vector",
+      "homogeneous function",
+      "differential",
+      "counterexample",
+      "real analysis",
+      "university mathematics"
+    ],
+    "language": "en"
+  }
+]

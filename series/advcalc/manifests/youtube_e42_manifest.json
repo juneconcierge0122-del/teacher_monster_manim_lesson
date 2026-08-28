@@ -1,0 +1,39 @@
+[
+  {
+    "file": "manim_lessons/samples/output/advcalc_e42_zh-TW.mp4",
+    "title": "《高等微積分》第 42 集｜連續偏微分與乘積規則｜Loomis & Sternberg 第 3 章 §8",
+    "description": "本集收掉 Loomis 與 Sternberg《Advanced Calculus》第 3 章第 8 節（書頁 154 到 155）。書頁 155 到 156 是習題 8.1 到 8.10。\n\n上一集留了一個問題：偏微分全部存在，能不能推出可微？答案一般是不行。影片開場那個函數在原點的兩個偏導數都是零，可是沿對角線走過去它恆等於二分之一，連連續都不是——只看兩個座標軸方向就下結論，會漏掉中間發生的事。\n\n但只要再要求一件事就夠了：偏微分不只在每一點存在，而且對那個點連續。定理 8.2 說這樣就推得出可微，而且推出來的微分本身也連續。開始證之前，形式已經被鎖死：如果微分存在，引理 8.2 加上投影與嵌入的恆等式就逼著它必須等於各偏微分接上投影再求和。剩下要證的只是「這個候選真的是微分」。\n\n證明用的是上一集那條推論：微分跟一個固定的線性映射差不超過 ε，變化量跟它作用出來的結果也差不超過 ε 乘位移。走法是分兩步：第一步只動第一個變數，第二步只動第二個，每一步都只剩一個變數在動。兩步的誤差各不超過 ε 乘上那一步的位移，加起來就不超過 ε 乘上整個位移。影片把這個兩步估計在一個具體的函數上實際走了一遍，三欄數字都掉到零。定理 8.3 用歸納法把因子數推廣到 n 個。\n\n後半段是有界雙線性映射。引理 8.3 說它處處可微，微分就是「一邊固定、另一邊動」的那兩項相加。證明很短：固定一邊之後它是線性的，所以那個偏微分就是它自己；而固定的那一邊對點又是線性的，所以偏微分連續，定理 8.2 一套就完成。影片用的例子是平行四邊形的有向面積，界剛好是一。\n\n定理 8.4 是一般的乘積規則：兩個可微的函數丟進一個有界雙線性映射，結果可微。影片算出來是二加負一等於一——其中一項是負的，所以這不是「兩個正數相加」那種乘積規則。\n\n到這裡加法、合成、乘積三條規則在賦範空間裡全部有了，而且完全沒有用到座標。下一集把它們搬到實數的 n 維空間。\n\n本影片為雙語教學動畫系列（繁體中文版）。\n\n本影片為獨立製作的學習導讀，非官方教材，與原書作者及出版社無關。\n講解為自行撰寫，動畫為自行繪製，不含原書頁面，也不提供原書的取得管道。",
+    "tags": [
+      "高等微積分",
+      "Advanced Calculus",
+      "Loomis",
+      "Sternberg",
+      "偏微分",
+      "連續可微",
+      "雙線性",
+      "乘積規則",
+      "反例",
+      "數學分析",
+      "大學數學"
+    ],
+    "language": "zh-TW"
+  },
+  {
+    "file": "manim_lessons/samples/output/advcalc_e42_en.mp4",
+    "title": "Advanced Calculus, Episode 42 | Continuous Partials and the Product Rule | Ch. 3, §8",
+    "description": "This episode finishes section 8 of chapter 3 (pages 154 to 155) in Loomis and Sternberg's Advanced Calculus. Pages 155 to 156 are exercises 8.1 to 8.10.\n\nThe previous episode left a question: do all the partial differentials existing force differentiability? Generally no. The function opening the video has both partial derivatives at the origin equal to zero, yet is one half all along the diagonal, so it is not even continuous — reading only the two coordinate directions misses what happens between them.\n\nOne more requirement suffices: the partial differentials should not merely exist at each point but depend continuously on it. Theorem 8.2 says that forces differentiability, and the differential it produces is itself continuous. Before the proof the form is already pinned down: if the differential exists, Lemma 8.2 with the projection and injection identities forces it to be the sum of the partials composed with the projections. Only that this candidate works remains.\n\nThe proof uses the previous episode's corollary: if the differential stays within epsilon of a fixed linear map, the change stays within epsilon times the displacement of that map applied. The route goes in two steps, moving one variable at a time, so each step has a single variable in motion. Each step's error is at most epsilon times its own displacement, so together at most epsilon times the whole. The video walks that two-step estimate on a concrete function, and all three columns of numbers fall to zero. Theorem 8.3 extends the factor count to n by induction.\n\nThe second half is about bounded bilinear maps. Lemma 8.3 says such a map is everywhere differentiable, with differential the sum of the two terms got by holding one side fixed. The proof is short: hold one side and what is left is linear, so that partial differential is the map itself; the held side depends linearly on the point, so the partial is continuous, and Theorem 8.2 closes it. The video uses the signed area of a parallelogram, whose bound is exactly one.\n\nTheorem 8.4 is the general product rule: feed two differentiable functions into a bounded bilinear map and the result is differentiable. On screen it comes out as two plus minus one — one term is negative, so this is not a rule about adding two positive things.\n\nSums, composites and products now all have their rules in a normed space, and none of them needed coordinates. Next time they move to real n-space.\n\nPart of a bilingual animated teaching series (English edition).\n\nThis is an independently produced study guide. It is not official course material and is not affiliated with the authors or publisher of the book. The narration and animations are original work; no pages of the book are reproduced, and no copy of it is provided.",
+    "tags": [
+      "Advanced Calculus",
+      "Loomis",
+      "Sternberg",
+      "partial differential",
+      "continuously differentiable",
+      "bilinear",
+      "product rule",
+      "counterexample",
+      "real analysis",
+      "university mathematics"
+    ],
+    "language": "en"
+  }
+]

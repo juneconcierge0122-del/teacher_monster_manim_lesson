@@ -1,0 +1,39 @@
+[
+  {
+    "file": "manim_lessons/samples/output/advcalc_e43_zh-TW.mp4",
+    "title": "《高等微積分》第 43 集｜微分與 R^n、雅可比矩陣｜Loomis & Sternberg 第 3 章 §9",
+    "description": "本集是 Loomis 與 Sternberg《Advanced Calculus》第 3 章第 9 節（書頁 156 到 159）。書頁 159 到 160 是習題 9.1 到 9.11。\n\n前兩節的定理從頭到尾沒有用到座標。這一節做的是翻譯：把它們搬到實數的 n 維空間，那裡有標準基底，於是「偏導數」這個古典的東西才第一次真的出現。\n\n定理 9.1 把三件事對在一起：老式的偏導數、沿第 j 個基底向量的方向導數、第 j 個偏微分。三個只要有一個存在，另外兩個就都存在。第 j 個偏微分特別簡單，因為那個因子只有一維——它做的事就只是乘上那個偏導數。定理 9.2 說可微推得出 n 個偏導數全都存在，而且它們排成的那一組就是微分的骨架，於是任意方向的導數就是各分量乘偏導數再求和，也就是大家熟悉的「梯度點乘方向」。定理 9.3 是上一集定理 8.3 的特例：偏導數存在而且連續，就連續可微——這是實際判斷可微時真正在用的判準。\n\n值域也是實數的 m 維空間時，微分的矩陣就叫雅可比矩陣。矩陣的第 j 行是第 j 個偏導數排成的 m 元組：行對應輸入變數，列對應輸出分量。定理 9.4 把矩陣元寫死成偏導數。鏈鎖規則寫成矩陣，就是大家背過的那條有兩個求和記號的連鎖公式，而它其實只是「線性映射的合成等於矩陣相乘」。\n\n影片從頭到尾用同一個映射，把平面向量送到它複數平方的那一個。雅可比矩陣是用中央差商算出來的、每一行都驗過等於對應的方向導數、任意方向的加權和也驗過、兩個雅可比矩陣相乘跟直接對合成算的逐項相同、行列式在四個取樣點上都等於四乘向量長度的平方，連「小方塊的像面積放大幾倍」都驗過。\n\n書上在這裡對古典記號留了一句評語：把微分寫成 dF 下標 a 作用在 x 上，讀起來會打架，因為 x 同時是座標的名字。\n\n最後，如果 F 從 n 維空間映到自己，雅可比矩陣的行列式就叫 F 的雅可比。它不為零，後面會是反函數定理的關鍵。下一集講初等應用。\n\n本影片為雙語教學動畫系列（繁體中文版）。\n\n本影片為獨立製作的學習導讀，非官方教材，與原書作者及出版社無關。\n講解為自行撰寫，動畫為自行繪製，不含原書頁面，也不提供原書的取得管道。",
+    "tags": [
+      "高等微積分",
+      "Advanced Calculus",
+      "Loomis",
+      "Sternberg",
+      "雅可比矩陣",
+      "偏導數",
+      "鏈鎖規則",
+      "梯度",
+      "行列式",
+      "數學分析",
+      "大學數學"
+    ],
+    "language": "zh-TW"
+  },
+  {
+    "file": "manim_lessons/samples/output/advcalc_e43_en.mp4",
+    "title": "Advanced Calculus, Episode 43 | The Differential and Real n-Space | Ch. 3, §9",
+    "description": "This episode is section 9 of chapter 3 (pages 156 to 159) in Loomis and Sternberg's Advanced Calculus. Pages 159 to 160 are exercises 9.1 to 9.11.\n\nNothing in the last two sections used coordinates. This one is translation: the results move into real n-space, where a standard basis exists, so the classical object called a partial derivative finally makes its first real appearance.\n\nTheorem 9.1 lines three things up: the old fashioned partial derivative, the directional derivative along the jth basis vector, and the jth partial differential. If any one exists so do the others. The jth partial differential is especially simple because that factor is one dimensional — all it does is multiply by the partial derivative. Theorem 9.2 says differentiability forces all n partial derivatives to exist and makes the tuple they form the skeleton of the differential, so the derivative in any direction is the components weighted by the partials, which is the familiar gradient dotted with a direction. Theorem 9.3 is the previous episode's Theorem 8.3 specialised: partial derivatives that exist and are continuous give continuous differentiability, and that is the test actually used.\n\nWhen the range is real m-space as well, the matrix of the differential is the Jacobian matrix. Its jth column is the m-tuple of jth partial derivatives: columns answer to input variables, rows to output components. Theorem 9.4 nails the entries down. Written as matrices the chain rule becomes the formula with two summation signs that everyone memorised, and it is only the statement that composing linear maps is multiplying matrices.\n\nOne map runs through the whole video, the one sending a plane vector to its complex square. Its Jacobian matrix is computed by central differences, each column is checked against the matching directional derivative, the weighted sum for a general direction is checked, the product of two Jacobians is checked entry by entry against the composite's own, the determinant is checked at four sample points against four times the squared length, and even the growth in area of a small square is checked.\n\nThe book leaves a remark about the classical notation here: writing the differential at a applied to x reads badly, since x is also the name of the coordinates.\n\nFinally, if F maps n-space to itself, the determinant of the Jacobian matrix is called the Jacobian of F. A nonzero one is later the key to the inverse function theorem. Next time: elementary applications.\n\nPart of a bilingual animated teaching series (English edition).\n\nThis is an independently produced study guide. It is not official course material and is not affiliated with the authors or publisher of the book. The narration and animations are original work; no pages of the book are reproduced, and no copy of it is provided.",
+    "tags": [
+      "Advanced Calculus",
+      "Loomis",
+      "Sternberg",
+      "Jacobian matrix",
+      "partial derivative",
+      "chain rule",
+      "gradient",
+      "determinant",
+      "real analysis",
+      "university mathematics"
+    ],
+    "language": "en"
+  }
+]

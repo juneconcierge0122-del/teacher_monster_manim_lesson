@@ -1,0 +1,38 @@
+[
+  {
+    "file": "manim_lessons/samples/output/advcalc_e41_zh-TW.mp4",
+    "title": "《高等微積分》第 41 集｜微分與乘積空間｜Loomis & Sternberg 第 3 章 §8",
+    "description": "本集開始 Loomis 與 Sternberg《Advanced Calculus》第 3 章第 8 節（書頁 152 到 153）。書頁 155 到 156 是習題 8.1 到 8.10。\n\n這一節把微分規則接到乘積空間，而它的重點是一個不對稱：值域是乘積時很容易，定義域是乘積時就不是。\n\n值域這一半幾乎是定義的重述。定義在同一個定義域上的 m 個函數，跟一個取 m 元組值的函數，本來就是同一件事。定理 8.1 說這對可微也成立：F 可微恰好等於每個分量可微，而整個微分就是各分量微分排成的一組。證明只有兩行，靠的是嵌入與投影都是線性映射，而線性映射的微分就是它自己。弧是特例（引理 8.1），也正是大家在座標下算切向量的做法。\n\n定義域這一半不行。一個吃 n 個向量變數的函數，本身不會拆成 n 個函數——兩個變數的函數帶的資訊，比兩個一變數的函數多得多。不過它的微分會拆：把微分限制到第 j 個因子上，得到的就是第 j 個偏微分，而因為任何向量都寫得成各分量嵌入之和，微分作用在它身上就等於各偏微分之和。把這件事跟鏈鎖規則接起來，就是一般的鏈鎖規則。\n\n影片用內積當例子——它是最小的「真的吃兩個向量變數」的函數。兩個偏微分都寫得出封閉形式，程式算出來的餘項在三個取樣點上一路掉到零。一般鏈鎖規則也算了一次：兩個偏微分接上兩支內函數的微分，得到四與一，加起來是五，而直接對合成微分也是五。\n\n偏微分還有一個更直接的定義，而且那才是實際遇到的：把其他變數固定住，剩下那個一變數函數的微分。影片在同一個例子上把兩條路各走一次，確認結果相同。最後是引理 8.2：可微一定推得出所有偏微分存在，而且等於那些限制。反過來一般不成立。\n\n下一集補上需要的條件，還有一般的乘積規則。\n\n本影片為雙語教學動畫系列（繁體中文版）。\n\n本影片為獨立製作的學習導讀，非官方教材，與原書作者及出版社無關。\n講解為自行撰寫，動畫為自行繪製，不含原書頁面，也不提供原書的取得管道。",
+    "tags": [
+      "高等微積分",
+      "Advanced Calculus",
+      "Loomis",
+      "Sternberg",
+      "乘積空間",
+      "偏微分",
+      "鏈鎖規則",
+      "內積",
+      "雅可比",
+      "數學分析",
+      "大學數學"
+    ],
+    "language": "zh-TW"
+  },
+  {
+    "file": "manim_lessons/samples/output/advcalc_e41_en.mp4",
+    "title": "Advanced Calculus, Episode 41 | The Differential and Product Spaces | Ch. 3, §8",
+    "description": "This episode opens section 8 of chapter 3 (pages 152 to 153) in Loomis and Sternberg's Advanced Calculus. Pages 155 to 156 are exercises 8.1 to 8.10.\n\nThe section carries the rules of differentiation over to product spaces, and its real subject is an asymmetry: a product range is easy, a product domain is not.\n\nThe range half is nearly a restatement of definitions. An m-tuple of functions on one domain and a single m-tuple-valued function are the same thing already. Theorem 8.1 says the same holds for differentiability: F is differentiable exactly when every component is, and the whole differential is the components' differentials gathered into a tuple. The proof takes two lines, resting on the injections and projections being linear and a linear map being its own differential. Arcs are the special case (Lemma 8.1), and that is precisely how a tangent vector is computed in coordinates.\n\nThe domain half fails. A function of n vector variables does not split into n functions: a function of two variables carries far more than two functions of one. Its differential does split, though. Restrict the differential to the jth factor and the jth partial differential comes back, and since any vector is the sum of its components injected in, the differential applied to it is the sum of the partials. Joining that to the chain rule gives the general chain rule.\n\nThe video uses the inner product, the smallest function that genuinely takes two vector variables. Both partial differentials have closed forms, and the remainder computed here falls to zero across three sample points. The general chain rule is evaluated too: the two partials composed with the two inner differentials give four and one, adding to five, and differentiating the composite directly also gives five.\n\nThere is a more direct definition of a partial differential, and it is the one met in practice: hold the other variables fixed and differentiate what remains. The video walks both routes on the same example and confirms they agree. Finally Lemma 8.2: differentiable forces every partial differential to exist and to equal those restrictions. The converse generally fails.\n\nNext time supplies the condition that is missing, along with the general product rule.\n\nPart of a bilingual animated teaching series (English edition).\n\nThis is an independently produced study guide. It is not official course material and is not affiliated with the authors or publisher of the book. The narration and animations are original work; no pages of the book are reproduced, and no copy of it is provided.",
+    "tags": [
+      "Advanced Calculus",
+      "Loomis",
+      "Sternberg",
+      "product space",
+      "partial differential",
+      "chain rule",
+      "inner product",
+      "real analysis",
+      "university mathematics"
+    ],
+    "language": "en"
+  }
+]
