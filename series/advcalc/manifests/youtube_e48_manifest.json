@@ -1,0 +1,39 @@
+[
+  {
+    "file": "manim_lessons/samples/output/advcalc_e48_zh-TW.mp4",
+    "title": "《高等微積分》第 48 集｜笛卡兒形式：定理 11.4 與 11.5｜Loomis & Sternberg 第 3 章 §11",
+    "description": "本集是 Loomis 與 Sternberg《Advanced Calculus》第 3 章第 11 節「隱函數定理」的後段（書頁 167 到 169）。書頁 169 到 171 是習題 11.1 到 11.29。\n\n這一集沒有新的數學，是把前兩集那兩條定理翻成座標的語言，也就是多變數微積分課本裡看到的樣子。「微分可逆」變成「雅可比行列式不為零」，「唯一的連續可微映射」變成「唯一的一組實值函數」。\n\n定理 11.4 是反映射定理的笛卡兒形式：n 個連續可微的實值函數、n 個變數，唯一的條件是那個 n 階的雅可比行列式在該點不等於零。結論是那一點的像附近有一顆球，球上存在唯一一組連續可微的實值函數，把它們代回去恰好還原成原來的變數。\n\n定理 11.5 是隱函數定理的笛卡兒形式：這次有 m 個方程，但變數有 n 加 m 個，n 個是自由的、m 個是要解出來的，結論是那 m 個可以寫成前面 n 個的連續可微函數。關鍵而且最容易記錯的一點是：行列式只對要解出來的那 m 個變數取，取出來的是一個 m 階的方陣；對全部變數取的話矩陣根本不是方陣。\n\n兩個例子都滿足假設，所以解一定存在、唯一而且連續可微，可是誰也寫不出公式。第一個是兩個三次的方程，行列式是 8；程式用牛頓法把局部反函數真的逼出來了，代回去確實還原，而且它的雅可比矩陣正好是原矩陣的反矩陣。可是想寫成公式就得消元，消完是一個九次方程，一般沒有根式解。第二個是兩個方程、四個變數，對兩個待解變數取的行列式是負七；消元之後是六次方程，一樣寫不出來，可是微分還是用上一集那條公式算得出來，而且跟數值解出來的隱函數的雅可比完全相同。\n\n這正是整節的重點：存在性、唯一性、可微性，全部不必解出來就有。第 11 節到此結束，下一集講第 12 節的子流形與 Lagrange 乘子。\n\n本影片為雙語教學動畫系列（繁體中文版）。\n\n本影片為獨立製作的學習導讀，非官方教材，與原書作者及出版社無關。\n講解為自行撰寫，動畫為自行繪製，不含原書頁面，也不提供原書的取得管道。",
+    "tags": [
+      "高等微積分",
+      "Advanced Calculus",
+      "Loomis",
+      "Sternberg",
+      "隱函數定理",
+      "雅可比行列式",
+      "反函數",
+      "偏導數",
+      "牛頓法",
+      "數學分析",
+      "大學數學"
+    ],
+    "language": "zh-TW"
+  },
+  {
+    "file": "manim_lessons/samples/output/advcalc_e48_en.mp4",
+    "title": "Advanced Calculus, Episode 48 | Cartesian Form: Theorems 11.4 and 11.5 | Ch. 3, §11",
+    "description": "This episode is the last part of section 11 of chapter 3, The Implicit Function Theorem, pages 167 to 169 of Loomis and Sternberg's Advanced Calculus. Pages 169 to 171 are exercises 11.1 to 11.29.\n\nThere is no new mathematics here. The two theorems of the last two episodes are put into coordinates, which is the version any multivariable calculus text prints. An invertible differential becomes a nonvanishing Jacobian determinant, and a unique continuously differentiable map becomes a unique tuple of real valued functions.\n\nTheorem 11.4 is the inverse mapping theorem in Cartesian form: n continuously differentiable real valued functions of n variables, with the single condition that the n by n Jacobian determinant does not vanish at the point. The conclusion is a ball about the image carrying a unique tuple of continuously differentiable real valued functions which, substituted back, return the original variables.\n\nTheorem 11.5 is the implicit function theorem in Cartesian form: m equations now, in n plus m variables, n of them free and m to be solved for, and the conclusion is that those m become continuously differentiable functions of the n. The point that is easiest to get wrong is that the determinant is taken over the m variables being solved for and is an m by m determinant; taken over all the variables the matrix is not square at all.\n\nBoth examples satisfy the hypotheses, so a solution exists, is unique and is continuously differentiable, and neither can be written down. The first is a pair of cubic equations with determinant eight; Newton's method actually produces the local inverse here, substituting back does return the original variables, and its Jacobian matrix comes out as the inverse of the original's. Writing it as a formula means eliminating a variable, and what is left is a polynomial of degree nine, with no solution by radicals in general. The second is two equations in four variables whose determinant over the two solved variables is minus seven; eliminating leaves degree six, equally unwritable, and yet the differential is still computable by the previous episode's formula and matches the Jacobian of the implicit function solved numerically.\n\nThat is the section's point: existence, uniqueness and differentiability, all without solving. Section 11 ends here; next come submanifolds and Lagrange multipliers in section 12.\n\nPart of a bilingual animated teaching series (English edition).\n\nThis is an independently produced study guide. It is not official course material and is not affiliated with the authors or publisher of the book. The narration and animations are original work; no pages of the book are reproduced, and no copy of it is provided.",
+    "tags": [
+      "Advanced Calculus",
+      "Loomis",
+      "Sternberg",
+      "implicit function theorem",
+      "Jacobian determinant",
+      "inverse function",
+      "partial derivative",
+      "Newton's method",
+      "real analysis",
+      "university mathematics"
+    ],
+    "language": "en"
+  }
+]

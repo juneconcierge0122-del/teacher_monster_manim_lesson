@@ -1,0 +1,39 @@
+[
+  {
+    "file": "manim_lessons/samples/output/advcalc_e44_zh-TW.mp4",
+    "title": "《高等微積分》第 44 集｜極值與臨界點｜Loomis & Sternberg 第 3 章 §10",
+    "description": "本集是 Loomis 與 Sternberg《Advanced Calculus》第 3 章第 10 節「初等應用」的前半（書頁 161 到 162）。\n\n初等微積分的極大極小理論搬到賦範空間，幾乎一個字都不用改：唯一的差別是導數換成微分，而微分是一個線性映射。\n\n定理 10.1 說的是，如果 F 在一個內部點取到相對極大或極小值，而且微分在那裡存在，那個微分就是零映射。證明是把多變數的問題壓成一變數：沿著任何一個方向切一條直線，得到的一元函數在零那裡有極值，所以它的導數是零；而那個導數就是方向導數，也就是微分作用在那個方向上。每個方向都零，微分就是零。\n\n微分等於零的點叫臨界點。內部的極值只能出現在臨界點，所以解題的第一步永遠是把臨界點找出來。寫成座標，就是 n 個偏導數各自等於零，n 個方程配 n 個未知數。\n\n影片用同一個例子貫穿：體積固定為 8 的長方盒，問表面積最小的形狀。把體積代進去消掉第三個變數，兩個偏導數設成零，得到 x 等於 y，再代回去三邊全部相等——答案是正方體，邊長 2、表面積 24。對稱性在這裡是算出來的，不是假設的。畫面上另外擺了兩個同體積的盒子，表面積都是 28。\n\n還有一步書上留成習題，可是它是必要的：表面積在兩端都跑到無窮，所以極小值不會逃到邊界上。沒有這一步，前面只證明了「如果內部有極小值，它在正方體」。\n\n最後一拍是馬鞍面。原點的微分是零，是臨界點，可是沿一個方向是極小、沿另一個方向是極大，所以兩者都不是。臨界點的條件是必要條件，不是充分條件；分類要看二階微分，那是第 16 節的事。\n\n本影片為雙語教學動畫系列（繁體中文版）。\n\n本影片為獨立製作的學習導讀，非官方教材，與原書作者及出版社無關。\n講解為自行撰寫，動畫為自行繪製，不含原書頁面，也不提供原書的取得管道。",
+    "tags": [
+      "高等微積分",
+      "Advanced Calculus",
+      "Loomis",
+      "Sternberg",
+      "極值",
+      "臨界點",
+      "偏導數",
+      "馬鞍點",
+      "最佳化",
+      "數學分析",
+      "大學數學"
+    ],
+    "language": "zh-TW"
+  },
+  {
+    "file": "manim_lessons/samples/output/advcalc_e44_en.mp4",
+    "title": "Advanced Calculus, Episode 44 | Maxima, Minima and Critical Points | Ch. 3, §10",
+    "description": "This episode is the first half of section 10 of chapter 3, Elementary Applications, pages 161 to 162 of Loomis and Sternberg's Advanced Calculus.\n\nThe maximum and minimum theory of elementary calculus carries over to normed spaces almost verbatim. The only change is that the derivative becomes a differential, and a differential is a linear map.\n\nTheorem 10.1 says that if F takes a relative maximum or minimum at an interior point and the differential exists there, that differential is the zero map. The proof squashes the many variable question into one: cut along a straight line in any direction and the resulting function of one variable has an extreme value at zero, so its derivative vanishes; and that derivative is the directional derivative, which is the differential applied to the direction. Every direction gives zero, so the differential is zero.\n\nA point where the differential vanishes is called critical. An interior extreme value can happen only at one, so the first step in any such problem is to find the critical points. In coordinates that is n partial derivatives set to zero, n equations in n unknowns.\n\nOne example runs through the video: a rectangular box of fixed volume eight, and the question of which shape has the least surface area. Using the volume to eliminate the third variable and setting both partial derivatives to zero gives x equal to y, and substituting back makes all three edges agree. The answer is a cube of edge two and area twenty four. The symmetry here is derived, not assumed. Two other boxes of the same volume sit alongside it, each with area twenty eight.\n\nOne step is left as an exercise in the book and is genuinely needed: the area climbs without bound at both ends, so the minimum cannot escape to the boundary. Without it, all that was shown is that any interior minimum is the cube.\n\nThe last beat is a saddle. The differential vanishes at the origin, making it critical, yet the origin is a minimum along one direction and a maximum along another, so it is neither. The critical point condition is necessary, not sufficient; sorting the candidates needs the second differential, which is section 16.\n\nPart of a bilingual animated teaching series (English edition).\n\nThis is an independently produced study guide. It is not official course material and is not affiliated with the authors or publisher of the book. The narration and animations are original work; no pages of the book are reproduced, and no copy of it is provided.",
+    "tags": [
+      "Advanced Calculus",
+      "Loomis",
+      "Sternberg",
+      "maxima and minima",
+      "critical point",
+      "partial derivative",
+      "saddle point",
+      "optimization",
+      "real analysis",
+      "university mathematics"
+    ],
+    "language": "en"
+  }
+]

@@ -1,0 +1,39 @@
+[
+  {
+    "file": "manim_lessons/samples/output/advcalc_e45_zh-TW.mp4",
+    "title": "《高等微積分》第 45 集｜切平面與定理 10.2｜Loomis & Sternberg 第 3 章 §10",
+    "description": "本集是 Loomis 與 Sternberg《Advanced Calculus》第 3 章第 10 節「初等應用」的後半（書頁 162 到 163）。\n\n一個映射 F 的圖形是 V 乘 W 裡的一張曲面，蓋在定義域上面，而且與定義域一一對應。切平面的定義完全不靠幾何直覺：微分是線性映射，它的圖形是一個過原點的子空間；把那個子空間平移到接觸點，得到的就是切平面。寫成方程，就是 η 減 F(α) 等於 dF 作用在 ξ 減 α 上，跟一元的點斜式一模一樣，只是斜率換成一個線性映射。\n\n它是唯一「貼合到小 o 等級」的仿射平面。理由是上一次講無窮小時最後那條：線性映射裡只有零映射是小 o，所以線性部分唯一，那個仿射映射也唯一。「切」在這裡是一個關於逼近的陳述。\n\n定理 10.2 事後才給它一個純幾何的說法：切平面就是曲面上所有切線的聯集。兩個方向都要證。一個方向是把定義域裡的一條直線抬到曲面上，它的切向量正好是原來那個向量；另一個方向是任何落在曲面裡的光滑曲線，都是定義域裡某條曲線抬上去的，所以它的切向量本來就在平面裡。\n\n影片的例子是一個平面到平面的映射，圖形住在四維空間裡，畫不出來，可是方程一點都不受影響。雅可比矩陣與函數值是程式算的，代進去得到兩條純量方程；餘項的商在三個越來越小的取樣點上算過，確實掉下去；最後把那兩條式子改寫成四維裡兩個超平面，切平面就是它們的交——兩個條件、四個變數，剩下二維。畫面上那個切向量是一條真的彎的弧的切向量，也驗過。\n\n下一集開始講隱函數定理。\n\n本影片為雙語教學動畫系列（繁體中文版）。\n\n本影片為獨立製作的學習導讀，非官方教材，與原書作者及出版社無關。\n講解為自行撰寫，動畫為自行繪製，不含原書頁面，也不提供原書的取得管道。",
+    "tags": [
+      "高等微積分",
+      "Advanced Calculus",
+      "Loomis",
+      "Sternberg",
+      "切平面",
+      "微分",
+      "小 o",
+      "雅可比矩陣",
+      "超平面",
+      "數學分析",
+      "大學數學"
+    ],
+    "language": "zh-TW"
+  },
+  {
+    "file": "manim_lessons/samples/output/advcalc_e45_en.mp4",
+    "title": "Advanced Calculus, Episode 45 | The Tangent Plane and Theorem 10.2 | Ch. 3, §10",
+    "description": "This episode is the second half of section 10 of chapter 3, Elementary Applications, pages 162 to 163 of Loomis and Sternberg's Advanced Calculus.\n\nThe graph of a map F is a surface in V times W lying over the domain and matching it one to one. The tangent plane is defined without any appeal to geometric intuition: the differential is linear, so its graph is a subspace through the origin, and translating that subspace to the point of contact gives the tangent plane. As an equation, eta minus F of alpha equals the differential applied to xi minus alpha, which is exactly the point slope form of one variable with the slope now a linear map.\n\nIt is the only affine plane that fits to within little oh. The reason is the closing result on infinitesimals: among linear maps only the zero map is little oh, so the linear part is unique and the affine map is unique with it. Tangency here is a statement about approximation.\n\nTheorem 10.2 supplies a purely geometric reading afterwards: the tangent plane is the union of all the tangent lines to the surface. Both directions need proof. One lifts a straight line from the domain onto the surface and finds its tangent vector is the vector one started with; the other observes that any smooth curve lying in the surface is a curve in the domain lifted, so its tangent vector was in the plane already.\n\nThe example is a map of the plane to the plane, whose graph lives in four dimensions and cannot be drawn, though the equations do not care. The Jacobian matrix and the value are computed here, and substituting them gives two scalar equations; the remainder quotient is evaluated at three shrinking sample points and does fall away; and rewriting the pair as two hyperplanes in four dimensions makes the tangent plane their intersection, two conditions on four variables leaving two dimensions. The tangent vector on screen belongs to a genuinely curved arc, and it is checked against both equations.\n\nNext time: the implicit function theorem.\n\nPart of a bilingual animated teaching series (English edition).\n\nThis is an independently produced study guide. It is not official course material and is not affiliated with the authors or publisher of the book. The narration and animations are original work; no pages of the book are reproduced, and no copy of it is provided.",
+    "tags": [
+      "Advanced Calculus",
+      "Loomis",
+      "Sternberg",
+      "tangent plane",
+      "differential",
+      "little oh",
+      "Jacobian matrix",
+      "hyperplane",
+      "real analysis",
+      "university mathematics"
+    ],
+    "language": "en"
+  }
+]

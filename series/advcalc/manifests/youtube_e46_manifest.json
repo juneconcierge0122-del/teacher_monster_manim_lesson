@@ -1,0 +1,39 @@
+[
+  {
+    "file": "manim_lessons/samples/output/advcalc_e46_zh-TW.mp4",
+    "title": "《高等微積分》第 46 集｜隱函數的微分：定理 11.1｜Loomis & Sternberg 第 3 章 §11",
+    "description": "本集是 Loomis 與 Sternberg《Advanced Calculus》第 3 章第 11 節「隱函數定理」的前段（書頁 164 到 166）。\n\n先看兩條長得一模一樣的公式：古典的偏導數連鎖式，與一般的「合成的微分等於微分的合成」。上面那條是數字相乘、相加，下面那條是線性映射合成、相加，除此之外兩條完全一樣。整個微分學都是這樣走的：把數換成線性映射，公式原樣成立。一維時微分就是乘上一個數，取了座標那些數排成矩陣，一般情形乘法換成合成——同一件事的三種語言。\n\n反函數的導數是導數的倒數；一般版本是反映射的微分是微分的合成反元素。影片用一個有封閉形式反元素的映射把它驗了一次：兩個雅可比矩陣乘起來剛好是單位矩陣。\n\n隱函數走同一條路。古典的做法是把恆等式對 x 微分：g 對 x 的偏導數，加上 g 對 y 的偏導數乘 f 一撇，等於零，解出斜率。畫面上用圓上的一點示範，算出來的斜率跟畫上去的切線相符。一般情形一字不改：把恆等式寫成一個合成，用鏈鎖規則微分，兩個偏微分各配一支內函數，只要第二個偏微分可逆就解得出 dF。除法換成合成反元素，所以順序變得要緊，反元素寫在左邊。\n\n這就是定理 11.1。要注意的是「F 存在而且連續」是假設，不是結論——這條定理不製造隱函數。證明的關鍵一步是把 η 也當成未知數先解出來，再用連續性把它認成無窮小，最後用無窮小那一節裡看起來閒置的那條引理，把它升級成大 O，式子就收乾淨了。\n\n影片最後用一個向量的例子核對整條公式：兩個偏微分都是程式算的，公式算出來的 dF 與顯式解的雅可比逐項相同。存在性本身還沒證，那要用第 4 章的不動點定理。下一集講定理 11.2 與反映射定理。\n\n本影片為雙語教學動畫系列（繁體中文版）。\n\n本影片為獨立製作的學習導讀，非官方教材，與原書作者及出版社無關。\n講解為自行撰寫，動畫為自行繪製，不含原書頁面，也不提供原書的取得管道。",
+    "tags": [
+      "高等微積分",
+      "Advanced Calculus",
+      "Loomis",
+      "Sternberg",
+      "隱函數定理",
+      "反函數",
+      "鏈鎖規則",
+      "偏微分",
+      "微分",
+      "數學分析",
+      "大學數學"
+    ],
+    "language": "zh-TW"
+  },
+  {
+    "file": "manim_lessons/samples/output/advcalc_e46_en.mp4",
+    "title": "Advanced Calculus, Episode 46 | The Differential of an Implicit Function: Theorem 11.1 | Ch. 3, §11",
+    "description": "This episode is the first part of section 11 of chapter 3, The Implicit Function Theorem, pages 164 to 166 of Loomis and Sternberg's Advanced Calculus.\n\nStart with two formulas of identical shape: the classical chain rule for partial derivatives, and the statement that the differential of a composition is the composition of the differentials. The first multiplies and adds numbers, the second composes and adds linear maps, and beyond that they say the same thing. The whole subject goes this way: replace numbers by linear maps and the formulas stand. In one dimension the differential multiplies by a number, in coordinates those numbers form a matrix, and in general multiplication becomes composition — one thing in three languages.\n\nThe derivative of an inverse function is the reciprocal of the derivative; the general version is that the differential of an inverse map is the composition inverse of the differential. A map with a closed form inverse checks it here: the two Jacobian matrices multiply to the identity.\n\nImplicit functions take the same road. The classical move differentiates the identity with respect to x: the partial of g in x, plus the partial in y times f prime, equals zero, and the slope comes out. A point on a circle demonstrates it, and the computed slope matches the tangent line drawn through it. The general case is word for word the same: write the identity as a composition, differentiate by the chain rule, let each partial differential meet one inner map, and solve for dF whenever the second partial differential inverts. Division becomes composition inverse, so order now matters and the inverse goes on the left.\n\nThat is Theorem 11.1. Note that F existing and being continuous is a hypothesis and not a conclusion: this theorem makes no implicit functions. The key step of the proof treats eta as an unknown and solves for it, uses continuity to recognise it as an infinitesimal, and then calls on the one lemma from the section on infinitesimals that looked idle at the time to upgrade it to big oh, at which point the expression closes.\n\nA vector example checks the whole formula at the end: both partial differentials are computed here, and the dF the formula produces agrees entry by entry with the Jacobian of the explicit solution. Existence itself is still unproved and needs the fixed point theorem of chapter four. Next time: Theorem 11.2 and the inverse mapping theorem.\n\nPart of a bilingual animated teaching series (English edition).\n\nThis is an independently produced study guide. It is not official course material and is not affiliated with the authors or publisher of the book. The narration and animations are original work; no pages of the book are reproduced, and no copy of it is provided.",
+    "tags": [
+      "Advanced Calculus",
+      "Loomis",
+      "Sternberg",
+      "implicit function theorem",
+      "inverse function",
+      "chain rule",
+      "partial differential",
+      "differential",
+      "real analysis",
+      "university mathematics"
+    ],
+    "language": "en"
+  }
+]
