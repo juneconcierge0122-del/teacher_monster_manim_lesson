@@ -358,9 +358,8 @@ class AdvCalcE48Base(ArrayArt, CanonicalBase):
   ux0, ux1, uy = x0 - 0.48, x1 + 0.46, -0.34
   g.add(self._curve([[ux0, uy + 0.12, 0], [ux0, uy, 0], [ux1, uy, 0], [ux1, uy + 0.12, 0]],
                     WARN, sw=2.5))
-  g.add(self._sym(-0.52, "只 對 y 取", WARN, FS_TAG, x=(x0 + x1) / 2, w=2.20)
-        if False else self._mid(-0.52, "只對 y 那一組取", "taken over the y block only",
-                                WARN, FS_TAG, x=(x0 + x1) / 2, w=2.40))
+  g.add(self._mid(-0.52, "只對 y 那一組取", "taken over the y block only",
+                  WARN, FS_TAG, x=(x0 + x1) / 2, w=2.40))
   g.add(self._panel(((0.86, "整個雅可比矩陣有 n 加 m 行",
                       "the full Jacobian has n plus m columns", DIM),
                      (0.20, "行列式只取紅線標住的那兩行",
