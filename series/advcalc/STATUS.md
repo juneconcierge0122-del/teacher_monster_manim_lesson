@@ -1,6 +1,6 @@
 # advcalc —《Advanced Calculus》(Loomis & Sternberg)
 
-**狀態：E00–E48 已上傳（私人）；E49–E53 已寫完、檢查完、配音完，正在渲染。
+**狀態：E00–E53 已上傳（私人）。
 第 0、1、2 章完結，第 3 章做到第 16 節前半（書頁 189）——微分學的骨幹、初等應用、
 隱函數定理與反映射定理、子流形與 Lagrange 乘子、函數相依性、均勻連續、變分法，
 以及二階微分。
@@ -100,6 +100,11 @@ E22 從「零化子」起（83–86）。自然性那張交換圖雖然講的是
 | E46 | 隱函數的微分（定理 11.1） | 3.11（164–166） | 3:16 ／ 3:08 | https://youtu.be/S64QXKpp6aM | https://youtu.be/q54nihWh8mw |
 | E47 | 反映射定理（定理 11.2、11.3） | 3.11（166–167） | 3:02 ／ 2:57 | https://youtu.be/2CT_8U7fvsM | https://youtu.be/ltJmB4GQc6A |
 | E48 | 笛卡兒形式（定理 11.4、11.5） | 3.11（167–169） | 3:01 ／ 2:59 | https://youtu.be/vqSKofBYlKU | https://youtu.be/g6cfe1VW1_E |
+| E49 | 子流形與 Lagrange 乘子 | 3.12（172–175） | 3:23 ／ 3:25 | https://youtu.be/TMwCDjOROTY | https://youtu.be/Knhuyqr1H3w |
+| E50 | 函數相依性 | 3.13（175–179） | 3:12 ／ 3:09 | https://youtu.be/o-SJtiGFcdE | https://youtu.be/O7y6LX-tcGQ |
+| E51 | 均勻連續與函數值的映射 | 3.14（179–182） | 3:18 ／ 3:15 | https://youtu.be/Y984ORv-f9A | https://youtu.be/R8W5xLQAkzU |
+| E52 | 變分法與 Euler 方程 | 3.15（182–185） | 3:14 ／ 3:05 | https://youtu.be/7B_D-cGTUW4 | https://youtu.be/z_pDbCNIIOg |
+| E53 | 二階微分 | 3.16 前半（186–189） | 3:09 ／ 3:02 | https://youtu.be/enAr0QL2UHQ | https://youtu.be/04Ho6EgMrBs |
 
 **E16 起的描述結尾都帶了 PLAYBOOK 第 8 節那段免責聲明**（E00–E15 是在此之前上傳的，沒有那段，
 而 YouTube token 只有上傳權限、改不了已上傳影片的描述，要補只能在 YouTube Studio 手動編輯）。
