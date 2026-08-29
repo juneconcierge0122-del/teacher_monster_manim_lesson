@@ -221,13 +221,16 @@ class AdvCalcE51Base(ArrayArt, CanonicalBase):
   Y = lambda v: oy + v * sy
   g = VGroup(Line([ox - 0.10, oy, 0], [X(1.04), oy, 0], color=DIM, stroke_width=1.4),
              Line([ox, oy - 0.62, 0], [ox, oy + 1.02, 0], color=DIM, stroke_width=1.4))
-  for e, col in ((0.35, ACCENT_B), (0.75, ACCENT_C), (1.15, WARN)):
-   g.add(self._curve([[X(k / 60.0), Y(0.55 * math.sin(2.6 * k / 60.0 + e) + 0.30 * e), 0]
+  # a first version separated the three curves by a quarter of a unit and they
+  # read as one thick smear; spread them by three quarters
+  off = lambda e: 0.75 * e
+  for e, col in ((0.0, ACCENT_B), (0.55, ACCENT_C), (1.10, WARN)):
+   g.add(self._curve([[X(k / 60.0), Y(0.45 * math.sin(2.6 * k / 60.0 + e) + off(e)), 0]
                       for k in range(61)], col, sw=2.4))
   # the uniform norm is the widest vertical gap, not the average one
   xs = 0.42
-  g.add(self._arr([X(xs), Y(0.55 * math.sin(2.6 * xs + 0.35) + 0.105), 0],
-                  [X(xs), Y(0.55 * math.sin(2.6 * xs + 1.15) + 0.345), 0],
+  g.add(self._arr([X(xs), Y(0.45 * math.sin(2.6 * xs) + off(0.0)), 0],
+                  [X(xs), Y(0.45 * math.sin(2.6 * xs + 1.10) + off(1.10)), 0],
                   ACCENT_A, sw=2.5, tl=0.10))
   g.add(self._panel(((0.86, "每個參數值給出一條曲線",
                       "each value of the parameter gives one curve", ACCENT_B),
@@ -248,11 +251,13 @@ class AdvCalcE51Base(ArrayArt, CanonicalBase):
   Y = lambda v: oy + v * sy
   g = VGroup(Line([ox - 0.10, oy, 0], [X(1.04), oy, 0], color=DIM, stroke_width=1.4))
   base = lambda x: 0.60 * math.sin(2.6 * x + 0.6) + 0.20
+  # the two curves used to differ by 0.12, which is under a tenth of a unit on
+  # screen; the band has to be wide enough to see the two inside it
   g.add(self._curve([[X(k / 60.0), Y(base(k / 60.0)), 0] for k in range(61)], ACCENT_B, sw=2.6),
-        self._curve([[X(k / 60.0), Y(base(k / 60.0) + 0.12), 0] for k in range(61)], WARN, sw=2.2))
+        self._curve([[X(k / 60.0), Y(base(k / 60.0) + 0.30), 0] for k in range(61)], WARN, sw=2.2))
   for sgn in (1, -1):
-   g.add(self._dash([X(0), Y(base(0) + 0.06 + sgn * 0.20), 0],
-                    [X(1.0), Y(base(1.0) + 0.06 + sgn * 0.20), 0], DIM, n=26, sw=1.0))
+   g.add(self._dash([X(0), Y(base(0) + 0.15 + sgn * 0.46), 0],
+                    [X(1.0), Y(base(1.0) + 0.15 + sgn * 0.46), 0], DIM, n=26, sw=1.0))
   g.add(self._panel(((0.86, "兩個參數值靠得夠近",
                       "two values of the parameter close enough together", ACCENT_B),
                      (0.20, "兩條曲線就整條落在同一個 ε 帶裡",
@@ -287,14 +292,14 @@ class AdvCalcE51Base(ArrayArt, CanonicalBase):
                           "nothing in the proof uses finite dimensionality, so it holds in infinite dimensions too"))
 
  def _integralcont(self):
-  ox, oy = -5.85, -0.55
-  sx, sy = 4.40, 0.36
+  ox, oy = -5.85, -0.62
+  sx, sy = 4.40, 0.62
   X = lambda x: ox + x * sx
   Y = lambda v: oy + v * sy
   g = VGroup(Line([ox - 0.10, oy, 0], [X(1.06), oy, 0], color=DIM, stroke_width=1.4),
-             Line([ox, oy - 0.10, 0], [ox, Y(2.5), 0], color=DIM, stroke_width=1.4))
+             Line([ox, oy - 0.10, 0], [ox, Y(2.2), 0], color=DIM, stroke_width=1.4))
   for (y, _), col in zip(CONT, (ACCENT_B, ACCENT_C, WARN)):
-   g.add(self._curve([[X(k / 60.0), Y(_Fxy(k / 60.0, y) + 0.9), 0] for k in range(61)],
+   g.add(self._curve([[X(k / 60.0), Y(_Fxy(k / 60.0, y) + 0.35), 0] for k in range(61)],
                      col, sw=2.4))
   rows = [("        y            ∫ ₀ ¹ F  d x", DIM)]
   for y, v in CONT:

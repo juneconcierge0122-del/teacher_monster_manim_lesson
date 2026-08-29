@@ -28,7 +28,7 @@ sys.path.insert(0, str(pathlib.Path(__file__).resolve().parents[2]))
 WHITELIST = {
     "Hom", "lub", "glb", "min", "max", "sup", "inf", "det", "lim", "dim",
     "rank", "Ch", "dF", "dG", "dH", "dK", "df", "dg", "dh", "dk", "id",
-    "sin", "cos", "tan", "log", "exp", "arg", "mod",
+    "sin", "cos", "tan", "log", "exp", "arg", "mod", "ev",
 }
 WORD = re.compile(r"[A-Za-z]{2,}")
 CJK = re.compile(r"[㐀-鿿　-〿＀-￯]")
