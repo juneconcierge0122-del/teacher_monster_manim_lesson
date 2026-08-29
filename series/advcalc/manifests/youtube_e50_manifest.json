@@ -1,0 +1,39 @@
+[
+  {
+    "file": "manim_lessons/samples/output/advcalc_e50_zh-TW.mp4",
+    "title": "《高等微積分》第 50 集｜函數相依性｜Loomis & Sternberg 第 3 章 §13",
+    "description": "本集是 Loomis 與 Sternberg《Advanced Calculus》第 3 章第 13 節（書頁 175 到 179）。這一節整節沒有習題。\n\n問題很實際：手上有一組連續函數，怎麼判斷其中某一個是不是其他幾個的函數？這件事跟另一個問題幾乎一樣——把那些函數併成一個映射，它的像是不是一個二維子流形？幾乎一樣，可是兩邊各有一個例外，而例外才是這一節真正的內容。\n\n第一個方向：如果第三個真的依賴前兩個，像確實落在一個二維子流形上，可是它不見得撐出一個二維的東西。取第二、第三個都依賴第一個，像就縮成一條曲線。另一個方向：像可以真的是一個二維子流形，而第三個並不整體地依賴前兩個。能說的只有局部——每一點附近三個裡總有一個是另外兩個的函數，可是走遠一點要解的可能換一個。\n\n先給一個必要條件。如果那個映射的微分在某一點的秩是三，隱函數定理就說像裡含一整顆球，而一顆球裝不進任何二維的東西。所以秩必須處處小於三。\n\n工具有兩個。定理 13.1 說秩是下半連續的：附近所有的線性映射，秩都不小於原來那個。注意只有一邊——秩可以跳上去，跳不下來。證明很短：取零空間的一個補空間，原映射限制在上面是同構、有正的下界，只要距離小於下界的一半，新的映射在上面也有下界，因此是單射，秩就不會變小。\n\n定理 13.2 是主定理：微分的秩在整個定義域上都等於同一個數，那麼每一點都有一個鄰域，它的像是一塊。推論就是原來那個問題的答案：m 個連續可微的實值函數，微分的秩處處等於 r 而 r 小於 m，那麼每一點附近，其中 m 減 r 個是剩下 r 個的函數。這就是函數相依的精確版本。\n\n最後是一個小麻煩。常秩不保證整個像是子流形。書上那條曲線先沿一個軸下來，轉個彎後在平面上繞原點螺旋內縮。它是一個區間的連續可微單射的像，可是原點附近怎麼取鄰域，交出來都不是一塊。影片對八個方向都算過，每個方向的投影在原點附近都至少來回十二次，所以沒有一個方向是單調的。這條曲線當成流形沒問題，出問題的是它嵌進三維空間的方式。\n\n本影片為雙語教學動畫系列（繁體中文版）。\n\n本影片為獨立製作的學習導讀，非官方教材，與原書作者及出版社無關。\n講解為自行撰寫，動畫為自行繪製，不含原書頁面，也不提供原書的取得管道。",
+    "tags": [
+      "高等微積分",
+      "Advanced Calculus",
+      "Loomis",
+      "Sternberg",
+      "函數相依",
+      "秩",
+      "下半連續",
+      "常秩定理",
+      "子流形",
+      "數學分析",
+      "大學數學"
+    ],
+    "language": "zh-TW"
+  },
+  {
+    "file": "manim_lessons/samples/output/advcalc_e50_en.mp4",
+    "title": "Advanced Calculus, Episode 50 | Functional Dependence | Ch. 3, §13",
+    "description": "This episode is section 13 of chapter 3, pages 175 to 179, of Loomis and Sternberg's Advanced Calculus. The section has no exercises at all.\n\nThe question is practical: given a collection of continuous functions, how can we tell whether some are functions of the rest? That is very nearly the same as asking whether the range of the mapping they form is a two-dimensional submanifold. Very nearly, but each direction has an exception, and the exceptions are what the section is about.\n\nOne direction: if the third really does depend on the first two, the range does lie on a two-dimensional submanifold, but it need not fill one out. Let the second and third both depend on the first and the range collapses to a curve. The other direction: the range can genuinely be a submanifold while the third is not globally a function of the first two. All one can say is locally, and moving away may force a different one to be solved for.\n\nFirst a necessary condition. If the differential has rank three somewhere, the implicit function theorem puts a whole ball inside the range, and no ball fits inside anything two-dimensional. So the rank must everywhere be less than three.\n\nThere are two tools. Theorem 13.1 says rank is lower semicontinuous: every linear map near a given one has rank at least as large. Note the one-sidedness, that rank can jump up but cannot fall. The proof is short: take a complement of the null space, on which the map is an isomorphism and so bounded below by some positive number; anything within half of that is bounded below there too, hence injective, so its rank is at least as large.\n\nTheorem 13.2 is the main result: if the rank of the differential is the same throughout the domain, every point has a neighborhood whose image is a patch. The corollary answers the original question: for m continuously differentiable real-valued functions of constant rank r less than m, every point has a neighborhood on which m minus r of them are functions of the remaining r. That is dependence made precise.\n\nFinally a small difficulty. Constant rank does not make the whole range a submanifold. The book's curve comes down an axis, turns over, and spirals in toward the origin in a plane. It is the injective continuously differentiable image of an interval, yet no neighborhood of the origin meets it in a patch. Eight directions are checked here and every projection turns at least twelve times near the origin, so none is monotone. The curve is fine as a manifold; what has gone wrong is the way it sits in three-space.\n\nPart of a bilingual animated teaching series (English edition).\n\nThis is an independently produced study guide. It is not official course material and is not affiliated with the authors or publisher of the book. The narration and animations are original work; no pages of the book are reproduced, and no copy of it is provided.",
+    "tags": [
+      "Advanced Calculus",
+      "Loomis",
+      "Sternberg",
+      "functional dependence",
+      "rank",
+      "lower semicontinuity",
+      "constant rank theorem",
+      "submanifold",
+      "real analysis",
+      "university mathematics"
+    ],
+    "language": "en"
+  }
+]

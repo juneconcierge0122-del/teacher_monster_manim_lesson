@@ -1,0 +1,39 @@
+[
+  {
+    "file": "manim_lessons/samples/output/advcalc_e51_zh-TW.mp4",
+    "title": "《高等微積分》第 51 集｜均勻連續與函數值的映射｜Loomis & Sternberg 第 3 章 §14",
+    "description": "本集是 Loomis 與 Sternberg《Advanced Calculus》第 3 章第 14 節（書頁 179 到 182）。這一節整節沒有習題。\n\n先把均勻連續說清楚。普通的連續是：給了 ε，δ 可以隨著你站的那一點變。均勻連續要求 δ 只跟 ε 有關，跟站在哪裡無關。差別看起來小，可是整節都靠它。影片把差別量出來了：對一除以 x 這個函數，同一個 ε 之下，在一個位置可以取的 δ 是另一個位置的二十三倍，再往左差得更多。\n\n這一節的模式是升級：把一個點到點的映射，升級成一個函數到函數的映射，然後證明點映射的性質會傳給升級後的那個。設定是這樣：F 是乘積開集上的有界連續映射，把第二個變數固定住，剩下的就是一個有界連續函數，也就是那個函數空間的一個元素，而空間帶的是一致範數，逐點取上確界。\n\n定理 14.1：如果 F 均勻連續，那麼把參數送到那個函數的映射連續，而且是均勻連續的。證明只有兩行，完全靠均勻性：給了 ε 取到 δ，再把第一個變數兩邊取成同一個，就得到兩個函數在每一點都夠近，而每一點都近就是一致範數下近。推論是一個熟悉的事實：正方形上均勻連續的函數，對一個變數積分之後對另一個連續。\n\n定理 14.2 把連續換成可微：對第二個變數的偏微分存在而且有界、均勻連續，那麼那個函數值的映射可微，微分逐點就是那個偏微分。證明的關鍵是一個換讀法——F 對第二個變數的增量，逐點看就是那個映射的增量。於是得到積分號下微分。影片在一個例子上用三種完全不同的算法算過：積分的差商、偏導數的積分、以及手推的封閉形式，三個數字到小數點後八位完全相同。\n\n定理 14.3 是後面真正會用到的那一條。把「接上 g」本身當成一個映射，如果 g 處處可微而且微分有界均勻連續，那麼這個映射可微，微分在每一點就是 g 在那一點的微分。最後要驗的是那個微分真的是有界線性的：加法與齊次都逐點驗，範數不超過 g 的微分的界。還有一個乘積版本，那正是下一集算第一變分要用的式子。\n\n本影片為雙語教學動畫系列（繁體中文版）。\n\n本影片為獨立製作的學習導讀，非官方教材，與原書作者及出版社無關。\n講解為自行撰寫，動畫為自行繪製，不含原書頁面，也不提供原書的取得管道。",
+    "tags": [
+      "高等微積分",
+      "Advanced Calculus",
+      "Loomis",
+      "Sternberg",
+      "均勻連續",
+      "一致範數",
+      "積分號下微分",
+      "函數空間",
+      "合成映射",
+      "數學分析",
+      "大學數學"
+    ],
+    "language": "zh-TW"
+  },
+  {
+    "file": "manim_lessons/samples/output/advcalc_e51_en.mp4",
+    "title": "Advanced Calculus, Episode 51 | Uniform Continuity and Function-Valued Mappings | Ch. 3, §14",
+    "description": "This episode is section 14 of chapter 3, pages 179 to 182, of Loomis and Sternberg's Advanced Calculus. The section has no exercises at all.\n\nFirst, uniform continuity. Ordinary continuity lets delta depend on the anchor point at which continuity is asserted; uniform continuity asks that delta depend on epsilon alone. The difference looks small and the whole section rests on it. The gap is measured here: for one over x at a fixed epsilon, the delta available at one place is twenty three times the delta available at another, and it keeps collapsing further in.\n\nThe pattern of the section is escalation: a point-to-point map is raised to a function-valued map, and properties of the first are shown to pass to the second. F is a bounded continuous map on a product open set; holding the second variable fixed leaves a bounded continuous function, an element of the space of all of them, and that space carries the uniform norm, a least upper bound taken pointwise.\n\nTheorem 14.1: if F is uniformly continuous, the map sending the parameter to that function is continuous, in fact uniformly continuous. The proof is two lines and rests entirely on uniformity: choose delta for epsilon, take the first variable to be the same on both sides, and two nearby parameters give functions close at every point, which is closeness in the uniform norm. The corollary is a familiar fact: a uniformly continuous function on the square, integrated over one variable, is continuous in the other.\n\nTheorem 14.2 upgrades continuity to differentiability: if the partial differential in the second variable exists and is bounded and uniformly continuous, the function-valued map is differentiable and its differential is that partial taken pointwise. The proof turns on a change of reading, since the increment of F in the second variable, read pointwise, is the increment of the escalated map. Differentiation under the integral sign follows, and it is checked here three completely different ways at one point: a difference quotient of the integral, the integral of the partial derivative, and a closed form. All three agree to eight decimal places.\n\nTheorem 14.3 is the one actually used later. Composition by g becomes a map of its own, and if g is differentiable with a bounded uniformly continuous differential, that map is differentiable with the differential of g at each point. What remains is checking that it really is bounded and linear: additivity and homogeneity hold pointwise and the norm is at most the bound on the differential of g. There is a product version too, and that is the formula the next episode needs for the first variation.\n\nPart of a bilingual animated teaching series (English edition).\n\nThis is an independently produced study guide. It is not official course material and is not affiliated with the authors or publisher of the book. The narration and animations are original work; no pages of the book are reproduced, and no copy of it is provided.",
+    "tags": [
+      "Advanced Calculus",
+      "Loomis",
+      "Sternberg",
+      "uniform continuity",
+      "uniform norm",
+      "differentiation under the integral",
+      "function space",
+      "composition",
+      "real analysis",
+      "university mathematics"
+    ],
+    "language": "en"
+  }
+]

@@ -189,7 +189,9 @@ class AdvCalcE52Base(ArrayArt, CanonicalBase):
  # ── beats ─────────────────────────────────────────────────────────
  def _problem(self):
   g = VGroup(self._arcaxes())
-  for e, col in ((0.0, WARN), (0.30, ACCENT_B), (-0.30, ACCENT_C)):
+  # these arcs are illustrative, so they may be bigger than the ones beat 9
+  # actually measures; at the measured size the three read as one thick line
+  for e, col in ((0.0, WARN), (0.60, ACCENT_B), (-0.60, ACCENT_C)):
    g.add(self._arc(_bump(e) if e else _line, col, sw=2.4 if e else 3.0))
   g.add(self._ends())
   g.add(self._panel(((0.86, "兩個端點固定，中間的弧任意",
@@ -226,7 +228,7 @@ class AdvCalcE52Base(ArrayArt, CanonicalBase):
 
  def _space(self):
   g = VGroup(self._arcaxes())
-  for e, col in ((0.0, DIM), (0.42, ACCENT_B), (-0.28, ACCENT_C), (0.18, WARN)):
+  for e, col in ((0.0, DIM), (0.70, ACCENT_B), (-0.50, ACCENT_C), (0.30, WARN)):
    g.add(self._arc(_bump(e) if e else _line, col, sw=2.0))
   g.add(self._ends(ACCENT_A))
   g.add(self._sym(0.86, "V  =  C ¹ ( [ a , b ] , W )", ACCENT_B, FS_TAG, x=PANEL_X, w=PANEL_W),
@@ -308,7 +310,8 @@ class AdvCalcE52Base(ArrayArt, CanonicalBase):
            ("∫ ₐ ᵇ  ( ∂F / ∂y   −   ∫ ∂F / ∂x )  g    =    0", WARN))
   for k, (lab, col) in enumerate(lines):
    g.add(self._sym(0.80 - k * 0.60, lab, col, FS_TAG - 1, x=-3.45, w=5.30))
-  g.add(self._curve([[-5.55, -0.02, 0], [-1.45, -0.02, 0]], DIM, sw=2.0))
+  g.add(self._curve([[-5.45, 0.08, 0], [-5.15, 0.32, 0]], WARN, sw=2.5),
+        self._curve([[-5.15, 0.08, 0], [-5.45, 0.32, 0]], WARN, sw=2.5))
   g.add(self._panel(((0.86, "把第一項分部積分",
                       "integrate the first term by parts", ACCENT_B),
                      (0.20, "端點項因為 h 兩端是零而消掉",
@@ -366,10 +369,10 @@ class AdvCalcE52Base(ArrayArt, CanonicalBase):
   for (e, _), col in zip(LENS, (ACCENT_B, ACCENT_C, ACCENT_C, ACCENT_B)):
    g.add(self._arc(_bump(e), col, sw=1.8))
   g.add(self._arc(_line, WARN, sw=3.0), self._ends(ACCENT_A))
-  rows = [("       ϵ                L", DIM)]
-  g.add(self._table([(f"    {0.0:.2f}          {STRAIGHT:.6f}", WARN)]
-                    + [(f"    {e:+.2f}          {L:.6f}", ACCENT_C) for e, L in LENS],
-                    x=PANEL_X, w=PANEL_W, y0=0.72, dy=0.40))
+  rows = ([("       ϵ                L", DIM),
+           (f"    {0.0:+.2f}          {STRAIGHT:.6f}", WARN)]
+          + [(f"    {e:+.2f}          {L:.6f}", ACCENT_C) for e, L in LENS])
+  g.add(self._table(rows, x=PANEL_X, w=PANEL_W, y0=0.80, dy=0.32))
   return g.add(self._foot(f"被積函數不含 x，所以 Euler 方程說對 y 的偏導數是常數（畫面上這條是 {PY_CONST:.4f}），導數也就是常數",
                           f"the integrand has no x, so Euler makes the partial in y constant, here {PY_CONST:.4f}, hence the derivative constant",
                           ACCENT_A,

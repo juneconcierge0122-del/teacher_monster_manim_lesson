@@ -1,0 +1,39 @@
+[
+  {
+    "file": "manim_lessons/samples/output/advcalc_e53_zh-TW.mp4",
+    "title": "《高等微積分》第 53 集｜二階微分｜Loomis & Sternberg 第 3 章 §16",
+    "description": "本集是 Loomis 與 Sternberg《Advanced Calculus》第 3 章第 16 節的前半（書頁 186 到 189）。這一節整節沒有習題。\n\nF 的微分本身是一個映射：把一點送到微分在那一點的值，落在 Hom 裡。既然是映射，就可以問它可不可微——這一問就得到二階微分。定義照抄一階的：把微分算子作用在微分上，得到的是從 V 到 Hom 的有界線性映射。所以二階微分吃兩個向量，一次吃一個；等價地說，它是一個有界的雙線性映射，兩個變數各自線性，值落在值域空間裡。\n\n書上說這個東西應該是某種二階導數，而讀者大概已經猜到，它就是兩個方向的混合導數。定理 16.1 把這個猜測證出來：先沿一個方向求方向導數，得到的還是一個點的函數，再沿另一個方向求一次，結果正好是二階微分吃那兩個向量。證明用一個叫「取值」的映射，它把 Hom 裡的元素送到它作用在某個固定向量上的值，是有界線性的，於是方向導數就是取值映射接上微分，合成規則直接給出結論。\n\n翻成座標：二階微分存在就推出所有二階偏導數存在，而它吃兩個向量的結果是那些偏導數配上兩組分量的雙重求和。定理 16.2 是反過來的、實際會用到的判準：所有二階偏導數在開集上存在而且連續，那麼二階微分就存在而且連續。同樣的做法可以一直往下推，三階的公式長得一模一樣，只是多一個指標。\n\n定理 16.3 是這一節最要緊的一條：二階微分對它的兩個變數是對稱的，也就是混合偏導數可以交換次序。可是要注意假設——對稱要的是二階微分存在，不是只有兩個混合偏導數存在。證明的關鍵是二階差分，也就是函數在四個點上的交錯和：它一眼就看得出對稱，因為兩個增量地位相同。\n\n影片用同一個函數把整集串起來，同一個數字用三種算法算過：巢狀的方向導數、二階偏導數的雙重求和、以及二階差分除以增量的平方。收尾用經典的反例：兩個混合偏導數在原點都存在，一個是負一、一個是正一，不相等——所以那一點沒有二階微分。少了這一拍，定理 16.3 看起來就像不需要假設。\n\n下一集講第 16 節的後半：臨界點的分類。\n\n本影片為雙語教學動畫系列（繁體中文版）。\n\n本影片為獨立製作的學習導讀，非官方教材，與原書作者及出版社無關。\n講解為自行撰寫，動畫為自行繪製，不含原書頁面，也不提供原書的取得管道。",
+    "tags": [
+      "高等微積分",
+      "Advanced Calculus",
+      "Loomis",
+      "Sternberg",
+      "二階微分",
+      "混合偏導數",
+      "對稱性",
+      "雙線性映射",
+      "二階差分",
+      "數學分析",
+      "大學數學"
+    ],
+    "language": "zh-TW"
+  },
+  {
+    "file": "manim_lessons/samples/output/advcalc_e53_en.mp4",
+    "title": "Advanced Calculus, Episode 53 | The Second Differential | Ch. 3, §16",
+    "description": "This episode is the first part of section 16 of chapter 3, pages 186 to 189, of Loomis and Sternberg's Advanced Calculus. The section has no exercises at all.\n\nThe differential of F is itself a map: it sends a point to the differential of F there, an element of Hom. Being a map, it can be asked whether it is differentiable, and that question produces the second differential. The definition copies the first: apply the differential operator to the differential and get a bounded linear map from V into Hom. So the second differential eats two vectors, one at a time; equivalently it is a bounded bilinear map, linear in each variable with values in the range space.\n\nThe book says this ought to be a second derivative of some kind, and the reader has probably guessed it is the mixed derivative in the two directions. Theorem 16.1 proves it: take a directional derivative in one direction, which leaves a function of the point, then take one in another direction, and the result is exactly the second differential on the two vectors. The proof uses evaluation, the map sending an element of Hom to its value on a fixed vector, which is bounded and linear; the directional derivative is then evaluation composed with the differential, and the composite rule finishes it.\n\nIn coordinates: the existence of the second differential forces all the second partial derivatives to exist, and its value on two vectors is the double sum of those partials weighted by the two sets of components. Theorem 16.2 is the converse and the test actually used: if all the second partials exist and are continuous on an open set, the second differential exists and is continuous. The same construction repeats indefinitely, the third-order formula having exactly the same shape with one more index.\n\nTheorem 16.3 is the one that matters most: the second differential is symmetric in its two arguments, so mixed partials may be taken in either order. But note the hypothesis, that the second differential exists, not merely that both mixed partials do. The proof turns on the second difference, an alternating sum of the function at four points, which is visibly symmetric because the two increments enter alike.\n\nOne function runs through the whole video, and one number is computed three ways: nested directional derivatives, the double sum over the second partials, and the second difference divided by the square of the increment. The closing counterexample matters: its two mixed partials at the origin both exist and come out at minus one and plus one, so they differ, which is only possible because no second differential is there. Without that beat the symmetry theorem would look like it needed no hypothesis.\n\nNext time: the second half of section 16, the classification of critical points.\n\nPart of a bilingual animated teaching series (English edition).\n\nThis is an independently produced study guide. It is not official course material and is not affiliated with the authors or publisher of the book. The narration and animations are original work; no pages of the book are reproduced, and no copy of it is provided.",
+    "tags": [
+      "Advanced Calculus",
+      "Loomis",
+      "Sternberg",
+      "second differential",
+      "mixed partial derivatives",
+      "symmetry",
+      "bilinear map",
+      "second difference",
+      "real analysis",
+      "university mathematics"
+    ],
+    "language": "en"
+  }
+]

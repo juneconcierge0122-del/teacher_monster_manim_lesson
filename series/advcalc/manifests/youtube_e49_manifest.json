@@ -1,0 +1,39 @@
+[
+  {
+    "file": "manim_lessons/samples/output/advcalc_e49_zh-TW.mp4",
+    "title": "《高等微積分》第 49 集｜子流形與 Lagrange 乘子｜Loomis & Sternberg 第 3 章 §12",
+    "description": "本集是 Loomis 與 Sternberg《Advanced Calculus》第 3 章第 12 節（書頁 172 到 175）。這一節整節沒有習題。\n\n流形是用「一塊一塊」拼出來的。最簡單的一塊就是一個圖形：F 從 V 的開集映到 W，它的圖形住在 V 乘 W 裡，看起來像一張蓋在定義域上的曲面，書上把這樣的 F 叫做 n 維的塊。\n\n可是有些曲面不是圖形。單位球面是三維裡的二維曲面，不管怎麼把空間拆成直和都寫不成一張圖形。但它顯然是一堆互相重疊的塊黏起來的：每一點附近取夠小的鄰域，交出來就是一塊。這句話本身就是子流形的定義。如果那些塊對應的函數都連續可微，就說它是光滑的。\n\n子流形常常以零集合的樣子出現。定理 12.1 給的條件很乾淨：G 連續可微、從 n 加 m 維映到 m 維，只要零集合上每一點的微分都是滿射，那個零集合就是 n 維子流形。證明就是隱函數定理：滿射使零空間的維數恰好是 n，取一個補空間當第二個因子，微分限制在上面是同構，也就是第二個偏微分可逆。\n\n光滑子流形在每一點有唯一的切平面。定理 10.2 說切空間的元素恰好是子流形上通過那一點的光滑曲線的切向量，而不同的曲線可以有同一個切向量——所以切向量其實是曲線的一個等價類。這個說法後面談抽象流形時會直接當成定義。\n\n接下來是有約束的極值。這裡不能令微分等於零：球面上取第二個座標當函數，最大值在北極取到，可是它是線性的，微分永遠不是零映射。定理 12.2 就是解方：存在一個對偶空間裡的泛函，使那一點是函數減掉它接上約束的臨界點。條件從「微分是零」放寬成「微分是某個泛函接上約束的微分」。\n\n翻成座標就是大家背過的乘子法，而那些係數就是那個泛函。影片用兩個例子收尾：球面上第二個座標的極值，以及第 44 集那個體積固定的盒子——這次用乘子解，乘子算出來正好是二，表面積是二十四，跟當時用代入法得到的一樣。\n\n下一集講第 13 節的函數相依性。\n\n本影片為雙語教學動畫系列（繁體中文版）。\n\n本影片為獨立製作的學習導讀，非官方教材，與原書作者及出版社無關。\n講解為自行撰寫，動畫為自行繪製，不含原書頁面，也不提供原書的取得管道。",
+    "tags": [
+      "高等微積分",
+      "Advanced Calculus",
+      "Loomis",
+      "Sternberg",
+      "子流形",
+      "Lagrange 乘子",
+      "切空間",
+      "有約束的極值",
+      "隱函數定理",
+      "數學分析",
+      "大學數學"
+    ],
+    "language": "zh-TW"
+  },
+  {
+    "file": "manim_lessons/samples/output/advcalc_e49_en.mp4",
+    "title": "Advanced Calculus, Episode 49 | Submanifolds and Lagrange Multipliers | Ch. 3, §12",
+    "description": "This episode is section 12 of chapter 3, pages 172 to 175, of Loomis and Sternberg's Advanced Calculus. The section has no exercises at all.\n\nManifolds are built out of patches. The simplest patch is a graph: F maps an open subset of V into W, and its graph in V times W looks like a surface spread over the domain. The book calls such an F an n-dimensional patch.\n\nSome surfaces are not graphs. The unit sphere is a two-dimensional surface in three-space, and no way of writing that space as a direct sum makes it one. Yet it is plainly a union of overlapping patches: a small enough neighborhood of any point meets it in one. That observation is the definition of a submanifold, and if the functions of all the patches are continuously differentiable, it is smooth.\n\nSubmanifolds usually appear as zero sets. Theorem 12.1 is clean: if G is continuously differentiable from n plus m dimensions to m and its differential is onto at every point of the zero set, that set is an n-dimensional submanifold. The proof is the implicit function theorem: surjectivity makes the null space exactly n-dimensional, and the differential restricted to any complement is an isomorphism, which is the second partial differential inverting.\n\nA smooth submanifold has a unique tangent plane at each point. Theorem 10.2 says the tangent space consists exactly of the tangent vectors of smooth curves lying in it, and different curves can share one tangent vector, so a tangent vector is really an equivalence class of curves. That reading becomes the definition once manifolds are treated abstractly.\n\nThen the constrained maximum. Setting the differential to zero is no good: take the second coordinate on the unit sphere, whose maximum is at the north pole, and it is linear, so its differential never vanishes. Theorem 12.2 is the fix: some functional on the dual makes the point critical for the function minus that functional composed with the constraint. The condition relaxes from the differential vanishing to its being that composition.\n\nIn coordinates this is the multiplier rule everyone memorised, the coefficients being that functional. Two examples close the episode: the second coordinate on the sphere, and episode 44's box of fixed volume, done by a multiplier this time. The multiplier comes out at exactly two and the area at twenty four, as it did the other way.\n\nNext time: functional dependence, section 13.\n\nPart of a bilingual animated teaching series (English edition).\n\nThis is an independently produced study guide. It is not official course material and is not affiliated with the authors or publisher of the book. The narration and animations are original work; no pages of the book are reproduced, and no copy of it is provided.",
+    "tags": [
+      "Advanced Calculus",
+      "Loomis",
+      "Sternberg",
+      "submanifold",
+      "Lagrange multiplier",
+      "tangent space",
+      "constrained maximum",
+      "implicit function theorem",
+      "real analysis",
+      "university mathematics"
+    ],
+    "language": "en"
+  }
+]

@@ -50,6 +50,11 @@ def _second(f, a, i, j, h=1e-4):
  return _dir(lambda p: _dir(f, p, e[i], h), a, e[j], h)
 
 
+PT_ONE, PT_TWO = APT, (-0.30, 0.90)
+GRADS = [[_dir(_F, p, u) for u in ((1.0, 0.0), (0.0, 1.0))] for p in (PT_ONE, PT_TWO)]
+assert max(abs(a - b) for a, b in zip(*GRADS)) > 0.5, \
+    "the two points have to give visibly different differentials, or the beat shows nothing"
+
 HESS = [[_second(_F, APT, i, j) for j in range(2)] for i in range(2)]
 assert abs(HESS[0][1] - HESS[1][0]) < 1e-5, \
     "the mixed partials disagree, so Theorem 16.3 would be false on this example"
@@ -155,13 +160,14 @@ class AdvCalcE53Base(ArrayArt, CanonicalBase):
  # ── beats ─────────────────────────────────────────────────────────
  def _dfismap(self):
   g = VGroup(self._blob(-5.05, 0.10, 1.05, 0.72, 0.12, ACCENT_B))
-  for dx, dy, col in ((-0.35, 0.22, WARN), (0.42, -0.24, ACCENT_C)):
+  for (dx, dy), col in zip(((-0.35, 0.22), (0.42, -0.24)), (WARN, ACCENT_C)):
    g.add(Dot([-5.05 + dx, 0.10 + dy, 0], radius=0.06, color=col))
-  for k, (col, m) in enumerate(((WARN, HESS), (ACCENT_C, HESS))):
-   gr, _ = self._numgrid(-1.95, 0.62 - k * 1.05,
-                         [[f"{v:.2f}" for v in row] for row in m], color=col,
-                         dx=0.92, dy=0.44, size=FS_TAG - 3)
-   g.add(gr)
+  for k, (col, pt) in enumerate(((WARN, PT_ONE), (ACCENT_C, PT_TWO))):
+   gr, _ = self._numgrid(-1.95, 0.56 - k * 0.94,
+                         [[f"{v:.3f}" for v in GRADS[k]]], color=col,
+                         dx=1.25, dy=0.44, size=FS_TAG - 2)
+   g.add(gr, self._sym(0.20 - k * 0.94, f"dF ⟨ {pt[0]:.1f} , {pt[1]:.1f} ⟩",
+                       col, FS_TAG - 3, x=-1.95, w=2.20))
   g.add(self._arr([-3.85, 0.24, 0], [-3.05, 0.40, 0], WARN, sw=2, tl=0.10),
         self._arr([-3.85, -0.10, 0], [-3.05, -0.55, 0], ACCENT_C, sw=2, tl=0.10))
   g.add(self._panel(((0.86, "每一點對到一個線性映射",
@@ -173,8 +179,8 @@ class AdvCalcE53Base(ArrayArt, CanonicalBase):
   return g.add(self._foot("這一步是整節的起點，而且它跟第 6 節定義一階微分時的動作一模一樣",
                           "this is where the section starts, and it repeats exactly what section 6 did for the first differential",
                           ACCENT_A,
-                          "畫面上那兩個矩陣是同一個函數在兩點的二階資料，用中央差商算的",
-                          "the two matrices are that function's second-order data at two points, by central differences"))
+                          "畫面上那兩列是同一個函數在兩點的 dF，用中央差商算的，兩者差得夠遠",
+                          "the two rows are that function's dF at two points, by central differences, and they differ visibly"))
 
  def _definition(self):
   g = VGroup()
@@ -306,14 +312,16 @@ class AdvCalcE53Base(ArrayArt, CanonicalBase):
 
  def _lemma(self):
   g = VGroup()
-  for k, (lab, col) in enumerate((("S ₁  ∘  F", ACCENT_B), ("S ₂  ∘  F", ACCENT_C),
-                                  ("S ₖ  ∘  F", WARN))):
-   g.add(self._rect(-5.05, 0.62 - k * 0.62, 0.95, 0.24, col),
-         self._sym(0.62 - k * 0.62, lab, col, FS_TAG - 1, x=-5.05, w=1.80))
-  g.add(self._sym(0.00, "⋮", DIM, FS_TAG, x=-5.05, w=0.60))
-  g.add(self._arr([-3.90, 0.00, 0], [-3.35, 0.00, 0], ACCENT_A, sw=3, tl=0.14))
-  g.add(self._rect(-2.15, 0.00, 1.05, 0.30, ACCENT_A),
-        self._sym(0.00, "F   ∈   C ¹", ACCENT_A, FS_TAG + 1, x=-2.15, w=2.00))
+  # the ellipsis used to sit at the same height as the middle box and printed
+  # straight through it
+  for y, lab, col in ((0.66, "S ₁  ∘  F", ACCENT_B), (0.10, "S ₂  ∘  F", ACCENT_C),
+                      (-0.72, "S ₖ  ∘  F", WARN)):
+   g.add(self._rect(-5.05, y, 0.95, 0.22, col),
+         self._sym(y, lab, col, FS_TAG - 1, x=-5.05, w=1.80))
+  g.add(self._sym(-0.31, "⋮", DIM, FS_TAG, x=-5.05, w=0.60))
+  g.add(self._arr([-3.90, -0.02, 0], [-3.35, -0.02, 0], ACCENT_A, sw=3, tl=0.14))
+  g.add(self._rect(-2.15, -0.02, 1.05, 0.30, ACCENT_A),
+        self._sym(-0.02, "F   ∈   C ¹", ACCENT_A, FS_TAG + 1, x=-2.15, w=2.00))
   g.add(self._panel(((0.86, "一組線性映射併起來可逆",
                       "a collection of linear maps that assembles into an invertible one", ACCENT_B),
                      (0.20, "那麼每個分量都可微，就推出 F 可微",

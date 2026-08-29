@@ -19,13 +19,13 @@
 | `series/t1_mechanics/` | Landau《力學》第 1–53 課 | **已完結**（第 52 課是本書最後一節，第 53 課是總複習） |
 | `series/special/` | 特別篇 S01（Anthropic 全域工作空間論文） | 單集，可再加 |
 | `series/t2_fields/` | Landau《場論》 | **尚未開始**，開工前的決定寫在它的 STATUS.md |
-| `series/advcalc/` | Loomis & Sternberg《Advanced Calculus》 | **進行中**：E00–E48 已上傳（第 0、1、2 章完結，第 3 章做到第 11 節完） |
+| `series/advcalc/` | Loomis & Sternberg《Advanced Calculus》 | **進行中**：E00–E48 已上傳，E49–E53 待渲染（第 0、1、2 章完結，第 3 章做到第 16 節前半） |
 
 **現在的方向是 `advcalc`。**《力學》已完結；《場論》仍是空殼。
 接手時先讀 `series/advcalc/STATUS.md`（進度、連結、踩過的坑）與
 `series/advcalc/OUTLINE.md`（全書解析與 169 集規劃）。
 
-**眼前第一件事是 E49**，接第 3 章第 12 節「子流形與 Lagrange 乘子」（書頁 172 起）。
+**眼前第一件事是 E54**，接第 3 章第 16 節的後半（書頁 189 起）：臨界點的分類。
 E44–E48 已經把 §10 與 §11 收完了（定理 10.1、10.2、11.1 到 11.5：極值與臨界點、切平面、
 隱函數的微分、反映射定理，以及那兩條定理的笛卡兒形式；實際收在書頁 169，
 169–171 是習題 11.1–11.29，依第 8 節不做解答）。
@@ -35,13 +35,25 @@ OUTLINE 把 §9 排成兩集、§10 排成一集，實際上反過來；到 E48 
 **OUTLINE 的集數仍然是估的，動工前先照書核一次**——那張表的頁碼錯過四次（見 advcalc 的 STATUS.md）：
 它的「書頁」欄含各節的習題頁，實際內容比表上少。
 
-**版面有兩道檢查，兩道都要跑，而且要跑到 0：**
+**有三道檢查，三道都要跑，而且都要跑到 0：**
 
 ```bash
 cd manim_lessons
-../.venv/bin/python tools/bounds.py  lessons/advcalc/<檔名>.py AdvCalcE<NN>   # 跑出畫面外
-../.venv/bin/python tools/collide.py lessons/advcalc/<檔名>.py AdvCalcE<NN>   # 疊在一起
+../.venv/bin/python tools/bounds.py   lessons/advcalc/<檔名>.py AdvCalcE<NN>  # 跑出畫面外
+../.venv/bin/python tools/collide.py  lessons/advcalc/<檔名>.py AdvCalcE<NN>  # 疊在一起
+../.venv/bin/python tools/langscan.py advcalc <NN>                            # 混語
 ```
+
+`langscan.py` 是 2026-08-29 加的，掃 `FORMULAS` 與場景裡 `_sym`／`(label, colour)`
+這兩種「兩個語言版本會渲染成同一個樣子」的字串。這類錯已經出現五次
+（E42 的 `_sym` 夾中文、E47 的 `on M`／`injective`／`open`、E50 的 `on M` 與 `range dF`、
+E52 表格裡的 `closed form`／`line`／`length`），而 `bounds` 與 `collide` 都看不到它，
+在剛好對的那個語言下每一張 probe 幀也都正常。
+
+**三道工具全過之後還要看 probe 幀**——這一輪五集裡，三道工具全是 0 的情況下，
+probe 幀仍抓到十處版面問題（曲線間距太小糊成一條、矩陣擠成一排括號、
+標籤放在自己那一列下面而讀成下一列的、刪除線畫在兩列之間、表頭建好卻沒傳進去、
+省略號印在方塊上、兩個矩陣其實是同一個）。
 
 `collide.py` 是 2026-08-25 加的，補 `bounds.py` 看不到的那一半（線壓在字上、字疊字）。
 E27 與 E28 各為這類錯重渲過一次，一次 50 分鐘。

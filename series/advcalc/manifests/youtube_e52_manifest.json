@@ -1,0 +1,39 @@
+[
+  {
+    "file": "manim_lessons/samples/output/advcalc_e52_zh-TW.mp4",
+    "title": "《高等微積分》第 52 集｜變分法與 Euler 方程｜Loomis & Sternberg 第 3 章 §15",
+    "description": "本集是 Loomis 與 Sternberg《Advanced Calculus》第 3 章第 15 節（書頁 182 到 185）。這一節整節沒有習題。\n\n書上的說法很直接：變分問題就是臨界點問題，只是定義域是一個無窮維的空間，而且用「微分等於零」的方式帶了一個特別的轉折。\n\n有約束的極值本來要一個更一般的乘子定理，可是這裡不必。約束是一個閉平面，也就是某個子空間平移過去的，限制上去的函數就是子空間上的函數，所以條件只是微分在那個子空間上等於零。設定：要極大化的是一個積分，被積函數吃弧、弧的導數、以及時間；定義域是區間上連續可微的弧構成的空間，範數取函數與導數兩個上確界之和；兩個端點固定。\n\n先要證那個泛函可微，用的正是上一集的定理 14.3：把被積函數接上去是一個可微的映射，而積分是一個有界線性泛函、微分就是它自己，合成規則一套就好了。得到的就是第一變分：一個積分，被積函數是兩個偏微分各配一支，一支配增量、一支配增量的導數。影片在一條刻意不是解的弧上，用兩種完全不同的算法把它算了兩次，六位小數完全相同。\n\n端點固定給出一個閉平面，它是「兩端都取零的弧」構成的子空間的平移。於是臨界點的條件是：第一變分對每一個這樣的增量都等於零。接下來是變分法的招牌手法，叫 Du Bois-Reymond 引理：把積分裡的第一項分部積分，端點項因為增量兩端是零而消掉，剩下的式子裡只出現增量的導數。而那個導數是任意的連續函數，唯一的限制是積分為零，也就是說剩下那個東西正交於一個線性泛函的零空間，而零空間的正交補是一維的常數函數。所以它只能是常數。\n\n再微分一次，就得到 Euler 方程。順帶還推出左邊真的可微，這件事本來看不出來。影片用兩點之間的最短路徑當例子：被積函數不含弧本身，所以偏導數是常數、導數也是常數，答案是直線；四條擾動過的弧都量過，每一條都比直線長。\n\n如果端點不固定，分部積分留下的端點項不再消失，Euler 方程照樣成立，另外多兩個端點條件。而「什麼時候真的是極大或極小」要看第二變分，那是下一集的主題。\n\n本影片為雙語教學動畫系列（繁體中文版）。\n\n本影片為獨立製作的學習導讀，非官方教材，與原書作者及出版社無關。\n講解為自行撰寫，動畫為自行繪製，不含原書頁面，也不提供原書的取得管道。",
+    "tags": [
+      "高等微積分",
+      "Advanced Calculus",
+      "Loomis",
+      "Sternberg",
+      "變分法",
+      "Euler 方程",
+      "第一變分",
+      "分部積分",
+      "最短路徑",
+      "數學分析",
+      "大學數學"
+    ],
+    "language": "zh-TW"
+  },
+  {
+    "file": "manim_lessons/samples/output/advcalc_e52_en.mp4",
+    "title": "Advanced Calculus, Episode 52 | The Calculus of Variations and the Euler Equation | Ch. 3, §15",
+    "description": "This episode is section 15 of chapter 3, pages 182 to 185, of Loomis and Sternberg's Advanced Calculus. The section has no exercises at all.\n\nThe book is blunt: variational problems are simply critical-point problems, with the domain an infinite-dimensional space and one characteristic twist in how the vanishing of the differential is used.\n\nA constrained maximum would in general want a more general multiplier theorem, but not here. The constraint set is a closed plane, a subspace translated, so restricting to it gives a function on that subspace and the condition is just that the differential vanish there. The setup: the functional to maximize is an integral whose integrand takes an arc, the derivative of the arc, and time; the domain is the space of continuously differentiable arcs on an interval, normed by the two uniform norms added; both endpoints are held fixed.\n\nFirst the functional has to be shown differentiable, and that uses the previous episode's Theorem 14.3: composing with the integrand is a differentiable map, integration is a bounded linear functional and so is its own differential, and the composite rule finishes. What comes out is the first variation: an integral whose integrand is one partial differential for the increment and another for its derivative. That formula is checked here at an arc deliberately chosen not to be a solution, computed two completely different ways, agreeing to six decimal places.\n\nFixed endpoints give a closed plane, a translate of the subspace of arcs vanishing at both ends, so the critical-point condition is that the first variation vanish for every such increment. Then comes the trademark trick, the lemma of Du Bois-Reymond: integrate the first term by parts, the endpoint term drops because the increment vanishes at both ends, and only the derivative of the increment is left. That derivative is an arbitrary continuous function subject only to having integral zero, so what remains is orthogonal to the null space of a linear functional whose orthogonal complement is the one-dimensional space of constants. It can only be a constant.\n\nDifferentiating once more gives the Euler equation, and it also shows the left side really is differentiable, which was not apparent. The example is the shortest path between two points: the integrand does not contain the arc itself, so the partial is constant, the derivative is constant, and the answer is a straight line. Four perturbed arcs are measured here and every one is longer.\n\nWith free endpoints the endpoint term no longer drops, the Euler equation still holds, and two endpoint conditions are added. Whether a critical arc really is a maximum needs the second variation, which is the next episode's subject.\n\nPart of a bilingual animated teaching series (English edition).\n\nThis is an independently produced study guide. It is not official course material and is not affiliated with the authors or publisher of the book. The narration and animations are original work; no pages of the book are reproduced, and no copy of it is provided.",
+    "tags": [
+      "Advanced Calculus",
+      "Loomis",
+      "Sternberg",
+      "calculus of variations",
+      "Euler equation",
+      "first variation",
+      "integration by parts",
+      "geodesic",
+      "real analysis",
+      "university mathematics"
+    ],
+    "language": "en"
+  }
+]
