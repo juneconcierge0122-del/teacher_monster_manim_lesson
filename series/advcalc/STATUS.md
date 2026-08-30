@@ -1,6 +1,6 @@
 # advcalc —《Advanced Calculus》(Loomis & Sternberg)
 
-**狀態：E00–E53 已上傳（私人）；E54–E58 已寫完、檢查完、配音完，正在渲染。
+**狀態：E00–E58 已上傳（私人）。
 第 0、1、2、3 章完結（書頁 194），第 4 章做到第 4 節完（書頁 209）。
 下一集 E59 接第 4 章第 5 節「緊緻性與均勻性」（書頁 210 起）。**
 全書解析與 169 集的分集規劃見 **[`OUTLINE.md`](OUTLINE.md)**。
@@ -109,6 +109,11 @@ E22 從「零化子」起（83–86）。自然性那張交換圖雖然講的是
 | E51 | 均勻連續與函數值的映射 | 3.14（179–182） | 3:18 ／ 3:15 | https://youtu.be/Y984ORv-f9A | https://youtu.be/R8W5xLQAkzU |
 | E52 | 變分法與 Euler 方程 | 3.15（182–185） | 3:14 ／ 3:05 | https://youtu.be/7B_D-cGTUW4 | https://youtu.be/z_pDbCNIIOg |
 | E53 | 二階微分 | 3.16 前半（186–189） | 3:09 ／ 3:02 | https://youtu.be/enAr0QL2UHQ | https://youtu.be/04Ho6EgMrBs |
+| E54 | 臨界點的分類 | 3.16 後半（189–191） | 3:19 ／ 3:16 | https://youtu.be/g8CaWdEQgx4 | https://youtu.be/b2ikyknX3rI |
+| E55 | Taylor 公式 | 3.17（191–194） | 3:19 ／ 3:15 | https://youtu.be/UrLQhr0LbKM | https://youtu.be/Rw6dRpzsYBc |
+| E56 | 度量空間、開集與閉集 | 4.1（195–200） | 3:25 ／ 3:15 | https://youtu.be/Z844UA4t5WA | https://youtu.be/w-5_iEMkTiw |
+| E57 | 拓撲與序列收斂 | 4.2 + 4.3（201–204） | 3:20 ／ 3:18 | https://youtu.be/cS9odZ5Syjg | https://youtu.be/uvfpLChzvOM |
+| E58 | 序列緊緻性 | 4.4（205–209） | 3:29 ／ 3:26 | https://youtu.be/T5eri3ywoSo | https://youtu.be/8_m6VIwmzhc |
 
 **E16 起的描述結尾都帶了 PLAYBOOK 第 8 節那段免責聲明**（E00–E15 是在此之前上傳的，沒有那段，
 而 YouTube token 只有上傳權限、改不了已上傳影片的描述，要補只能在 YouTube Studio 手動編輯）。
