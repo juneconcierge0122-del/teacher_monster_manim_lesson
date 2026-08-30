@@ -19,13 +19,13 @@
 | `series/t1_mechanics/` | Landau《力學》第 1–53 課 | **已完結**（第 52 課是本書最後一節，第 53 課是總複習） |
 | `series/special/` | 特別篇 S01（Anthropic 全域工作空間論文） | 單集，可再加 |
 | `series/t2_fields/` | Landau《場論》 | **尚未開始**，開工前的決定寫在它的 STATUS.md |
-| `series/advcalc/` | Loomis & Sternberg《Advanced Calculus》 | **進行中**：E00–E53 已上傳（第 0、1、2 章完結，第 3 章做到第 16 節前半） |
+| `series/advcalc/` | Loomis & Sternberg《Advanced Calculus》 | **進行中**：E00–E53 已上傳，E54–E58 待渲染（第 0 到 3 章完結，第 4 章做到第 4 節完） |
 
 **現在的方向是 `advcalc`。**《力學》已完結；《場論》仍是空殼。
 接手時先讀 `series/advcalc/STATUS.md`（進度、連結、踩過的坑）與
 `series/advcalc/OUTLINE.md`（全書解析與 169 集規劃）。
 
-**眼前第一件事是 E54**，接第 3 章第 16 節的後半（書頁 189 起）：臨界點的分類。
+**眼前第一件事是 E59**，接第 4 章第 5 節「緊緻性與均勻性」（書頁 210 起）。
 E44–E48 已經把 §10 與 §11 收完了（定理 10.1、10.2、11.1 到 11.5：極值與臨界點、切平面、
 隱函數的微分、反映射定理，以及那兩條定理的笛卡兒形式；實際收在書頁 169，
 169–171 是習題 11.1–11.29，依第 8 節不做解答）。

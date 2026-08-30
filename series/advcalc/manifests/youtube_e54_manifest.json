@@ -1,0 +1,39 @@
+[
+  {
+    "file": "manim_lessons/samples/output/advcalc_e54_zh-TW.mp4",
+    "title": "《高等微積分》第 54 集｜臨界點的分類｜Loomis & Sternberg 第 3 章 §16",
+    "description": "本集是 Loomis 與 Sternberg《Advanced Calculus》第 3 章第 16 節的後半（書頁 189 到 191）。這一節整節沒有習題。\n\n假設有兩個：那一點是臨界點，微分等於零；而且二階微分存在、非奇異，也就是它對應的那個雙線性形式在任何一組基底下的矩陣都可逆。\n\n工具是第 2 章的定理 7.1：任何對稱雙線性形式都有一組正交的基底，在那組基底下不同的兩個基向量配出來是零，同一個配自己是正一或負一。對角線上不可能出現零，因為那樣整欄都是零、矩陣就奇異了。所以非奇異這個假設正好保證只有正一與負一，而正號的個數 p 可以從零跑到 n，一共 n 加一種可能。兩個變數時就是三種：極小、鞍點、極大。\n\n定理 16.4：臨界點上二階微分正定，那麼函數在那裡取到相對極小。證明是一維的手法：二階微分的定義給出一個估計，而微分在那一點是零，估計就變成沿射線走的那個一元函數的導數被夾住。對參數積分之後，函數的增量夾在一減 ε 與一加 ε 除以二乘上長度平方之間。所以結論不只是「有極小」——增量夾在兩個非常接近的拋物面之間。\n\n一般的 p 完全一樣，只要把長度平方換成那個二次型：增量夾在兩個同型的二次曲面之間。於是鞍點的結構就出來了：函數在前 p 個座標張成的子空間上有相對極小，在互補的那個子空間上有相對極大，往下那一片的維數是 n 減 p。所以鞍點不是一種，而是 n 減一種。\n\n兩個變數有捷徑，不必真的正交化：看二階偏導數矩陣的行列式，正的是極大或極小，沿一條直線走一下就知道是哪一個；負的是鞍點。影片對三個例子各用兩種方法分類過——行列式的規則，以及在臨界點周圍取一圈點直接看函數升降——兩種結論完全相同。\n\n最後一句對變分法很要緊：定理 16.4 在定義域換成無窮維的完備空間時照樣成立，證明幾乎一個字都不用改。\n\n本影片為雙語教學動畫系列（繁體中文版）。\n\n本影片為獨立製作的學習導讀，非官方教材，與原書作者及出版社無關。\n講解為自行撰寫，動畫為自行繪製，不含原書頁面，也不提供原書的取得管道。",
+    "tags": [
+      "高等微積分",
+      "Advanced Calculus",
+      "Loomis",
+      "Sternberg",
+      "臨界點",
+      "二次型",
+      "鞍點",
+      "正定",
+      "Hessian",
+      "數學分析",
+      "大學數學"
+    ],
+    "language": "zh-TW"
+  },
+  {
+    "file": "manim_lessons/samples/output/advcalc_e54_en.mp4",
+    "title": "Advanced Calculus, Episode 54 | The Classification of Critical Points | Ch. 3, §16",
+    "description": "This episode is the second half of section 16 of chapter 3, pages 189 to 191, of Loomis and Sternberg's Advanced Calculus. The section has no exercises.\n\nTwo hypotheses: the point is critical, so the differential vanishes, and the second differential exists and is nonsingular, meaning the bilinear form it corresponds to has an invertible matrix in any basis.\n\nThe tool is Theorem 7.1 of chapter 2: every symmetric bilinear form has an orthonormal basis in which distinct basis vectors pair to zero and each pairs with itself to plus or minus one. No zero can appear on the diagonal, since that would make a whole column vanish and the matrix singular. So nonsingularity guarantees only plus and minus ones, the number p of plus signs runs from zero to n, and there are n plus one possibilities. For two variables that is three: minimum, saddle, maximum.\n\nTheorem 16.4: at a critical point where the second differential is positive definite, the function has a relative minimum. The proof is a one variable manoeuvre. The definition of the second differential gives an estimate, and since the differential vanishes there, the estimate squeezes the derivative of the function along a ray. Integrating, the increment of the function lies between one minus and one plus epsilon, halved, times the squared length. So the conclusion is more than a minimum: the increment lies between two very close paraboloids.\n\nThe general p works the same way with the squared length replaced by the quadratic form: the increment lies between two quadric surfaces of the same type. That gives the structure of a saddle. The function has a relative minimum on the subspace spanned by the first p coordinates and a relative maximum on the complementary one, and the downward subspace has dimension n minus p. So a saddle is not one thing but n minus one things.\n\nFor two variables there is a shortcut that avoids orthonormalising: look at the determinant of the matrix of second partials. Positive means a maximum or a minimum, and following one line says which; negative means a saddle. Three examples are classified here two ways, by that rule and by sampling a ring around the critical point, and the verdicts agree.\n\nOne closing remark matters for the calculus of variations: Theorem 16.4 stays true when the domain is an infinite dimensional complete space, and the proof is essentially unchanged.\n\nPart of a bilingual animated teaching series (English edition).\n\nThis is an independently produced study guide. It is not official course material and is not affiliated with the authors or publisher of the book. The narration and animations are original work; no pages of the book are reproduced, and no copy of it is provided.",
+    "tags": [
+      "Advanced Calculus",
+      "Loomis",
+      "Sternberg",
+      "critical point",
+      "quadratic form",
+      "saddle point",
+      "positive definite",
+      "Hessian",
+      "real analysis",
+      "university mathematics"
+    ],
+    "language": "en"
+  }
+]

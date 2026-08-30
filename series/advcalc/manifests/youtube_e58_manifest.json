@@ -1,0 +1,39 @@
+[
+  {
+    "file": "manim_lessons/samples/output/advcalc_e58_zh-TW.mp4",
+    "title": "《高等微積分》第 58 集｜序列緊緻性｜Loomis & Sternberg 第 4 章 §4",
+    "description": "本集是 Loomis 與 Sternberg《Advanced Calculus》第 4 章第 4 節（書頁 205 到 209）。書頁 209 到 210 是習題 4.1 到 4.16。\n\n先把子序列說清楚：從一個序列裡挑出無窮多項，按原來的順序排好。接著是一條看起來很怪的引理：如果每一支子序列都還有一支收斂到某一點，那麼整個序列就收斂到那一點。理由是，如果不收斂，就挑得出一整支每一項都離那點至少 ε 遠的子序列，而那一支的任何子序列也收斂不到。\n\n定義：一個子集是序列緊緻的，如果它裡面每一個序列都有子序列收斂到它裡面的一點。書上的話很傳神：這裡等於是無中生有地造出收斂。引理 4.2 說這樣的集合一定又閉又有界。定理 4.1 說連續映射把緊緻集送成緊緻集，而實數線上的緊緻集含著最大與最小元，合起來就是那條熟悉的推論：連續函數在緊緻定義域上取得到最大與最小值。\n\n定理 4.2 說連續的雙射若定義域緊緻，反函數也連續——證明正是用剛才那條怪引理。緊緻這個假設不能省：把零到二 π 那一段（不含右端）繞成一個圓，映射連續而且是雙射，可是反函數在一那一點不連續。\n\n接下來證實數線上的有界閉集是緊緻的。引理 4.3：有界的單調序列收斂。引理 4.4：任何實數列都有單調子序列，用的是峰項——大於等於它後面所有項的那些項。峰項有無窮多個的話它們本身就是遞減的一支；只有有限多個的話，最後一個之後挑得出嚴格遞增的一支。合起來就是定理 4.3。定理 4.4 用歸納推到 n 維，定理 4.5 隨即得到。\n\n最後補上第 3 章欠的那個洞。定理 4.6：n 維實空間上所有範數等價。一個方向是三角不等式直接給的；另一個方向是把任意範數限制到一範數的單位球面上，那是緊緻集，所以最小值取得到而且不是零。第 3 章第 4 節當時用了這個事實卻沒有工具證它，到這裡才補上。\n\n本影片為雙語教學動畫系列（繁體中文版）。\n\n本影片為獨立製作的學習導讀，非官方教材，與原書作者及出版社無關。\n講解為自行撰寫，動畫為自行繪製，不含原書頁面，也不提供原書的取得管道。",
+    "tags": [
+      "高等微積分",
+      "Advanced Calculus",
+      "Loomis",
+      "Sternberg",
+      "序列緊緻",
+      "子序列",
+      "Bolzano-Weierstrass",
+      "峰項",
+      "等價範數",
+      "數學分析",
+      "大學數學"
+    ],
+    "language": "zh-TW"
+  },
+  {
+    "file": "manim_lessons/samples/output/advcalc_e58_en.mp4",
+    "title": "Advanced Calculus, Episode 58 | Sequential Compactness | Ch. 4, §4",
+    "description": "This episode is section 4 of chapter 4, pages 205 to 209, of Loomis and Sternberg's Advanced Calculus. Pages 209 to 210 are exercises 4.1 to 4.16.\n\nFirst subsequences: pick infinitely many terms out of a sequence, keeping their order. Then a lemma that sounds unlikely: if every subsequence has a further subsequence converging to a point, the whole sequence converges to it. The reason is that a sequence failing to converge admits a whole subsequence staying at least epsilon away, and no subsequence of that one converges either.\n\nThe definition: a subset is sequentially compact if every sequence in it has a subsequence converging to a point of it. The book puts it well — here we create convergence out of nothing. Lemma 4.2 says such a set is closed and bounded. Theorem 4.1 says continuous maps carry compact sets to compact ones, and a compact subset of the line contains its largest and smallest elements; together they give the familiar corollary that a continuous function on a compact domain attains its extremes.\n\nTheorem 4.2 says a continuous bijection with compact domain has a continuous inverse, and its proof is exactly where that odd lemma earns its place. Compactness cannot be dropped: wrap the interval from zero to two pi, right end excluded, around a circle, and the map is continuous and bijective while the inverse is not continuous at one point.\n\nThen bounded closed sets on the line. Lemma 4.3: a bounded monotone sequence converges. Lemma 4.4: any real sequence has a monotone subsequence, via peak terms, the terms at least as large as everything after them. Infinitely many peaks already form a decreasing subsequence; only finitely many, and past the last one a strictly increasing subsequence can be built. Together that is Theorem 4.3. Theorem 4.4 lifts it to n dimensions by induction, and Theorem 4.5 follows.\n\nFinally the gap left in chapter 3 is filled. Theorem 4.6: all norms on real n-space are equivalent. One inequality falls out of the triangle inequality; the other restricts an arbitrary norm to the unit sphere of the one-norm, which is compact, so a minimum is attained and cannot be zero. Section 4 of chapter 3 used that fact without the tools to prove it, and here it is proved.\n\nPart of a bilingual animated teaching series (English edition).\n\nThis is an independently produced study guide. It is not official course material and is not affiliated with the authors or publisher of the book. The narration and animations are original work; no pages of the book are reproduced, and no copy of it is provided.",
+    "tags": [
+      "Advanced Calculus",
+      "Loomis",
+      "Sternberg",
+      "sequential compactness",
+      "subsequence",
+      "Bolzano-Weierstrass",
+      "peak terms",
+      "equivalent norms",
+      "real analysis",
+      "university mathematics"
+    ],
+    "language": "en"
+  }
+]

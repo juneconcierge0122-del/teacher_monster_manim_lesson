@@ -1,0 +1,39 @@
+[
+  {
+    "file": "manim_lessons/samples/output/advcalc_e57_zh-TW.mp4",
+    "title": "《高等微積分》第 57 集｜拓撲與序列收斂｜Loomis & Sternberg 第 4 章 §2–§3",
+    "description": "本集是 Loomis 與 Sternberg《Advanced Calculus》第 4 章的第 2 節與第 3 節（書頁 201 到 204）。第 2 節只有一頁多，所以兩節併成一集。書頁 204 到 205 是習題 3.1 到 3.15。\n\n第 2 節把定理 1.1 那三條性質抽出來當公理：任意一個集合配上滿足那三條的一族子集，就叫一個拓撲。度量空間的開集族因此是一個拓撲。接下來要分辨哪些概念是純拓撲的——內部、閉集、閉包都只用到開集族，所以是；球與 ε-δ 的連續要用到距離，所以不是。有點意外的是，雖然連續是用度量定義的，它其實有純拓撲的刻畫：含著像的每個開集，都吞得下某個含著原像的開集的像。用鄰域講更順，而全域的版本最漂亮：連續等價於開集的逆像都是開的。\n\n第 3 節加進序列收斂。定義是三個量詞，而書上提供一個比較順口的講法：說一件事對「幾乎所有 n」成立，意思是只有有限多個 n 不成立。於是收斂就等於「極限周圍每個球都含幾乎所有的項」。引理 3.1 與 3.2 把和與純量積搬過來，證明跟第 3 章幾乎一樣，唯一的差別是取 N 的最大值而不是取 δ 的最小值。\n\n定理 3.1 是這一節最好用的一條：一點落在閉包裡等價於集合裡有一個序列收斂到它。推出來的第二句更常用：一個集合是閉的，等價於裡面每個收斂序列的極限都還在裡面。定理 3.2 是連續的序列刻畫，實際用起來比 ε-δ 靈活得多。反方向的證法值得記：把量詞的否定寫清楚，然後讓 δ 跑遍一除以 n，每個 n 挑一個對應的點——書上說這幾乎是一套自動的證明程序。\n\n最後兩條：定理 3.3 說兩個範數等價，等價於它們給出完全同一批收斂序列；定理 3.4 說乘積範數就是那些「逐分量收斂等價於整體收斂」的範數。影片對兩個方向都做了驗算。\n\n本影片為雙語教學動畫系列（繁體中文版）。\n\n本影片為獨立製作的學習導讀，非官方教材，與原書作者及出版社無關。\n講解為自行撰寫，動畫為自行繪製，不含原書頁面，也不提供原書的取得管道。",
+    "tags": [
+      "高等微積分",
+      "Advanced Calculus",
+      "Loomis",
+      "Sternberg",
+      "拓撲",
+      "序列收斂",
+      "閉集",
+      "連續",
+      "等價範數",
+      "數學分析",
+      "大學數學"
+    ],
+    "language": "zh-TW"
+  },
+  {
+    "file": "manim_lessons/samples/output/advcalc_e57_en.mp4",
+    "title": "Advanced Calculus, Episode 57 | Topology and Sequential Convergence | Ch. 4, §§2-3",
+    "description": "This episode is sections 2 and 3 of chapter 4, pages 201 to 204, of Loomis and Sternberg's Advanced Calculus. Section 2 runs to barely a page, so the two are taken together. Pages 204 to 205 are exercises 3.1 to 3.15.\n\nSection 2 takes the three properties of Theorem 1.1 as axioms: any set together with a family of subsets satisfying them is called a topology. The open sets of a metric space therefore form one. Then, which notions are purely topological: interior, closed set and closure use only the family of open sets, so they are; balls and the epsilon-delta definition of continuity need the distance, so they are not. It comes as a surprise that continuity, though defined metrically, has a purely topological characterisation: every open set about the image must swallow the image of some open set about the point. Neighborhoods say it more fluently, and the global form is prettiest: continuity is that inverse images of open sets are open.\n\nSection 3 adds sequential convergence. The definition has three quantifiers, and the book offers a more idiomatic phrasing: a statement holds for almost all n if it fails for only finitely many. So convergence is that every ball about the limit contains almost all the terms. Lemmas 3.1 and 3.2 carry sums and scalar multiples across, with proofs nearly those of chapter 3 — the one change is taking a maximum of two indices instead of a minimum of two deltas.\n\nTheorem 3.1 is the most usable result here: a point lies in the closure exactly when some sequence in the set converges to it. The second half is used even more: a set is closed exactly when every convergent sequence lying in it has its limit in it. Theorem 3.2 characterises continuity by sequences, which in practice is far more flexible than epsilon-delta. The proof of its converse is worth remembering: write out the negation of the quantifiers, then let delta run through one over n and pick a point for each n, which the book calls almost an automatic proof procedure.\n\nTwo results close the section. Theorem 3.3: two norms are equivalent exactly when they yield the same collection of convergent sequences. Theorem 3.4: a product norm is any norm for which componentwise convergence is convergence. Both directions are checked here on examples.\n\nPart of a bilingual animated teaching series (English edition).\n\nThis is an independently produced study guide. It is not official course material and is not affiliated with the authors or publisher of the book. The narration and animations are original work; no pages of the book are reproduced, and no copy of it is provided.",
+    "tags": [
+      "Advanced Calculus",
+      "Loomis",
+      "Sternberg",
+      "topology",
+      "sequential convergence",
+      "closed set",
+      "continuity",
+      "equivalent norms",
+      "real analysis",
+      "university mathematics"
+    ],
+    "language": "en"
+  }
+]

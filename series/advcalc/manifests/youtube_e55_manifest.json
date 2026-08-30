@@ -1,0 +1,39 @@
+[
+  {
+    "file": "manim_lessons/samples/output/advcalc_e55_zh-TW.mp4",
+    "title": "《高等微積分》第 55 集｜Taylor 公式｜Loomis & Sternberg 第 3 章 §17",
+    "description": "本集是 Loomis 與 Sternberg《Advanced Calculus》第 3 章第 17 節（書頁 191 到 194），也是第 3 章的最後一節。這一節整節沒有習題。\n\n微分本身是一個從定義域到 Hom 的映射；如果它可微，那個微分就是二階微分，落在雙線性映射的空間裡。同樣的動作可以一直往上疊，第 n 階微分是一個從定義域到 n 重線性映射那個空間的映射，而且上一集那條「二階微分對稱」的定理可以用歸納法往上推：第 n 階微分是對稱的。上一集那條「二階微分就是混合方向導數」也一樣往上推。\n\n座標下的樣子跟前面平行：到 m 階為止的微分都連續，等價於所有 m 階偏導數存在而且連續，而 m 階微分吃 m 個向量的結果是那些偏導數配上多組分量的多重求和。\n\n接下來看函數沿一條直線的行為。把參數送到函數在那條線上的值，得到一個一元函數；用歸納法可以證明它的第 j 階導數就是方向導數作用 j 次。如果原函數是實值的，一元的 Taylor 公式就直接可用，取參數等於一再代回去，就得到賦範空間裡的一般 Taylor 公式：前 m 項是方向導數，最後一項是餘項，在中間某一點取值。\n\n翻成座標，一般項就是那個熟悉的「求和符號的 m 次方」。這樣寫邏輯上簡單卻很浪費，因為同樣的項會重複出現，所以有多重指標記號，把整個第 m 項縮成一行——書上說這是記號上的勝利。\n\n可是實際上沒有人這樣算。書上說一般的 Taylor 公式太笨重，主要是理論上的價值；真正在算的展開式都是用別的辦法得到的，例如把一個多項式代進一個已知的冪級數。影片用書上自己的例子驗證了這件事：尺度減半，誤差掉一百二十八倍，因為第一個沒寫出來的項是七次。\n\n最後是類別的記號：到 k 階為止的微分都存在而且連續就叫那一類。它是一個向量空間，合成與乘積都保持它，下一章會補上取反元素也保持，於是隱函數定理交出來的函數也同一類。對每個 k 都成立就是無窮光滑。第 3 章到此結束。\n\n本影片為雙語教學動畫系列（繁體中文版）。\n\n本影片為獨立製作的學習導讀，非官方教材，與原書作者及出版社無關。\n講解為自行撰寫，動畫為自行繪製，不含原書頁面，也不提供原書的取得管道。",
+    "tags": [
+      "高等微積分",
+      "Advanced Calculus",
+      "Loomis",
+      "Sternberg",
+      "Taylor 公式",
+      "高階微分",
+      "多重指標",
+      "餘項",
+      "C 無窮",
+      "數學分析",
+      "大學數學"
+    ],
+    "language": "zh-TW"
+  },
+  {
+    "file": "manim_lessons/samples/output/advcalc_e55_en.mp4",
+    "title": "Advanced Calculus, Episode 55 | The Taylor Formula | Ch. 3, §17",
+    "description": "This episode is section 17 of chapter 3, pages 191 to 194, of Loomis and Sternberg's Advanced Calculus, and the last section of the chapter. It has no exercises.\n\nThe differential is itself a map from the domain into Hom; if that map is differentiable, its differential is the second differential, living among the bilinear maps. The same move stacks upward without limit: the nth differential is a map into the space of n-linear maps, and the previous episode's symmetry theorem extends by induction. So does the identification of the second differential with the nested directional derivative.\n\nIn coordinates the pattern continues: differentials through order m are continuous exactly when all mth-order partial derivatives exist and are continuous, and the value of the mth differential is a multiple sum of those partials weighted by the components.\n\nThen the behaviour along a line. Sending a parameter to the value of the function along that line gives a function of one variable whose jth derivative, by induction, is the directional derivative applied j times. If the original function is real-valued, the ordinary Taylor formula applies; taking the parameter equal to one and substituting gives the general Taylor formula in a normed space, with m terms of directional derivatives and a remainder evaluated somewhere between.\n\nIn coordinates the general term is the familiar mth power of a sum of partials. That is logically simple but wasteful, since identical terms repeat, so multi-index notation compresses the whole mth term into one line, which the book calls a notational triumph.\n\nNobody computes that way in practice. The book says the general formula is too cumbersome to be of much use and is principally of theoretical value; real expansions come by other means, such as substituting a polynomial into a known power series. The book's own example is checked here: halving the scale divides the error by a hundred and twenty eight, since the first missing term has degree seven.\n\nFinally the classes: a map whose differentials through order k exist and are continuous belongs to the kth class. That class is a vector space closed under composition and products, and the next chapter adds inversion, so a function defined implicitly inherits the class. Holding for every k is smoothness. That ends chapter three.\n\nPart of a bilingual animated teaching series (English edition).\n\nThis is an independently produced study guide. It is not official course material and is not affiliated with the authors or publisher of the book. The narration and animations are original work; no pages of the book are reproduced, and no copy of it is provided.",
+    "tags": [
+      "Advanced Calculus",
+      "Loomis",
+      "Sternberg",
+      "Taylor formula",
+      "higher differentials",
+      "multi-index",
+      "remainder",
+      "smoothness",
+      "real analysis",
+      "university mathematics"
+    ],
+    "language": "en"
+  }
+]
