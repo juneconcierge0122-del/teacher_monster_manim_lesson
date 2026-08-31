@@ -450,6 +450,32 @@ E00 在 2026-08-05 重新渲染上傳過**兩次**（前面的都已刪，表上
 | 場景類別 | `AdvCalcENNZH` / `AdvCalcENNEN` |
 | manifest | `series/advcalc/manifests/youtube_eNN_manifest.json` |
 
+## 可重製性：怎麼驗，驗過什麼（2026-08-31）
+
+影片檔不進 git（太大），配音也不進（`.gitignore` 擋著）。所以「推上去了」不等於
+「重製得出來」——要真的 clone 一份下來跑過才算數。做法與結果：
+
+```bash
+git clone --depth 1 <repo> /tmp/repro && cd /tmp/repro/manim_lessons
+../../.venv/bin/python ../manim_lessons/samples/generate_advcalc_tts.py 58 zh ../manim_lessons/samples/audio_e58/zh-TW
+manim -ql --fps 15 --disable_caching lessons/advcalc/advcalc_e58_compactness.py AdvCalcE58ZH
+```
+
+驗過的結果：
+
+- clone 下來 **7.3 MB**，裡面沒有任何 mp4、也沒有任何 mp3。
+- 配音重生成之後 **長度與原版完全相同**（3.47 分），因為 edge-tts 對同一段文字、
+  同一個聲音、同一個語速是決定性的。
+- 渲染出來 **音軌覆蓋率 100%**，總長 209.4 秒對原版的 208.8 秒
+  （差在 `-ql` 的 15 fps 量化，不是內容差異）。
+- `langscan`、`bounds`、`collide` 三道閘在 clone 裡都跑得動而且都是 0，
+  所以工具本身沒有依賴工作目錄以外的東西。
+- 59 個 manifest 與 59 份腳本 md 都在（E00–E58）。
+
+**所以「清掉本機 mp4」是安全的**：需要的時候用上面三行就重建得出來。
+唯一不可重建的是已經上傳的 YouTube 影片本身——token 只有上傳權限、無法刪片，
+所以要換掉某一集時，舊版必須人工到 YouTube Studio 刪。
+
 ## 命名與編號
 
 - 課號**自己從 1 開始**，寫成 `E01`、`E02`…（`e` = episode）。不接續 T1 的 53 課。
