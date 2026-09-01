@@ -29,6 +29,10 @@ WHITELIST = {
     "Hom", "lub", "glb", "min", "max", "sup", "inf", "det", "lim", "dim",
     "rank", "Ch", "dF", "dG", "dH", "dK", "df", "dg", "dh", "dk", "id", "int",
     "sin", "cos", "tan", "log", "exp", "arg", "mod", "ev",
+    # proper names, written in Latin letters in the Chinese narration too
+    # ("Cauchy 序列", "Banach 空間"), so they are language-independent the way
+    # an operator name is -- not words one half of the audience reads wrong.
+    "Cauchy", "Banach", "Lipschitz", "Lebesgue", "Hausdorff",
 }
 WORD = re.compile(r"[A-Za-z]{2,}")
 CJK = re.compile(r"[㐀-鿿　-〿＀-￯]")

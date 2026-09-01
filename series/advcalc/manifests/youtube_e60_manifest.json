@@ -1,0 +1,39 @@
+[
+  {
+    "file": "manim_lessons/samples/output/advcalc_e60_zh-TW.mp4",
+    "title": "《高等微積分》第 60 集｜等度連續與 Cauchy 序列｜Loomis & Sternberg 第 4 章 §6–§7",
+    "description": "本集是 Loomis 與 Sternberg《Advanced Calculus》第 4 章第 6 節「等度連續」（書頁 215 到 216，這一節整節沒有習題）與第 7 節「完備性」的前半（216 到 218）。第 7 節的習題 7.1 到 7.21 在書頁 221 到 223，在本集範圍之後。\n\n第 6 節把「均勻」那個量詞把戲用到第三個地方。一族函數在某一點等度連續，意思是它們每一個都在那點連續，而且給了 ε 之後，有一個 δ 對整族都行。注意方向：均勻連續是「一個 δ 對很多點」，等度連續是「一個 δ 對很多函數」。如果那個 δ 連位置也不依賴，就叫均勻等度連續；書上的例子是一族導數絕對值都不超過 m 的函數，由均值定理，δ 取 ε 除以 m 就對整族、對所有位置都成立。\n\n定理 6.1：定義域與值域都全有界，而且那一族均勻等度連續，那麼那一族在一致度量下也全有界——也就是有限多個一致範數的球就蓋得住整族函數。證明的骨架是三個有限集：定義域裡取一個 δ 稠密的有限集 D，值域裡取一個 ε 除以四稠密的有限集 E，然後看所有從 D 到 E 的函數，那是一個有限的集合。每一個這樣的函數收集在 D 上跟它差不到 ε 除以四的成員，要證的是這些收集蓋住整族、而且每一個的直徑不超過 ε。書上證完之後說：這個論證完全初等，可是很難；「精巧」與「困難」不是同一回事。\n\n第 7 節換題目。如果一個序列收斂，它的項顯然會越靠越近；反過來，項越靠越近的序列「應該」要收斂。定義是這樣：對每個 ε 都有一個 N，使得兩個指標都大於 N 時距離小於 ε，這叫 Cauchy 序列。引理 7.1 說收斂的一定是 Cauchy 的，把三角不等式從極限那裡切成兩半；引理 7.2 反過來補一半：Cauchy 序列只要有一支子序列收斂，整個就收斂。引理 7.3 說 Lipschitz 映射把 Cauchy 序列送成 Cauchy 序列，有界線性映射是特例，定理 7.1 推廣到均勻連續。注意「連續」不夠：一除以 x 在半開區間上連續，卻把一除以 n 這個 Cauchy 序列送成 n。\n\n定義：一個度量空間完備，如果它裡面每個 Cauchy 序列都收斂到裡面的一點；完備的賦範空間叫 Banach 空間。定理 7.2 說實數線完備。定理 7.3 說完備性搬得動：定義域完備、映射是連續雙射而且反函數 Lipschitz，那麼像也完備，於是等價的範數要嘛都完備、要嘛都不完備。定理 7.4 說兩個 Banach 空間的乘積還是 Banach 空間，推廣到有限個乘積，第二個推論因此是：每一個有限維向量空間，配上任何一個範數，都是 Banach 空間。\n\n本影片為雙語教學動畫系列（繁體中文版）。\n\n本影片為獨立製作的學習導讀，非官方教材，與原書作者及出版社無關。\n講解為自行撰寫，動畫為自行繪製，不含原書頁面，也不提供原書的取得管道。",
+    "tags": [
+      "高等微積分",
+      "Advanced Calculus",
+      "Loomis",
+      "Sternberg",
+      "等度連續",
+      "Cauchy 序列",
+      "完備性",
+      "Banach 空間",
+      "均值定理",
+      "數學分析",
+      "大學數學"
+    ],
+    "language": "zh-TW"
+  },
+  {
+    "file": "manim_lessons/samples/output/advcalc_e60_en.mp4",
+    "title": "Advanced Calculus, Episode 60 | Equicontinuity and Cauchy Sequences | Ch. 4, §6-7",
+    "description": "This episode is section 6 of chapter 4, equicontinuity, pages 215 to 216, which has no exercises at all, together with the first half of section 7, completeness, pages 216 to 218, of Loomis and Sternberg's Advanced Calculus. Section 7's exercises, 7.1 to 7.21, are on pages 221 to 223, past where this episode stops.\n\nSection 6 puts the quantifier trick behind the word uniform to a third use. A family of functions is equicontinuous at a point if each member is continuous there and, given epsilon, one delta serves the whole family. Note the direction: uniform continuity was one delta for many points, equicontinuity is one delta for many functions. If that delta is free of the point as well, the family is uniformly equicontinuous, and the book's example is a family whose derivatives are bounded by m, where the mean value theorem makes delta equal to epsilon over m work for every member at every point.\n\nTheorem 6.1: if the domain and range are totally bounded and the family is uniformly equicontinuous, then the family is totally bounded in the uniform metric, that is, finitely many balls in the uniform norm cover it. The proof rests on three finite sets: a finite delta-dense subset of the domain, a finite quarter-epsilon-dense subset of the range, and all functions from the first into the second, a finite collection. Each such function collects the members that stay within a quarter of epsilon of it on the finite set, and what needs proving is that the collections cover the family and that each has diameter at most epsilon. The book then remarks that the argument is completely elementary and hard, and that sophisticated and difficult are by no means equivalent.\n\nSection 7 changes the subject. If a sequence converges its terms plainly get close to one another; conversely a sequence whose terms get close together ought to converge. The definition: for every epsilon there is an N beyond which any two terms are within epsilon, and such a sequence is called Cauchy. Lemma 7.1 says a convergent sequence is Cauchy, splitting the triangle inequality in half at the limit; Lemma 7.2 supplies the other half, that a Cauchy sequence with one convergent subsequence converges outright. Lemma 7.3 says Lipschitz maps carry Cauchy sequences to Cauchy sequences, bounded linear maps being a special case, and Theorem 7.1 extends this to uniformly continuous maps. Continuity alone will not do: one over x is continuous on the half-open interval and carries the Cauchy sequence one over n to the sequence n.\n\nThe definition: a metric space is complete if every Cauchy sequence in it converges to a point of it, and a complete normed space is called a Banach space. Theorem 7.2 says the line is complete. Theorem 7.3 says completeness travels: if the domain is complete and the map is a continuous bijection whose inverse is Lipschitz, the image is complete too, so equivalent norms are complete together or not at all. Theorem 7.4 says a product of two Banach spaces is one and extends to finite products, and the second corollary is therefore that every finite-dimensional vector space, under any norm at all, is a Banach space.\n\nPart of a bilingual animated teaching series (English edition).\n\nThis is an independently produced study guide. It is not official course material and is not affiliated with the authors or publisher of the book. The narration and animations are original work; no pages of the book are reproduced, and no copy of it is provided.",
+    "tags": [
+      "Advanced Calculus",
+      "Loomis",
+      "Sternberg",
+      "equicontinuity",
+      "Cauchy sequence",
+      "completeness",
+      "Banach space",
+      "mean value theorem",
+      "real analysis",
+      "university mathematics"
+    ],
+    "language": "en"
+  }
+]
