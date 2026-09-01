@@ -1,0 +1,39 @@
+[
+  {
+    "file": "manim_lessons/samples/output/advcalc_e59_zh-TW.mp4",
+    "title": "《高等微積分》第 59 集｜緊緻性與均勻性｜Loomis & Sternberg 第 4 章 §5",
+    "description": "本集是 Loomis 與 Sternberg《Advanced Calculus》第 4 章第 5 節（書頁 210 到 214）。書頁 214 到 215 是習題 5.1 到 5.14。\n\n這一節的主題只有一句話：逐點的性質是「對每個 y，存在一個 d」，均勻的性質是「存在一個 d，對每個 y 都行」——差別只在兩個量詞的順序。均勻連續就是這樣來的：δ 只依賴 ε，不依賴那個主張連續的點。同樣的模式用在函數序列上：逐點收斂是每個點各有各的 N，均勻收斂是一個 N 對所有點都行，而後者等價於一致範數下的距離掉到零，這就是那個上確界範數叫一致範數的原因。\n\n逐點推不出均勻：x 的 n 次方在開區間零到一上逐點收斂到零，可是上確界永遠是一。連續也推不出均勻連續：一除以 x 在同一個區間上連續卻不均勻，而更有意思的是 sin 一除以 x——它連續而且有界，一樣不均勻連續，所以缺的不是有界。\n\n定理 5.1 說緊緻集上的連續函數一定均勻連續，證明又是那套自動的否定法：否定均勻連續得到一個 ε 與兩列點，距離小於一除以 n 而像的距離不小於 ε，緊緻性抽出收斂子序列，連續性就逼出矛盾。可是緊緻性補不起收斂：一族底邊從一除以 n 到二除以 n、高度是一的帳篷函數，定義域緊緻、逐點收斂到零，每一個的上確界卻都是一。定理 5.2 則說兩個不相交的非空閉集，只要有一個緊緻，距離就一定是正的。\n\n接著一組定義。r 稠密是說每一點都離某個成員不到 r；全有界是說對每個正的 r 都找得到一個有限集是 r 稠密的，也就是有限多個半徑 r 的球就蓋得住。全有界比有界強得多：引理 5.1 說無窮維賦範空間的閉單位球用有限多個半徑三分之一的球蓋不住，書上的例子是一族互不重疊的尖峰函數，兩兩的一致距離都是一。引理 5.2 說序列緊緻的集合一定全有界，跟定理 4.4 合起來就得到一條漂亮的推論：一個賦範空間是有限維的，等價於它的閉單位球序列緊緻。\n\n最後兩條把兩種緊緻接起來。引理 5.3 給出一個 Lebesgue 數：開覆蓋之下有一個 r，使得每一點的 r 球都整個落在某一個開集裡。定理 5.3 與 5.4 因此說：在度量空間上，序列緊緻與有限子覆蓋是同一件事。\n\n本影片為雙語教學動畫系列（繁體中文版）。\n\n本影片為獨立製作的學習導讀，非官方教材，與原書作者及出版社無關。\n講解為自行撰寫，動畫為自行繪製，不含原書頁面，也不提供原書的取得管道。",
+    "tags": [
+      "高等微積分",
+      "Advanced Calculus",
+      "Loomis",
+      "Sternberg",
+      "均勻連續",
+      "均勻收斂",
+      "全有界",
+      "Lebesgue 數",
+      "緊緻性",
+      "數學分析",
+      "大學數學"
+    ],
+    "language": "zh-TW"
+  },
+  {
+    "file": "manim_lessons/samples/output/advcalc_e59_en.mp4",
+    "title": "Advanced Calculus, Episode 59 | Compactness and Uniformity | Ch. 4, §5",
+    "description": "This episode is section 5 of chapter 4, pages 210 to 214, of Loomis and Sternberg's Advanced Calculus. Pages 214 to 215 are exercises 5.1 to 5.14.\n\nThe section has one idea. A pointwise property says that for each y there is a d making something hold; the uniform version says that one d serves every y. The difference is only the order of two quantifiers. Uniform continuity is exactly that: delta depends on epsilon alone and not on the point at which continuity is asserted. The same pattern applies to sequences of functions: pointwise convergence gives each point its own N, uniform convergence one N for all of them, and the latter is the same as the distance in the uniform norm falling to zero, which is why that least upper bound norm carries the name.\n\nPointwise does not give uniform: x to the n on the open unit interval tends to zero pointwise while its supremum stays at one. Continuity does not give uniform continuity either: one over x is continuous on that interval but not uniformly so, and more interestingly the sine of one over x is continuous and bounded and still not uniformly continuous, so boundedness is not what is missing.\n\nTheorem 5.1 says a continuous function on a compact set is uniformly continuous, and the proof is that automatic negation again: denying uniformity gives two sequences at distance under one over n whose images stay apart, and compactness with continuity forces a contradiction. But compactness does not repair convergence: a family of tent functions with base from one over n to two over n and height one lives on a compact domain and tends to zero pointwise, yet every supremum is one. Theorem 5.2 says two disjoint nonempty closed sets, one of them compact, are a positive distance apart.\n\nThen some definitions. A set is r-dense if every point is within r of one of its members; totally bounded means that for every positive r some finite set is r-dense, that is, finitely many balls of radius r cover it. Total boundedness is much stronger than boundedness: Lemma 5.1 says the closed unit ball of an infinite-dimensional normed space cannot be covered by finitely many balls of radius one third, the book's example being a family of non-overlapping peaks whose uniform distances are all one. Lemma 5.2 says a sequentially compact set is totally bounded, and with Theorem 4.4 that gives a beautiful corollary: a normed space is finite-dimensional exactly when its closed unit ball is sequentially compact.\n\nTwo results join the two notions of compactness. Lemma 5.3 produces a Lebesgue number: given an open covering there is an r such that every ball of that radius lies inside one of the sets. Theorems 5.3 and 5.4 then say that on a metric space, sequential compactness and finite subcovers agree.\n\nPart of a bilingual animated teaching series (English edition).\n\nThis is an independently produced study guide. It is not official course material and is not affiliated with the authors or publisher of the book. The narration and animations are original work; no pages of the book are reproduced, and no copy of it is provided.",
+    "tags": [
+      "Advanced Calculus",
+      "Loomis",
+      "Sternberg",
+      "uniform continuity",
+      "uniform convergence",
+      "totally bounded",
+      "Lebesgue number",
+      "compactness",
+      "real analysis",
+      "university mathematics"
+    ],
+    "language": "en"
+  }
+]
