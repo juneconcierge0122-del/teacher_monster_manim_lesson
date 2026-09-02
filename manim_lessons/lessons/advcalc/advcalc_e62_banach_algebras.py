@@ -222,14 +222,14 @@ class AdvCalcE62Base(ArrayArt, CanonicalBase):
 
  # ── beats ─────────────────────────────────────────────────────────
  def _debt(self):
-  cx, cy = -3.60, 0.20
+  cx, cy = -3.60, 0.02
   g = VGroup(self._blob(cx, cy, ACCENT_B))
   g.add(Dot([cx - 0.30, cy, 0], radius=0.075, color=ACCENT_A),
         self._sym(cy + 0.28, "T", ACCENT_A, FS_TAG, x=cx - 0.30, w=0.60),
         self._circ(cx - 0.30, cy, 0.50, WARN, sw=1.5))
   g.add(Dot([cx + 0.05, cy - 0.22, 0], radius=0.06, color=WARN),
         self._sym(cy - 0.50, "S", WARN, FS_TAG, x=cx + 0.05, w=0.60))
-  g.add(self._mid(cy + 1.05, "可逆元的全體", "the invertible elements", ACCENT_B,
+  g.add(self._mid(cy + 1.12, "可逆元的全體", "the invertible elements", ACCENT_B,
                   FS_TAG - 1, x=cx, w=3.20))
   g.add(self._panel(((0.86, "反映射定理用到：T 可逆，附近的 S 也可逆",
                       "the inverse mapping theorem needed S invertible near an invertible T",
@@ -271,7 +271,9 @@ class AdvCalcE62Base(ArrayArt, CanonicalBase):
   sx, sy = 4.20, 1.85
   g = VGroup(Line([ox - 0.10, oy, 0], [ox + sx * 1.06, oy, 0], color=DIM, stroke_width=1.4),
              Line([ox, oy - 0.10, 0], [ox, oy + sy * 1.06, 0], color=DIM, stroke_width=1.4))
-  lo = math.log10(GEO[-1][1])
+  # a little headroom under the smallest value, so the last point does not land
+  # on the axis and read as an error of exactly zero
+  lo = math.log10(GEO[-1][1]) - 0.6
   hi = math.log10(GEO[0][1])
   pts = []
   for k, e in GEO:
@@ -307,8 +309,10 @@ class AdvCalcE62Base(ArrayArt, CanonicalBase):
    px = ox + sx * 0.80 * r / 0.68
    g.add(Dot([px, oy + sy * got / top, 0], radius=0.06, color=col),
          self._dash([px, oy, 0], [px, oy + sy * min(bound, top) / top, 0], col, n=8, sw=1.0))
-  g.add(self._sym(oy + sy * 1.00, "r / ( 1 − r )", ACCENT_A, FS_TAG - 1,
-                  x=ox + sx * 0.72, w=1.90))
+  # the curve climbs to the top of the box at its right end, so the label goes
+  # left, over the flat part, instead of onto the curve
+  g.add(self._sym(oy + sy * 0.88, "r / ( 1 − r )", ACCENT_A, FS_TAG - 1,
+                  x=ox + 1.60, w=1.90))
   g.add(self._table([("       r        ‖ e − ( e − x ) ⁻ ¹ ‖      r / ( 1 − r )", DIM)]
                     + [(f"    {r:.2f}              {got:.3f}                {bound:.3f}", ACCENT_C)
                        for r, got, bound in EST], y0=0.86, dy=0.34))
@@ -368,12 +372,12 @@ class AdvCalcE62Base(ArrayArt, CanonicalBase):
                           "this is the way the book calls the most natural and most elegant: hand the problem back to the geometric series"))
 
  def _power_series(self):
-  cx, cy = -3.75, 0.18
-  g = VGroup(self._circ(cx, cy, 1.00, ACCENT_B, sw=2.0),
-             self._circ(cx, cy, 0.70, WARN, sw=2.0))
+  cx, cy = -3.75, 0.02
+  g = VGroup(self._circ(cx, cy, 0.86, ACCENT_B, sw=2.0),
+             self._circ(cx, cy, 0.60, WARN, sw=2.0))
   g.add(Dot([cx, cy, 0], radius=0.05, color=DIM))
-  g.add(self._sym(cy + 1.10, f"δ  =  {DELTA6:.1f}", ACCENT_B, FS_TAG - 1, x=cx + 1.15, w=1.30),
-        self._sym(cy - 0.86, f"s  =  {S6:.2f}", WARN, FS_TAG - 1, x=cx + 0.34, w=1.30))
+  g.add(self._sym(cy + 1.02, f"δ  =  {DELTA6:.1f}", ACCENT_B, FS_TAG - 1, x=cx, w=1.30),
+        self._sym(cy - 0.34, f"s  =  {S6:.2f}", WARN, FS_TAG - 1, x=cx + 1.55, w=1.30))
   g.add(self._table((("     ‖ a ₙ ‖ δ ⁿ   ≤   b", DIM),
                      (f"     b   =   {B6:.2f}", ACCENT_C),
                      (f"     r   =   s / δ   =   {R6:.2f}", ACCENT_A),
@@ -393,7 +397,7 @@ class AdvCalcE62Base(ArrayArt, CanonicalBase):
   sx, sy = 4.20, 1.85
   g = VGroup(Line([ox - 0.10, oy, 0], [ox + sx * 1.06, oy, 0], color=DIM, stroke_width=1.4),
              Line([ox, oy - 0.10, 0], [ox, oy + sy * 1.06, 0], color=DIM, stroke_width=1.4))
-  lo, hi = math.log10(EXP_ERR[-1][1]), math.log10(EXP_ERR[0][1])
+  lo, hi = math.log10(EXP_ERR[-1][1]) - 0.9, math.log10(EXP_ERR[0][1])
   pts = []
   for k, e in EXP_ERR:
    px = ox + sx * (k - EXP_ERR[0][0]) / (EXP_ERR[-1][0] - EXP_ERR[0][0])
@@ -447,7 +451,7 @@ class AdvCalcE62Base(ArrayArt, CanonicalBase):
   y0 = 0.72
   g.add(self._sym(y0, "F ( x )    =    a ₀  +  a ₁ x  +  a ₂ x ²  +  a ₃ x ³  +  …",
                   ACCENT_B, FS_TAG, x=-3.30, w=5.60))
-  for k, dx in enumerate((-1.40, -0.30, 0.80)):
+  for k, dx in enumerate((-3.60, -2.30, -1.05)):
    g.add(self._arr([dx, y0 - 0.16, 0], [dx, y0 - 0.52, 0], ACCENT_A, sw=1.8, tl=0.09))
   g.add(self._sym(y0 - 0.74, "F ′ ( y )    =    a ₁  +  2 a ₂ y  +  3 a ₃ y ²  +  …",
                   WARN, FS_TAG, x=-3.30, w=5.60))

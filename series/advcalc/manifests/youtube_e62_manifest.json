@@ -1,0 +1,39 @@
+[
+  {
+    "file": "manim_lessons/samples/output/advcalc_e62_zh-TW.mp4",
+    "title": "《高等微積分》第 62 集｜Banach 代數初探｜Loomis & Sternberg 第 4 章 §8",
+    "description": "本集是 Loomis 與 Sternberg《Advanced Calculus》第 4 章第 8 節「Banach 代數初探」（書頁 223 到 226）。書頁 227 到 228 是習題 8.1 到 8.24。\n\n這一節是為了還第 3 章的帳。反映射定理當時用了一件事：T 可逆的話，跟它夠靠近的 S 也可逆，而且反元素還連續地依賴它。有限維可以靠行列式的連續性，一般的情況當時沒有工具。\n\n先把 Hom V 的性質整理一遍：它是 Banach 空間，而且帶著一個結合的乘法，就是合成；乘法對加法分配、跟純量相容，而且跟範數扣在一起——乘積的範數不超過兩個範數的乘積，單位映射的範數是一。這幾條合起來就是 Banach 代數的公理。書上接著說：把「它們是變換」這件複雜的事忘掉，只當成抽象代數裡的元素。\n\n一旦這樣看，初等微積分那條幾何級數就原封不動地成立。定理 8.1：如果 x 的範數小於一，那麼 e 減 x 可逆，反元素就是 x 的 n 次方的和。證明只用到絕對收斂，加上上一節的定理 7.11。順便還得到誤差估計：e 減去那個反元素，範數不超過 r 除以一減 r。\n\n定理 8.2 因此成立：可逆元的全體是開集，取反元素在上面連續。手法很漂亮——把 y 減 h 寫成 y 乘上 e 減 x，其中 x 是 y 的反元素乘 h；x 的範數不超過 m 乘 h 的範數，小於一，定理 8.1 就直接可用。第 3 章欠的那一條到這裡還清了，而且完全是代數，沒有碰行列式。\n\n後半轉向可微性。定理 8.3 說冪級數在球上收斂、在更小的球上均勻收斂；指數函數對代數裡每一個元素都收斂。定理 8.4 是一條關於極限的可微性的定理，加上引理 8.1 與 8.2，就得到定理 8.5：冪級數可以逐項微分。最值得注意的是答案的形狀——F 在 y 的微分不是什麼複雜的線性變換，就是「乘上某一個元素」，而那個元素正好是逐項微分得到的 F 撇 y。指數函數因此是自己的導數，指數律也跟著出來，不過那條要在交換的 Banach 代數上才成立。\n\n本影片為雙語教學動畫系列（繁體中文版）。\n\n本影片為獨立製作的學習導讀，非官方教材，與原書作者及出版社無關。\n講解為自行撰寫，動畫為自行繪製，不含原書頁面，也不提供原書的取得管道。",
+    "tags": [
+      "高等微積分",
+      "Advanced Calculus",
+      "Loomis",
+      "Sternberg",
+      "Banach 代數",
+      "幾何級數",
+      "可逆元",
+      "指數函數",
+      "冪級數",
+      "數學分析",
+      "大學數學"
+    ],
+    "language": "zh-TW"
+  },
+  {
+    "file": "manim_lessons/samples/output/advcalc_e62_en.mp4",
+    "title": "Advanced Calculus, Episode 62 | A First Look at Banach Algebras | Ch. 4, §8",
+    "description": "This episode is section 8 of chapter 4, a first look at Banach algebras, pages 223 to 226 of Loomis and Sternberg's Advanced Calculus. Pages 227 to 228 are exercises 8.1 to 8.24.\n\nThe section exists to pay a debt from chapter 3. The inverse mapping theorem used the fact that an invertible T stays invertible under a small enough perturbation and that the inverse depends continuously on it. In finite dimensions the determinant settles that; in general there were no tools for it at the time.\n\nFirst the properties of Hom V are collected. It is a Banach space, and it carries an associative multiplication, namely composition; the multiplication distributes over addition, works with scalars, and ties to the norm, since a product has norm at most the product of the norms and the identity has norm one. That list is exactly the axioms of a Banach algebra. The book then says to forget the complicated nature of a transformation and treat it merely as an element of an abstract algebra.\n\nSeen that way, the geometric series of elementary calculus goes through verbatim. Theorem 8.1: if the norm of x is under one, then e minus x is invertible and its inverse is the sum of the powers of x. The proof needs only absolute convergence together with Theorem 7.11 from the previous section, and the estimate comes along with it: e minus that inverse has norm at most r over one minus r.\n\nTheorem 8.2 follows: the invertible elements form an open set and inversion is continuous on it. The trick is neat. Write y minus h as y times e minus x, where x is the inverse of y times h; the norm of x is at most m times the norm of h, which is under one, so Theorem 8.1 applies directly. The debt from chapter 3 is settled here, by algebra alone, with no determinant anywhere.\n\nThe rest turns to differentiability. Theorem 8.3 gives convergence of a power series on a ball and uniform convergence on any smaller ball, and the exponential converges for every element of the algebra. Theorem 8.4, on differentiating a limit, together with Lemmas 8.1 and 8.2, gives Theorem 8.5: a power series may be differentiated term by term. The striking part is the shape of the answer. The differential of F at y is not some complicated linear transformation but multiplication by a single element, namely the F prime that term-by-term differentiation produces. The exponential is therefore its own derivative, and the law of exponents follows, though only on a commutative Banach algebra.\n\nPart of a bilingual animated teaching series (English edition).\n\nThis is an independently produced study guide. It is not official course material and is not affiliated with the authors or publisher of the book. The narration and animations are original work; no pages of the book are reproduced, and no copy of it is provided.",
+    "tags": [
+      "Advanced Calculus",
+      "Loomis",
+      "Sternberg",
+      "Banach algebra",
+      "geometric series",
+      "invertible elements",
+      "exponential",
+      "power series",
+      "real analysis",
+      "university mathematics"
+    ],
+    "language": "en"
+  }
+]
