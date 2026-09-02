@@ -1,0 +1,39 @@
+[
+  {
+    "file": "manim_lessons/samples/output/advcalc_e61_zh-TW.mp4",
+    "title": "《高等微積分》第 61 集｜完備空間的例子與級數｜Loomis & Sternberg 第 4 章 §7",
+    "description": "本集是 Loomis 與 Sternberg《Advanced Calculus》第 4 章第 7 節「完備性」的後半（書頁 218 到 221，定理 7.5 到 7.11）。第 7 節的內容收在書頁 221，221 到 223 是習題 7.1 到 7.21。\n\n這一段的內容其實是一張 Banach 空間的清單，加上一招證明技巧。定理 7.5：W 是 Banach 空間、A 是任意一個集合，那麼從 A 到 W 的所有有界函數配上一致範數也是 Banach 空間；做法是先讓每一點各自收斂得到極限函數，再用一致的控制證明它有界而且真的是一致收斂過去。定理 7.6 用同一套證明說 Hom V W 也是 Banach 空間，只多一件事要補：極限那個映射還得是線性的。\n\n定理 7.7 有兩半：完備空間的閉子集是完備的，而任何度量空間裡的完備子集一定是閉的。第二半的說法是完備的空間絕對閉——不管放進多大的空間裡它都還是閉集，而這個性質跟完備等價，因為不完備的空間可以被完備化，它在完備化裡的閉包跟它自己不一樣。有理數配上實數就是最熟悉的例子。\n\n定理 7.8 是這一節最重要的一條：在有界函數空間裡，取那些同時連續的，得到的子空間是閉的。證明用一個經典的三段論證，書上叫「上去、過去、下來」，三段各壓在 ε 除以三以內，加起來剛好是 ε。傳統的說法就是：均勻收斂的連續函數列，極限函數也連續。書上還提醒證明其實給得更多——只要每一個都在某一點連續，極限就在那一點連續。推論：又有界又連續的函數配上一致範數，是 Banach 空間。\n\n接著把緊緻補完。定理 7.9：序列緊緻的度量空間一定完備，證明只有兩行。引理 7.4 補另一半：全有界的集合裡每個序列都有 Cauchy 子序列，證明是一層一層套下去、最後沿對角線挑。兩件合起來就是定理 7.10：序列緊緻等價於全有界而且完備——緊緻到這裡被拆成兩個獨立的條件。\n\n最後講級數。賦範空間裡的級數收斂就是部分和的序列收斂；如果那些範數的級數在實數上收斂，就叫絕對收斂。定理 7.11：在 Banach 空間裡絕對收斂的級數一定收斂，因為部分和自己就是 Cauchy 的。書上說反過來也對並留成習題，所以這個性質本身就刻畫了 Banach 空間。推論是古典的 Weierstrass 判別法。\n\n本影片為雙語教學動畫系列（繁體中文版）。\n\n本影片為獨立製作的學習導讀，非官方教材，與原書作者及出版社無關。\n講解為自行撰寫，動畫為自行繪製，不含原書頁面，也不提供原書的取得管道。",
+    "tags": [
+      "高等微積分",
+      "Advanced Calculus",
+      "Loomis",
+      "Sternberg",
+      "Banach 空間",
+      "完備性",
+      "均勻收斂",
+      "Weierstrass 判別法",
+      "絕對收斂",
+      "數學分析",
+      "大學數學"
+    ],
+    "language": "zh-TW"
+  },
+  {
+    "file": "manim_lessons/samples/output/advcalc_e61_en.mp4",
+    "title": "Advanced Calculus, Episode 61 | Examples of Complete Spaces, and Series | Ch. 4, §7",
+    "description": "This episode is the second half of section 7 of chapter 4, completeness, pages 218 to 221 of Loomis and Sternberg's Advanced Calculus, covering Theorems 7.5 through 7.11. Section 7's content ends on page 221; pages 221 to 223 are exercises 7.1 to 7.21.\n\nWhat this stretch really contains is a list of Banach spaces together with one proof technique. Theorem 7.5: if W is a Banach space and A is any set, the bounded functions from A to W under the uniform norm form a Banach space; each point converges on its own to give the limit function, and the uniform control shows it is bounded and that the convergence is uniform. Theorem 7.6 uses the same proof to say that Hom of V and W is Banach, with one extra thing to check: the limit map must be linear.\n\nTheorem 7.7 has two halves: a closed subset of a complete space is complete, and a complete subset of any metric space is closed. The second half says a complete space is absolutely closed, staying closed inside however large a space you embed it in, and that property is equivalent to completeness, because an incomplete space can be completed and its closure inside the completion differs from itself. The rationals inside the reals are the case to picture.\n\nTheorem 7.8 is the important one. Inside the bounded functions, take those that are also continuous, and that subspace is closed. The proof is the classical three-step argument the book calls up, over, and down: three pieces each held under a third of epsilon, adding to epsilon. The traditional statement is that the limit of a uniformly convergent sequence of continuous functions is continuous. The book notes the proof gave more, that if each function is continuous at a point the limit is continuous there. The corollary: the bounded continuous functions form a Banach space.\n\nCompactness is then finished off. Theorem 7.9: a sequentially compact metric space is complete, in a two-line proof. Lemma 7.4 supplies the other half: in a totally bounded set every sequence has a Cauchy subsequence, by a nested construction and a choice along the diagonal. Together they give Theorem 7.10: sequential compactness is exactly total boundedness plus completeness, so compactness splits into two independent conditions.\n\nFinally series. A series in a normed space converges when its sequence of partial sums does, and it converges absolutely when the series of norms converges in the reals. Theorem 7.11: in a Banach space an absolutely convergent series converges, because the partial sums are Cauchy. The book says the converse holds and leaves it as an exercise, so the property characterizes Banach spaces. The corollary is the classical Weierstrass comparison test.\n\nPart of a bilingual animated teaching series (English edition).\n\nThis is an independently produced study guide. It is not official course material and is not affiliated with the authors or publisher of the book. The narration and animations are original work; no pages of the book are reproduced, and no copy of it is provided.",
+    "tags": [
+      "Advanced Calculus",
+      "Loomis",
+      "Sternberg",
+      "Banach space",
+      "completeness",
+      "uniform convergence",
+      "Weierstrass comparison test",
+      "absolute convergence",
+      "real analysis",
+      "university mathematics"
+    ],
+    "language": "en"
+  }
+]
