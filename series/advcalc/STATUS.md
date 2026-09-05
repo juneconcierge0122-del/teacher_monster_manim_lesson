@@ -1,11 +1,12 @@
 # advcalc —《Advanced Calculus》(Loomis & Sternberg)
 
-**狀態：E00–E60 已上傳（私人）。E61 與 E62 都已渲染並通過四道檢查，
-但 2026-09-02 上傳時 YouTube 的 refresh token 失效（`invalid_grant`），**等重新授權後才上傳**；
-`manim_lessons/samples/output/advcalc_e6{1,2}_*.mp4` 因此**先不要清**，
-manifest 也都寫好了（`youtube_e61_manifest.json`、`youtube_e62_manifest.json`）。
+**狀態：E00–E62 已上傳（私人）。
 第 0、1、2、3 章完結（書頁 194），第 4 章做到第 8 節完（書頁 226）。
-下一集 E63 接第 9 節「壓縮映射不動點定理」（書頁 228–236，OUTLINE 排兩集 E63–E64）。**
+下一集 E63 接第 9 節「壓縮映射不動點定理」。**
+**§9 的內容收在書頁 234**（234–236 是習題 9.1–9.13），OUTLINE 寫 228–236 是含了習題頁——
+**這是那張表的頁碼第六次這樣錯**。E63／E64 照內容切：E63 收不動點定理本身（228–230，
+定理 9.1、推論 1 到 4、定理 9.2、定理 9.3），E64 接定理 9.4、迭代法與 Newton 法的比較，
+以及書末那個 ℝ² 的例子（231–234）。
 全書解析與 169 集的分集規劃見 **[`OUTLINE.md`](OUTLINE.md)**。
 
 第 1 章的實際切法：§1 用 E05–E08（書頁 21–36）、§2 用 E09–E10（36–43）、
@@ -121,6 +122,8 @@ E22 從「零化子」起（83–86）。自然性那張交換圖雖然講的是
 | E58 | 序列緊緻性 | 4.4（205–209） | 3:29 ／ 3:26 | https://youtu.be/T5eri3ywoSo | https://youtu.be/8_m6VIwmzhc |
 | E59 | 緊緻性與均勻性 | 4.5（210–214） | 3:28 ／ 3:23 | https://youtu.be/jnlHLvbhcfA | https://youtu.be/dbHVuE-z3m4 |
 | E60 | 等度連續與 Cauchy 序列 | 4.6 + 4.7 前半（215–218） | 3:40 ／ 3:21 | https://youtu.be/mmpCquJZTuM | https://youtu.be/OnQdhNJckqs |
+| E61 | 完備空間的例子與級數 | 4.7 後半（218–221） | 4:00 ／ 3:35 | https://youtu.be/OJ_kOOjqFtc | https://youtu.be/iYbt6LSvUMg |
+| E62 | Banach 代數初探 | 4.8（223–226） | 3:53 ／ 3:28 | https://youtu.be/2icq1gBloZA | https://youtu.be/barbGiVLumk |
 
 **E16 起的描述結尾都帶了 PLAYBOOK 第 8 節那段免責聲明**（E00–E15 是在此之前上傳的，沒有那段，
 而 YouTube token 只有上傳權限、改不了已上傳影片的描述，要補只能在 YouTube Studio 手動編輯）。

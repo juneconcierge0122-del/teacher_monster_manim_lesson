@@ -7,7 +7,7 @@ Chapter 4: Examples of Complete Spaces, and Series
 - 場景檔：`manim_lessons/lessons/advcalc/advcalc_e61_banach_examples.py`（`AdvCalcE61ZH` / `AdvCalcE61EN`）
 - 腳本與公式：`manim_lessons/localization/advcalc.py`（`TOPICS_ADVCALC[61]` / `FORMULAS_ADVCALC[61]`）
 - 配音：`manim_lessons/samples/audio_e61/`（zh-TW `-4%`、en `-4%`）
-- 片長：中文 __ZH_LEN__ ／英文 __EN_LEN__
+- 片長：中文 3.99 分（240 秒）／英文 3.58 分（215 秒）
 
 ## 一張清單，外加一招
 
