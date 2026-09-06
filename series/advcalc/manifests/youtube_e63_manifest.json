@@ -1,0 +1,39 @@
+[
+  {
+    "file": "manim_lessons/samples/output/advcalc_e63_zh-TW.mp4",
+    "title": "《高等微積分》第 63 集｜壓縮映射不動點定理｜Loomis & Sternberg 第 4 章 §9",
+    "description": "本集是 Loomis 與 Sternberg《Advanced Calculus》第 4 章第 9 節「壓縮映射不動點定理」的前半（書頁 228 到 230，定理 9.1、推論 1 到 4、定理 9.2、定理 9.3）。第 9 節的內容收在書頁 234，234 到 236 是習題 9.1 到 9.13。\n\n書上說這條定理很簡單、很漂亮，而它要做三件事：補完隱函數定理的證明、第 6 章拿來證常微分方程的存在唯一性，還有跟 Newton 法比較。定義是：K 是度量空間到自己的 Lipschitz 映射，而且常數嚴格小於一。\n\n壓縮至多只有一個不動點，證明只有兩行：兩個不動點的距離等於它們的像的距離，不超過 C 倍，移項就得到一減 C 乘那個距離小於等於零。值得注意的是，這一段完全沒有用到完備性——唯一性是壓縮這個條件自己給的。\n\n定理 9.1：非空的完備度量空間上，壓縮有唯一的不動點。存在性是造出來的：隨便取一個起點，反覆作用 K。相鄰兩項的距離每走一步就縮小 C 倍，所以第 n 對的距離不超過 C 的 n 次方乘 δ；把中間那些距離用幾何級數加起來，就得到 Cauchy 的估計。完備性是在這裡才需要的。\n\n接下來四條推論把定理搬到實際會遇到的情況。實際的映射常常只在某一點附近是壓縮，所以要先確認那個鄰域被送進自己：推論 1 說，閉球上的壓縮只要把球心移動的距離不超過一減 C 乘半徑，不動點就落在球裡；證明就是 C 乘 r 加上一減 C 乘 r 剛好等於 r 這一個加法。推論 2 是開球的版本。推論 3 給距離的估計：K 把 x 移動了 d，那麼 x 到不動點的距離不超過 d 除以一減 C。推論 4 讓壓縮帶一個參數，結論是不動點連續地依賴參數；證明就是把推論 3 接上去。推論 2 與推論 4 合起來就是定理 9.2，那才是後面真正拿來用的形式。\n\n最後補完隱函數定理。定理 9.3：G 在某一點等於零，而且它在那裡的第二個偏微分可逆。令 K 是 η 減去那個偏微分的反元素乘上 G，K 的不動點正好就是 G 等於零的解。關鍵在於 K 對第二個變數的微分在那一點正好是零——那就是把一階項消掉的意思；因為它連續，附近就有一個球讓它的範數不超過二分之一，均值定理再把 K 變成壓縮。\n\n本影片為雙語教學動畫系列（繁體中文版）。\n\n本影片為獨立製作的學習導讀，非官方教材，與原書作者及出版社無關。\n講解為自行撰寫，動畫為自行繪製，不含原書頁面，也不提供原書的取得管道。",
+    "tags": [
+      "高等微積分",
+      "Advanced Calculus",
+      "Loomis",
+      "Sternberg",
+      "不動點定理",
+      "壓縮映射",
+      "隱函數定理",
+      "完備性",
+      "Banach 不動點",
+      "數學分析",
+      "大學數學"
+    ],
+    "language": "zh-TW"
+  },
+  {
+    "file": "manim_lessons/samples/output/advcalc_e63_en.mp4",
+    "title": "Advanced Calculus, Episode 63 | The Contraction Mapping Fixed-Point Theorem | Ch. 4, §9",
+    "description": "This episode is the first part of section 9 of chapter 4, the contraction mapping fixed-point theorem, pages 228 to 230 of Loomis and Sternberg's Advanced Calculus, covering Theorem 9.1, Corollaries 1 through 4, Theorem 9.2 and Theorem 9.3. Section 9's content ends on page 234; pages 234 to 236 are exercises 9.1 to 9.13.\n\nThe book calls the theorem very simple and elegant, and it has three jobs: to complete the proof of the implicit-function theorem, to give existence and uniqueness for differential equations in chapter 6, and to be set beside Newton's method. The definition: K is a Lipschitz mapping of a metric space into itself whose constant is strictly under one.\n\nA contraction has at most one fixed point, in two lines: two fixed points are as far apart as their images, which is at most C times as far, and rearranging gives one minus C times that distance being at most zero. Worth noticing is that completeness appears nowhere in this argument. Uniqueness comes from the contraction condition alone.\n\nTheorem 9.1: on a nonempty complete metric space a contraction has a unique fixed point. Existence is constructed: pick any starting point and apply K over and over. Each step shrinks the gap between consecutive terms by a factor of C, so the n-th gap is at most C to the n times delta, and summing the gaps between with a geometric series gives the Cauchy estimate. Completeness is what is needed here.\n\nFour corollaries then carry the theorem to the situations actually met. A map is often a contraction only near some point, so the neighbourhood has to be checked to go into itself. Corollary 1: on a closed ball, a contraction that moves the center at most one minus C times the radius has its fixed point inside that ball, and the proof is the single addition C times r plus one minus C times r equals r. Corollary 2 is the open version. Corollary 3 estimates a distance: if K moves x a distance d, then x is within d over one minus C of the fixed point. Corollary 4 gives the contraction a parameter and concludes that the fixed point depends continuously on it, by hooking Corollary 3 on. Corollaries 2 and 4 combine into Theorem 9.2, the form actually used later.\n\nFinally the implicit-function theorem is finished. Theorem 9.3: G vanishes at a point where its second partial differential is invertible. Let K be eta minus the inverse of that differential applied to G; the fixed points of K are exactly the solutions of G equals zero. The key is that the differential of K in its second variable vanishes at that point, which is what killing the first-order term means. Being continuous, it stays under one half on a nearby ball, and the mean value theorem then makes K a contraction.\n\nPart of a bilingual animated teaching series (English edition).\n\nThis is an independently produced study guide. It is not official course material and is not affiliated with the authors or publisher of the book. The narration and animations are original work; no pages of the book are reproduced, and no copy of it is provided.",
+    "tags": [
+      "Advanced Calculus",
+      "Loomis",
+      "Sternberg",
+      "fixed-point theorem",
+      "contraction mapping",
+      "implicit function theorem",
+      "completeness",
+      "Banach fixed point",
+      "real analysis",
+      "university mathematics"
+    ],
+    "language": "en"
+  }
+]
