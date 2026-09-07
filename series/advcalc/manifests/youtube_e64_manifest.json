@@ -1,0 +1,39 @@
+[
+  {
+    "file": "manim_lessons/samples/output/advcalc_e64_zh-TW.mp4",
+    "title": "《高等微積分》第 64 集｜迭代法與 Newton 法｜Loomis & Sternberg 第 4 章 §9",
+    "description": "本集是 Loomis 與 Sternberg《Advanced Calculus》第 4 章第 9 節的後半（書頁 231 到 234）：定理 9.4、迭代程序、與 Newton 法的比較，以及書末那個平面上的例子。書頁 234 到 236 是習題 9.1 到 9.13。\n\n定理 9.4 是反過來的方向：如果那個壓縮本身可微，而且滿足定理 9.2 的假設，那麼它隱含定義出來的函數也可微，推論再補一句連續可微也一樣傳得下去。證明很短，因為材料都備好了——K 的 Lipschitz 條件就是它的微分有界，令 G 是 η 減去 K 之後，G 的微分是單位映射減去 K 的微分，第 8 節的定理 8.1 保證它可逆，再引第 3 章的定理 11.1 就結束。\n\n接著書上特別強調一件容易漏掉的事，還用星號標了起來：不動點定理不只是隱函數定理的推論而已，它的證明還給出一個真正能把值算出來的迭代程序。寫出來就是每一步減去那個固定的反元素乘上 G 在當前點的值。在一維的情況下，圖像是一道階梯：從當前點沿著一條固定斜率的直線走到橫軸，那個橫座標就是下一點——三條斜線彼此平行。\n\nNewton 法把固定的斜率換成當地的斜率，每一步用的是 G 在當前點的微分。圖像就是切線階梯，三條斜線的斜率各不相同，落點明顯更靠近根。書上把代價講得很清楚：Newton 收斂快得多，可是它必須算得出無窮多個線性變換的反元素，每一步一個；而前面那個程序只算一次，之後一直重複用。\n\n快多少？假設在單位球上，微分的反元素與二階微分的範數都不超過 K，那麼對一到二之間的 τ 與某個常數 c，第 n 步的長度不超過 e 的負 c 乘 τ 的 n 次方。這不是幾何收斂——幾何收斂是 e 的負 c n，這裡的指數裡還有一個指數。歸納的關鍵是 Taylor 定理：一階項剛好消掉，剩下每一步不超過 K 平方乘上前一步的平方，也就是每走一步就把誤差平方一次。\n\n最後是一個盡可能簡單的例子：平面上的反映射，x 等於 u 加 v 平方、y 等於 u 立方加 v。Jacobian 在原點正好是單位矩陣，映射與恆等映射的差只剩高階項——那正是微分在中心點等於零的實際樣貌。從零出發迭代，每一項都是多項式，而它們算的就是兩個反函數的 Taylor 展開。\n\n註：書上把 u 的第三項印成減 2 y x 立方，但書上自己上面那行的 u 三展開出來是加，數值也站在加號這邊，所以本片用的是加號。\n\n本影片為雙語教學動畫系列（繁體中文版）。\n\n本影片為獨立製作的學習導讀，非官方教材，與原書作者及出版社無關。\n講解為自行撰寫，動畫為自行繪製，不含原書頁面，也不提供原書的取得管道。",
+    "tags": [
+      "高等微積分",
+      "Advanced Calculus",
+      "Loomis",
+      "Sternberg",
+      "Newton 法",
+      "不動點迭代",
+      "隱函數定理",
+      "二次收斂",
+      "Taylor 展開",
+      "數學分析",
+      "大學數學"
+    ],
+    "language": "zh-TW"
+  },
+  {
+    "file": "manim_lessons/samples/output/advcalc_e64_en.mp4",
+    "title": "Advanced Calculus, Episode 64 | The Iteration, and Newton's Method | Ch. 4, §9",
+    "description": "This episode is the second part of section 9 of chapter 4, pages 231 to 234 of Loomis and Sternberg's Advanced Calculus: Theorem 9.4, the iterative procedure, the comparison with Newton's method, and the worked example that closes the section. Pages 234 to 236 are exercises 9.1 to 9.13.\n\nTheorem 9.4 goes the other way. If the contraction is itself differentiable and satisfies the hypotheses of Theorem 9.2, the function it defines implicitly is differentiable too, and the corollary adds that continuous differentiability is inherited as well. The proof is short because the pieces are already in place: the Lipschitz condition on K is a bound on its differential, so setting G to be eta minus K gives a differential of the identity minus that of K, which Theorem 8.1 of section 8 makes invertible, and Theorem 11.1 of chapter 3 finishes it.\n\nThe book then stars a passage that is easy to read past. The fixed-point theorem does not merely have the implicit-function theorem as a consequence; its proof gives an iterative procedure for actually computing the value. Written out, each step moves by minus one fixed inverse applied to G at the current point. In one real dimension the picture is a staircase: from the current point follow a line of one fixed slope down to the axis, and where it lands is the next point, the slanted lines all parallel to one another.\n\nNewton's method replaces that fixed slope with the local one, using the differential of G at the current point. The picture becomes the tangent-line staircase, the slopes all different, and the steps land visibly closer to the root. The book states the trade plainly: Newton converges much more rapidly, but it suffers the disadvantage that the inverses of an infinite number of linear transformations must be computable, one for every step, where the first procedure inverts once and reuses it.\n\nHow much faster? Assume the inverse differential and the second differential are both bounded by K on the unit ball. Then for tau between one and two and some constant c, the n-th step is at most e to the minus c tau to the n. This is not geometric convergence, which would be e to the minus c n; here there is an exponent inside the exponent. The induction turns on Taylor's theorem: the first-order term cancels exactly, leaving each step bounded by K squared times the square of the previous one, which is to say that every step squares the error.\n\nThe section ends with the simplest possible example, an inverse mapping in the plane where x is u plus v squared and y is u cubed plus v. The Jacobian is the identity at the origin and the difference between the map and the identity carries only higher-order terms, which is the practical face of the differential vanishing at the center. Started from zero, the iterates are polynomials, and they are computing the Taylor expansions of the two inverse functions.\n\nA note: the book prints the third term of u as minus two y x cubed, but its own preceding line for u three expands to a plus, and the numbers agree with the plus, so the plus sign is what this video uses.\n\nPart of a bilingual animated teaching series (English edition).\n\nThis is an independently produced study guide. It is not official course material and is not affiliated with the authors or publisher of the book. The narration and animations are original work; no pages of the book are reproduced, and no copy of it is provided.",
+    "tags": [
+      "Advanced Calculus",
+      "Loomis",
+      "Sternberg",
+      "Newtons method",
+      "fixed point iteration",
+      "implicit function theorem",
+      "quadratic convergence",
+      "Taylor expansion",
+      "real analysis",
+      "university mathematics"
+    ],
+    "language": "en"
+  }
+]
