@@ -1,0 +1,39 @@
+[
+  {
+    "file": "manim_lessons/samples/output/advcalc_e65_zh-TW.mp4",
+    "title": "《高等微積分》第 65 集｜參數化弧的積分｜Loomis & Sternberg 第 4 章 §10",
+    "description": "本集是 Loomis 與 Sternberg《Advanced Calculus》第 4 章第 10 節「參數化弧的積分」（書頁 236 到 238）。書頁 239 到 240 是習題 10.1 到 10.15。\n\n書上開宗明義說這是第 4 章對完備性的最後一個應用，而且講得很直白：之所以拖到現在才做積分，就是因為要證積分存在，非用值域的完備性不可。結構是先造一把通用的工具，再拿它做一件具體的事。\n\n定理 10.1 是一條跟積分完全無關的一般結果：U 是某個賦範空間的子空間，T 是從 U 到 Banach 空間 W 的有界線性映射，那麼 T 可以唯一地延拓成閉包上的有界線性映射，而且範數一模一樣。證明很短：取閉包裡的一點與 U 裡收斂到它的序列，那個序列是 Cauchy 的，所以它的像也是 Cauchy 的，而 W 完備就給出極限；換一個序列會得到同一個值。範數相等是因為一邊被 T 界住、另一邊延拓本來就包含 T。\n\n接著把它套上去。一個區間的分割是含有兩端點的有限點集，階梯函數在那些開區間上是常數；它的積分就是每個值乘上自己那一段的長度。這個和跟用哪個分割描述無關：加一個點會把一項拆成兩項，可是加回去還是原來那一項，任意兩個分割則透過共同細分來比。階梯函數構成向量空間，積分在上面是線性的，而且被區間長度界住——所以定理 10.1 用得上了。\n\n引理 10.1 說每一個連續函數都落在階梯函數的閉包裡。緊緻性在這裡回來了：閉區間上的連續函數均勻連續，所以只要分割夠細，就造得出一個處處與它相差不到 ε 的階梯函數。定理 10.2 於是把前面重述一次：積分唯一地延拓成連續函數上的有界線性映射，值是任何一列收斂到 f 的階梯函數的積分的極限。\n\n可加性跟著出來，而微積分基本定理也還在：f 連續、F 是從左端點積到 x 的積分，那麼 F 可微而且導函數就是 f。第 4 章到此結束——完備性從 Cauchy 序列一路鋪到這裡，最後造出了積分。\n\n本影片為雙語教學動畫系列（繁體中文版）。\n\n本影片為獨立製作的學習導讀，非官方教材，與原書作者及出版社無關。\n講解為自行撰寫，動畫為自行繪製，不含原書頁面，也不提供原書的取得管道。",
+    "tags": [
+      "高等微積分",
+      "Advanced Calculus",
+      "Loomis",
+      "Sternberg",
+      "Riemann 積分",
+      "延拓定理",
+      "階梯函數",
+      "微積分基本定理",
+      "完備性",
+      "數學分析",
+      "大學數學"
+    ],
+    "language": "zh-TW"
+  },
+  {
+    "file": "manim_lessons/samples/output/advcalc_e65_en.mp4",
+    "title": "Advanced Calculus, Episode 65 | The Integral of a Parametrized Arc | Ch. 4, §10",
+    "description": "This episode is section 10 of chapter 4, the integral of a parametrized arc, pages 236 to 238 of Loomis and Sternberg's Advanced Calculus. Pages 239 to 240 are exercises 10.1 to 10.15.\n\nThe book opens by calling this the last application of completeness in the chapter, and is blunt about the reason for the delay: the integral waited until now because proving that it exists needs the completeness of the range. The shape of the section is to build one general tool and then use it for one concrete thing.\n\nTheorem 10.1 has nothing to do with integrals. Let U be a subspace of a normed space and T a bounded linear map from U into a Banach space W; then T extends, in exactly one way, to a bounded linear map on the closure of U, with the same norm. The proof is short: take a point of the closure and a sequence in U converging to it, note that the sequence is Cauchy so its images are Cauchy, and let the completeness of W supply the limit; a second sequence gives the same value. The norms agree because one side is bounded by T while the extension already contains T.\n\nThen the tool is applied. A partition of an interval is a finite set of points containing both ends, a step function is constant on its open intervals, and its integral is each value times the length of its interval. That sum does not depend on which partition describes the function: adding one point splits a term into two that add back to it, and any two partitions are compared through their common refinement. The step functions form a vector space, integration is linear on it, and it is bounded by the length of the interval, which is exactly what lets Theorem 10.1 be applied.\n\nLemma 10.1 says every continuous function lies in the closure of the step functions. Compactness comes back here: a continuous function on a closed interval is uniformly continuous, so a fine enough partition gives a step function within epsilon of it everywhere. Theorem 10.2 is then the recapitulation: the integral extends uniquely to a bounded linear map on the continuous functions, given by the limit of the integrals of any sequence of step functions converging to f.\n\nAdditivity comes along, and the fundamental theorem of calculus survives: if f is continuous and F is its integral from the left endpoint to x, then F is differentiable with derivative f. That ends chapter 4, where completeness ran from Cauchy sequences all the way here and built the integral at the end.\n\nPart of a bilingual animated teaching series (English edition).\n\nThis is an independently produced study guide. It is not official course material and is not affiliated with the authors or publisher of the book. The narration and animations are original work; no pages of the book are reproduced, and no copy of it is provided.",
+    "tags": [
+      "Advanced Calculus",
+      "Loomis",
+      "Sternberg",
+      "Riemann integral",
+      "extension theorem",
+      "step functions",
+      "fundamental theorem of calculus",
+      "completeness",
+      "real analysis",
+      "university mathematics"
+    ],
+    "language": "en"
+  }
+]
