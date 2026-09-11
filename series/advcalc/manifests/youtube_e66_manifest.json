@@ -1,0 +1,39 @@
+[
+  {
+    "file": "manim_lessons/samples/output/advcalc_e66_zh-TW.mp4",
+    "title": "《高等微積分》第 66 集｜複數系統｜Loomis & Sternberg 第 4 章 §11",
+    "description": "本集是 Loomis 與 Sternberg《Advanced Calculus》第 4 章第 11 節「複數系統」（書頁 240 到 243）。書頁 243 到 245 是習題 11.1 到 11.19。\n\n複數是繼有理數與實數之後，第三個必須研究的基本數域。幾乎每個人本來就把一個複數看成等同於一對實數，所以這個系統就是笛卡兒平面，再加上一些額外的結構。而把它跟那個向量底層區別開來的，只是多出來的那一個運算：複數乘法。定義的動機是把一對數寫成 x 加 i y、令 i 的平方等於負一，再照普通的代數規則乘開來。\n\n向量的運算加上這個乘法，讓平面成為一個交換代數。而且不只如此：一和零那一對是唯一的乘法單位元，而每一個非零元素都有乘法反元素——把這幾件事總結起來，就是說這個系統是一個域。這一點就換到了整節的全部：因為它是一個域，就可以拿來當向量空間理論裡新的純量域，第 1 章與第 2 章的整套發展把實數處處換成複數之後仍然成立。\n\n把一個實數送成第二個分量為零的那一對，這個映射保和也保積，所以實數是以子域的身分坐在裡面。那個神祕的 i 就是零和一那一對，它的平方真的是負一，於是一對數可以寫成 x 加 i y。把 x 加 i y 送成 x 減 i y 的映射也保和保積，所以它是這個域到自己的自同構，叫複共軛；而且除了恆等映射之外，它是唯一一個讓每個實數都不動的自同構。歐氏範數在這裡叫絕對值，它是可乘的——最漂亮的證法是注意到一個數乘上它的共軛就是絕對值的平方，同一個等式順便也把反元素交出來。\n\n最後是一個落差。因為實數是子域，每個複線性映射自動也是實線性的；可是反過來不成立。共軛就是那個見證：它是實線性的，但跟「乘 i」不交換，而它的差商完全由趨近的方向決定——沿實數方向趨近一，沿虛數方向趨近負一。所以一個映射可以實可微而不複可微。反過來說，冪級數自動就是複可微的，因為它在一點的微分就是「乘上逐項微分得到的那個數」，而那是複線性的運算；又因為非零複數可以拿來除，差商自己就收斂，導數變回一個真正的商。這一節收在代數基本定理與複數的指數函數。\n\n本影片為雙語教學動畫系列（繁體中文版）。\n\n本影片為獨立製作的學習導讀，非官方教材，與原書作者及出版社無關。\n講解為自行撰寫，動畫為自行繪製，不含原書頁面，也不提供原書的取得管道。",
+    "tags": [
+      "高等微積分",
+      "Advanced Calculus",
+      "Loomis",
+      "Sternberg",
+      "複數",
+      "複數乘法",
+      "複共軛",
+      "複可微",
+      "代數基本定理",
+      "數學分析",
+      "大學數學"
+    ],
+    "language": "zh-TW"
+  },
+  {
+    "file": "manim_lessons/samples/output/advcalc_e66_en.mp4",
+    "title": "Advanced Calculus, Episode 66 | The Complex Number System | Ch. 4, §11",
+    "description": "This episode is section 11 of chapter 4, the complex number system, pages 240 to 243 of Loomis and Sternberg's Advanced Calculus. Pages 243 to 245 are exercises 11.1 to 11.19.\n\nThe complex numbers are the third basic number field to study, after the rationals and the reals. Almost everybody already views a complex number as equivalent to a pair of real numbers, so the system is the Cartesian plane carrying some further structure, and what distinguishes it from that vector substratum is one extra operation: complex multiplication. The definition is motivated by writing a pair as x plus i y with i squared equal to minus one, and multiplying out by the ordinary laws of algebra.\n\nThe vector operations together with this multiplication make the plane a commutative algebra. More than that: the pair one, zero is the unique multiplicative identity and every nonzero element has a multiplicative inverse, and those facts are summarised by saying the system is a field. That single fact buys the whole section, because a field can be used as a new scalar field in vector space theory, and the entire development of chapters 1 and 2 stays valid with the reals replaced everywhere by the complex numbers.\n\nThe map sending a real number to the pair with second entry zero preserves sums and products, so the reals sit inside as a subfield. The mysterious i is the pair zero, one, whose square really is minus one, which is what lets a pair be written as x plus i y. The map sending x plus i y to x minus i y also preserves sums and products, so it is an automorphism of the field with itself, called complex conjugation, and apart from the identity it is the only automorphism leaving every real number fixed. The Euclidean norm is called the absolute value and it is multiplicative, most elegantly because a number times its conjugate is the square of the absolute value, an identity that also hands over the inverse.\n\nThen a gap. Since the reals are a subfield, every complex linear map is automatically real linear, but the converse fails. Conjugation is the witness: it is real linear, yet it does not commute with multiplication by i, and its difference quotient is decided entirely by the direction of approach, tending to one along the real direction and minus one along the imaginary one. So a map can be real differentiable without being complex differentiable. Power series, on the other hand, are automatically complex differentiable, since the differential at a point is multiplication by the term-by-term derivative and that is a complex linear operation; and because a nonzero complex number can be divided by, the difference quotient itself converges and the derivative is an honest quotient again. The section closes with the fundamental theorem of algebra and the complex exponential.\n\nPart of a bilingual animated teaching series (English edition).\n\nThis is an independently produced study guide. It is not official course material and is not affiliated with the authors or publisher of the book. The narration and animations are original work; no pages of the book are reproduced, and no copy of it is provided.",
+    "tags": [
+      "Advanced Calculus",
+      "Loomis",
+      "Sternberg",
+      "complex numbers",
+      "complex multiplication",
+      "complex conjugation",
+      "complex differentiability",
+      "fundamental theorem of algebra",
+      "real analysis",
+      "university mathematics"
+    ],
+    "language": "en"
+  }
+]
