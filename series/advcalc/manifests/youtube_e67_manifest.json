@@ -1,0 +1,39 @@
+[
+  {
+    "file": "manim_lessons/samples/output/advcalc_e67_zh-TW.mp4",
+    "title": "《高等微積分》第 67 集｜弱方法｜Loomis & Sternberg 第 4 章 §12",
+    "description": "本集是 Loomis 與 Sternberg《Advanced Calculus》第 4 章加星號的第 12 節「弱方法」（書頁 245 到 247）。這一節整節沒有習題，講完直接進第 5 章；那是這本書裡第二次這樣（第一次是第 2 章加星號的第 7 節）。\n\n出發點是兩個已經證過的事實：有限維空間上所有範數都等價，而定義域有限維的線性映射自動有界。合起來讓人懷疑，這種空間的極限理論也許根本不需要範數。這一節就去查這件事。做法是把一個向量值的映射 F，換成研究所有由對偶空間泛函得到的實值映射。\n\n定理 12.1 說：V 有限維時，一個序列收斂（用任何一個範數，因此用每一個）的充要條件是，對偶空間裡每個泛函都把它送成收斂的實數列。必要的那一半沒有內容，因為泛函自動連續；反過來那一半是這節唯一的計算：取一組基，一範數剛好就是那些座標泛函的差的絕對值之和。而那 n 個泛函一個都不能少——漏掉哪一個，那個泛函的核就是測不到的方向。在一般的賦範空間裡，每個有界泛函作用上去都收斂就叫弱收斂；範數收斂推得弱收斂在任何賦範空間都成立，而有限維才有反過來。\n\n同樣一招把參數化弧的積分與微分丟回單變數實函數的標準微積分。積分的弱定義是：積分是那個唯一的向量，使每個泛函在它上面的值等於複合的積分；唯一性來自「泛函映到那個積分」是線性的，所以它落在二次對偶空間裡，而第 2 章定理 3.2 的自然同構說那裡每個元素都由唯一一個向量給出。微分照抄同一句話。微積分基本定理於是變成一行：弱定義把複合變成積分，標準的基本定理把它微分掉，再用微分的弱定義翻回來。\n\n有一個結論弱方法拿不到：積分的範數不超過區間長度乘上上界範數。它要的是定理 12.2——二次對偶像的範數等於原向量的範數，也就是要找到一個範數一的泛函把範數取到，幾何上是單位球面在那一點的切超平面。書上說這種切平面顯然存在，可是這門課不證。假設了它，剩下就只是一串不等式。第 4 章到此結束。\n\n畫面上的數字都是算出來的：弧取 f(t) = (cos t, sin t) 在 0 到 π/2 上，V 取平面配一範數，所以對偶範數是上界範數、對偶單位球面是一個正方形。積分的弱定義用 Simpson 數值積分對五個泛函逐一驗過，微分與基本定理用中央差商驗過（步長縮十倍、誤差縮一百倍），而定理 12.2 的賦範泛函、切線與它碰到的整條邊都是搜出來的。\n\n本影片為雙語教學動畫系列（繁體中文版）。\n\n本影片為獨立製作的學習導讀，非官方教材，與原書作者及出版社無關。\n講解為自行撰寫，動畫為自行繪製，不含原書頁面，也不提供原書的取得管道。",
+    "tags": [
+      "高等微積分",
+      "Advanced Calculus",
+      "Loomis",
+      "Sternberg",
+      "弱方法",
+      "弱收斂",
+      "對偶空間",
+      "二次對偶",
+      "微積分基本定理",
+      "數學分析",
+      "大學數學"
+    ],
+    "language": "zh-TW"
+  },
+  {
+    "file": "manim_lessons/samples/output/advcalc_e67_en.mp4",
+    "title": "Advanced Calculus, Episode 67 | Weak Methods | Ch. 4, §12",
+    "description": "This episode is starred section 12 of chapter 4, weak methods, pages 245 to 247 of Loomis and Sternberg's Advanced Calculus. The section has no exercises at all and runs straight into chapter 5, only the second time that happens in this book.\n\nThe starting point is two facts already proved: all norms on a finite-dimensional space are equivalent, and every linear map with a finite-dimensional domain is automatically bounded. Together they suggest that the limit theory of such spaces might be had without norms at all, and this section looks into it. The device is to replace a vector-valued map by the whole family of real-valued maps obtained from functionals in the dual space.\n\nTheorem 12.1 says that if V is finite-dimensional, a sequence converges, with respect to any and so every norm, if and only if every functional in the dual carries it to a convergent sequence of reals. One half has no content, since a functional is automatically continuous; the converse is the only computation in the section, and it works because for a basis the one-norm is exactly the sum of the absolute values of the coordinate differences. Not one of those n functionals can be dropped: whichever is left out, its null space is the direction the test cannot see. In a general normed space, convergence under every bounded functional is the definition of weak convergence, norm convergence always implies it, and only in finite dimension does the converse hold.\n\nThe same device throws the integration and differentiation of parametrized arcs back to the calculus of real functions of one variable. The weak integral is the unique vector on which every functional takes the value of the integral of the composite; uniqueness holds because sending a functional to that integral is itself linear, so it lies in the second dual, and the natural isomorphism of chapter 2 says each element there comes from exactly one vector. Differentiation reads the same way, and the fundamental theorem of calculus becomes one line.\n\nOne conclusion weak methods do not reach is the norm inequality for the integral. It needs Theorem 12.2, that the second dual image has the same norm, which asks for a functional of norm one attaining the norm, geometrically a hyperplane tangent to the unit sphere at that point. The book calls such tangent planes geometrically evident and drops the matter; granting it, the rest is a chain of inequalities. Chapter 4 ends here.\n\nEvery number on screen is computed. The arc is the quarter circle from zero to pi over two, V is the plane under the one-norm, so the dual carries the sup norm and its unit sphere is a square. The weak integral is checked against Simpson quadrature for five functionals, the derivative and the fundamental theorem against central differences (ten times the step, a hundred times the error), and the norming functional of Theorem 12.2, its tangent line and the whole edge that line touches are all found by search.\n\nPart of a bilingual animated teaching series (English edition).\n\nThis is an independently produced study guide. It is not official course material and is not affiliated with the authors or publisher of the book. The narration and animations are original work; no pages of the book are reproduced, and no copy of it is provided.",
+    "tags": [
+      "Advanced Calculus",
+      "Loomis",
+      "Sternberg",
+      "weak methods",
+      "weak convergence",
+      "dual space",
+      "second dual",
+      "fundamental theorem of calculus",
+      "real analysis",
+      "university mathematics"
+    ],
+    "language": "en"
+  }
+]
