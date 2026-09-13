@@ -1,0 +1,38 @@
+[
+  {
+    "file": "manim_lessons/samples/output/advcalc_e69_zh-TW.mp4",
+    "title": "《高等微積分》第 69 集｜正交投影（上）｜Loomis & Sternberg 第 5 章 §2",
+    "description": "本集是 Loomis 與 Sternberg《Advanced Calculus》第 5 章第 2 節「正交投影」的前半（書頁 252 到 254）。第 2 節共 5 頁，分成兩集；後半（正交規範序列、Bessel 不等式、基底、Gram–Schmidt 與 Riesz 表示）是下一集。\n\n幾何裡最重要的手法之一，是從一點往一條線或一個平面作垂線，再用直角三角形論證。這一節就是把這一招搬進 pre-Hilbert 空間。M 是子空間、α 是任一向量時，從 α 落到 M 的垂足，就是 M 裡使 α 減 μ 垂直 M 的那個 μ。把 α 寫成 μ 加上 α 減 μ，就看得出來：每個 α 都有垂足，等價於 V 分解成 M 與它的正交補的直和。\n\n引理 2.1 說垂足就是最佳近似：μ 在 M 裡時，α 減 μ 垂直 M 的充要條件，是 μ 為 M 裡離 α 最近的唯一一點。一個方向直接用畢氏定理；反過來則是把 α 減 μ 再加 t ξ 的長度平方展開，得到一個對每個實數 t 都非負的二次式——內積不是零的話，取跟它反號的 t 就會讓式子變負。\n\n於是找垂足的辦法有了：取 M 裡一列點，讓它們到 α 的距離趨近 M 到 α 的距離，再把垂足定義成極限。關鍵在於引理 2.2：這種序列一定是 Cauchy 的，證明就是平行四邊形法則，而中點也在 M 裡這件事給出後面那一項的界。可是 M 不完備的時候，極限可能不存在。定理 2.1 因此說：M 完備時 V 就分解成那個直和，特別是任何有限維子空間與 Hilbert 空間的任何閉子空間。\n\n剩下的是投影本身。沿正交補到 M 的那個投影叫正交投影，在 M 的各種補空間給出的投影裡是被挑出來的那一個，因為它同時是垂足與最佳近似。引理 2.3：有限多個完備、兩兩正交的子空間，投影加起來就是直和上的投影。引理 2.4：到單一非零向量張成的一維子空間的投影，是內積除以長度平方再乘那個向量，而這個係數就叫 Fourier 係數。\n\n畫面上的數字都是算出來的。平面上 M 是一條過原點的直線，垂足、距離、以及「在垂足以外的點上那個二次式會掉到零以下」都逐項算過。函數空間裡 α 是拿四個正弦組出來的，其中三個張成 M，所以積分把前三個係數原封不動還回來（1.0000、0.6000、0.3500），而剩下的第四個正弦正好就是殘差，範數 0.6267。\n\n本影片為雙語教學動畫系列（繁體中文版）。\n\n本影片為獨立製作的學習導讀，非官方教材，與原書作者及出版社無關。\n講解為自行撰寫，動畫為自行繪製，不含原書頁面，也不提供原書的取得管道。",
+    "tags": [
+      "高等微積分",
+      "Advanced Calculus",
+      "Loomis",
+      "Sternberg",
+      "正交投影",
+      "最佳近似",
+      "垂足",
+      "Fourier 係數",
+      "Hilbert 空間",
+      "數學分析",
+      "大學數學"
+    ],
+    "language": "zh-TW"
+  },
+  {
+    "file": "manim_lessons/samples/output/advcalc_e69_en.mp4",
+    "title": "Advanced Calculus, Episode 69 | Orthogonal Projection I | Ch. 5, §2",
+    "description": "This episode is the first half of section 2 of chapter 5, orthogonal projection, pages 252 to 254 of Loomis and Sternberg's Advanced Calculus. The section runs five pages and takes two episodes; orthonormal sequences, Bessel's inequality, bases, Gram-Schmidt and the Riesz theorem come next.\n\nOne of the most important devices in geometry is dropping a perpendicular from a point to a line or a plane and then arguing with right triangles, and this section carries it into a pre-Hilbert space. For a subspace M and any vector, the foot of the perpendicular is the vector in M whose difference from the given one is orthogonal to M. Writing the vector as the foot plus the difference shows that having a foot for every vector is the same as splitting the space into M and its orthogonal complement.\n\nLemma 2.1 identifies the foot with the best approximation: for a vector in M, the difference being orthogonal to M is equivalent to its being the unique closest point of M. One direction is the Pythagorean theorem. For the converse, expanding the square of the difference plus t times any vector of M gives a quadratic that must be non-negative for every real t, and a t of the opposite sign would make it negative unless the product vanishes.\n\nSo one looks for the foot as a limit: take a sequence in M whose distances tend to the distance from the vector to M. Lemma 2.2 says such a sequence is always Cauchy, proved by the parallelogram law, with the midpoint lying in M bounding the second term. But its limit need not exist when M is incomplete, so Theorem 2.1 reads: if M is complete the space splits as that direct sum, which covers every finite-dimensional subspace and every closed subspace of a Hilbert space.\n\nThe rest is the projection itself. The projection on M along the orthogonal complement is called the orthogonal projection, and among all projections on M it is the distinguished one, being at once the foot of the perpendicular and the best approximation. Lemma 2.3: for finitely many complete, pairwise orthogonal subspaces the projections add. Lemma 2.4: the projection on the span of a single nonzero vector is the product divided by its square norm times that vector, and that number is the Fourier coefficient.\n\nEvery number on screen is computed. In the plane M is a line through the origin, and the foot, the distances and the fact that the quadratic dips below zero at a point that is not the foot are all worked out. In the function space the target is built from four sines, three of which span M, so the integral returns the first three coefficients unchanged, 1.0000, 0.6000 and 0.3500, and the fourth sine is exactly the residual, of norm 0.6267.\n\nPart of a bilingual animated teaching series (English edition).\n\nThis is an independently produced study guide. It is not official course material and is not affiliated with the authors or publisher of the book. The narration and animations are original work; no pages of the book are reproduced, and no copy of it is provided.",
+    "tags": [
+      "Advanced Calculus",
+      "Loomis",
+      "Sternberg",
+      "orthogonal projection",
+      "best approximation",
+      "Fourier coefficient",
+      "Hilbert space",
+      "real analysis",
+      "university mathematics"
+    ],
+    "language": "en"
+  }
+]
