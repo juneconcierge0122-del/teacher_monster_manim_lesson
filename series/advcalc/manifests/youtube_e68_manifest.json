@@ -1,0 +1,41 @@
+[
+  {
+    "file": "manim_lessons/samples/output/advcalc_e68_zh-TW.mp4",
+    "title": "《高等微積分》第 68 集｜純量積｜Loomis & Sternberg 第 5 章 §1",
+    "description": "本集是 Loomis 與 Sternberg《Advanced Calculus》第 5 章第 1 節「純量積」（書頁 247 到 251，含章首引言）。書頁 251 到 252 是習題 1.1 到 1.10。\n\n第 5 章很短，可是它打開一整片新的線性分析。書上的問題是：two-norm 背後的東西是什麼？答案是純量積。這種範數是普通歐氏長度在有限與無限維的類比，帶著歐氏幾何幾乎所有概念——夾角、垂直、畢氏定理，以及大量的剛體運動。無限維時衝擊最大：正交基大量存在，而基底展開變成收斂的無窮級數，Fourier 級數就是這種展開的一例；完備的純量積空間就叫 Hilbert 空間。\n\n定義是三條：固定第二個變數時對第一個線性、對稱、以及正定。把正定換成「對每個向量都大於等於零」這個較弱的條件，就叫半純量積。兩個重要的例子是 ℝⁿ 上的座標乘積之和與連續函數上的 f 乘 g 的積分——它們正好解釋了兩個 two-norm 是從哪裡來的。複空間要把對稱換成 Hermitian 對稱，書上明說只做實數的情形。由前兩條可以推出對第二個變數也線性，所以半純量積就是一個對稱雙線性泛函，而它的二次形式正定或半正定。\n\n定理 1.1 是 Schwarz 不等式，對任何半純量積都成立。證明只有一行：把 ξ 減 t η 的自內積展開，它對每個實數 t 都非負，是不變號的二次式，判別式因此不能是正的。也可以把 t 代成內積除以 η 的自內積直接化簡；而 η 的自內積等於零的退化情形要另外講一句。推論是：純量積正定時，自內積的平方根是一個範數——三角不等式就是把和的平方展開再用 Schwarz 換掉中間那一項。範數這樣來的空間叫 pre-Hilbert 空間，完備的叫 Hilbert 空間，ℝⁿ 配這個範數就是歐氏 n 維空間。\n\n後半是正交：內積為零就說兩個向量垂直。引理 1.1 說「垂直一個集合」就等於「垂直它線性包的閉包」，所以任何子集的正交補都是閉子空間。引理 1.2 給出平行四邊形法則與畢氏定理，以及正交族的版本——交叉項全部消掉。推論：彼此正交的非零向量必獨立。\n\n畫面上的數字都是算出來的：V 取平面與 C([0,1])（純量積是 f 乘 g 的積分）。Schwarz 證明裡那個二次式畫了兩對函數，一對幾乎成比例（比值 0.9691，最低點只有 0.0203），一對差得遠（0.5000，最低點 0.2500）。夾角三個例子分別算出 14.29 度、60 度與 90 度。連續函數在 two-norm 下不完備用習題 1.10 的斜坡列畫出來。而第一拍問「哪個範數是從純量積來的」，最後一拍用平行四邊形法則回答：兩範數兩邊相等，一範數與上界範數分別差 2.24 與 1.68。\n\n本影片為雙語教學動畫系列（繁體中文版）。\n\n本影片為獨立製作的學習導讀，非官方教材，與原書作者及出版社無關。\n講解為自行撰寫，動畫為自行繪製，不含原書頁面，也不提供原書的取得管道。",
+    "tags": [
+      "高等微積分",
+      "Advanced Calculus",
+      "Loomis",
+      "Sternberg",
+      "純量積",
+      "內積",
+      "Schwarz 不等式",
+      "Hilbert 空間",
+      "正交",
+      "平行四邊形法則",
+      "數學分析",
+      "大學數學"
+    ],
+    "language": "zh-TW"
+  },
+  {
+    "file": "manim_lessons/samples/output/advcalc_e68_en.mp4",
+    "title": "Advanced Calculus, Episode 68 | Scalar Products | Ch. 5, §1",
+    "description": "This episode is section 1 of chapter 5, scalar products, pages 247 to 251 of Loomis and Sternberg's Advanced Calculus, including the chapter introduction. Pages 251 to 252 are exercises 1.1 to 1.10.\n\nChapter 5 is short but opens a whole new branch of linear analysis. The question it starts from is what lies behind the two-norms, and the answer is the scalar product. Such norms are the finite and infinite-dimensional analogues of ordinary Euclidean length, and they carry almost every concept of Euclidean geometry with them: angles, perpendicularity, the Pythagorean theorem. The impact is greatest in infinite dimension, where orthogonal bases abound and a basis expansion becomes a convergent series, the Fourier series being one example; a complete scalar product space is called a Hilbert space.\n\nThe definition has three conditions: linearity in the first variable when the second is held fixed, symmetry, and positive definiteness. Weakening the third to mere non-negativity gives a semiscalar product. The two important examples are the sum of coordinate products on real n-space and the integral of f times g on the continuous functions, and they are exactly what explains both two-norms. A complex space needs Hermitian symmetry instead, and the book studies only the real case. The first two conditions give linearity in the second variable too, so a semiscalar product is a symmetric bilinear functional whose quadratic form is definite or semidefinite.\n\nTheorem 1.1 is the Schwarz inequality, valid for any semiscalar product, and the proof is one line: expand the self-product of the first vector minus t times the second. It is never negative, so this quadratic in t never changes sign and cannot have a positive discriminant. One can also substitute the ratio for t directly, with the degenerate case handled separately. The corollary is that the square root of the self-product is a norm, the triangle inequality coming from Schwarz applied to the middle term of the expanded square. A space whose norm arises this way is a pre-Hilbert space, a complete one a Hilbert space, and real n-space under this norm is Euclidean n-space.\n\nThe second half is orthogonality: two vectors are orthogonal when their product is zero. Lemma 1.1 says that being orthogonal to a set is the same as being orthogonal to the closure of its linear span, so every orthogonal complement is a closed subspace. Lemma 1.2 gives the parallelogram law and the Pythagorean theorem, together with the version for an orthogonal family, where the mixed terms all drop out. The corollary: orthogonal nonzero vectors are independent.\n\nEvery number on screen is computed, in the plane and in the continuous functions on the unit interval under the integral of f times g. The quadratic from the Schwarz proof is drawn for two pairs, one nearly proportional, ratio 0.9691 with the parabola dipping to 0.0203, and one far from it, 0.5000 dipping to 0.2500. Three angles come out at 14.29, 60 and 90 degrees. The failure of completeness in the two-norm is drawn with the ramps of exercise 1.10. And the first beat asks which norm comes from a scalar product, which the last beat answers with the parallelogram law: the two-norm balances, the one-norm and the sup-norm miss by 2.24 and 1.68.\n\nPart of a bilingual animated teaching series (English edition).\n\nThis is an independently produced study guide. It is not official course material and is not affiliated with the authors or publisher of the book. The narration and animations are original work; no pages of the book are reproduced, and no copy of it is provided.",
+    "tags": [
+      "Advanced Calculus",
+      "Loomis",
+      "Sternberg",
+      "scalar product",
+      "inner product",
+      "Schwarz inequality",
+      "Hilbert space",
+      "orthogonality",
+      "parallelogram law",
+      "real analysis",
+      "university mathematics"
+    ],
+    "language": "en"
+  }
+]
