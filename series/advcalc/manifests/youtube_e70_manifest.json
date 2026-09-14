@@ -1,0 +1,41 @@
+[
+  {
+    "file": "manim_lessons/samples/output/advcalc_e70_zh-TW.mp4",
+    "title": "《高等微積分》第 70 集｜正交投影（下）｜Loomis & Sternberg 第 5 章 §2",
+    "description": "本集是 Loomis 與 Sternberg《Advanced Calculus》第 5 章第 2 節「正交投影」的後半（書頁 254 到 256），第 2 節到此結束。習題 2.1 到 2.11 在書頁 256 到 257，第 3 節「自伴變換」從 257 起。\n\n整段後半都從一個等式長出來。把 Fourier 級數的前 n 項加起來，那個部分和就是向量在這 n 個向量張成的空間上的投影（上一集的引理 2.3 與 2.4），所以差垂直於它，畢氏定理給出：差的平方等於向量的平方減掉前 n 個係數的平方和。\n\n這個等式往一邊讀是 Bessel 不等式：左邊是長度平方不可能為負，所以係數平方和對每個 n 都不超過向量的長度平方，級數因此收斂。往另一邊讀是 Parseval：部分和收斂到那個向量，充要條件就是係數平方和收斂到它的長度平方。書上把那個形式級數叫做 Fourier 級數。\n\n接著是基底：無窮的正交規範序列，如果空間裡每個元素都是自己 Fourier 級數的和，就叫基底——注意是級數收斂，不是有限展開。定理 2.3 說這等價於它的線性包稠密，證明只用「Fourier 部分和是最佳近似」把任意 ε 近似夾住。推論：Hilbert 空間裡，基底的充要條件是那組向量的正交補只有零。\n\n然後是一句評註與兩個結果。用正交基時，向量在某個基向量上的係數就是 Fourier 係數，只由那個基向量決定；一般基底不是這樣，這部分解釋了正交基被偏愛的地位。引理 2.5 說獨立序列都可以正交化，作法就是減掉在前面那些向量上的投影。最後定理 2.4：把向量送成「跟它取內積」這個泛函，得到的映射線性、單射、等距，而它是同構的充要條件就是空間完備。\n\n畫面上的數字都是算出來的。正交規範序列取 [0, π] 上的正弦乘上根號二除以 π，要展開的是常數函數，它的級數收斂得夠慢，慢到畫得出兩端翹起來的部分：n = 7 時係數平方和才走到 2.9832，離 π 還有 0.1583。反例取只有偶數的那一組——常數函數的係數全是零，Bessel 成立而 Parseval 差了整個長度平方。正交化的例子照書上算 1、x、x 平方，得到 1、x 減二分之一、x 平方減 x 加六分之一。\n\n本影片為雙語教學動畫系列（繁體中文版）。\n\n本影片為獨立製作的學習導讀，非官方教材，與原書作者及出版社無關。\n講解為自行撰寫，動畫為自行繪製，不含原書頁面，也不提供原書的取得管道。",
+    "tags": [
+      "高等微積分",
+      "Advanced Calculus",
+      "Loomis",
+      "Sternberg",
+      "Bessel 不等式",
+      "Parseval",
+      "Fourier 級數",
+      "正交規範基底",
+      "Gram-Schmidt",
+      "Hilbert 空間",
+      "數學分析",
+      "大學數學"
+    ],
+    "language": "zh-TW"
+  },
+  {
+    "file": "manim_lessons/samples/output/advcalc_e70_en.mp4",
+    "title": "Advanced Calculus, Episode 70 | Orthogonal Projection II | Ch. 5, §2",
+    "description": "This episode is the second half of section 2 of chapter 5, orthogonal projection, pages 254 to 256 of Loomis and Sternberg's Advanced Calculus, which completes the section. Exercises 2.1 to 2.11 run from 256 to 257 and section 3, self-adjoint transformations, begins on 257.\n\nAll of it grows out of one identity. Summing the first n terms of the Fourier series gives the projection of the vector on the span of those n vectors, by the two lemmas of the last episode, so the difference is orthogonal to it and the Pythagorean theorem gives: the square of the difference is the squared norm minus the sum of the squares of the first n coefficients.\n\nRead one way that is Bessel's inequality: the left side is a squared length and cannot be negative, so the sum of the squared coefficients never exceeds the squared norm and the series converges. Read the other way it is Parseval: the partial sums converge to the vector exactly when the squared coefficients sum to the squared norm. The formal series is called the Fourier series.\n\nThen bases. An infinite orthonormal sequence is a basis when every element of the space is the sum of its own Fourier series, meaning the series converges, not that there is a finite expansion. Theorem 2.3 shows this is the same as the linear span being dense, using only that the Fourier partial sum is the best approximation. The corollary: in a Hilbert space it is a basis exactly when nothing but zero is orthogonal to all of it.\n\nA remark and two results close the section. With an orthogonal basis the coefficient at a basis vector is the Fourier coefficient and depends on that vector alone, which is not true of an arbitrary basis and partly explains the favoured position of orthogonal bases. Lemma 2.5 orthogonalises any independent sequence by subtracting projections on the earlier vectors. And Theorem 2.4: sending a vector to the functional that takes the product with it gives a linear, injective isometry which is an isomorphism exactly when the space is complete.\n\nEvery number on screen is computed. The orthonormal sequence is the sines on the interval from zero to pi scaled by the square root of two over pi, and the vector expanded is the constant function, whose series converges slowly enough to draw the overshoot at both ends: at seven terms the squared coefficients have only reached 2.9832, still 0.1583 short of pi. The counterexample is the even sines alone, against which the constant has every coefficient zero, so Bessel holds while Parseval fails by the whole squared norm. The orthogonalisation runs on one, x and x squared, returning the book's own answer.\n\nPart of a bilingual animated teaching series (English edition).\n\nThis is an independently produced study guide. It is not official course material and is not affiliated with the authors or publisher of the book. The narration and animations are original work; no pages of the book are reproduced, and no copy of it is provided.",
+    "tags": [
+      "Advanced Calculus",
+      "Loomis",
+      "Sternberg",
+      "Bessel inequality",
+      "Parseval",
+      "Fourier series",
+      "orthonormal basis",
+      "Gram-Schmidt",
+      "Hilbert space",
+      "real analysis",
+      "university mathematics"
+    ],
+    "language": "en"
+  }
+]
