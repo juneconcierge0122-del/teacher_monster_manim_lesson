@@ -1,0 +1,41 @@
+[
+  {
+    "file": "manim_lessons/samples/output/advcalc_e71_zh-TW.mp4",
+    "title": "《高等微積分》第 71 集｜自伴變換｜Loomis & Sternberg 第 5 章 §3",
+    "description": "本集是 Loomis 與 Sternberg《Advanced Calculus》第 5 章第 3 節「自伴變換」（書頁 257 到 260）。書頁 260 到 261 是習題 3.1 到 3.14。\n\n準 Hilbert 空間裡的 T 叫自伴，如果對每一對 α、β 都有 (Tα, β) = (α, Tβ)——也就是說 T 可以在內積裡從一邊搬到另一邊。這句話有兩個等價的說法。第一，在把 V 嵌入共軛空間的那個映射 θ 底下，T 變成自己的伴隨：T 星合成 θ 等於 θ 合成 T。第二是引理 3.1：在有限維 Hilbert 空間裡，對一組正交規範基而言，T 自伴等價於它的矩陣對稱。要強調的是正交規範這個前提——同一個自伴變換，換成只有正交而沒有正規化的基底，矩陣就不對稱了。\n\n自伴而且 (Tξ, ξ) 恆非負的 T 叫非負。這時候把 [ξ, η] 定成 (Tξ, η)，得到的是一個半純量積：對稱來自自伴，非負來自假設。所以 Schwarz 不等式可以用，取 η 等於 Tξ 就得到引理 3.2：‖Tξ‖ 的平方不超過 ‖T‖ 乘上 (Tξ, ξ)。真正要用的是它的推論——(Tξ, ξ) 一等於零，右邊就是零，左邊被夾死，Tξ 只好是零。\n\n定理 3.1 整個就是這一句的應用。在單位球面上取 m 為 (Tξ, ξ) 的上確界；球面有界又閉所以緊緻，連續函數一定取得到，設在 α 上取到。m 減 T 是非負的自伴變換，而「最大值在 α 取到」寫出來就是 ((m − T)α, α) 等於零，引理 3.2 於是逼出 (m − T)α 等於零，也就是 Tα 等於 mα——那個最大值點自己就是特徵向量。接著 α 的正交補在 T 底下不變（把 T 搬過去，碰到特徵值方程，剩下的是零），在裡面重做一次，維數每次掉一，最後得到一組全由特徵向量組成的正交規範基。\n\n把相同的特徵值歸成一組得到子空間 M j：它們互相正交、直和是 V，而 T 限制在每一個上面就是 λ j 乘恆等。引理 3.3 說每個特徵向量都落在某個 M j 裡，於是定理 3.2：那個分解與那些 λ j 是唯一的，基向量本身不是——有重根的時候，那個平面裡任何一組正交規範對都能用。有了特徵基底，計算全部退化成算術：T 平方的特徵值平方，反元素存在的充要條件是沒有特徵值等於零，任何多項式 P 都把 β i 送成 P(r i) 乘 β i。\n\n最後是反面。一般的 T 可能連一個特徵向量都沒有：平面上轉九十度的那個映射，特徵多項式是 λ 平方加一，在實數上不可約，而且每一個方向都被轉走九十度，一個都沒留下。換到複二維空間，同一個矩陣的特徵值就成了正負 i。定理 3.3 收尾：特徵值是每個使 p(T) 等於零的多項式 p 的根，而且恰好是極小多項式的根。\n\n本影片為雙語教學動畫系列（繁體中文版）。\n\n本影片為獨立製作的學習導讀，非官方教材，與原書作者及出版社無關。\n講解為自行撰寫，動畫為自行繪製，不含原書頁面，也不提供原書的取得管道。",
+    "tags": [
+      "高等微積分",
+      "Advanced Calculus",
+      "Loomis",
+      "Sternberg",
+      "自伴變換",
+      "特徵值",
+      "特徵向量",
+      "譜定理",
+      "正交規範基",
+      "極小多項式",
+      "數學分析",
+      "大學數學"
+    ],
+    "language": "zh-TW"
+  },
+  {
+    "file": "manim_lessons/samples/output/advcalc_e71_en.mp4",
+    "title": "Advanced Calculus, Episode 71 | Self-Adjoint Transformations | Ch. 5, §3",
+    "description": "This episode is section 3 of chapter 5, self-adjoint transformations, pages 257 to 260 of Loomis and Sternberg's Advanced Calculus. Pages 260 to 261 are exercises 3.1 to 3.14.\n\nAn element T of Hom V is self-adjoint when the product of T alpha with beta equals the product of alpha with T beta for every pair, which says that T can be moved from one side of the scalar product to the other. There are two equivalent readings. First, under the injection theta of V into its conjugate space, T becomes its own adjoint: T star composed with theta equals theta composed with T. Second, Lemma 3.1: in a finite-dimensional Hilbert space, against an orthonormal basis, T is self-adjoint exactly when its matrix is symmetric. The orthonormality matters, and the episode shows the same self-adjoint transformation written against a basis that is orthogonal but not normalised, where the symmetry is gone.\n\nA self-adjoint T whose value on the diagonal is never negative is called nonnegative. Then the bracket of xi and eta, defined as the product of T xi with eta, is a semiscalar product: symmetric because T is self-adjoint, nonnegative by assumption. Schwarz therefore applies, and taking eta to be T xi gives Lemma 3.2: the squared norm of T xi is at most the norm of T times the product of T xi with xi. What gets used is the consequence. If that number is zero the right side is zero, the left side is squeezed, and T xi must vanish.\n\nTheorem 3.1 is that one sentence applied. Let m be the supremum of the product of T xi with xi over the unit sphere; the sphere is bounded and closed, so a continuous function attains it, say at alpha. Now m minus T is a nonnegative self-adjoint transformation, and saying the maximum is attained at alpha is saying that m minus T applied to alpha, paired with alpha, is zero. Lemma 3.2 turns that into the vector equation, so T alpha is m alpha: the maximiser is itself an eigenvector. The orthogonal complement of alpha is carried into itself by T, since moving T across meets the eigenvalue equation and leaves a multiple of zero, so the same argument runs inside it and the dimension drops by one each time, producing an orthonormal basis of eigenvectors.\n\nGrouping the equal eigenvalues gives subspaces which are mutually orthogonal, sum to V, and on each of which T is a scalar times the identity. Lemma 3.3 places every eigenvector inside one of them, which is Theorem 3.2: that decomposition and those scalars are unique, though the basis vectors are not, since with a repeated eigenvalue any orthonormal pair inside the plane will serve. With such a basis every computation becomes arithmetic on the eigenvalues: squaring squares them, the inverse exists exactly when none is zero, and any polynomial sends an eigenvector to that polynomial at its eigenvalue times the vector.\n\nThe section closes on what fails without self-adjointness. An arbitrary transformation need not have any eigenvector: the rotation of the plane by ninety degrees has characteristic polynomial lambda squared plus one, irreducible over the reals, and turns every direction through a right angle, so none survives. Over complex two-space the same matrix has eigenvalues plus and minus i. Theorem 3.3 ends the section: the eigenvalues of T are the roots of every polynomial annihilating it, and exactly the roots of its minimal polynomial.\n\nPart of a bilingual animated teaching series (English edition).\n\nThis is an independently produced study guide. It is not official course material and is not affiliated with the authors or publisher of the book. The narration and animations are original work; no pages of the book are reproduced, and no copy of it is provided.",
+    "tags": [
+      "Advanced Calculus",
+      "Loomis",
+      "Sternberg",
+      "self-adjoint",
+      "eigenvalues",
+      "eigenvectors",
+      "spectral theorem",
+      "orthonormal basis",
+      "minimal polynomial",
+      "real analysis",
+      "university mathematics"
+    ],
+    "language": "en"
+  }
+]
