@@ -1,0 +1,41 @@
+[
+  {
+    "file": "manim_lessons/samples/output/advcalc_e72_zh-TW.mp4",
+    "title": "《高等微積分》第 72 集｜正交變換｜Loomis & Sternberg 第 5 章 §4",
+    "description": "本集是 Loomis 與 Sternberg《Advanced Calculus》第 5 章第 4 節「正交變換」（書頁 262 到 263）。書頁 263 到 264 是習題 4.1 到 4.8。\n\n這一節做兩件事。第一件是把伴隨搬回 V 裡。第 2 節收在定理 2.4——θ 從 V 到共軛空間是同構的充要條件，就是 V 完備。所以 V 是 Hilbert 空間時 θ 可逆，Hom V 星裡的伴隨 T 星就可以用 θ 共軛回來，得到 θ 反 合成 T 星 合成 θ，它落在 Hom V 裡。Hilbert 空間理論說的伴隨指的正是這個映射。搬回來之後它由 (Tα, β) = (α, T星β) 這個恆等式唯一決定，引理 3.1 那段矩陣計算一字不改地推廣過來說明它的矩陣就是轉置，而「T 自伴」也就簡化成一行：T 等於 T 星。書上另外給了一個不繞共軛空間的直接定義：固定 η，映射「ξ 送到 (Tξ, η)」線性而且有界，所以是共軛空間的元素，定理 2.4 說它由唯一一個向量代表，而那個對應本身線性有界，就是 T 星。\n\n第二件是正交變換。T 叫正交，意思是它保純量積：對每一對 α、β 都有 (Tα, Tβ) = (α, β)。用剛才那個伴隨恆等式改寫一次，它完全等價於 T 星 T 等於恆等。保純量積就保長度，所以正交的 T 一定單射；V 有限維時單射就可逆，而可逆之後那個條件就寫成 T 星等於 T 的反元素。要注意鏡射也是正交的——行列式是負一——所以正交不等於旋轉。在 Hom R n 裡寫成矩陣，條件逐項就是 t 的第 i 欄與第 j 欄的內積等於 δ i j，也就是各欄構成一組正交規範集，這是定理 4.1：T 正交的充要條件是標準基的像又是一組正交規範基。\n\n接著兩個定理把上一集接過來。定理 4.2：對稱矩陣 t 一定存在正交矩陣 b，使得 b 反 t b 是對角的——這就是上一集的譜定理換個說法，把正交規範特徵基取成 b 的各欄就行。定理 4.3 是極分解：有限維 Hilbert 空間上任何可逆的 T 都寫成 R S，R 正交、S 自伴而且正。關鍵在 T 星 T 對任何 T 都自伴，而它的特徵值 r i 等於 ‖T φ i‖ 的平方，T 可逆時全都嚴格大於零，所以正的平方根 S 定義得出來；然後驗算 S 合成 T 反 是正交的，那是一串五個等號：S 搬過去變 S 平方、S 平方就是 T 星 T、T 星 搬過去、T 與 T 反 消掉，剩下 (α, β)。這個分解唯一，從 T T 星 出發會得到另一個順序。\n\n書上叫這些極分解，因為它們的作用像複數的 z 等於 r 乘 e 的 i θ 次方。最後是推論：任何非奇異矩陣 t 都寫成 u d v，u 與 v 正交、d 對角。\n\n本影片為雙語教學動畫系列（繁體中文版）。\n\n本影片為獨立製作的學習導讀，非官方教材，與原書作者及出版社無關。\n講解為自行撰寫，動畫為自行繪製，不含原書頁面，也不提供原書的取得管道。",
+    "tags": [
+      "高等微積分",
+      "Advanced Calculus",
+      "Loomis",
+      "Sternberg",
+      "正交變換",
+      "伴隨",
+      "極分解",
+      "奇異值分解",
+      "正交矩陣",
+      "對角化",
+      "數學分析",
+      "大學數學"
+    ],
+    "language": "zh-TW"
+  },
+  {
+    "file": "manim_lessons/samples/output/advcalc_e72_en.mp4",
+    "title": "Advanced Calculus, Episode 72 | Orthogonal Transformations | Ch. 5, §4",
+    "description": "This episode is section 4 of chapter 5, orthogonal transformations, pages 262 to 263 of Loomis and Sternberg's Advanced Calculus. Pages 263 to 264 are exercises 4.1 to 4.8.\n\nThe section does two things. The first is to bring the adjoint back into V. Section 2 closed on Theorem 2.4: theta from V into its conjugate space is an isomorphism exactly when V is complete. So on a Hilbert space theta is invertible, and the adjoint living in Hom of the conjugate space can be conjugated back, giving theta inverse composed with it composed with theta, which lands in Hom V. That map is what Hilbert space theory calls the adjoint of T. Once back, it is pinned down uniquely by the identity saying the product of T alpha with beta equals the product of alpha with T star beta, the matrix calculations of Lemma 3.1 generalise verbatim to show its matrix is the transpose, and self-adjointness collapses to the single line T equals T star. The book also gives a direct definition that avoids the conjugate space: with eta fixed, the map sending xi to the product of T xi with eta is linear and bounded, hence an element of the conjugate space, so Theorem 2.4 supplies a unique vector representing it, and that correspondence is itself T star.\n\nThe second thing is orthogonal transformations. T is orthogonal when it preserves the scalar product: the product of T alpha with T beta equals the product of alpha with beta for every pair. Rewriting with the adjoint identity makes this entirely equivalent to T star T being the identity. Preserving the product preserves norms, so an orthogonal T is injective, and in finite dimensions injective already means invertible, whereupon the condition reads as the adjoint being the inverse. A reflection is orthogonal too, with determinant minus one, so orthogonal does not mean rotation. Written out in Hom R n the condition says entry by entry that column i dotted with column j is the Kronecker delta, which is to say the columns form an orthonormal set. That is Theorem 4.1: T is orthogonal exactly when the image of the standard basis is another orthonormal basis.\n\nTwo theorems then carry the previous episode forward. Theorem 4.2: for a symmetric matrix there is an orthogonal matrix conjugating it into a diagonal one, which is last episode's spectral theorem restated, proved by taking the orthonormal eigenbasis as the columns. Theorem 4.3 is the polar decomposition: any invertible T on a finite-dimensional Hilbert space can be written as an orthogonal map times a self-adjoint positive one. The key point is that T star T is self-adjoint whatever T is, and each of its eigenvalues equals the squared norm of T applied to the corresponding basis vector, so with T invertible they are all strictly positive and a positive square root S exists. Then S composed with T inverse turns out to be orthogonal, by a chain of five equalities: S across becomes S squared, which is T star T, then T star across, then T cancels T inverse, and the product of alpha and beta is what remains. The factorisation is unique, and starting from T T star gives the other order.\n\nThe book calls these the polar decompositions, since they function somewhat like the polar factorisation of a complex number. The section closes with a corollary: any nonsingular matrix is an orthogonal matrix times a diagonal one times another orthogonal matrix.\n\nPart of a bilingual animated teaching series (English edition).\n\nThis is an independently produced study guide. It is not official course material and is not affiliated with the authors or publisher of the book. The narration and animations are original work; no pages of the book are reproduced, and no copy of it is provided.",
+    "tags": [
+      "Advanced Calculus",
+      "Loomis",
+      "Sternberg",
+      "orthogonal transformations",
+      "adjoint",
+      "polar decomposition",
+      "singular value decomposition",
+      "orthogonal matrix",
+      "diagonalisation",
+      "real analysis",
+      "university mathematics"
+    ],
+    "language": "en"
+  }
+]
