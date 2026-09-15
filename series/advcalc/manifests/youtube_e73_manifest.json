@@ -1,0 +1,40 @@
+[
+  {
+    "file": "manim_lessons/samples/output/advcalc_e73_zh-TW.mp4",
+    "title": "《高等微積分》第 73 集｜緊變換｜Loomis & Sternberg 第 5 章 §5",
+    "description": "本集是 Loomis 與 Sternberg《Advanced Calculus》第 5 章第 5 節「緊變換」（書頁 264 到 265）。這一節整節沒有習題，265 頁講完直接進第 6 章。第 5 章到此結束。\n\n無窮維時定理 3.1 就不成立了。自伴的有界算子一般沒有足夠多的特徵向量張成基底：把 f(x) 送成 x f(x) 的乘法算子就是標準的見證，單位區間裡每一個點都在它的譜裡，可是沒有一個是特徵值——把試驗函數擠在某點附近，像的長度要多小有多小，卻永遠不是零。除了離散譜還要處理這種連續譜，需要更細緻的分析，這正是 Hilbert 空間理論要留到研究所，也是量子力學數學結構複雜的來源之一。\n\n不過有一個很重要的特例，特徵基定理仍然成立。定義：S 是 V 的單位球，T 叫緊，如果 T 作用在 S 上的像在 W 裡的閉包是序列緊緻的。恆等映射在無窮維不緊，因為正交規範序列兩兩距離都是根號二，抽不出收斂子列。定理 5.1：V 是任何準 Hilbert 空間，T 自伴而且緊，那麼 T 的像作為準 Hilbert 空間，有一組完全由特徵向量構成的正交規範基，而對應的特徵值序列收斂到零，或者只有有限個。\n\n證明是定理 3.1 那一套，換個起手。取 m 為 T 的範數，挑一列長度都是一的向量使它們的像的長度趨近 m。那麼 m 平方減 T 平方作用上去再與自己配對，得到的數就是 m 平方減像的長度平方，趨近零。m 平方減 T 平方非負而且自伴，所以引理 3.2 可以用——上一集那個推論在這裡第二次付現：那個數趨近零，就逼出那個向量也趨近零。\n\n緊性在這裡第一次用上。T 緊，必要時取子列可以假設像收斂到某個 β。於是 T 平方作用在那一列上趨近 T β，而上一步說 m 平方乘那一列也趨近 T β，所以那一列自己也被拖著收斂，而 β 的長度就是 m，不是零，且滿足 T 平方 β 等於 m 平方 β。把 m 平方減 T 平方分解成 m 減 T 乘 m 加 T，兩個分支都交出一個特徵值絕對值等於 m 的特徵向量，剩下的歸納跟定理 3.1 一字不差。\n\n緊性第二次登場是在證特徵值必須趨近零。特徵值的絕對值本來就遞減，因為每次都在更小的空間上取範數；若它們不趨近零，就有正的下界 b，可是兩個像的距離平方正好等於兩個特徵值的平方和，於是永遠不小於二倍 b 平方，像就擠不在一起，與緊性矛盾。最後，若 β 是 α 的像，兩者的 Fourier 係數差一個特徵值，於是 β 減掉前 n 項的長度不超過下一個特徵值乘上 α 的長度，而那個係數趨近零，級數就收斂到 β。下一章會認出某個微分算子的右反元素是緊而自伴的，Fourier 級數就是這個定理的推論。\n\n本影片為雙語教學動畫系列（繁體中文版）。\n\n本影片為獨立製作的學習導讀，非官方教材，與原書作者及出版社無關。\n講解為自行撰寫，動畫為自行繪製，不含原書頁面，也不提供原書的取得管道。",
+    "tags": [
+      "高等微積分",
+      "Advanced Calculus",
+      "Loomis",
+      "Sternberg",
+      "緊算子",
+      "緊變換",
+      "譜定理",
+      "連續譜",
+      "Hilbert 空間",
+      "Green 函數",
+      "數學分析",
+      "大學數學"
+    ],
+    "language": "zh-TW"
+  },
+  {
+    "file": "manim_lessons/samples/output/advcalc_e73_en.mp4",
+    "title": "Advanced Calculus, Episode 73 | Compact Transformations | Ch. 5, §5",
+    "description": "This episode is section 5 of chapter 5, compact transformations, pages 264 to 265 of Loomis and Sternberg's Advanced Calculus. This section has no exercises at all: page 265 finishes and chapter 6 begins on 266. Chapter 5 ends here.\n\nIn infinite dimensions Theorem 3.1 breaks down. A bounded self-adjoint operator need not have enough eigenvectors to form a basis, and multiplication by x is the standard witness: every point of the unit interval lies in its spectrum, yet none of them is an eigenvalue, since squeezing a test function towards a point makes the image as short as we like but never zero. A continuous spectrum as well as a discrete one has to be handled, which needs more sophisticated analysis. That is why Hilbert space theory is studied at the graduate level, and one source of complexity in the mathematical structure of quantum mechanics.\n\nThere is however one very important special case in which the eigenbasis theorem survives. Definition: with S the unit ball of V, a transformation is compact when the closure of the image of S is sequentially compact. The identity is not compact in infinite dimensions, since an orthonormal sequence keeps a fixed distance apart and no subsequence can converge. Theorem 5.1: let V be any pre-Hilbert space and let T be self-adjoint and compact. Then the range of T, as a pre-Hilbert space, has an orthonormal basis consisting entirely of eigenvectors of T, and the corresponding sequence of eigenvalues converges to zero, or is finite.\n\nThe proof is the one for Theorem 3.1 with a different opening. Let m be the norm of T and choose unit vectors whose images have norms tending to m. Then m squared minus T squared, applied to one of them and paired with it, equals m squared minus that squared norm, and tends to zero. Since m squared minus T squared is nonnegative and self-adjoint, Lemma 3.2 applies, and last episode's consequence pays off a second time: the number tending to zero forces the vector to tend to zero as well.\n\nCompactness is used here for the first time. Passing to a subsequence, the images converge, say to beta. Then T squared applied to the vectors tends to T beta, and by the previous step so does m squared times them, so the vectors are dragged into convergence as well, and beta has norm m, which is not zero, and satisfies T squared beta equals m squared beta. Factoring the difference as m minus T composed with m plus T, either branch hands over an eigenvector whose eigenvalue has absolute value m, and the induction from there is word for word the one in Theorem 3.1.\n\nCompactness enters a second time in showing that the eigenvalues must die away. They decrease in absolute value anyway, each norm being taken over a smaller space; if they did not tend to zero there would be a positive lower bound, but the squared distance between two images is exactly the sum of the two squared eigenvalues, so the images would stay apart and no subsequence could converge. Finally, if beta is the image of alpha, their Fourier coefficients differ by the eigenvalue, so the tail of beta is bounded by the next eigenvalue times the norm of alpha, and since those tend to zero the series converges. The next chapter recognises a right inverse of a differential operator as compact and self-adjoint, and Fourier series follow as a corollary of this theorem.\n\nPart of a bilingual animated teaching series (English edition).\n\nThis is an independently produced study guide. It is not official course material and is not affiliated with the authors or publisher of the book. The narration and animations are original work; no pages of the book are reproduced, and no copy of it is provided.",
+    "tags": [
+      "Advanced Calculus",
+      "Loomis",
+      "Sternberg",
+      "compact operators",
+      "spectral theorem",
+      "continuous spectrum",
+      "Hilbert space",
+      "Green's function",
+      "real analysis",
+      "university mathematics"
+    ],
+    "language": "en"
+  }
+]
