@@ -1,0 +1,43 @@
+[
+  {
+    "file": "manim_lessons/samples/output/advcalc_e74_zh-TW.mp4",
+    "title": "《高等微積分》第 74 集｜微分方程的基本定理｜Loomis & Sternberg 第 6 章 §1",
+    "description": "本集是 Loomis 與 Sternberg《Advanced Calculus》第 6 章第 1 節「基本定理」的前半（書頁 266 到 269），收在定理 1.2。第 6 章從這裡開始講微分方程。\n\n要解的是初始值問題：W 是 Banach 空間，A 是其中的開集，I 是開區間，F 從 I 乘 A 連續映到 W；給定一點，問 α 對 t 的導數等於 F(t, α) 有沒有解通過它、唯不唯一。撐住整個答案的假設不是連續，而是局部一致 Lipschitz：每一點附近有一個常數 b，讓 F 在兩個值上的差不超過 b 乘上兩者的距離，而且同一個 b 對附近每個 t 都成立。F 的二階偏微分連續，配上均值定理，一般就給出這個條件。\n\n少了它，唯一性立刻垮掉。x 的導數等於二倍根號 x 的絕對值到處連續，可是過原點的解有無限多條：沿著零軸走任意久，再翹起來成拋物線，每一條都真的滿足方程。它的 Lipschitz 商在原點附近衝上無窮大，沒有任何常數 b 攔得住。\n\n定理 1.1 的證明先換舞台。從 t 零積到 t，「f 可微而且滿足方程」就等價於「f 連續而且 f(t) 等於 α 零加上 F(s, f(s)) 的積分」，反過來由微積分基本定理。好處全在這裡：積分式只要求連續，而有界連續函數的空間是完備的，第 4 章的不動點定理才有地方站。於是定義 K 把 f 送到 α 零加上那個積分，解就正好是 K 的不動點。\n\n剩下兩個估計。第一個：K 作用在常數函數 α 零上，位移不超過 δ 乘 m，其中 m 是 F 在那一塊上的界、δ 是區間長度。第二個：兩個函數餵進 K，差被 Lipschitz 常數 c 控制，所以距離被壓成 δ 乘 c 倍。要 K 是壓縮，又要它把球打回球內，兩個要求合起來正好是 δ 小於 r 除以 m 加 c r，然後套第 4 章不動點定理的推論。書上還補一個推論：F 連續而且二階偏微分連續就夠。\n\n最後是引理 1.1：過同一點的兩個解，在定義域的交集上一定相等。取兩者相異的那些 t，令 x 是下確界；那個集合是開的，所以 x 不在裡面，兩個解在 x 相等，再對 x 用一次定理 1.1 就得到矛盾。有了它，定理 1.2 就能把「解必須落在小鄰域 U 裡」這個人為限制拿掉：過每一點，在夠小的 J 上恰有一條從 J 到 A 的解。\n\n整集用同一個例子：x 的導數等於一加 x 平方，過原點。在半徑一的球上 m 與 c 都等於二，所以定理保證的區間只有四分之一；而真正的解是 tan t，一路活到 π 的一半，差了整整二π 倍。那就是一個要對所有 F 都成立的估計該付的代價。下一集接整體解、極大解與 n 階方程。\n\n本影片為雙語教學動畫系列（繁體中文版）。\n\n本影片為獨立製作的學習導讀，非官方教材，與原書作者及出版社無關。\n講解為自行撰寫，動畫為自行繪製，不含原書頁面，也不提供原書的取得管道。",
+    "tags": [
+      "高等微積分",
+      "Advanced Calculus",
+      "Loomis",
+      "Sternberg",
+      "微分方程",
+      "初始值問題",
+      "存在唯一性",
+      "Picard 迭代",
+      "壓縮映射",
+      "不動點定理",
+      "Lipschitz 條件",
+      "數學分析",
+      "大學數學"
+    ],
+    "language": "zh-TW"
+  },
+  {
+    "file": "manim_lessons/samples/output/advcalc_e74_en.mp4",
+    "title": "Advanced Calculus, Episode 74 | The Fundamental Theorem of ODEs | Ch. 6, §1",
+    "description": "This episode is the first half of section 1 of chapter 6, the fundamental theorem, pages 266 to 269 of Loomis and Sternberg's Advanced Calculus, stopping at Theorem 1.2. Chapter 6 on differential equations begins here.\n\nThe problem is the initial-value problem: W is a Banach space, A an open subset of it, I an open interval, and F a continuous map from I times A into W. Given a point, does the equation for the derivative of alpha have a solution through it, and only one? The hypothesis that carries the answer is not continuity but a locally uniform Lipschitz condition: near each point one constant b bounds the difference of the values of F by b times the distance between them, with the same b for every nearby t. A continuous second partial differential, with the mean-value theorem, supplies the condition in general.\n\nWithout it uniqueness collapses at once. The derivative of x equal to twice the square root of the absolute value of x is continuous everywhere, yet infinitely many solutions pass through the origin: run along zero as long as you like, then lift off as a parabola, and every one of them really does satisfy the equation. The Lipschitz quotient blows up at the origin, and no constant b can hold it down.\n\nThe proof of Theorem 1.1 starts by changing the stage. Integrating from t zero to t, being a differentiable solution is the same as being a continuous function satisfying f of t equals alpha zero plus the integral of F at s and f of s, and back again by the fundamental theorem of calculus. That is the whole gain: the integral form asks only for continuity, and the bounded continuous functions form a complete space, which is where the chapter 4 fixed-point theorem can stand. Define K by sending f to alpha zero plus that integral, and a solution is exactly a fixed point of K.\n\nTwo estimates remain. First, K applied to the constant function alpha zero moves it by at most delta times m, where m bounds F on that block and delta is the length of the interval. Second, feeding two functions into K, the difference is held down by the Lipschitz constant c, so distances are shrunk by delta times c. Asking that K contract and that it map the ball into itself is exactly delta below r over m plus c r, and a corollary of the chapter 4 fixed-point theorem finishes it. The book adds a corollary of its own: a continuous F with a continuous second partial differential suffices.\n\nLast comes Lemma 1.1: two solutions through the same point agree on the intersection of their domains. Take the set of t where they differ and let x be its greatest lower bound; the set is open, so x is not in it and the two agree at x, and Theorem 1.1 applied at x then contradicts the bound. With that, Theorem 1.2 can drop the artificial requirement that the solution stay inside the small neighbourhood U: through each point there is exactly one solution from a small enough J into A.\n\nOne example carries the episode: the derivative of x equal to one plus x squared, through the origin. On the ball of radius one both m and c are two, so the theorem guarantees only a quarter, while the real solution is tan t and lives out to half of pi, short by a factor of exactly two pi. That is the price an estimate valid for every F has to pay. The next episode takes up global solutions, maximal solutions and the nth-order equation.\n\nPart of a bilingual animated teaching series (English edition).\n\nThis is an independently produced study guide. It is not official course material and is not affiliated with the authors or publisher of the book. The narration and animations are original work; no pages of the book are reproduced, and no copy of it is provided.",
+    "tags": [
+      "Advanced Calculus",
+      "Loomis",
+      "Sternberg",
+      "differential equations",
+      "initial value problem",
+      "existence and uniqueness",
+      "Picard iteration",
+      "contraction mapping",
+      "fixed point theorem",
+      "Lipschitz condition",
+      "real analysis",
+      "university mathematics"
+    ],
+    "language": "en"
+  }
+]
