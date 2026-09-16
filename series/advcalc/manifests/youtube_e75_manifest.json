@@ -1,0 +1,43 @@
+[
+  {
+    "file": "manim_lessons/samples/output/advcalc_e75_zh-TW.mp4",
+    "title": "《高等微積分》第 75 集｜整體解與 n 階方程｜Loomis & Sternberg 第 6 章 §1",
+    "description": "本集是 Loomis 與 Sternberg《Advanced Calculus》第 6 章第 1 節「基本定理」的後半（書頁 269 到 272），接上一集的定理 1.2。第 1 節到此結束。\n\n上一集的定理 1.1 只給出局部解。可是跑到一條局部解的尾端附近，再取一個新的局部解，引理 1.1 保證兩者在定義域的交集上相等，而新的那條往前伸得更遠，於是拼成一條活得更久的解。要把「一直拼下去」講精確，就取聯集：設 𝔉 是所有通過那一點的解，函數本來就是有序對的集合，所以聯集有意義，而引理 1.1 正好保證這個聯集還是個函數——同一個 t 不會被配到兩個值。\n\n這個聯集自己就是解，因為定義域裡任一點附近它都與 𝔉 裡某一條相同；而每一條解都被它包含。這就是定理 1.3：過每一點都有唯一一條決定好的極大解。極大解一般會撞上 A 的邊界，所以定義域真包含在 I 裡——上一集那個例子正是如此，I 是整條實數線而解只活在正負 π 的一半之間。\n\n定理 1.4 給出定義域等於整個 I 的條件：A 是整個 W，F 連續，而且存在連續函數 c 使 F 在任兩點的差被 c 乘距離控制住。重點在「任兩點」：要對 W 裡所有的點成立，不只是附近。兩個例子的差別只在這一條，而且兩個的 A 都是整條實數線：x 的導數等於 t 加 x，商恆等於一，c 取常數一就夠；x 的導數等於一加 x 平方，商是兩點之和的絕對值，沒有任何 c 攔得住。前者活在整條實數線上，後者在 π 的一半就停住。\n\n證明用反證。設極大解的右端點 b 還在 I 裡面，取有限開區間 L 含 b 而閉包落在 I 裡；閉包是緊的，所以連續的 c 在上面取到最大值。緊性在這裡只做一件事：把一個連續函數換成一個數。接著是關鍵——定理 1.1 給的半徑上限是 r 除以 m 加 r c，改寫成一除以 c 加 m 除以 r，分母裡只有第二項跟 r 有關；而 A 是整個 W，球要多大有多大，所以那個上限一路爬向一除以 c。這是整個證明唯一用到 A 等於 W 的地方。\n\n於是挑一個離 b 比一除以 c 更近的點，就能取到 δ 讓它加上 δ 之後超過 b。可是通過那一點的極大解包含原來那條，所以必須不超過 b。兩件事同時成立，矛盾，所以 b 不可能在 I 裡面。\n\n最後是 n 階方程。用 ψ 把 f 送到 f 與它的前 n 減一階導數，方程就寫成 f 的 n 階導數等於 G 帶入 t 與那個 n 元組，初始條件是 n 個值。化成一階系統的辦法很老：前面每一條都是「這個座標的導數等於下一個座標」，只有最後一條帶 G。這樣得到的 F 顯然局部一致 Lipschitz，所以定理 1.1 與 1.2 直接給出存在唯一，這就是定理 1.5，證明只是換記號。影片裡的例子是 x 的二階導數等於負 x，它變成平面上的旋轉場，解曲線正是單位圓；旋轉場的 c 恆等於一，所以定理 1.4 也適用，解活在整條實數線上。\n\n本影片為雙語教學動畫系列（繁體中文版）。\n\n本影片為獨立製作的學習導讀，非官方教材，與原書作者及出版社無關。\n講解為自行撰寫，動畫為自行繪製，不含原書頁面，也不提供原書的取得管道。",
+    "tags": [
+      "高等微積分",
+      "Advanced Calculus",
+      "Loomis",
+      "Sternberg",
+      "微分方程",
+      "整體解",
+      "極大解",
+      "存在唯一性",
+      "n 階方程",
+      "一階系統",
+      "Lipschitz 條件",
+      "數學分析",
+      "大學數學"
+    ],
+    "language": "zh-TW"
+  },
+  {
+    "file": "manim_lessons/samples/output/advcalc_e75_en.mp4",
+    "title": "Advanced Calculus, Episode 75 | Global Solutions and nth-Order Equations | Ch. 6, §1",
+    "description": "This episode is the second half of section 1 of chapter 6, the fundamental theorem, pages 269 to 272 of Loomis and Sternberg's Advanced Calculus, continuing from last episode's Theorem 1.2. Section 1 ends here.\n\nTheorem 1.1 gave only local solutions. But run to near the end of one, take a fresh local solution there, and Lemma 1.1 guarantees the two agree on the overlap while the new one reaches further, so they patch into a longer solution. To make patching precise, take a union: let the family be all solutions through the point. A function is a set of ordered pairs, so the union means something, and Lemma 1.1 is exactly what guarantees that the union is still a function, with no t given two values.\n\nThat union is itself a solution, since near any point of its domain it agrees with one member of the family; and it contains every solution. That is Theorem 1.3: through each point there is a uniquely determined maximal solution. A maximal solution generally runs into the boundary of A, so its domain sits properly inside I, and last episode's example is exactly that, with I the whole real line and the solution living only between minus and plus half of pi.\n\nTheorem 1.4 gives the condition for the domain to be all of I: A is the whole of W, F is continuous, and some continuous function bounds the difference of F's values by that function times the distance. The force is in for every pair, meaning every pair of points in W, not just nearby ones. Two examples differ in exactly that hypothesis and in nothing else, both having A equal to the whole line. For the derivative of x equal to t plus x the quotient is identically one, so the constant one will serve; for one plus x squared it is the absolute value of the sum of the two points, and no function holds it down. The first lives on the whole line, the second stops at half of pi.\n\nThe proof is by contradiction. Suppose the maximal solution's right endpoint still lies inside I, and choose a finite open interval containing it whose closure lies in I. That closure is compact, so the continuous bound attains a maximum there, and compactness does exactly one job: it turns a continuous function into a single number. Then the key step. The radius bound from Theorem 1.1 is r over m plus r times c, which is one over c plus m over r, and only the second term of that denominator involves r. Since A is the whole of W the ball may be taken as large as we like, so the bound climbs all the way to one over c. That is the only place in the proof where A equal to W is used.\n\nSo pick a point closer to the endpoint than one over c, and a delta can be chosen carrying past it. But the maximal solution through that point contains the original, so the reach must not pass the endpoint. Both cannot hold, so the endpoint cannot lie inside I.\n\nLast comes the nth-order equation. Send f to itself together with its first n minus one derivatives, and the equation reads: the nth derivative of f is G at t and that tuple, with n initial values. The reduction to a first-order system is ancient, each equation but the last saying that one coordinate's derivative is the next, and only the last carrying G. The F this produces is plainly locally uniformly Lipschitz, so Theorems 1.1 and 1.2 hand over existence and uniqueness at once, which is Theorem 1.5, its proof only a change of notation. The example on screen is the second derivative of x equal to minus x, which becomes the rotation field on the plane with the unit circle as its solution curve; that field has constant one for its bound, so Theorem 1.4 applies too and the solution lives on the whole real line.\n\nPart of a bilingual animated teaching series (English edition).\n\nThis is an independently produced study guide. It is not official course material and is not affiliated with the authors or publisher of the book. The narration and animations are original work; no pages of the book are reproduced, and no copy of it is provided.",
+    "tags": [
+      "Advanced Calculus",
+      "Loomis",
+      "Sternberg",
+      "differential equations",
+      "global solutions",
+      "maximal solution",
+      "existence and uniqueness",
+      "nth order equation",
+      "first order system",
+      "Lipschitz condition",
+      "real analysis",
+      "university mathematics"
+    ],
+    "language": "en"
+  }
+]

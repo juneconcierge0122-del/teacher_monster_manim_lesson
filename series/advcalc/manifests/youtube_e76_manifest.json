@@ -1,0 +1,40 @@
+[
+  {
+    "file": "manim_lessons/samples/output/advcalc_e76_zh-TW.mp4",
+    "title": "《高等微積分》第 76 集｜對參數的可微相依｜Loomis & Sternberg 第 6 章 §2",
+    "description": "本集是 Loomis 與 Sternberg《Advanced Calculus》第 6 章第 2 節「對參數的可微相依」（書頁 274 到 275），整節一集講完。這一節整節沒有習題，275 頁講完直接進第 3 節——這是這本書裡第四次（前三次是第 2 章的加星號第 7 節、第 4 章的加星號第 12 節、第 5 章第 5 節）。\n\n第 1 節問解存不存在、活多遠；第 2 節問它怎麼動。固定一個區間與函數空間裡的一個球，初始點就決定一條解，於是有一個從初始點的鄰域到函數空間的映射。定理 2.1 說它連續，定理 2.2 說若 F 的微分一致連續，它連續可微。\n\n兩個證明都不是新工作。K 只是多吃兩個變數——初始時刻與初始值——同樣那兩個估計再跑一次，只有一個地方不同：N 取半徑是 r 一半的球，於是球心那一項從 δ 乘 m 變成 r 的一半加 δ 乘 m，雙重要求就變成 δ 小於 r 除以二倍的 m 加 c r，正好是第 1 節那個上限的一半。這就是連續相依的全部代價：同一個 F、同一個球，區間砍一半。定理 2.1 的鄰域之所以非小不可，原因就在這裡。\n\n有了那個 δ，第 4 章的定理 9.2——帶參數的不動點定理——就給出連續相依；而它的可微版本定理 9.4 給出可微相依，前提是 K 自己連續可微。要看出 K 連續可微，就把它拆成兩步：先把 f 送到 s 對應 F 帶入 s 與 f s，這一步由第 3 章定理 14.3 連續可微；再從初始時刻積到 t，這一步是函數空間到自己的有界線性映射，自動連續可微。\n\n接著三個偏微分裡有兩個直接算得出來：對初始值那一個是恆等映射，因為增量就是那個向量本身；對初始時刻那一個是負的 h 乘 F 在初始點的值，道理是把積分下限往前挪等於扣掉一小段積分，而那一小段約等於 h 乘被積函數在起點的值。三個都連續，第 3 章定理 8.3 就接成連續可微。\n\n推論：解在任一點的值，是初始值的可微函數——因為初始值送到那條解連續可微，而取值那一步是有界線性、自動連續可微，複合起來就是。定理 2.3 把整件事做成整體的，書上不給證明；最後 F 自己也可以帶一個參數，對那個參數的相依同理。\n\n整集的計算都在這一章唯一有閉式解映射的初始值問題上做：x 的導數等於 t 加 x，通過任意一點的解寫得出來，所以推論裡那個「解對初始值的導數」算得出真值，正是 e 的 s 減初始時刻次方；在 s 等於一、初始時刻等於零時就是 e，而畫面上那一把解張開的倍率恰好就是這個數。\n\n本影片為雙語教學動畫系列（繁體中文版）。\n\n本影片為獨立製作的學習導讀，非官方教材，與原書作者及出版社無關。\n講解為自行撰寫，動畫為自行繪製，不含原書頁面，也不提供原書的取得管道。",
+    "tags": [
+      "高等微積分",
+      "Advanced Calculus",
+      "Loomis",
+      "Sternberg",
+      "微分方程",
+      "可微相依",
+      "初始值問題",
+      "不動點定理",
+      "偏微分",
+      "解對初始值的導數",
+      "數學分析",
+      "大學數學"
+    ],
+    "language": "zh-TW"
+  },
+  {
+    "file": "manim_lessons/samples/output/advcalc_e76_en.mp4",
+    "title": "Advanced Calculus, Episode 76 | Differentiable Dependence on Parameters | Ch. 6, §2",
+    "description": "This episode is section 2 of chapter 6, differentiable dependence on parameters, pages 274 to 275 of Loomis and Sternberg's Advanced Calculus, the whole section in one episode. It has no exercises at all: page 275 finishes and section 3 begins. That is the fourth time in the book, after the starred section 7 of chapter 2, the starred section 12 of chapter 4, and section 5 of chapter 5.\n\nSection 1 asked whether a solution exists and how far it runs; this one asks how it moves. Fix an interval and a ball in the function space, and the initial point determines a solution, so there is a map from a neighbourhood of the initial point into the function space. Theorem 2.1 says it is continuous; Theorem 2.2 says that if the differential of F is uniformly continuous, it is continuously differentiable.\n\nNeither proof is new work. K simply takes two more arguments, the initial time and the initial value, and the same two estimates run again with one difference: taking N to be the ball of half the radius turns the displacement term from delta times m into half of r plus delta times m, so the double requirement becomes delta below r over twice m plus c r, exactly half of section 1's ceiling. That is the entire price of continuous dependence, the same F and the same ball with half the interval, and it is why the neighbourhood in Theorem 2.1 has to be small.\n\nWith that delta in hand, chapter 4's Theorem 9.2, the fixed-point theorem with a parameter, gives continuous dependence, and its differentiable version, Theorem 9.4, gives differentiable dependence provided K itself is continuously differentiable. To see that it is, split K in two: first send f to the function F at s and f of s, continuously differentiable by chapter 3's Theorem 14.3; then integrate from the initial time out to t, a bounded linear map of the function space into itself and so automatically continuously differentiable.\n\nTwo of the three partial differentials then come out outright. The one in the initial value is the identity, since the increment is that vector itself. The one in the initial time is minus h times F at the initial point, because moving the lower limit of the integral forward subtracts a short integral, and that short integral is about h times the integrand at the start. All three being continuous, chapter 3's Theorem 8.3 joins them into continuous differentiability.\n\nCorollary: the value of a solution at any point is a differentiable function of the initial value, since the map from the initial value to the solution is continuously differentiable and evaluation is bounded and linear. Theorem 2.3 makes the whole thing global, left unproved in the book, and finally F itself may carry a parameter, with dependence on it working the same way.\n\nEvery number on screen is computed from the one initial-value problem in this chapter whose solution map has a closed form: the derivative of x equal to t plus x, whose solution through any point can be written down. So the corollary's derivative of the solution with respect to the initial value is exactly the exponential of s minus the initial time, which at s equal to one and initial time zero is e, and the fan of solutions on screen opens at precisely that rate.\n\nPart of a bilingual animated teaching series (English edition).\n\nThis is an independently produced study guide. It is not official course material and is not affiliated with the authors or publisher of the book. The narration and animations are original work; no pages of the book are reproduced, and no copy of it is provided.",
+    "tags": [
+      "Advanced Calculus",
+      "Loomis",
+      "Sternberg",
+      "differential equations",
+      "differentiable dependence",
+      "initial value problem",
+      "fixed point theorem",
+      "partial differentials",
+      "real analysis",
+      "university mathematics"
+    ],
+    "language": "en"
+  }
+]
