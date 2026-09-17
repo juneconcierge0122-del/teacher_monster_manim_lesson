@@ -1,0 +1,41 @@
+[
+  {
+    "file": "manim_lessons/samples/output/advcalc_e78_zh-TW.mp4",
+    "title": "《高等微積分》第 78 集｜常係數與矩陣指數｜Loomis & Sternberg 第 6 章 §3",
+    "description": "本集是 Loomis 與 Sternberg《Advanced Calculus》第 6 章第 3 節「線性方程」的後半（書頁 278 到 280），接上一集的定理 3.2。§3 到此結束，習題 3.1 到 3.9 在 280 到 281 頁。\n\n上一集證了右反元素存在，這一集要把它寫出來。要解的是 f 一撇減去 T t 作用在 f 上等於 g。手上唯一的新工具是基本解自己的方程：K 一撇等於 T t 複合 K，把它解出 T t 等於 K 一撇複合 K 的反元素，代回去之後左邊就變成一個認得出來的東西。由第 4 章習題 8.12 與第 3 章的乘法法則，左邊正好等於 K t 乘上「K t 的反元素作用在 f 上」對 t 的導數——一個看起來要解的微分方程，左邊其實已經是某個東西的全微分，只要先用 K 的反元素換個座標。\n\n於是方程變成可以直接積分的形式，兩邊從零積到 t 再把 K t 乘回去，就得到定理 3.3：f t 等於 K t 作用在「K s 的反元素作用在 g s 上，從零積到 t」這個積分上。被積的是把 g 先拉回時刻零那一格再累加。書上說即使覺得推導太技術，也可以把答案直接微分驗一次；影片裡就是這樣驗的。\n\n接下來是常係數的情形，T t 是固定的 T，書上說這一段極其重要。兩個小引理先鋪路。引理 3.1：如果 f 是解，那麼 f 一撇也是解——方程右邊可微，兩邊再微分一次就得到 f 兩撇等於 T 作用在 f 一撇上；所以解空間在導數算子底下不變。這件事在非常係數時不成立，因為那時右邊還帶著 t。\n\n引理 3.2 更進一步：導數算子在解空間上其實就是 T。把方程寫成「在 t 取值複合 D」等於「T 複合在 t 取值」，而取值限制到解空間上是同構，就解得出 T 等於那個同構複合 D 再複合它的反元素。換句話說，微分算子在解空間上的樣子與 T 在 W 上的樣子，是同一個算子的兩張臉。這解釋了為什麼指數會出現。\n\n基本解的方程現在是 S 一撇等於 T S、S 零是恆等。在初等微積分裡這正是指數函數的方程，所以 K t 等於 e 的 t T 次方，而通過零與 β 的解就是那個級數：t 的 j 次方乘 T 的 j 次方作用在 β 上除以 j 階乘，全部加起來。\n\n有限維時可以走得更遠。T 一定滿足某個多項式方程，把 p 分解成互質的因式，第 1 章定理 5.5 就把 W 拆成各個零化空間的直和，而每一塊在 T 底下不變，所以可以一塊一塊算。在一塊上 T 減 λ 的 m 次方是零，所以 T 等於 λ 加上一個冪零的 R，指數分解成 e 的 t λ 次方乘 e 的 t R 次方，而後者的級數只有 m 項——無窮級數突然變成有限和，項數正好是那個因式的重數。\n\n定理 3.4 把這些合起來：一般的解是 k 個這種項的和，形狀是 t 的 j 次方乘 e 的 t λ i 次方再乘一個常向量，項數正好是多項式的次數。複數的情形完全一樣，只是 λ 可以有虛部，於是外面那個指數帶一個週期因子，解曲線的行為就豐富得多。\n\n最後是漸近行為，它完全由那些根決定，而且結論是一個乾淨的二分。實部大於零就指數爆炸，小於零就趨近零；實部是零而重數大於一時像 t 的 m 減一次方那樣長。所以解在整條實數線上有界，若且唯若所有根都是純虛數而且重數都是一。影片裡把四種情形都算出來——衰減、爆炸、有界的旋轉，以及純虛但重根那個長度隨 t 線性成長的例子——縱軸取對數，因為四個案例跨四個數量級，線性軸會把三條壓在底部看不出差別。\n\n本影片為雙語教學動畫系列（繁體中文版）。\n\n本影片為獨立製作的學習導讀，非官方教材，與原書作者及出版社無關。\n講解為自行撰寫，動畫為自行繪製，不含原書頁面，也不提供原書的取得管道。",
+    "tags": [
+      "高等微積分",
+      "Advanced Calculus",
+      "Loomis",
+      "Sternberg",
+      "線性微分方程",
+      "常係數",
+      "矩陣指數",
+      "冪零算子",
+      "漸近行為",
+      "參數變動法",
+      "數學分析",
+      "大學數學"
+    ],
+    "language": "zh-TW"
+  },
+  {
+    "file": "manim_lessons/samples/output/advcalc_e78_en.mp4",
+    "title": "Advanced Calculus, Episode 78 | Constant Coefficients and the Matrix Exponential | Ch. 6, §3",
+    "description": "This episode is the second half of section 3 of chapter 6, the linear equation, pages 278 to 280 of Loomis and Sternberg's Advanced Calculus, continuing from last episode's Theorem 3.2. Section 3 ends here, with exercises 3.1 through 3.9 on pages 280 and 281.\n\nLast episode proved the right inverse exists; this one writes it down. We want f with its derivative minus the operator applied to f equal to g, and the only new tool is the fundamental solution's own equation. Solving that for the operator and substituting turns the left side into something recognisable: by Exercise 8.12 of chapter 4 and chapter 3's product rule it equals K at t times the derivative of K inverse applied to f. What looks like an equation to be solved already has a total derivative on the left, once K inverse is used to change coordinates.\n\nSo the equation becomes one to integrate directly; integrate from zero to t and multiply K back on, and that is Theorem 3.3: K at t applied to the integral of K inverse applied to g. What is integrated is g pulled back to time zero. The book adds that even if the derivation feels technical, the answer can simply be differentiated to check, and that is how the episode checks it.\n\nThen constant coefficients, where the operator is a fixed T, a case the book calls extremely important. Two small lemmas set it up. Lemma 3.1: if f is a solution then so is its derivative, since the right side is differentiable and differentiating again gives its equation, so the solution space is invariant under differentiation. This fails for variable coefficients, where the right side still carries a t.\n\nLemma 3.2 goes further: differentiation on the solution space is just T. Write the equation as evaluation composed with the derivative operator equals T composed with evaluation, and since evaluation restricted to the solution space is an isomorphism, solve for T. In other words, differentiation on the solution space and T on W are two faces of one operator, which is why an exponential is about to appear.\n\nThe equation for the fundamental solution is now the one elementary calculus answers with the exponential, so K at t is the exponential of t times T, and the solution through a vector is that series: t to the j times the jth power of T applied to it, over j factorial.\n\nIn finite dimensions we can go further. T satisfies a polynomial equation; factoring it into relatively prime powers, chapter 1's Theorem 5.5 splits W into the direct sum of the null spaces, each invariant under T, so they can be handled one at a time. On one piece the operator minus lambda to the m is zero, so T is lambda plus a nilpotent part, the exponential factors, and the second series has only m terms. The infinite series becomes a finite sum, with as many terms as the multiplicity.\n\nTheorem 3.4 collects this: the general solution is a sum of such terms, each a power of t times an exponential times a constant vector, with as many terms as the degree of the polynomial. The complex case is identical, except that lambda may have an imaginary part, which puts a periodic factor outside the exponential and makes the solution curves much richer.\n\nFinally the asymptotics, controlled entirely by those roots, and here the answer is a clean dichotomy. Positive real part means exponential blow-up, negative means decay to zero, and zero real part with multiplicity above one grows like a power of t. So the solution curves are bounded on the whole real line exactly when every root is pure imaginary with multiplicity one. All four cases are computed on screen: decay, blow-up, a bounded rotation, and the pure imaginary but repeated case whose size grows linearly. The vertical axis is logarithmic, since the four span four orders of magnitude and a linear axis flattens three of them along the bottom.\n\nPart of a bilingual animated teaching series (English edition).\n\nThis is an independently produced study guide. It is not official course material and is not affiliated with the authors or publisher of the book. The narration and animations are original work; no pages of the book are reproduced, and no copy of it is provided.",
+    "tags": [
+      "Advanced Calculus",
+      "Loomis",
+      "Sternberg",
+      "linear differential equations",
+      "constant coefficients",
+      "matrix exponential",
+      "nilpotent operators",
+      "asymptotic behaviour",
+      "variation of parameters",
+      "real analysis",
+      "university mathematics"
+    ],
+    "language": "en"
+  }
+]

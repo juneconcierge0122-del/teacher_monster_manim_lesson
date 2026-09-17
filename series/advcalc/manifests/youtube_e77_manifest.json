@@ -1,0 +1,43 @@
+[
+  {
+    "file": "manim_lessons/samples/output/advcalc_e77_zh-TW.mp4",
+    "title": "《高等微積分》第 77 集｜線性方程的解空間｜Loomis & Sternberg 第 6 章 §3",
+    "description": "本集是 Loomis 與 Sternberg《Advanced Calculus》第 6 章第 3 節「線性方程」的前半（書頁 276 到 277），收在定理 3.2。§3 的細目原本估 1 集，可是它有定理 3.1 到 3.4 加兩個引理，前半講解空間的結構、後半講 e 的 t T 次方，是兩件不同的事，所以切成兩集。\n\n只要 F 對第二個變數是線性的——F t α 等於 T t 作用在 α 上，而 T t 的範數被連續函數 c t 壓住——定理 1.4 的強 Lipschitz 假設就免費送上來了。因為線性時 F 在兩點的差就是 T t 作用在差上，Lipschitz 條件退化成「T t 有界」，而且自動對 W 裡所有點成立，不只是附近。所以這一節的解一律活在整個 I 上，可以只談整體解。\n\n於是整個問題變成線性代數。設 X 零是 I 到 W 的連續函數空間，X 一是其中有連續一階導數的那些，S 把 f 送到 f 一撇減去 F 帶入 t 與 f t。這兩個空間都沒有指定範數——定理 3.1 從頭到尾用不到一個不等式。\n\n定理 3.1 說了四件事，而書上指出它們彼此等價。S 是滿射；方程的整體解全體 N 正是 S 的核，所以是向量空間；對每個 t 零，在 t 零取值這個映射限制到 N 上是 N 到 W 的同構；它的核 M 因此是 N 在 X 一裡的補，並決定 S 的一個右反元素。最簡潔的說法是：把 f 送到 S f 與 f t 零這一對，是 X 一到 X 零乘 W 的同構。\n\n證明只有一句話。對固定的 g 設 G 等於 F 加 g，那就是第 1 節的方程，由定理 1.3 與 1.4 它有唯一的整體解通過任一初始點，而定義域是整個 I。所以那個配對映射是雙射，而且顯然線性。左邊的分解只是右邊那個明顯的直和分解拉回來而已。\n\n第一個結果是 N 與 W 同構，維度相同。這件事的內容全在一個行列式上：兩條基底解在任何一個時刻取的值都還是線性獨立，從來不會塌下去。這是線性方程獨有的，非線性時解會互相撞上。第二個結果是 M 與 N 互為補，所以任何一個 X 一裡的函數都唯一地拆成「在 t 零歸零的那一半」加上「一條解」——影片裡用一個跟方程毫無關係的函數示範這件事。\n\n這個分解把初始值問題拆成兩個獨立的子問題：一個解非齊次方程但初始值歸零，一個解齊次方程但帶著初始值，答案是兩者相加。書上說初始值問題在某種意義下是這兩個獨立問題的直和。\n\n接下來只看齊次方程。在時刻 t 取值是 N 到 W 的同構，取初始時刻為零，定義 K t 等於它複合零那一個的反元素。於是 K t 是 W 到自己的一族線性同構、K 零是恆等，而 K t 作用在 β 上就是通過零與 β 的那條解在時刻 t 的值——一個算子把所有初始值的解一次全帶著走。書上叫它基本解。\n\n既然每條解都滿足方程，K t 對 t 的導數等於 T t 複合 K t。可是這句話目前只是逐點的意思：對每個 β 分別成立。導數不一定以 Hom W 的範數極限存在，因為假設裡從頭到尾只說了 T t 的範數被壓住，沒有說 t 送到 T t 是連續的。定理 3.2 補上這一點：只要那個映射連續，初始值問題 A 一撇等於 T t 複合 A、A 零是恆等就有唯一解，而在 β 取值是有界線性映射，所以兩者相等。\n\n整集的計算都在一個真的隨時間變、但基本解仍寫得出來的例子上做：T t 等於一加 t 再乘旋轉生成元。所有 T t 互相交換，所以 K t 就是轉 t 加二分之一 t 平方那麼多角度的旋轉；K 零是恆等、導數也對得上，都在場景檔裡驗過。下一集接定理 3.3 的顯式右反元素，然後是常係數與 e 的 t T 次方。\n\n本影片為雙語教學動畫系列（繁體中文版）。\n\n本影片為獨立製作的學習導讀，非官方教材，與原書作者及出版社無關。\n講解為自行撰寫，動畫為自行繪製，不含原書頁面，也不提供原書的取得管道。",
+    "tags": [
+      "高等微積分",
+      "Advanced Calculus",
+      "Loomis",
+      "Sternberg",
+      "線性微分方程",
+      "解空間",
+      "右反元素",
+      "基本解",
+      "直和分解",
+      "初始值問題",
+      "線性代數",
+      "數學分析",
+      "大學數學"
+    ],
+    "language": "zh-TW"
+  },
+  {
+    "file": "manim_lessons/samples/output/advcalc_e77_en.mp4",
+    "title": "Advanced Calculus, Episode 77 | The Solution Space of the Linear Equation | Ch. 6, §3",
+    "description": "This episode is the first half of section 3 of chapter 6, the linear equation, pages 276 to 277 of Loomis and Sternberg's Advanced Calculus, stopping at Theorem 3.2. The section was planned as one episode, but with Theorems 3.1 through 3.4 and two lemmas, and with the structure of the solution space and the exponential being two different subjects, it became two.\n\nThe moment F is linear in its second variable, with the norm of the operator bounded by a continuous function of t, the strong Lipschitz hypothesis of Theorem 1.4 comes free. For a linear map the difference of the values of F is the operator applied to the difference, so the Lipschitz condition collapses into boundedness of the operator, and it holds automatically for every pair of points in W rather than only nearby ones. Every solution here is therefore global.\n\nSo the whole problem becomes linear algebra. Let one space be the continuous functions from I to W and the other those with a continuous first derivative, and let S send f to its derivative minus F at t and f of t. Neither space is given a norm: Theorem 3.1 never uses an inequality.\n\nTheorem 3.1 says four things, which the book points out are equivalent to one another. S is surjective; the global solutions are exactly its null space and so a vector space; evaluation at any initial time, restricted to that null space, is an isomorphism onto W; and the null space of that evaluation is therefore a complement, which determines a right inverse of S. The compact form is that sending f to the pair of S f and its initial value is an isomorphism onto the product.\n\nThe proof is one sentence. For fixed g set G to be F plus g, which is section 1's equation, so by Theorems 1.3 and 1.4 it has a unique global solution through any initial point with all of I for its domain. Hence the pair map is a bijection, and plainly linear. The decomposition on the left is just the obvious one on the right pulled back.\n\nThe first consequence is that the solution space is isomorphic to W, with the same dimension, and the content of that is a determinant: the values of two basis solutions stay linearly independent at every moment and never collapse. That is special to the linear case. The second is that the two spaces are complementary, so every function with a continuous derivative splits uniquely into a part vanishing at the initial time plus a solution, demonstrated on screen with a function chosen with no regard for the equation.\n\nThat splitting breaks the initial-value problem into two independent subproblems: one solves the inhomogeneous equation with zero initial data, the other the homogeneous equation with the given data, and the answer is their sum. The book calls the initial-value problem the direct sum of these two.\n\nNow only the homogeneous equation. Evaluation at time t is an isomorphism from the solution space onto W; with the initial time taken to be zero, K at t is that isomorphism composed with the inverse of the one at zero. These form a family of linear isomorphisms of W with K at zero the identity, and K at t applied to a vector is the value of the solution through it, so one operator carries the solutions for every initial value at once. The book calls it a fundamental solution.\n\nSince every solution satisfies the equation, the derivative of K is the operator composed with K. But that is so far only pointwise, true separately at each vector. The derivative need not exist as a norm limit in the space of operators, because the hypotheses bound the norm of the operator without saying that it depends continuously on t. Theorem 3.2 supplies that: with continuity, the initial-value problem for A with A at zero the identity has a unique solution, and since evaluation at a vector is bounded and linear, the two agree.\n\nEvery number on screen comes from a linear equation that genuinely varies with time and yet still has a closed-form fundamental solution: the rotation generator scaled by one plus t. Those operators all commute, so K at t is rotation through t plus half t squared; that it is the identity at zero and satisfies its own equation are both checked in the scene file. Next episode takes up the explicit right inverse of Theorem 3.3, then constant coefficients and the exponential.\n\nPart of a bilingual animated teaching series (English edition).\n\nThis is an independently produced study guide. It is not official course material and is not affiliated with the authors or publisher of the book. The narration and animations are original work; no pages of the book are reproduced, and no copy of it is provided.",
+    "tags": [
+      "Advanced Calculus",
+      "Loomis",
+      "Sternberg",
+      "linear differential equations",
+      "solution space",
+      "right inverse",
+      "fundamental solution",
+      "direct sum decomposition",
+      "initial value problem",
+      "linear algebra",
+      "real analysis",
+      "university mathematics"
+    ],
+    "language": "en"
+  }
+]

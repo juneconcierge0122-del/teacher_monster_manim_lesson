@@ -28,7 +28,7 @@ sys.path.insert(0, str(pathlib.Path(__file__).resolve().parents[2]))
 WHITELIST = {
     "Hom", "lub", "glb", "min", "max", "sup", "inf", "det", "lim", "dim",
     "rank", "diag", "Ch", "dF", "dG", "dH", "dK", "df", "dg", "dh", "dk", "id", "int",
-    "sin", "cos", "tan", "log", "exp", "arg", "mod", "ev",
+    "sin", "cos", "tan", "log", "exp", "arg", "mod", "ev", "Re", "Im", "ker",
     # proper names, written in Latin letters in the Chinese narration too
     # ("Cauchy 序列", "Banach 空間"), so they are language-independent the way
     # an operator name is -- not words one half of the audience reads wrong.
