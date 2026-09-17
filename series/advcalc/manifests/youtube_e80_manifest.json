@@ -1,0 +1,41 @@
+[
+  {
+    "file": "manim_lessons/samples/output/advcalc_e80_zh-TW.mp4",
+    "title": "《高等微積分》第 80 集｜常係數方程的顯式解｜Loomis & Sternberg 第 6 章 §4",
+    "description": "本集是 Loomis 與 Sternberg《Advanced Calculus》第 6 章第 4 節「n 階線性方程」的後半（書頁 284 到 287），第 4 節到此結束。這一節的習題 4.1 到 4.19 在書頁 287。\n\n上一集的降階法要先知道一個解才動得了。係數全是常數時完全不同：有完整的顯式答案。關鍵是此時 L 就是導數算子 D 的一個多項式，記作 p 作用在 D 上，於是解微分方程變成把 p 分解因式。\n\n書上說最漂亮的走法是繞到第 3 節去。ψ 把解空間同構地搬到一階系統那邊，而且它與微分交換；引理 3.1 說那個空間在 D 底下不變，引理 3.2 說取值同構把 D 換成 T。所以 p 作用在 D 上是零，就推出 p 作用在 T 上是零，而那是有限維的事。定理 3.4 交出來的是 t 的 j 次方乘 e 的 t λ 次方再乘常向量，取第一個座標就是答案。\n\n定理 4.2 的前半：p 是 x 減 b 的 n 次方時，解空間的基底是 e 的 b t 次方乘上 t 的零到 n 減一次方。影片把這些函數逐個代回去，殘差都在機器精度，而 t 的 n 次方那一個不是零——所以剛好 n 個，不是 n 加一個。後半是互質分解：每個因式照前面給出一組基底，全部聯集起來就是整個解空間的基底，理由是第 1 章定理 5.5 那個直和分解。\n\n如果 p 的根不全是實數，就要用第 4 章第 11 節習題裡的複化理論。除了最後一步，結果一模一樣。要補的那個事實是：實算子在實空間上的零化空間，正好是它的複化的零化空間與實空間的交集，所以實的解就是複的解取實部。設某個二次式在實數上不可約而 p 的一個因式是它的 m 次方，在複數上它分解成 x 減 λ 與 x 減 λ 共軛各 m 次方，其中 λ 的實部是 b、虛部是 ω。取實部就得到定理 4.3：e 的 b t 次方乘 cos ω t 與 sin ω t，各再乘上 t 的零到 m 減一次方，一共 2 m 個。\n\n這裡有一件書上的印刷不一致。定理 4.3 那一行把二次式寫成 x 平方加 2 b x 加 c，可是它自己上面兩段的推導用的是減號，而基底寫的是 e 的正 b t 次方。兩者只能有一個對：影片用推導那個版本，並把兩個符號的殘差都算出來放在畫面上——減號版是 10 的負 15 次方，加號版是 4.7 到 16.8，不是零。\n\n兩個例子。D 的四次方減一等於零，多項式分解成四個一次式，四個根在單位圓上彼此差九十度，實的基底是 e 的 t 次方、e 的負 t 次方、cos t、sin t。D 的三次方減一等於零，分解成 x 減一乘上 x 平方加 x 加一，後面那個不可約，兩個根是負二分之一加減 i 乘根三除以二，所以實的基底是 e 的 t 次方，以及 e 的負 t 除以二次方分別乘上 cos 與 sin 根三 t 除以二：根的實部給衰減率，虛部給頻率。\n\n最後是加星號的一段。所有常係數齊次線性方程的實值解合起來，對加法與乘法都封閉，它就是 t 的幂、指數、cos 與 sin 生成的代數。加法容易，因為兩個常係數算子一定交換，複合起來把兩邊的解都殺掉；乘法要靠三角恆等式把乘積寫成和。影片用 sin t 乘 cos 2 t 示範：它等於 sin 3 t 減 sin t 的一半，被 D 平方加一與 D 平方加九的複合殺掉，而單獨一個因式殺不掉。而且這些函數恰好是「所有平移張成有限維空間」的那些連續函數，因為常係數算子正是與平移交換的線性微分算子。反過來那一半很細緻，書上沒有證。\n\n本影片為雙語教學動畫系列（繁體中文版）。\n\n本影片為獨立製作的學習導讀，非官方教材，與原書作者及出版社無關。\n講解為自行撰寫，動畫為自行繪製，不含原書頁面，也不提供原書的取得管道。",
+    "tags": [
+      "高等微積分",
+      "Advanced Calculus",
+      "Loomis",
+      "Sternberg",
+      "微分方程",
+      "常係數線性方程",
+      "特徵方程",
+      "複化",
+      "微分算子",
+      "平移不變",
+      "數學分析",
+      "大學數學"
+    ],
+    "language": "zh-TW"
+  },
+  {
+    "file": "manim_lessons/samples/output/advcalc_e80_en.mp4",
+    "title": "Advanced Calculus, Episode 80 | Constant Coefficients, Solved Explicitly | Ch. 6, §4",
+    "description": "This episode is the second half of section 4 of chapter 6, pages 284 to 287 of Loomis and Sternberg's Advanced Calculus, and it finishes the section. Exercises 4.1 to 4.19 are on page 287.\n\nLast episode's reduction of order needed one solution before it could start. With constant coefficients the situation is entirely different: there is a complete explicit answer. The point is that the operator is now a polynomial in the derivative operator D, so solving the differential equation becomes factoring that polynomial.\n\nThe book calls the detour through section 3 the most elegant route. Psi carries the solution space isomorphically over to the first-order system and commutes with differentiation; Lemma 3.1 makes that space invariant under D, and Lemma 3.2 turns D into T. So the polynomial annihilating D annihilates T, which is a finite-dimensional statement, and Theorem 3.4 hands back powers of t times exponentials times constant vectors. Taking first coordinates gives the answer.\n\nThe first half of Theorem 4.2: when the polynomial is x minus b to the n, the solution space has the basis given by the exponential of b t times the powers of t below n. Each of those is substituted back here, with residuals at machine precision, while t to the n is not annihilated: there are exactly n of them, not n plus one. The second half is the relatively prime factorization, where each factor contributes its own basis and the union is a basis for the whole space, by chapter 1's direct sum decomposition.\n\nIf the roots are not all real we need the complexification theory from the exercises of chapter 4. Except for one last step the results are the same. The extra fact is that the null space of a real operator is the intersection with the real space of the complexified null space, so the real solutions are the real parts of the complex ones. Let a quadratic be irreducible over the reals and one factor be its mth power; over the complex numbers it splits into x minus lambda and x minus its conjugate, each to the m, with lambda of real part b and imaginary part omega. Taking real parts gives Theorem 4.3: the exponential of b t times cosine and sine of omega t, each with powers of t below m, two m functions in all.\n\nThere is a printing inconsistency here. The display of Theorem 4.3 writes the quadratic with a plus sign on the middle term, yet the derivation two paragraphs above uses a minus and the basis it gives has a positive b in the exponent. Only one of the two can be right. This episode uses the derivation's version and puts both residuals on screen: the minus version annihilates all four basis functions to within a thousandth of a trillionth, and the printed version leaves residuals between four and seventeen.\n\nTwo examples. For the fourth power of D minus one the polynomial splits into four linear factors, whose roots sit on the unit circle ninety degrees apart, and the real basis is two exponentials, a cosine and a sine. For the third power of D minus one the polynomial splits into x minus one times an irreducible quadratic whose roots are minus a half plus and minus i root three over two, so the real basis is the exponential of t together with a decaying exponential times the cosine and the sine of root three t over two: the root's real part sets the decay and its imaginary part the frequency.\n\nThe starred passage closes the section. All real-valued solutions of constant coefficient homogeneous linear equations, taken together, are closed under addition and multiplication: they form the algebra generated by powers of t, exponentials, cosines and sines. Sums are easy, since two such operators commute and the composite kills both; products need the trigonometric identities that rewrite a product as a sum. The episode uses one product of a sine and a cosine, which is half the difference of two sines and is killed by a composite of two operators though by neither alone. These functions are moreover exactly the continuous ones whose translates span a finite-dimensional space, since constant coefficient operators are precisely the linear differential operators commuting with translation. The converse half is delicate and is not proved.\n\nPart of a bilingual animated teaching series (English edition).\n\nThis is an independently produced study guide. It is not official course material and is not affiliated with the authors or publisher of the book. The narration and animations are original work; no pages of the book are reproduced, and no copy of it is provided.",
+    "tags": [
+      "Advanced Calculus",
+      "Loomis",
+      "Sternberg",
+      "differential equations",
+      "constant coefficients",
+      "characteristic polynomial",
+      "complexification",
+      "differential operators",
+      "translation invariance",
+      "real analysis",
+      "university mathematics"
+    ],
+    "language": "en"
+  }
+]

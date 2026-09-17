@@ -1,0 +1,41 @@
+[
+  {
+    "file": "manim_lessons/samples/output/advcalc_e79_zh-TW.mp4",
+    "title": "《高等微積分》第 79 集｜n 階線性方程與降階法｜Loomis & Sternberg 第 6 章 §4",
+    "description": "本集是 Loomis 與 Sternberg《Advanced Calculus》第 6 章第 4 節「n 階線性方程」的前半（書頁 281 到 284）。這一節的習題 4.1 到 4.19 在書頁 287。\n\n第 4 節一開始就把第 1 節對一階方程做過的事，對 n 階方程再做一次：把 f 和它的前 n 減一階導數排成一個 n 元組，n 階方程就變成第 3 節那種一階系統。第 1 節定理 1.5 的證明其實已經說完了這件事——f 是 n 階方程的解，若且唯若那個 n 元組是一階系統的解——而排導數這個動作本身是線性的，回頭只要取第一個座標，所以它是兩個解空間之間的同構，不只是雙射。\n\n接著第 3 節那套結論全部搬過來。一階系統的解由它在某一時刻的值唯一決定，於是把 f 送成「f 在 t 的值連同前 n 減一階導數在 t 的值」是解空間到 W 的 n 次冪的同構，這就是「n 個初始值決定唯一一個解」。影片裡畫了三條同一個方程的解，在同一個時刻取同樣的值，只有斜率不同。\n\n取 W 是實數線之後，G 在每個 t 是一個線性函數，係數是 n 個連續函數，解空間正好是一個線性變換 L 的零化空間。最高階的係數處處不為零就可以除掉，這叫正則的情形；某個 t 讓它變成零的奇異情形要另外的理論，這本書不碰。影片用 t 乘 y 兩撇加 y 一撇等於零當奇異的例子：它的第一積分是 t 乘 y 一撇等於常數，所以除了常數解以外 y 一撇在原點附近爆掉，解空間在不含原點的區間上是二維的，一含進原點就掉成一維。\n\n定理 4.1 把一般理論在這裡的樣子收攏起來：L 是從 n 次連續可微函數到連續函數的滿射；零化空間就是解空間，維數是 n；在任一個時刻取值都是它到 n 維空間的同構；而在那個時刻連同前 n 減一階導數全為零的函數構成一個補，於是決定了 L 的一個線性右反元素。影片把這個右反元素在一個具體的 g 上算了出來，並驗證它在那個時刻的值與斜率都是零。\n\n然後這一節轉向實務，而且很老實地承認限度：找解空間的基底沒有一般的方法。三件事有用。一階方程可以直接積出來，因為 y 一撇除以 y 就是 log y 的導數。常係數有完整的顯式答案，那是下一集。中間這一段是降階法：已經知道一個解 u 時，找 c 乘 u 形式的第二個解，用 Leibniz 公式展開代進 L，不帶 c 的導數的那些項合起來是 c 乘 L 作用在 u 上，正好是零，剩下的可以寫成一個 n 減一階的算子作用在 c 一撇上。影片用一個隨便取的 c 驗這個等式，不是用答案驗。\n\n所以解那個低一階的方程就夠了。但這個手法不能一層層疊上去——它是從上面削，不是從下面長，要疊得先有一個零化空間落在 L 的零化空間裡面的一階算子，而那一般辦不到。二階的情形因此特別好：只要找到一個解就全部解完，因為剩下的是一階方程。書上的例子一眼看出 t 平方是一個解，代進去之後第二個解是 t 的倒數。兩個解在某一點的值相同也不礙事，定理 4.1 的同構配的是「值與導數」這一對，它們的 Wronskian 一直是負三。\n\n本影片為雙語教學動畫系列（繁體中文版）。\n\n本影片為獨立製作的學習導讀，非官方教材，與原書作者及出版社無關。\n講解為自行撰寫，動畫為自行繪製，不含原書頁面，也不提供原書的取得管道。",
+    "tags": [
+      "高等微積分",
+      "Advanced Calculus",
+      "Loomis",
+      "Sternberg",
+      "微分方程",
+      "n 階線性方程",
+      "降階法",
+      "線性微分算子",
+      "Wronskian",
+      "初始值問題",
+      "數學分析",
+      "大學數學"
+    ],
+    "language": "zh-TW"
+  },
+  {
+    "file": "manim_lessons/samples/output/advcalc_e79_en.mp4",
+    "title": "Advanced Calculus, Episode 79 | The nth-Order Equation, Reduction of Order | Ch. 6, §4",
+    "description": "This episode is the first half of section 4 of chapter 6, the nth-order linear equation, pages 281 to 284 of Loomis and Sternberg's Advanced Calculus. Exercises 4.1 to 4.19 for this section are on page 287.\n\nSection 4 opens by doing to the nth-order equation what section 1 did to the first-order one: line f up with its first n minus one derivatives and the equation becomes a first-order system. The proof of Theorem 1.5 already said this, since f solves the nth-order equation exactly when that n-tuple solves the system, and lining up derivatives is itself a linear operation whose inverse is taking the first coordinate. So it is an isomorphism of the two solution spaces, not merely a bijection.\n\nEverything section 3 proved then carries over. A solution of the system is fixed by its value at one instant, so sending f to its value at t together with its first n minus one derivatives there is an isomorphism onto the n-fold product: n initial values, exactly one solution. The episode draws three solutions of one equation agreeing at an instant and differing only in slope.\n\nTaking the space to be the real line, G is a linear function at each t with n continuous coefficients, and the solution space is exactly the null space of a single transformation. If the top coefficient never vanishes we divide it out, the regular case; the singular case, where it vanishes somewhere, needs further study and the book leaves it alone. The episode carries a singular example whose first integral is t times the derivative being constant, so apart from the constants the derivative blows up at the origin: the solution space is two-dimensional on an interval away from the origin and one-dimensional once the origin is inside it.\n\nTheorem 4.1 gathers what the general theory says here. The operator is onto the continuous functions; its null space is the solution space, of dimension n; evaluation at any one instant is an isomorphism onto n-space; and the functions vanishing there to order n minus one form a complement, which determines a linear right inverse. That right inverse is computed here for a particular right-hand side, and checked to vanish in value and slope at the chosen instant.\n\nThe section then turns practical, and is honest about the limits: there is no general method for finding a basis of the solution space. Three things do work. The first-order equation integrates outright, since the derivative over the function is the derivative of its logarithm. Constant coefficients have a complete explicit answer, which is the next episode. In between is reduction of order: given one solution, look for a second of the form c times it, expand by Leibniz and substitute, and the terms with no derivative of c add up to c times the operator applied to the known solution, which is zero, while the rest is an operator of order n minus one applied to the derivative of c. The episode verifies that identity with an arbitrary c rather than with the answer.\n\nSo solving the lower-order equation suffices. The device does not stack up, though: it works off the top and not off the bottom, and building up would need a first-order operator whose null space sits inside the given one, which is not available in general. Order two is therefore the happy case, completely solved once one solution is found, since what remains is first order. In the book's example one solution is visible by inspection and the second comes out as one over t. Their sharing a value at a point does not matter, since Theorem 4.1's isomorphism pairs value with derivative, and their Wronskian stays at minus three.\n\nPart of a bilingual animated teaching series (English edition).\n\nThis is an independently produced study guide. It is not official course material and is not affiliated with the authors or publisher of the book. The narration and animations are original work; no pages of the book are reproduced, and no copy of it is provided.",
+    "tags": [
+      "Advanced Calculus",
+      "Loomis",
+      "Sternberg",
+      "differential equations",
+      "nth-order linear equation",
+      "reduction of order",
+      "linear differential operator",
+      "Wronskian",
+      "initial value problem",
+      "real analysis",
+      "university mathematics"
+    ],
+    "language": "en"
+  }
+]
