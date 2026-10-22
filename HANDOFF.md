@@ -174,3 +174,19 @@ curl -s -o /dev/null -w '%{http_code}\n' -H "Authorization: Bearer $(tr -d '\n' 
   但那要使用者自己在 Console 操作。
 - GitHub 的 fine-grained PAT 也會過期（回 401）。需要使用者重發，權限是
   Contents: Read and write。
+
+- **`api.github.com/repos/…` 回的 `permissions.push: true` 不是在說 token 能推。**
+  那一欄是「這個**使用者**對這個 repo 的權限」，fine-grained PAT 就算只有讀取範圍也照樣是 true。
+  要驗 token 自己能不能推，測 git 的端點（200 才算數）：
+
+  ```bash
+  T=$(sed -n '1p' .secrets/github_juneconcierge0122-del_teacher_monster_manim_lesson)
+  curl -s -o /dev/null -w '%{http_code}\n' -u "x-access-token:$T" \
+    "https://github.com/juneconcierge0122-del/teacher_monster_manim_lesson.git/info/refs?service=git-receive-pack"
+  ```
+
+- **換了新 token 之後第一次推送可能還是會 401，這不代表新 token 壞掉。**
+  這個 repo 設了 `credential.helper = store`，git 會**先問 helper**；helper 有回答就不會去問
+  `GIT_ASKPASS`，於是舊的過期 token 被送出去而被拒。被拒之後 git 會自己把它從
+  `~/.git-credentials` 刪掉，所以**原指令再推一次就會成功**（2026-10-22 踩到）。
+  不想等那一次失敗就先清：`: > ~/.git-credentials`。
