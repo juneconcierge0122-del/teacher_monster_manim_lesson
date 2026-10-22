@@ -483,7 +483,7 @@ class AdvCalcE82Base(ArrayArt, CanonicalBase):
                        ("B ( f , g ) | ᵃ ᵇ   =   Σ  k ᵢ ⱼ  f ⁽ ⁱ ⁾ g ⁽ ʲ ⁾ | ᵃ ᵇ", ACCENT_A)),
                     y0=0.90, dy=0.22, size=FS_TAG - 4))
   g.add(self._cap("中間一欄與右邊一欄逐列相等，第三列的數值最大",
-                  "the middle and right columns agree row by row, and the next to last row is the largest gap"))
+                  "the middle and right columns agree row by row, and the third row carries the largest value"))
   return g.add(self._foot("用分部積分，把 f 身上的導數一次搬一個到 g 身上。搬完以後 f 不帶導數，g 被某個 n 階算子 R 作用著",
                           "integration by parts shifts the derivatives off f onto g one at a time; at the end f carries none and g is acted on by an operator R of order n",
                           ACCENT_A,

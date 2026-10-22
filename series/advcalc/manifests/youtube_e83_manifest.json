@@ -1,0 +1,41 @@
+[
+  {
+    "file": "manim_lessons/samples/output/advcalc_e83_zh-TW.mp4",
+    "title": "《高等微積分》第 83 集｜Sturm-Liouville 系統與特徵基底｜Loomis & Sternberg 第 6 章 §6",
+    "description": "本集是 Loomis 與 Sternberg《Advanced Calculus》第 6 章第 6 節的後半（書頁 297 到 299），§6 到此結束，習題 6.1 到 6.12 在 300 到 301。\n\n上一集把「自伴」弄清楚了，這一集用它證出整章最重的結果：正則 Sturm-Liouville 系統的右逆是一個緊的自伴算子，於是第 5 章那套特徵基底理論整個可以搬過來，而且收斂是一致的。\n\n引擎是引理 6.4 的不等式。在前面列出的那幾組邊界條件之下，只要最高階係數不小於某個正的 m、而且 λ 至少比最低階係數大一，那麼「T 減 λ 作用在 f 上」與 f 的內積，絕對值就不小於 m 乘導數的平方範數加上 f 的平方範數。證明是分部積分一次：端點項被邊界條件殺掉，剩下兩個積分分別被那兩個範數由下界住。畫面用四個試驗函數把兩邊都算出來，並且示範 λ 取得太小時前兩個就失效——那個條件買到的不是某一個 f，是整個子空間上的一致下界。\n\n由此 M 是零化空間的補，並決定一個自伴的右逆。接著是名詞：形式自伴的二階算子配上自伴邊界條件叫 Sturm-Liouville 系統；最高階係數在閉區間上處處不為零叫正則，在端點變成零或區間無窮就叫奇異。\n\n定理 6.1 說正則時那個右逆是連續函數空間到自己的緊自伴映射。證明分兩步。第一步用 Schwarz 不等式加上引理，得到像的函數與它的導數都被 g 的範數界住。第二步把那個界翻成一致等度連續——兩點函數值的差不超過導數的二範數乘上兩點距離的平方根——於是像集全有界、閉包緊，所以算子緊。\n\n定理 6.2 於是給出 M 的一組完全由特徵向量構成的正交規範基底。把第 5 章的定理用在右逆上得到它的特徵基底，再把特徵值翻譯回去：右逆把特徵向量乘上 r，原算子就乘上一加 λ r 再除以 r，於是右逆的特徵值聚集到零、原算子的特徵值跑向負無窮。最後引理 6.5 處理兩個範數的情形，結論是展開式在兩個範數底下都收斂——所以是一致收斂，不只是平方平均收斂。收尾的例子是二階導數算子配上兩端為零，特徵值是負的平方數、特徵函數是正弦，那正是下一集的全部故事。\n\n本影片為雙語教學動畫系列（繁體中文版）。\n\n本影片為獨立製作的學習導讀，非官方教材，與原書作者及出版社無關。\n講解為自行撰寫，動畫為自行繪製，不含原書頁面，也不提供原書的取得管道。",
+    "tags": [
+      "高等微積分",
+      "Advanced Calculus",
+      "Loomis",
+      "Sternberg",
+      "Sturm-Liouville",
+      "特徵基底",
+      "緊算子",
+      "等度連續",
+      "一致收斂",
+      "邊界值問題",
+      "數學分析",
+      "大學數學"
+    ],
+    "language": "zh-TW"
+  },
+  {
+    "file": "manim_lessons/samples/output/advcalc_e83_en.mp4",
+    "title": "Advanced Calculus, Episode 83 | Sturm-Liouville Systems and the Eigenbasis | Ch. 6, §6",
+    "description": "This episode is the second half of section 6 of chapter 6 of Loomis and Sternberg's Advanced Calculus, pages 297 to 299, which finishes the section. Exercises 6.1 to 6.12 are on pages 300 and 301.\n\nLast episode settled what self-adjointness means. This one uses it to prove the heaviest result of the chapter: for a regular Sturm-Liouville system the right inverse is a compact self-adjoint operator, so chapter 5's eigenbasis theory carries over whole, and the convergence is uniform.\n\nThe engine is the inequality of Lemma 6.4. Under the boundary conditions listed earlier, provided the leading coefficient stays at or above some positive number and lambda is at least one above the lowest coefficient, the inner product of f with the shifted operator applied to f is at least that number times the squared norm of the derivative plus the squared norm of f. The proof is one integration by parts: the endpoint term is killed by the boundary condition and the two surviving integrals are bounded below by those norms. The screen computes both sides for four test functions and shows the first two failing when lambda is taken too small, which is the point: the hypothesis buys a bound uniform over the whole subspace, not a bound for one f.\n\nThe subspace is therefore a complement of the null space and determines a self-adjoint right inverse. Then the terminology: a formally self-adjoint second-order operator with a self-adjoint boundary condition is a Sturm-Liouville system; it is regular when the leading coefficient never vanishes on the closed interval, and singular when that coefficient vanishes at an end or the interval runs to infinity.\n\nTheorem 6.1 states that in the regular case the right inverse is a compact self-adjoint map of the continuous functions into themselves. The proof has two steps. Schwarz plus the lemma bounds both the image function and its derivative by the norm of the right-hand side. That bound then yields uniform equicontinuity, since the difference of two values is at most the two-norm of the derivative times the square root of the distance, so the image of the unit ball is totally bounded, its closure compact, and the operator compact.\n\nTheorem 6.2 then provides an orthonormal basis for the subspace made entirely of eigenvectors. Applying chapter 5's theorem to the right inverse gives its eigenbasis, and translating the eigenvalues back, an eigenvalue r of the inverse corresponds to one plus lambda r over r for the operator, so eigenvalues piling up at zero become eigenvalues running to minus infinity. Lemma 6.5 handles the two-norm situation, and the conclusion is that the expansion converges in both norms: uniformly, not merely in mean square. The closing example is the second derivative with zero values at both ends, whose eigenvalues are the negative squares and whose eigenfunctions are the sines, which is the whole of the next episode.\n\nPart of a bilingual animated teaching series (English edition).\n\nThis is an independently produced study guide. It is not official course material and is not affiliated with the authors or publisher of the book. The narration and animations are original work; no pages of the book are reproduced, and no copy of it is provided.",
+    "tags": [
+      "Advanced Calculus",
+      "Loomis",
+      "Sternberg",
+      "Sturm-Liouville",
+      "eigenbasis",
+      "compact operators",
+      "equicontinuity",
+      "uniform convergence",
+      "boundary-value problem",
+      "real analysis",
+      "university mathematics"
+    ],
+    "language": "en"
+  }
+]

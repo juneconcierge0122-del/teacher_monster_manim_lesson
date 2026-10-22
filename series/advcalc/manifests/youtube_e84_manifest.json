@@ -1,0 +1,41 @@
+[
+  {
+    "file": "manim_lessons/samples/output/advcalc_e84_zh-TW.mp4",
+    "title": "《高等微積分》第 84 集｜Fourier 級數｜Loomis & Sternberg 第 6 章 §7",
+    "description": "本集是 Loomis 與 Sternberg《Advanced Calculus》第 6 章第 7 節「Fourier 級數」（書頁 301 到 303），習題 7.1 到 7.10 在 304。**第 6 章到此結束。**\n\n書上一開頭就說：正則的 Sturm-Liouville 系統其實不多。計算裡常用的那幾組正交基底——Bessel、Legendre、Hermite、Laguerre——全都來自奇異的系統，不是最高階係數在端點變成零，就是區間根本無界，超出前面設定的範圍。最有名也最可用的那個例外，正是 Fourier 級數。\n\n它就是二階導數算子配上兩種邊界條件。型一要求函數在零與 π 都是零：λ 大於零時解空間由兩個指數張成，兩端都為零會逼出兩個係數都是零；λ 等於零時解是一次式，同樣只剩零解；λ 小於零才有救，條件是正弦在 π 處為零，於是那個數必須是整數。特徵函數就是 sin n x、特徵值是負的 n 平方，這就是定理 7.1。\n\n型四是週期條件。算下來同樣逼出整數，但這一次整個二維解空間都滿足邊界條件，所以每個特徵值都是二重的——這就是為什麼週期的情形 sin 與 cos 都要。畫面上也點出一件書上寫得鬆散的事：書說一次式「同樣被排除」，但其實被排除的只有 x 那一項，常數函數的值與斜率在兩端都相等、完全滿足週期條件，它活下來就是 n 等於零的那個 cos，這正是定理 7.2 裡 cos 從零編號而 sin 從一編號的理由。\n\n定理 7.2 還要補證 sin 與 cos 互相正交，而那只是因為被積函數是奇函數，在對稱區間上積分必然為零。畫面把累積面積畫出來，跑完整個區間正好回到零。\n\n定理 7.3 是稠密性：兩階連續可微的函數在一致範數下稠密於連續函數。證法很手工——先用折線逼近，再把每個轉角磨成一小段斜坡，讓磨掉和補上的面積相等。它的作用是把「子空間的基底」升級成「整個連續函數空間的基底」，沒有這一步，前面證到的只是一個子空間上的展開。\n\n最後兩拍講習題裡那兩個更強的結果：習題 7.6 只要求一階連續可微、兩端的值相等就得到一致收斂，連定理 7.2 管不到的函數都管得到；習題 7.10 是 Weierstrass 逼近定理，多項式在一致範數下稠密於連續函數空間，由 Fourier 展開加上正弦的 Maclaurin 級數推出來。這兩個只講它們說什麼、為什麼比正文強，細節留在習題裡。\n\n本影片為雙語教學動畫系列（繁體中文版）。\n\n本影片為獨立製作的學習導讀，非官方教材，與原書作者及出版社無關。\n講解為自行撰寫，動畫為自行繪製，不含原書頁面，也不提供原書的取得管道。",
+    "tags": [
+      "高等微積分",
+      "Advanced Calculus",
+      "Loomis",
+      "Sternberg",
+      "Fourier 級數",
+      "正交基底",
+      "稠密性",
+      "Weierstrass 逼近定理",
+      "一致收斂",
+      "Sturm-Liouville",
+      "數學分析",
+      "大學數學"
+    ],
+    "language": "zh-TW"
+  },
+  {
+    "file": "manim_lessons/samples/output/advcalc_e84_en.mp4",
+    "title": "Advanced Calculus, Episode 84 | Fourier Series | Ch. 6, §7",
+    "description": "This episode is section 7 of chapter 6 of Loomis and Sternberg's Advanced Calculus, Fourier series, pages 301 to 303, with exercises 7.1 to 7.10 on page 304. Chapter 6 ends here.\n\nThe book opens by admitting that regular Sturm-Liouville systems are scarce. The orthogonal bases used in actual calculation -- Bessel, Legendre, Hermite, Laguerre -- all come from singular systems, either because the leading coefficient vanishes at an endpoint or because the interval has no end, and all fall outside the setting built so far. The best known and most usable exception is Fourier series.\n\nIt is the second derivative with two boundary conditions. The first asks the function to vanish at zero and at pi: for positive lambda the solution space is spanned by two exponentials and vanishing at both ends forces both coefficients to zero; for lambda zero the solutions are linear and again only zero survives; only negative lambda works, and then the sine must vanish at pi, which makes the parameter an integer. The eigenfunctions are the sines and the eigenvalues the negative squares, which is Theorem 7.1.\n\nThe fourth condition is periodicity. The same integers appear, but this time the entire two-dimensional solution space satisfies the condition, so every eigenvalue is double, which is why the periodic case needs both sines and cosines. The screen also notes something the book states loosely: it says the linear solutions are likewise ruled out, but in fact only the x term is, since a constant has equal values and equal slopes at both ends and satisfies the periodic condition perfectly. That surviving constant is the cosine of index zero, which is exactly why Theorem 7.2 indexes the cosines from zero and the sines from one.\n\nTheorem 7.2 still needs the sines and cosines to be orthogonal to each other, and that holds only because the integrand is odd and its integral over a symmetric interval must vanish. The screen draws the running area, which comes back to zero exactly at the end of the interval.\n\nTheorem 7.3 is the density statement: the twice continuously differentiable functions are dense in the continuous ones in the uniform norm. The proof is handmade -- approximate by a polygon, then round each corner into a short ramp so that the area removed equals the area added. Its role is to promote a basis for a subspace into a basis for the whole space of continuous functions; without it, what came before is only an expansion on a subspace.\n\nThe last two beats are the stronger results that the book leaves in the exercises. Exercise 7.6 needs only a continuous first derivative and equal values at the ends to get uniform convergence, reaching functions Theorem 7.2 cannot. Exercise 7.10 is the Weierstrass approximation theorem, that polynomials are dense in the continuous functions in the uniform norm, which follows from the Fourier expansion together with the Maclaurin series of the sine. Both are stated and motivated here; the details stay in the exercises.\n\nPart of a bilingual animated teaching series (English edition).\n\nThis is an independently produced study guide. It is not official course material and is not affiliated with the authors or publisher of the book. The narration and animations are original work; no pages of the book are reproduced, and no copy of it is provided.",
+    "tags": [
+      "Advanced Calculus",
+      "Loomis",
+      "Sternberg",
+      "Fourier series",
+      "orthogonal basis",
+      "density",
+      "Weierstrass approximation",
+      "uniform convergence",
+      "Sturm-Liouville",
+      "real analysis",
+      "university mathematics"
+    ],
+    "language": "en"
+  }
+]

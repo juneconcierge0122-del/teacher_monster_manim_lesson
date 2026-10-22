@@ -613,7 +613,7 @@ class AdvCalcE83Base(ArrayArt, CanonicalBase):
   g.add(self._cap("上排往右擠成一堆，下排往左散開，順序整個反過來",
                   "the upper row crowds to the right, the lower spreads left, and the order reverses"))
   return g.add(self._foot("定理 6.2：M 有一組完全由 T 的特徵向量構成的正交規範基底。把第五章的定理用在右逆上得到它的特徵基底，再翻譯回 T",
-                          "Theorem 6.2: there is an orthonormal basis made entirely of eigenvectors of T, got by applying the chapter five theorem to the right inverse",
+                          "Theorem 6.2: M has an orthonormal basis made entirely of eigenvectors of T, got by applying the chapter five theorem to the right inverse and translating back",
                           ACCENT_A,
                           "再把特徵值翻譯回去：右逆把 φ 乘上 r，T 就把 φ 乘上一加 λ r 再除以 r。右逆的特徵值聚集到零，T 的特徵值就跑向負無窮",
                           "then translate the eigenvalues back: if the inverse scales phi by r then T scales it by one plus lambda r over r, so eigenvalues piling up at zero become ones running to minus infinity"))

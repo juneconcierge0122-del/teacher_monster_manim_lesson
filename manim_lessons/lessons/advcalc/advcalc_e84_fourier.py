@@ -846,7 +846,7 @@ class AdvCalcE84Base(ArrayArt, CanonicalBase):
                           "the two strongest results are in the exercises: 7.6 asks that if f merely has a continuous derivative and takes equal values at the two endpoints, its Fourier series converges uniformly",
                           ACCENT_A,
                           "只要一階連續可微、而且兩端的值相等就夠，導數不必相等——左圖這個 f 的導數正好不相等，定理 7.2 管不到它。題目給的路線是對導數的級數逐項積分再用 Schwarz 不等式，這裡不做解答",
-                          "no second derivative and no matching slopes, and the drawn f is exactly a case Theorem 7.2 cannot reach; the exercise's own route is term-by-term integration and the Schwarz inequality, and it is left at that"))
+                          "a continuous first derivative and equal values at the ends is all it asks, and the slopes need not match -- the drawn f is exactly a case Theorem 7.2 cannot reach; the exercise's own route is term-by-term integration and the Schwarz inequality, and it is left at that"))
 
  # ── beat 10: exercise 7.10, and the end of chapter 6 ────────────
  def _ex710(self):

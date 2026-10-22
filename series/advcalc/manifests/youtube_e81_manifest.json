@@ -1,0 +1,41 @@
+[
+  {
+    "file": "manim_lessons/samples/output/advcalc_e81_zh-TW.mp4",
+    "title": "《高等微積分》第 81 集｜解非齊次方程｜Loomis & Sternberg 第 6 章 §5",
+    "description": "本集是 Loomis 與 Sternberg《Advanced Calculus》第 6 章第 5 節「解非齊次方程」（書頁 288 到 292），習題 5.1 到 5.22 在 293 到 294。\n\n這一節給兩條路。待定係數法容易算，但只對某些 g 管用：當 g 本身落在某個常係數算子 S 的零化空間裡時，解就落在 S 與 L 的複合的零化空間裡，而那個空間上一集已經完全知道。y 一撇減去 a y 等於 e 的 b t 次方時，試 c 乘 e 的 b t 次方就得到 c 等於 b 減 a 的倒數；右邊換成 cos b t 時，用 sin 與 cos 兩個係數解聯立。\n\n如果 L 與 S 有公因式，就要多帶一個 t 的幂，次數正好是公因式重複的次數。D 平方加一作用在 f 上等於 sin t 時，解是負二分之一乘 t 再乘 cos t——振幅隨 t 線性長大，那就是共振的雛形。畫面上把這件事畫出來，也把「為什麼非得多帶一個 t」用數字釘住：不帶 t 的那兩個試驗函數被算子殺光，帶 t 平方的那一個才不是零。\n\n書上對待定係數法並不滿意，理由很具體：它不是一個線性右反元素，不是「一個流程對付所有 g」，而是隨 g 換招。參數變異法才是真正的右反元素，對每一個 g 都成立，而且連變係數的 L 都能反。做法是把第 3 節的公式翻譯過來：用基底與它們的各階導數排成矩陣 w，那個矩陣的行就是一階系統解空間的基底，而基本解等於 w 在 t 的值乘上 w 在零的反矩陣。代進去之後中間那個常矩陣消掉，解就是 w 乘上「w 的反矩陣作用在 g 上」的積分。\n\n定理 5.1 把它寫成只含係數導數的線性方程組。書上的例子是 y 兩撇加 y 等於 cos x 的倒數——右邊不是常係數方程的解，所以待定係數法用不上——解出來是 x 乘 sin x 加上 cos x 的對數再乘 cos x。\n\n最後用彈簧收尾。質量乘加速度加上彈性係數乘位移等於零，解是角頻率等於根號 c 除以 m 的正弦波。加上摩擦之後，阻尼小的仍然永遠振盪、只是振幅照指數衰減，阻尼夠大就根本不振動。而同一個方程也治理 LRC 電路：外加週期電壓時解分成會衰減的暫態與一個穩態，於是出現相位與共振。第 5 節到此結束。\n\n本影片為雙語教學動畫系列（繁體中文版）。\n\n本影片為獨立製作的學習導讀，非官方教材，與原書作者及出版社無關。\n講解為自行撰寫，動畫為自行繪製，不含原書頁面，也不提供原書的取得管道。",
+    "tags": [
+      "高等微積分",
+      "Advanced Calculus",
+      "Loomis",
+      "Sternberg",
+      "微分方程",
+      "非齊次方程",
+      "待定係數法",
+      "參數變異法",
+      "共振",
+      "簡諧運動",
+      "數學分析",
+      "大學數學"
+    ],
+    "language": "zh-TW"
+  },
+  {
+    "file": "manim_lessons/samples/output/advcalc_e81_en.mp4",
+    "title": "Advanced Calculus, Episode 81 | Solving the Inhomogeneous Equation | Ch. 6, §5",
+    "description": "This episode is section 5 of chapter 6 of Loomis and Sternberg's Advanced Calculus, solving the inhomogeneous equation, pages 288 to 292. Exercises 5.1 to 5.22 are on pages 293 and 294.\n\nThe section offers two routes. Undetermined coefficients is easy to compute but works only for some right-hand sides: when g itself lies in the null space of a constant coefficient operator, the solution lies in the null space of the composite, and that space was completely determined last episode. For the first-order equation with an exponential on the right the constant comes out as one over b minus a; with a cosine on the right, two coefficients are solved together.\n\nWhen the two operators share a factor, a power of t has to be carried along, of exactly the multiplicity of that factor. For D squared plus one applied to f equal to sine, the answer is minus a half times t times cosine, whose amplitude grows linearly: the seed of resonance. The screen pins down why the extra t is unavoidable, by showing that the operator annihilates the trial functions without it and does not annihilate the one with t squared.\n\nThe book is not satisfied with undetermined coefficients, for a precise reason: it is not a linear right inverse, not one process that handles every g, but a trick that changes with g. Variation of parameters is a genuine right inverse, works for every g, and inverts even the variable coefficient operator. It comes from translating section 3's formula: the basis and its derivatives form a matrix whose columns are a basis for the first-order system, the fundamental solution is that matrix times its value at zero inverted, and on substituting, the constant matrix in the middle cancels.\n\nTheorem 5.1 reduces it to a linear system in the derivatives of the coefficients alone. The book's example has the secant on the right, which is not a solution of any constant coefficient equation, so the first method cannot touch it; the answer is x sine x plus the logarithm of the cosine times the cosine.\n\nThe section closes on the spring. Mass times acceleration plus stiffness times displacement is zero, and the solution is a sine of angular frequency the square root of stiffness over mass. With friction, light damping still oscillates forever with an exponentially shrinking amplitude, while heavy damping does not vibrate at all. The same equation governs an electric circuit, where a periodic applied voltage splits the answer into a decaying transient and a steady state, and phase and resonance appear.\n\nPart of a bilingual animated teaching series (English edition).\n\nThis is an independently produced study guide. It is not official course material and is not affiliated with the authors or publisher of the book. The narration and animations are original work; no pages of the book are reproduced, and no copy of it is provided.",
+    "tags": [
+      "Advanced Calculus",
+      "Loomis",
+      "Sternberg",
+      "differential equations",
+      "inhomogeneous equation",
+      "undetermined coefficients",
+      "variation of parameters",
+      "resonance",
+      "harmonic motion",
+      "real analysis",
+      "university mathematics"
+    ],
+    "language": "en"
+  }
+]

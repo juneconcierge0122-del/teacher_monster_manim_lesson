@@ -1,0 +1,40 @@
+[
+  {
+    "file": "manim_lessons/samples/output/advcalc_e82_zh-TW.mp4",
+    "title": "《高等微積分》第 82 集｜邊界值問題與形式自伴｜Loomis & Sternberg 第 6 章 §6",
+    "description": "本集是 Loomis 與 Sternberg《Advanced Calculus》第 6 章第 6 節「邊界值問題」的前半（書頁 294 到 297），習題 6.1 到 6.12 在 300 到 301。\n\n邊界值問題看起來像初始值問題，性格卻完全不同。初值在同一個點上給函數值與斜率，邊值在區間的兩個端點各給一個函數值。物理裡最重要的那些問題幾乎都是後面這一種，而書上直說：讀者從初值那一套理論完全看不出該怎麼辦，得另造工具。\n\n新工具是純量積與自伴算子。如果 T 在適當的意義下自伴，那麼適當選的補空間會讓右逆同時是自伴的與緊的，於是第 5 章的特徵基底定理整個可以搬過來。要走這條路，得先弄清楚「自伴」對一個微分算子到底是什麼意思。\n\n答案是分部積分。把 f 身上的導數一次一個搬到 g 上，最後 f 不帶導數、g 被某個 n 階算子作用著，而端點留下的值累積成一個雙線性的 B。那個算子叫 T 的形式伴隨；它等於 T 時就說 T 是形式自伴的。每做一次分部積分就帶一個負號，所以形式伴隨的首項係數是負一的 n 次方乘上 T 的——這表示 n 必須是偶數，否則連首項都對不起來。畫面把這件事用數字算出來：偶數階時兩個算子逐點相等，奇數階時差了一整個導數。\n\n二階的情形算完之後得到引理 6.2：T 形式自伴，若且唯若中間那個係數等於最高階係數的導數，也就是 T 可以寫成「c 二乘 f 一撇」的導數再加 c 零乘 f。常係數的情形就是一階項的係數為零。\n\n引理 6.1 再把算子的性質換成邊界條件的性質：右逆自伴，若且唯若 M 裡的任意兩個函數讓 B 在兩端的差變成零。於是可以直接寫下幾組自伴的邊界條件——兩端函數值為零、兩端斜率為零、斜率各自正比於同一端的函數值、以及最高階係數在兩端相等時的週期條件。畫面逐組把 B 算出來，全是零，並且另外放一組不滿足的作對照。最後是引理 6.3：「M 是零化空間的補」這個條件，可以換成比較好驗的「T 限制在 M 上是單射」。\n\n本影片為雙語教學動畫系列（繁體中文版）。\n\n本影片為獨立製作的學習導讀，非官方教材，與原書作者及出版社無關。\n講解為自行撰寫，動畫為自行繪製，不含原書頁面，也不提供原書的取得管道。",
+    "tags": [
+      "高等微積分",
+      "Advanced Calculus",
+      "Loomis",
+      "Sternberg",
+      "邊界值問題",
+      "形式自伴",
+      "分部積分",
+      "自伴算子",
+      "微分算子",
+      "Sturm-Liouville",
+      "數學分析",
+      "大學數學"
+    ],
+    "language": "zh-TW"
+  },
+  {
+    "file": "manim_lessons/samples/output/advcalc_e82_en.mp4",
+    "title": "Advanced Calculus, Episode 82 | The Boundary-Value Problem | Ch. 6, §6",
+    "description": "This episode is the first half of section 6 of chapter 6 of Loomis and Sternberg's Advanced Calculus, the boundary-value problem, pages 294 to 297. Exercises 6.1 to 6.12 are on pages 300 and 301.\n\nA boundary-value problem looks like an initial-value problem and behaves nothing like one. Initial data gives a value and a slope at a single point; boundary data gives one value at each end of an interval. Most of the important problems in physics are of the second kind, and the book says plainly that the initial-value theory offers no clue how to attack them: wholly new tools are needed.\n\nThe new tools are the scalar product and the theory of self-adjoint operators. If the operator is self-adjoint in the right sense, a suitable complement makes the right inverse both self-adjoint and compact, and chapter 5's eigenbasis theorem carries over entire. To take that road, we first have to know what self-adjointness means for a differential operator.\n\nThe answer is integration by parts. Moving the derivatives off f one at a time leaves f undifferentiated and g acted on by some operator of the same order, with the endpoint values accumulating into a bilinear form. That operator is the formal adjoint; when it equals the original, the operator is formally self-adjoint. Each integration by parts brings a sign, so the formal adjoint's leading coefficient is minus one to the n times the original's, which forces n to be even. The screen computes this rather than asserting it: at even order the two operators agree pointwise, at odd order they differ by a whole derivative.\n\nWorking the second-order case out gives Lemma 6.2: the operator is formally self-adjoint exactly when the middle coefficient is the derivative of the leading one, so that it can be written as the derivative of the leading coefficient times the first derivative, plus the lowest term. For constant coefficients that just means the first-order term vanishes.\n\nLemma 6.1 then trades a property of the operator for a property of the boundary conditions: the right inverse is self-adjoint exactly when the bilinear form vanishes between the ends for every pair in the subspace. Several self-adjoint boundary conditions can then be written down directly, and the screen evaluates the form for each one, all zero, with a condition that fails shown alongside for contrast. Lemma 6.3 closes the half by replacing the condition that the subspace be a complement with the easier one that the operator be injective on it.\n\nPart of a bilingual animated teaching series (English edition).\n\nThis is an independently produced study guide. It is not official course material and is not affiliated with the authors or publisher of the book. The narration and animations are original work; no pages of the book are reproduced, and no copy of it is provided.",
+    "tags": [
+      "Advanced Calculus",
+      "Loomis",
+      "Sternberg",
+      "boundary-value problem",
+      "formal adjoint",
+      "self-adjoint operators",
+      "integration by parts",
+      "differential operators",
+      "real analysis",
+      "university mathematics"
+    ],
+    "language": "en"
+  }
+]

@@ -1,7 +1,13 @@
 # advcalc —《Advanced Calculus》(Loomis & Sternberg)
 
-**狀態：E00–E80 已上傳（私人）。第 6 章 §1 到 §4 完結（書頁 287）。
-下一集 E81 接 §5「解非齊次方程」（書頁 288–292，習題 5.1–5.22 在 293–294），細目表給它 1 集。**
+**狀態：E00–E84 已上傳（私人）。第 6 章完結（書頁 304）。
+下一集 E85 進第 7 章「多重線性泛函」（書頁 305–320，**整章沒有習題**），細目表給它 6 集（E85–E90）。**
+**E81–E84 是第一次四集一批**：四個 opus subagent 各寫一集、一個 opus advisor 在開渲前審一次、
+sonnet worker 跑機械步驟。**8 支 1080p 一批實測 101 分鐘**（4 支那次是 54 分），
+每支吞吐從 13.5 分進步到 12.6 分——批量加倍幾乎沒有額外代價，但也沒有明顯加速。
+**這一輪共修了 30 處**，其中三道自動關卡全部看不到的有：E83 的表頭指著 D² 而底下三個數
+來自另一個系統（用封閉解核過差一個數量級）、兩處畫面數字是按奇偶寫死的而 assert 只在驗那個寫法、
+E81 的 assert 訊息與它驗的事相反、E82 的「允許的 λ」長條從一個本身不允許的點畫起。
 **§4 的頁碼在動工前自己核過，與 OUTLINE 那張表完全相符**——那是那張表第一次在動工前核就準。
 切點沒有照原本的注記（定理 4.1 之後，那樣前半只有兩頁），改在書頁 284 中間
 「We now turn to an important tractable case」：E79 是沒有常係數時能做什麼、E80 是常係數的完整顯式答案。
@@ -174,6 +180,10 @@ E22 從「零化子」起（83–86）。自然性那張交換圖雖然講的是
 | E78 | 常係數與矩陣指數 | 6.3 後半（278–280） | 3:52 ／ 3:28 | https://youtu.be/1sy5NxxkAKk | https://youtu.be/IDcSGXuLci4 |
 | E79 | n 階方程與降階法 | 6.4 前半（281–284 上半） | 4:04 ／ 3:20 | https://youtu.be/3RKcCeJwXDk | https://youtu.be/cpqPJplV7ms |
 | E80 | 常係數方程的顯式解 | 6.4 後半（284 下半–287） | 4:10 ／ 3:27 | https://youtu.be/T1BVZndPncM | https://youtu.be/4EPuV_RaySg |
+| E81 | 解非齊次方程 | 6.5（288–292） | 4:18 ／ 3:25 | https://youtu.be/Hf-Ie7uqduo | https://youtu.be/JBPh7KjmBTA |
+| E82 | 邊界值問題與形式自伴 | 6.6 前半（294–297） | 4:26 ／ 3:22 | https://youtu.be/b33wWQW92TY | https://youtu.be/STb24Y9Y7ic |
+| E83 | Sturm-Liouville 與特徵基底 | 6.6 後半（297–299） | 4:19 ／ 3:21 | https://youtu.be/pElyyNI3DkY | https://youtu.be/1YOX60sK4_o |
+| E84 | Fourier 級數 | 6.7（301–303） | 4:41 ／ 3:27 | https://youtu.be/74PqP-j7cKQ | https://youtu.be/oA8ZepMDHmM |
 
 **E16 起的描述結尾都帶了 PLAYBOOK 第 8 節那段免責聲明**（E00–E15 是在此之前上傳的，沒有那段，
 而 YouTube token 只有上傳權限、改不了已上傳影片的描述，要補只能在 YouTube Studio 手動編輯）。
