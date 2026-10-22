@@ -143,8 +143,14 @@ assert all(len({L % 2 for L in w}) == 1 for w in WIT.values()), \
 assert all(rebuild(w, 4) == s for s, ws in WIT.items() for w in ws.values()), \
     "each witness really does multiply out to the permutation it is filed under"
 SG1 = (1, 2, 3, 0)
-DEC = {L: WIT[SG1][L] for L in sorted(WIT[SG1])}
-assert sorted(DEC) == [3, 5], "this one is a product of three transpositions, or of five"
+# The search above keeps whichever witness it meets first, and at length five that
+# is a padded copy of the short one. The second row on screen is supposed to be a
+# genuinely different factorisation, so pick one that repeats no transposition.
+DEC5 = min(w for w in product(TR4, repeat=5)
+           if len(set(w)) == 5 and rebuild(w, 4) == SG1)
+DEC = {3: WIT[SG1][3], 5: DEC5}
+assert sorted(WIT[SG1]) == [3, 5], "this one is a product of three transpositions, or of five"
+assert all(rebuild(DEC[L], 4) == SG1 for L in DEC), "both printed rows multiply out to it"
 assert len(set(DEC[5])) == 5, "and the five are five different transpositions, not padding"
 assert all(sgn(s) == (1 if min(WIT[s]) % 2 == 0 else -1) for s in S4), \
     "parity of the shortest factorisation is the sign defined later by inversions"
@@ -477,7 +483,7 @@ class AdvCalcE86Base(ArrayArt, CanonicalBase):
     g.add(self._sym(y, str(v + 1), WARN if j in moved else INK, FS_TAG - 1, x=x, w=0.30))
    if k:
     i, j = DEC[3][k - 1]
-    g.add(self._sym(y, f"( {i + 1}  {j + 1} )", WARN, FS_TAG - 3, x=-2.78, w=0.76))
+    g.add(self._sym(y, f"( {i + 1}  {j + 1} )", WARN, FS_TAG - 3, x=-2.75, w=0.70))
   g.add(self._table(((f"σ   =   ( {show(SG1)} )", ACCENT_A),
                      ("k   =   3        "
                       + "  ".join(f"( {i + 1}  {j + 1} )" for i, j in DEC[3]), ACCENT_B),
@@ -512,13 +518,15 @@ class AdvCalcE86Base(ArrayArt, CanonicalBase):
                     ACCENT_A if k == 0 else ACCENT_B, pad=0.06, sw=1.8, tl=0.09))
   g.add(self._sym(1.20, "σ", ACCENT_A, FS_TAG, x=xa, w=0.32),
         self._sym(1.20, "σ ∘ ρ", ACCENT_B, FS_TAG - 1, x=xb, w=0.80))
-  g.add(self._table((f"ρ   =   ( {show(RHO2)} )", ACCENT_A),
-                    ("σ   ↦   σ ∘ ρ", ACCENT_B),
-                    ("σ ′   =   ( σ ′ ∘ ρ ⁻ ¹ )  ∘  ρ", ACCENT_B),
-                    ("σ ₁ ∘ ρ  =  σ ₂ ∘ ρ      ⇒      σ ₁  =  σ ₂", ACCENT_C),
-                    (f"{{ σ ∘ ρ }}   =   S ₃            {len(set(IMG2))} / {len(S3)}", ACCENT_A),
-                    (f"{{ σ ∘ ρ }}   =   S ₄            {NRIGHT} / {len(S4)}", ACCENT_B),
-                    (f"{{ ρ ∘ σ }}   =   S ₄            {NLEFT} / {len(S4)}", ACCENT_C))
+  g.add(self._table(((f"ρ   =   ( {show(RHO2)} )", ACCENT_A),
+                     ("σ   ↦   σ ∘ ρ", ACCENT_B),
+                     ("σ ′   =   ( σ ′ ∘ ρ ⁻ ¹ )  ∘  ρ", ACCENT_B),
+                     ("σ ₁ ∘ ρ  =  σ ₂ ∘ ρ      ⇒      σ ₁  =  σ ₂", ACCENT_C),
+                     (f"{{ σ ∘ ρ }}   =   S ₃            {len(set(IMG2))} / {len(S3)}",
+                      ACCENT_A),
+                     (f"{{ σ ∘ ρ }}   =   S ₄            {NRIGHT} / {len(S4)}", ACCENT_B),
+                     (f"{{ ρ ∘ σ }}   =   S ₄            {NLEFT} / {len(S4)}", ACCENT_C)),
+                    y0=0.90, dy=0.26, size=FS_TAG - 3))
   g.add(self._cap("右欄是同一份名單，箭頭只是把它重新排過",
                   "the right column is the same list, and the arrows only reorder it"))
   return g.add(self._foot("接下來要一個很小但後面一直用得到的事實：把 ρ 固定住，那麼把 σ 送到 σ 複合 ρ 的這個對應，是置換群到自己的雙射",
@@ -625,15 +633,16 @@ class AdvCalcE86Base(ArrayArt, CanonicalBase):
    g.add(self._ring(-4.60, cy, 0.32, [flat(p) for p in cyc], col))
   for cy, p, col in ((0.62, FIX3[0], ACCENT_A), (-0.52, FIX3[1], ACCENT_A)):
    g.add(self._sym(cy, f"{flat(p)}   ↦   {flat(p)}", col, FS_TAG - 4, x=-2.95, w=1.10))
-  g.add(self._table((f"m  =  2        n  =  3        m ⁿ  =  {len(IDXB)}", ACCENT_A),
-                    ("μ ( p )  ·  σ   =   μ ( p ∘ σ )", ACCENT_A),
-                    (f"σ   =   ( {show(SG6)} )", ACCENT_B),
-                    ("      p        ↦        p ∘ σ", DIM),
-                    ("   ↦   ".join(flat(p) for p in CYC3[0] + [CYC3[0][0]]), ACCENT_B),
-                    ("   ↦   ".join(flat(p) for p in CYC3[1] + [CYC3[1][0]]), ACCENT_C),
-                    (f"{flat(FIX3[0])}   ↦   {flat(FIX3[0])}"
-                     f"            {flat(FIX3[1])}   ↦   {flat(FIX3[1])}", ACCENT_A),
-                    (f"S ₃  ×  m ⁿ            {NB32} / {len(IDXB) * 6}", ACCENT_B))
+  g.add(self._table(((f"m  =  2        n  =  3        m ⁿ  =  {len(IDXB)}", ACCENT_A),
+                     ("μ ( p )  ·  σ   =   μ ( p ∘ σ )", ACCENT_A),
+                     (f"σ   =   ( {show(SG6)} )", ACCENT_B),
+                     ("      p        ↦        p ∘ σ", DIM),
+                     ("   ↦   ".join(flat(p) for p in CYC3[0] + [CYC3[0][0]]), ACCENT_B),
+                     ("   ↦   ".join(flat(p) for p in CYC3[1] + [CYC3[1][0]]), ACCENT_C),
+                     (f"{flat(FIX3[0])}   ↦   {flat(FIX3[0])}"
+                      f"            {flat(FIX3[1])}   ↦   {flat(FIX3[1])}", ACCENT_A),
+                     (f"S ₃  ×  m ⁿ            {NB32} / {len(IDXB) * 6}", ACCENT_B)),
+                    y0=0.90, dy=0.23, size=FS_TAG - 4))
   g.add(self._cap("八個基底元素被分成兩個三元環加兩個不動點",
                   "the eight basis elements fall into two three-cycles and two fixed points"))
   return g.add(self._foot("引理 3.2 說，每一個這樣的算子都把張量積空間的那組基底送回基底自己，只是把它重新排列而已，並沒有產生新的東西",
@@ -660,13 +669,15 @@ class AdvCalcE86Base(ArrayArt, CanonicalBase):
                    f"( x {'₁₂₃'[si]} − x {'₁₂₃'[sj]} )      {-1 if rev else 1:+d}",
                    WARN if rev else ACCENT_B, FS_TAG - 4, x=-4.30, w=3.60))
   g.add(self._sym(0.80, "σ", ACCENT_A, FS_TAG, x=-3.10, w=0.30))
-  g.add(self._table(("E ( x )   =   ∏  ( x ᵢ  −  x ₖ )            i  <  k", ACCENT_A),
-                    (f"n  =  3            ∏   :   {len(PAIRS7)}", DIM),
-                    (f"x   =   ( {' , '.join(f'{v:+.1f}' for v in X3)} )", ACCENT_B),
-                    (f"σ   =   ( {show(SG7)} )", ACCENT_A),
-                    ("   ·   ".join(f"( {f:+.3f} )" for *_a, f, _r in FACT7), ACCENT_B),
-                    (f"E ( x )   =   {E7:+.3f}", ACCENT_B),
-                    (f"E ( x ∘ σ )   =   {E7S:+.3f}            {abs(E7S - E7):.0e}", ACCENT_C))
+  g.add(self._table((("E ( x )   =   ∏  ( x ᵢ  −  x ₖ )            i  <  k", ACCENT_A),
+                     (f"n  =  3            ∏   :   {len(PAIRS7)}", DIM),
+                     (f"x   =   ( {' , '.join(f'{v:+.1f}' for v in X3)} )", ACCENT_B),
+                     (f"σ   =   ( {show(SG7)} )", ACCENT_A),
+                     ("   ·   ".join(f"( {f:+.3f} )" for *_a, f, _r in FACT7), ACCENT_B),
+                     (f"E ( x )   =   {E7:+.3f}", ACCENT_B),
+                     (f"E ( x ∘ σ )   =   {E7S:+.3f}            {abs(E7S - E7):.0e}",
+                      ACCENT_C)),
+                    y0=0.90, dy=0.26, size=FS_TAG - 3))
   g.add(self._cap("兩個因式各變一次號，乘起來剛好抵消",
                   "two of the factors change sign once each, and the two flips cancel"))
   return g.add(self._foot("第 4 節先定義一個特別的多項式 E：把所有編號由小到大的配對各取一個差，全部乘起來。n 等於三的時候只有三個因式",
