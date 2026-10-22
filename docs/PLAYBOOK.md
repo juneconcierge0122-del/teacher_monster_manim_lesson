@@ -106,6 +106,12 @@
 - **不要同時跑多個共用 `media/` 的 `manim -qh`**：`media/texts/*.svg` 是共用快取，
   兩個 process 同時要同一個未快取的字串時會 `FileNotFoundError`。
   用佇列 `bash tools/queue.sh 49:landau_l49_adiabatic.py …`（失敗重試一次、順便核對 `Rendered <名字>`）。
+- **`bounds.py` 與 `collide.py` 也吃 `media/texts` 那個共用快取，所以不要平行跑。**
+  2026-10-22 讓三集的六道檢查同時跑，其中一道掛在 `FileNotFoundError`（某個 `.svg`），
+  單獨重跑就正常。它們和 `manim -qh` 是同一個快取競態，只是因為跑得快所以少見。
+  **序列跑；真要平行就各給一個 `--media_dir`**（這兩支工具目前沒有那個參數，所以就是序列）。
+  同理，主控在跑檢查時要留意有沒有 subagent 同時也在跑——兩邊都會踩同一個快取。
+
 - **要平行渲染就給每支場景自己的 `--media_dir`**，那個共用快取就不再共用。
   `PARALLEL=1 bash tools/queue.sh 75:a.py 76:b.py` 會四支一起跑，各自一個 media dir，
   渲完把 mp4 搬回 `media/videos/<課名>/1080p60/`，所以下游工具（checkvideo、grabbeats、
@@ -165,10 +171,23 @@
 
 ## 7. 文字與 TTS
 
+- **改 `_cap`／`_foot` 的中文時，同一次就要改英文那半。** 2026-10-22 一輪裡犯了兩次：
+  把中文說明話改對了、英文還留著原來那句錯的（E84「只有橘色那條不碰底線」、
+  E82「the orange stretch」在長條已經斷成好幾段之後）。**中文幀複核不會抓到這個**，
+  因為那一半根本沒出現在中文畫面上。改完用 `grep` 把那個方法的 `_cap(` 兩個參數一起印出來核。
+
 - **`FORMULAS` 必須是語言無關的**（不只適用於模態名稱）：想在公式裡寫「積分到 t₀」「不可公度」這種說明時，
   很容易順手打中文或英文進去，結果另一個語言版本就混語。純符號寫不出來就把它移到 `MODE_LABEL`。
 - **大括號與 `^` 不會被當成排版指令**：`∫^{t₀}`、`e^{ilw}` 會原樣顯示成字面上的大括號，
   要改寫成 `∫ ω dt ( t → t₀ )`、`Σ_l Λ_l · exp ( i l w )`。
+- **配音突然全部生不出來、而指令還回 exit 0 時，先看 edge-tts 的版本。**
+  2026-10-22 八批配音一支都沒產出，log 裡是
+  `WSServerHandshakeError: 403` on `wss://speech.platform.bing.com/...`——
+  Microsoft 改了 handshake 的權杖（`Sec-MS-GEC`）演算法，舊版 edge-tts 一律被擋。
+  `pip install -U edge-tts`（7.2.8 → 7.3.1）就通了，聲音與 `rate="-4%"` 都沒變。
+  **這類故障不會讓指令回非零**，所以 `tools/ttscheck.py` 是唯一會發現的東西——
+  生成完一定要跑它，不要看回傳值。
+
 - **中文旁白裡的 π 是安全的**：實測 `zh-TW-HsiaoChenNeural` 會把「二π」唸成「二派」
   （2.42 s vs「二派」2.40 s、「二」2.18 s），不會漏字。
   要驗其他符號時就用這招 —— 生成兩三個只差一個字元的短句比長度即可。

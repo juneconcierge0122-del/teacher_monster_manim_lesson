@@ -29,6 +29,10 @@ WHITELIST = {
     "Hom", "lub", "glb", "min", "max", "sup", "inf", "det", "lim", "dim",
     "rank", "diag", "Ch", "dF", "dG", "dH", "dK", "df", "dg", "dh", "dk", "id", "int",
     "sin", "cos", "tan", "log", "exp", "arg", "mod", "ev", "Re", "Im", "ker",
+    # cl = closure, written cl(A) in both languages. Added 2026-10-22 for E83,
+    # where the overline notation was the alternative and U+203E after a "]"
+    # renders as a stray dash beside it instead of a bar over it.
+    "cl",
     # proper names, written in Latin letters in the Chinese narration too
     # ("Cauchy 序列", "Banach 空間"), so they are language-independent the way
     # an operator name is -- not words one half of the audience reads wrong.
