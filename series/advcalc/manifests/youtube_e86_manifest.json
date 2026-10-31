@@ -1,0 +1,39 @@
+[
+  {
+    "file": "manim_lessons/samples/output/advcalc_e86_zh-TW.mp4",
+    "title": "《高等微積分》第 86 集｜置換與正負號｜Loomis & Sternberg 第 7 章 §3–§4",
+    "description": "本集是 Loomis 與 Sternberg《Advanced Calculus》第 7 章第 3 節「置換」與第 4 節「置換的正負號」（書頁 308 到 310）。第 7 章整章沒有習題。\n\n這一段是純組合的，但它撐起整章：交錯是用置換的正負號定義的，而行列式就是唯一的交錯 m 重形式。\n\n置換在複合之下封閉、有反元素、有單位元、結合律成立，那就是一個群。最簡單的非單位置換是交換兩個元素，叫做對換，而任何置換都能寫成對換的乘積——分解法不唯一，但**長度的奇偶不變**。畫面把四個元素的二十四個置換全部分解、再乘回去逐一比對，並用廣度優先搜尋找出長度五以內的所有分解，驗每個置換的所有分解長度模二相同。\n\n接著是置換怎麼作用在泛函上。定義寫成 f 作用後在 ξ 上的值等於 f 在 ξ 複合 σ 的反元素上的值——**為什麼用反元素**是這一節的關鍵，因為只有這樣才會有引理 3.1 那個複合關係。畫面把不用反元素的版本也算了：三十六組裡有十八組不成立，而且它滿足的是順序寫反的那一條。\n\n定理 3.1 說每個置換給出一個線性同構，而那個對應是**反同態**——複合的順序會顛倒過來。這一點畫面上同樣用數字分出對錯：對的那個順序三十六組全中，反過來的那個有十八組不成立。引理 3.2 說每個這樣的算子只是把基底重新排列，畫面上八個多重指標排在同一個圈上，六支箭頭是兩條三角路徑、兩個圈起來的留在原地。\n\n最後是正負號。書上用一個特別的多項式，它是所有 i 小於 j 的差的乘積；置換作用在它上面只會改變某些因式的符號，而負一的那個次方就叫 sgn。畫面把四個元素的二十四個置換全部驗過，並且驗 sgn 的乘法性與「對換的 sgn 是負一」。有了 sgn 就能定義交錯，那是下一集的事。\n\n本影片為雙語教學動畫系列（繁體中文版）。\n\n本影片為獨立製作的學習導讀，非官方教材，與原書作者及出版社無關。\n講解為自行撰寫，動畫為自行繪製，不含原書頁面，也不提供原書的取得管道。",
+    "tags": [
+      "高等微積分",
+      "Advanced Calculus",
+      "Loomis",
+      "Sternberg",
+      "置換群",
+      "對換",
+      "正負號",
+      "反同態",
+      "組合數學",
+      "數學分析",
+      "大學數學"
+    ],
+    "language": "zh-TW"
+  },
+  {
+    "file": "manim_lessons/samples/output/advcalc_e86_en.mp4",
+    "title": "Advanced Calculus, Episode 86 | Permutations and the Sign | Ch. 7, §3-4",
+    "description": "This episode is sections 3 and 4 of chapter 7 of Loomis and Sternberg's Advanced Calculus, permutations and the sign of a permutation, pages 308 to 310. Chapter 7 has no exercises.\n\nThis stretch is pure combinatorics, and it carries the chapter: alternating is defined through the sign of a permutation, and the determinant is the unique alternating m-linear form.\n\nPermutations are closed under composition, have inverses and an identity, and compose associatively, which is exactly a group. The simplest non-identity permutation swaps two elements, and every permutation is a product of such swaps -- not uniquely, but the parity of the length never changes. On screen all twenty-four permutations of four elements are factored and multiplied back together one by one, and a breadth-first search finds every factorisation of length five or less, confirming that all factorisations of a given permutation have the same length modulo two.\n\nThen comes the action on functionals, defined so that the acted-on functional at a point equals the original at the point composed with the inverse. Why the inverse is the point of the section: only that convention gives Lemma 3.1 its composition law. The version without the inverse is computed as well, and it fails on eighteen of thirty-six pairs, while satisfying the law with the order reversed.\n\nTheorem 3.1 makes each permutation a linear isomorphism, and the correspondence an antihomomorphism: composition comes out in the opposite order. The screen separates right from wrong numerically here too, with the correct order holding on all thirty-six pairs and the reverse failing on eighteen. Lemma 3.2 says each such operator merely rearranges the basis, and the figure puts all eight multi-indices on one circle, where the six arrows form two triangular paths while the two ringed ones stay where they are.\n\nLast is the sign. The book uses a particular polynomial, the product of all the differences for i less than j; a permutation acting on it only changes the signs of some factors, and minus one to that power is the sign. All twenty-four permutations of four elements are verified, along with the multiplicativity of the sign and the fact that a transposition has sign minus one. With the sign in hand, alternating can be defined, which is the next episode.\n\nPart of a bilingual animated teaching series (English edition).\n\nThis is an independently produced study guide. It is not official course material and is not affiliated with the authors or publisher of the book. The narration and animations are original work; no pages of the book are reproduced, and no copy of it is provided.",
+    "tags": [
+      "Advanced Calculus",
+      "Loomis",
+      "Sternberg",
+      "permutation group",
+      "transposition",
+      "sign of a permutation",
+      "antihomomorphism",
+      "combinatorics",
+      "real analysis",
+      "university mathematics"
+    ],
+    "language": "en"
+  }
+]

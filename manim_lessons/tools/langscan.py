@@ -29,6 +29,9 @@ WHITELIST = {
     "Hom", "lub", "glb", "min", "max", "sup", "inf", "det", "lim", "dim",
     "rank", "diag", "Ch", "dF", "dG", "dH", "dK", "df", "dg", "dh", "dk", "id", "int",
     "sin", "cos", "tan", "log", "exp", "arg", "mod", "ev", "Re", "Im", "ker",
+    # sgn = the sign of a permutation, written sgn in both languages like det and
+    # dim. Added 2026-10-22 for chapter 7, where every formula row carries it.
+    "sgn",
     # cl = closure, written cl(A) in both languages. Added 2026-10-22 for E83,
     # where the overline notation was the alternative and U+203E after a "]"
     # renders as a stray dash beside it instead of a bar over it.

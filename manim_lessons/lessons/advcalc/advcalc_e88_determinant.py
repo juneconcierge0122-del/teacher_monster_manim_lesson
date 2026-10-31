@@ -193,13 +193,13 @@ def expand(M, r):
  return [(-1.0) ** (i + r) * M[i][r] * dexp(minor(M, i, r)) for i in range(len(M))]
 
 
-COLS = [0, 1, 2]
+COLS = [0, 1, 2, 3]
 EXPAND = {r: expand(T4.tolist(), r) for r in COLS}
 for _r in COLS:
  assert abs(sum(EXPAND[_r]) - D_T4) < 1e-12, \
      f"expanding down column {_r + 1} reproduces the determinant, not just its own arithmetic"
 assert max(abs(sum(EXPAND[a]) - sum(EXPAND[b])) for a in COLS for b in COLS) < 1e-12, \
-    "and the three different columns agree with each other, which a sign slip would break"
+    "and all four columns agree with each other, which a sign slip would break"
 EXERR = max(abs(sum(EXPAND[r]) - np.linalg.det(T4)) for r in COLS)
 RSHOW = 1                                   # the column whose four terms are listed on screen
 MINORS = [minor(T4.tolist(), i, RSHOW) for i in range(4)]
@@ -307,8 +307,7 @@ class AdvCalcE88Base(ArrayArt, CanonicalBase):
                      ("f  ,  g   ∈   𝒜 ᵐ            g   =   c  ·  f", DIM),
                      ("D ( δ ¹ , … , δ ᵐ )   =   1", ACCENT_A),
                      ("D ( x ¹ , … , x ᵐ )   =   D ( x )", ACCENT_A),
-                     (f"m   =   {M_DIM}            det ( I )   =   {ms(D_IDENT, '.6f')}", ACCENT_C),
-                     ("§ 5        ⇒        § 6", DIM)),
+                     (f"m   =   {M_DIM}            det ( I )   =   {ms(D_IDENT, '.6f')}", ACCENT_C),),
                     y0=0.88, dy=0.32, size=FS_TAG - 3))
   g.add(self._cap("線上每一點都是交錯形式，只有一點在標準基底上取值 1",
                   "every point of the line is an alternating form; one of them takes the value 1"))
@@ -339,7 +338,7 @@ class AdvCalcE88Base(ArrayArt, CanonicalBase):
                 ACCENT_A if k == SHOW3 else ACCENT_B))
   rows.append((f"Σ   =   {ms(sum(TERM3), '+.0f')}          det   =   "
                f"{ms(float(np.linalg.det(T3)), '.6f')}", ACCENT_C))
-  g.add(self._table(tuple(rows), y0=0.90, dy=0.23, size=FS_TAG - 5))
+  g.add(self._table(tuple(rows), y0=0.90, dy=0.21, size=FS_TAG - 5))
   g.add(self._cap("橘色那一列用的就是圖上三個橘色的格子",
                   "the orange row of the table uses the three orange cells of the grid"))
   return g.add(self._foot("引理 6.1 把它寫成顯式公式。對每一種把一到 m 重排的方式，從每一條直行各取一個元素，彼此落在不同橫列，乘起來",
@@ -419,7 +418,7 @@ class AdvCalcE88Base(ArrayArt, CanonicalBase):
         self._sym(0.05, "×  c", DIM, FS_TAG - 4, x=-2.78, w=0.60))
   rows = [("f ₜ ( ξ )   =   f ( T ξ ₁ , … , T ξ ₘ )   =   k ₜ  ·  f ( ξ )", ACCENT_A),
           (f"Δ ( T )   =   det ( t )   =   {ms(D_TD, '+.0f')}", ACCENT_B),
-          ("        c            f ( ξ )        f ₜ ( ξ )        f ₜ  /  f", DIM)]
+          ("    f = c D        f ( ξ )        f ₜ ( ξ )        f ₜ  /  f", DIM)]
   for c, f, ft in FVAL:
    rows.append((f"    {ms(c, '+.1f')}        {ms(f, '+.1f')}      {ms(ft, '+.1f')}"
                 f"      {ms(ft / f, '.6f')}", ACCENT_C))
@@ -456,8 +455,9 @@ class AdvCalcE88Base(ArrayArt, CanonicalBase):
                      (f"Δ ( S  ∘  T )   =   {ms(D_ST3, '+.0f')}", ACCENT_C),
                      (f"| Δ |   ≤   {ms(MULERR, '.1e')}", ACCENT_A)),
                     y0=0.90, dy=0.23, size=FS_TAG - 4))
-  g.add(self._cap("最後兩個數相同，所以倒數第二列與最後一列對得起來",
-                  "the last two numbers coincide, which is the whole content of the theorem"))
+  g.add(self._cap("兩個 Δ 相乘那一列，與合成那一列，是同一個數",
+                  "the row that multiplies the two determinants and the row for the composite "
+                  "are the same number"))
   return g.add(self._foot("定理 6.1 說 Δ 把合成變成相乘。證明只有兩行：把 S 合成 T 作用在一組輸入上，先把 S 提出一個 Δ S，再把 T 提出一個 Δ T",
                           "Theorem 6.1 says this turns composition into multiplication, and the proof is two lines: feed a composite in, pull out one factor for the outer map and one for the inner",
                           ACCENT_A,
@@ -502,24 +502,34 @@ class AdvCalcE88Base(ArrayArt, CanonicalBase):
                             dx=0.58, dy=0.44, size=FS_TAG - 4, color=INK,
                             hotcol=3, hotcolor=ACCENT_A)
   g = VGroup(grid)
+  xl, xr = pos(0, 0)[0] - 0.30, pos(0, 3)[0] + 0.30
+  yt, yb = pos(0, 0)[1] + 0.20, pos(3, 0)[1] - 0.20
   xc, yr = pos(0, 3)[0], pos(3, 0)[1]
-  g.add(Line([-5.37, yr, 0], [-3.03, yr, 0], color=WARN, stroke_width=2.4))
-  g.add(Line([xc, 0.96, 0], [xc, -0.76, 0], color=WARN, stroke_width=2.4))
-  g.add(Rectangle(width=1.68, height=1.28, color=ACCENT_B,
-                  stroke_width=2.4).move_to([-4.49, 0.32, 0]))
-  g.add(self._sym(0.32, "s", ACCENT_B, FS_TAG + 1, x=-2.74, w=0.40),
-        self._sym(1.16, "δ ᵐ", ACCENT_A, FS_TAG - 2, x=xc, w=0.70))
+  # the deleted row and column are framed rather than struck through: a stroke
+  # drawn across them would be a line through the very digits it points at
+  g.add(Rectangle(width=xr - xl, height=0.44, color=WARN,
+                  stroke_width=2.4).move_to([(xl + xr) / 2, yr, 0]))
+  g.add(Rectangle(width=0.58, height=yt - yb, color=WARN,
+                  stroke_width=2.4).move_to([xc, (yt + yb) / 2, 0]))
+  kx = pos(0, 2)[0] + 0.26
+  ky = pos(2, 0)[1] - 0.20
+  g.add(Rectangle(width=kx - xl + 0.04, height=yt - ky, color=ACCENT_B,
+                  stroke_width=2.4).move_to([(xl - 0.04 + kx) / 2, (yt + ky) / 2, 0]))
+  # x=-2.74 落在 WARN 那個「要被劃掉的直行」框右邊，讀起來像在標它；
+  # 移到 ACCENT_B 那個框（左上 3×3）的左上角外側
+  g.add(self._sym(1.06, "s", ACCENT_B, FS_TAG + 1, x=-5.60, w=0.40),
+        self._sym(1.18, "δ ᵐ", ACCENT_A, FS_TAG - 2, x=xc, w=0.70))
   g.add(self._table((("t ᵐ   =   δ ᵐ            s   =   ( t ) ᵐ ᵐ", ACCENT_A),
                      (f"D ( t )   =   {ms(D_RED, '.6f')}", ACCENT_B),
                      (f"D ( s )   =   {ms(D_SUB, '.6f')}", ACCENT_B),
-                     ("  " + mrow(RED[3, :3].astype(int).tolist()) + "   →   "
-                      + mrow(RED2[3, :3].astype(int).tolist()), DIM),
-                     (f"D ( t )   =   {ms(D_RED2, '.6f')}", ACCENT_C),
+                     ("  " + mrow([RED[3, :3].astype(int).tolist()]) + "   →   "
+                      + mrow([RED2[3, :3].astype(int).tolist()]), DIM),
+                     (f"D ( t ′ )   =   {ms(D_RED2, '.6f')}", ACCENT_C),
                      ("T  ↾  X   =   id        ⇒        Δ ( T )   =   Δ ( T  ↾  Y )", ACCENT_A),
                      (f"m   =   4            dim Y   =   3", DIM)),
                     y0=0.90, dy=0.26, size=FS_TAG - 4))
-  g.add(self._cap("劃掉的那一橫列換掉三個數，行列式還是一樣",
-                  "the struck-out row gets three new entries and the determinant does not move"))
+  g.add(self._cap("紅框那一橫列換掉三個數，行列式還是一樣",
+                  "the red-framed row gets three new entries and the determinant does not move"))
   return g.add(self._foot("引理 6.2 處理降階。當最後一條直行剛好是標準基底的最後一個向量時，行列式等於劃掉最後一橫列與最後一直行之後那個小矩陣的行列式",
                           "Lemma 6.2 drops a dimension: when the last column is the last standard basis vector, the determinant equals that of the matrix left after deleting the last row and column",
                           ACCENT_A,
@@ -541,23 +551,23 @@ class AdvCalcE88Base(ArrayArt, CanonicalBase):
    g.add(self._sym(cy + 0.58, f"{ms(sign, '+.0f')[0]}   {ent}",
                    ACCENT_A if sign > 0 else ACCENT_C, FS_TAG - 4, x=cx, w=1.10))
   rows = [(f"r   =   {RSHOW + 1}            i          t ᵢ ᵣ          "
-           f"D ( ( t ) ⁱ ʳ )", DIM)]
+           f"D ( ( t ) ⁱ ʳ )        ±  t  D", DIM)]
   for i, term in enumerate(EXPAND[RSHOW]):
    rows.append((f"        {i + 1}        {ms(T4[i][RSHOW], '+.0f')}        "
                 f"{ms(MDET[i], '+.0f')}        {ms(term, '+.0f')}", ACCENT_B))
   rows.append((f"Σ   =   {ms(sum(EXPAND[RSHOW]), '+.0f')}        det   =   "
                f"{ms(float(np.linalg.det(T4)), '.4f')}", ACCENT_A))
-  rows.append(("r  =  1 , 2 , 3        Σ   =   "
+  rows.append(("r  =  " + " , ".join(str(r + 1) for r in COLS) + "        Σ   =   "
                + " , ".join(ms(sum(EXPAND[r]), '+.0f') for r in COLS), ACCENT_C))
   rows.append((f"| Δ |   ≤   {ms(EXERR, '.1e')}", ACCENT_A))
-  g.add(self._table(tuple(rows), y0=0.90, dy=0.23, size=FS_TAG - 5))
+  g.add(self._table(tuple(rows), y0=0.90, dy=0.21, size=FS_TAG - 5))
   g.add(self._cap("四個小陣列是四個不同的小矩陣，上面的符號正負交錯",
                   "the four grids are four different submatrices, and the signs above them alternate"))
   return g.add(self._foot("定理 6.3 就是餘因子展開。沿著第 r 條直行走下去，每個元素乘上劃掉它所在那一橫列與那一直行之後的小行列式，再配上正負交錯的符號",
                           "Theorem 6.3 is the expansion by minors: go down column r, multiply each entry by the smaller determinant left after deleting its own row and column, and attach alternating signs",
                           ACCENT_A,
-                          "加起來就是原來的行列式。右表沿第二直行展開，四項逐項列出；倒數第二列是沿三條不同直行各展開一次的總和，三個數一模一樣",
-                          "adding them gives the determinant; the table expands down the second column, and the row below it runs the same expansion down three different columns, to the same number"))
+                          "加起來就是原來的行列式。右表沿第二直行展開，四項逐項列出；倒數第二列是沿四條直行各展開一次的總和，四個數一模一樣",
+                          "adding them gives the determinant; the table expands down the second column, and the row below it runs the same expansion down all four columns, to the same number"))
 
  # ── beat 9: Corollary 1 and the cofactor matrix ─────────────────
  def _cofactor(self):
@@ -577,7 +587,7 @@ class AdvCalcE88Base(ArrayArt, CanonicalBase):
   rows.append((f"| c ᵀ · t   −   D ( t ) · I |   ≤   {ms(COFERR, '.1e')}", ACCENT_B))
   rows.append(("s ᵣ ᵢ   =   c ᵢ ᵣ   /   D ( t )", ACCENT_A))
   rows.append((f"| s   −   t ⁻ ¹ |   ≤   {ms(INVERR, '.1e')}", ACCENT_A))
-  g.add(self._table(tuple(rows), y0=0.90, dy=0.23, size=FS_TAG - 4))
+  g.add(self._table(tuple(rows), y0=0.90, dy=0.21, size=FS_TAG - 4))
   g.add(self._cap("對角線上四格相同，其餘十二格都是零",
                   "the four diagonal cells all read alike and the other twelve are zero"))
   return g.add(self._foot("如果把展開式裡的元素換成另一條直行上的，那個和就是零，因為它等於一個有兩條直行相同的矩陣的行列式",
@@ -607,8 +617,9 @@ class AdvCalcE88Base(ArrayArt, CanonicalBase):
                 f"{ms(XCRAMER[j], '+.6f')}", ACCENT_A))
   rows.append((f"| Δ |   ≤   {ms(CRERR, '.1e')}", ACCENT_B))
   g.add(self._table(tuple(rows), y0=0.90, dy=0.23, size=FS_TAG - 4))
-  g.add(self._cap("三個商都是整數除以 54，與獨立解出來的那組逐項相同",
-                  "the three quotients match, entry by entry, a solution found independently"))
+  g.add(self._cap(f"三個商都是整數除以 {int(round(D_T3))}，與獨立解出來的那組逐項相同",
+                  f"each quotient is a whole number over {int(round(D_T3))}, and the three "
+                  f"match a solution found independently"))
   return g.add(self._foot("最後是 Cramer 法則。把第 j 條直行換成右手邊那個向量，算出來的行列式除以原本的行列式，就是解的第 j 個座標",
                           "last comes Cramer's rule: replace the jth column by the right-hand side, and that determinant over the original determinant is the jth coordinate of the solution",
                           ACCENT_A,

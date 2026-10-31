@@ -34,8 +34,18 @@ ap = {"advcalc": "e"}.get(series, "l")
 src = ROOT / f"samples/output/{series}_{ap}{n}_{lang}.mp4"
 out.mkdir(parents=True, exist_ok=True)
 
+beats = sorted((ROOT / f"samples/audio_{ap}{n}/{lang}").glob("*.mp3"))
+if not beats:
+    # the language is spelled the way the audio directory and the mp4 are:
+    # "zh-TW", not "zh". Without this the loop never runs and the last line
+    # dies on an undefined `i`, which reads like a bug in the grab itself.
+    sys.exit(f"no narration under samples/audio_{ap}{n}/{lang} -- "
+             f"the language is spelled as the directory is (zh-TW / en)")
+if not src.exists():
+    sys.exit(f"no render at {src}")
+
 t = 0.0
-for i, f in enumerate(sorted((ROOT / f"samples/audio_{ap}{n}/{lang}").glob("*.mp3"))):
+for i, f in enumerate(beats):
     with av.open(str(f)) as c:
         t += float(c.duration / av.time_base)
     subprocess.run([FF, "-y", "-loglevel", "error", "-ss", f"{t - 0.60:.3f}",

@@ -1,0 +1,39 @@
+[
+  {
+    "file": "manim_lessons/samples/output/advcalc_e85_zh-TW.mp4",
+    "title": "《高等微積分》第 85 集｜張量積與共變張量｜Loomis & Sternberg 第 7 章 §1–§2",
+    "description": "本集是 Loomis 與 Sternberg《Advanced Calculus》第 7 章第 1 節「雙線性泛函」與第 2 節「多重線性泛函」（書頁 305 到 308）。**第 7 章整章沒有習題**——305 到 320 逐頁核過，一題也沒有。\n\n書上開宗明義說這一章主要是備查用的，不期待讀者細讀證明，目標是把交錯多重線性泛函與行列式這一套工具備齊。這一集把第 1 節的雙線性情形推到第 2 節的 n 重情形，是同一件事的兩個維度。\n\nV 乘 W 上的雙線性泛函全體自成一個向量空間，記作 V 的對偶與 W 的對偶的張量積。定理 1.1 說它與兩個 Hom 空間自然同構——每個雙線性泛函決定一個對應，把第二個變數送到一個線性泛函上，而那個對應本身是線性的雙射。畫面把線性與可逆各自代回去驗，殘差都是字面上的零（整數算術，沒有容差）。\n\n初等張量是 γ 張量 λ 這種形式，它在一對向量上的值就是兩個泛函各自作用再相乘。一個雙線性泛函是初等的，若且唯若它對應的線性映射的秩是一。畫面上兩個三乘三的矩陣並排，左邊那個的第二個奇異值是零、右邊那個不是。\n\n定理 1.2 給出基底：取 V 與 W 的基底與對偶基底，m 乘 n 個初等雙線性泛函就構成基底，所以維數是 m 乘 n。推廣到 n 重之後，都取同一個 V 的情形叫 n 階共變張量空間，展開式的和跑遍所有 n 元組，而定理 2.1 說那些初等泛函是基底、維數是 m 的 n 次方。注意這兩個維數不一樣：雙線性是 m 乘 n，n 階共變是 m 的 n 次方。\n\n書上說嚴格證明要對 n 做歸納，而歸納步驟要把雙重和寫成單一和——那個對應畫面上也驗了，二十七個三元組與九乘三個配對逐項相同。最後一拍談對稱與交錯：二階時任何係數矩陣都唯一拆成對稱的一半加反對稱的一半，六加三剛好是九。但階數再高就不是這麼乾淨地分成兩塊，而交錯這個詞是用置換的正負號定義的，所以下一集從置換群講起。\n\n本影片為雙語教學動畫系列（繁體中文版）。\n\n本影片為獨立製作的學習導讀，非官方教材，與原書作者及出版社無關。\n講解為自行撰寫，動畫為自行繪製，不含原書頁面，也不提供原書的取得管道。",
+    "tags": [
+      "高等微積分",
+      "Advanced Calculus",
+      "Loomis",
+      "Sternberg",
+      "張量積",
+      "多重線性泛函",
+      "共變張量",
+      "對偶基底",
+      "線性代數",
+      "數學分析",
+      "大學數學"
+    ],
+    "language": "zh-TW"
+  },
+  {
+    "file": "manim_lessons/samples/output/advcalc_e85_en.mp4",
+    "title": "Advanced Calculus, Episode 85 | Tensor Products and Covariant Tensors | Ch. 7, §1-2",
+    "description": "This episode is sections 1 and 2 of chapter 7 of Loomis and Sternberg's Advanced Calculus, bilinear and multilinear functionals, pages 305 to 308. Chapter 7 has no exercises anywhere: all sixteen pages were checked one by one.\n\nThe book says at the outset that this chapter is principally for reference and that the reader is not expected to study the proofs; the goal is a working set of tools for alternating multilinear functionals and the determinant. This episode carries the bilinear case of section 1 up to the n-fold case of section 2, which are two dimensions of one idea.\n\nThe bilinear functionals on a product of two spaces form a vector space of their own, written as the tensor product of the two duals. Theorem 1.1 says it is naturally isomorphic to two Hom spaces: each bilinear functional determines a correspondence sending the second variable to a linear functional, and that correspondence is itself a linear bijection. Linearity and invertibility are both substituted back on screen, with residuals that are literally zero, since the arithmetic is integral and carries no tolerance.\n\nAn elementary tensor is one whose value on a pair is the product of two functionals applied separately. A bilinear functional is elementary exactly when the corresponding linear map has rank one. Two three-by-three matrices sit side by side on screen: the left one's second singular value is zero and the right one's is not.\n\nTheorem 1.2 supplies a basis: taking bases and dual bases, the m times n elementary bilinear functionals form one, so the dimension is m times n. Generalising to n factors, the case of one repeated space is the space of covariant tensors of order n, whose expansion runs over all n-tuples, and Theorem 2.1 makes those elementary functionals a basis of dimension m to the n. The two dimensions are different and the screen keeps them apart: m times n for the bilinear case, m to the n for order n.\n\nA strict proof needs induction on n, whose inductive step rewrites a double sum as a single one; that correspondence is checked too, with the twenty-seven triples matching the nine times three pairings term by term. The last beat reaches symmetry and antisymmetry: at order two every coefficient matrix splits uniquely into a symmetric half and an antisymmetric half, six plus three making nine. Higher orders do not split so cleanly, and since alternating is defined through the sign of a permutation, the next episode starts from the permutation group.\n\nPart of a bilingual animated teaching series (English edition).\n\nThis is an independently produced study guide. It is not official course material and is not affiliated with the authors or publisher of the book. The narration and animations are original work; no pages of the book are reproduced, and no copy of it is provided.",
+    "tags": [
+      "Advanced Calculus",
+      "Loomis",
+      "Sternberg",
+      "tensor product",
+      "multilinear functionals",
+      "covariant tensors",
+      "dual basis",
+      "linear algebra",
+      "real analysis",
+      "university mathematics"
+    ],
+    "language": "en"
+  }
+]

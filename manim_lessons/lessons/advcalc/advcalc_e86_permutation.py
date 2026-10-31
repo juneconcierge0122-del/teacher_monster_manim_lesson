@@ -39,7 +39,7 @@ from itertools import permutations, product
 
 sys.path.insert(0, str(pathlib.Path(__file__).resolve().parents[3]))
 import numpy as np
-from manim import Dot, Line, VGroup
+from manim import Circle, Dot, Line, VGroup
 from manim_lessons.lib.design_tokens import (ACCENT_A, ACCENT_B, ACCENT_C, DIM, INK, WARN)
 from manim_lessons.lessons.advcalc.arrays import ArrayArt
 from manim_lessons.lessons.canonical_base import CanonicalBase, make
@@ -82,6 +82,11 @@ def show(s):
 
 def flat(s):
  return " ".join(str(v + 1) for v in s)
+
+
+def cell(v, nd=0):
+ """A grid entry. Zero prints as 0, not as +0, which reads as a typo."""
+ return "0" if abs(v) < 1e-12 else f"{v:+.{nd}f}".replace("-", "\u2212")
 
 
 S3 = list(permutations(range(3)))
@@ -229,6 +234,16 @@ assert WRONG > 1.0 and NWRONG == 18, \
 assert WREV == 0.0, "what it satisfies instead is the same law with the factors swapped"
 
 ANTI = max(gap(act(COEF, comp(r, s)), act(act(COEF, r), s)) for r in S3 for s in S3)
+# the two zero counts on screen used to be typed in while every other count in
+# the same table was enumerated; count them the same way
+NWREV = sum(1 for a_ in S3 for b_ in S3
+            if gap(act(COEF, comp(b_, a_), False),
+                   act(act(COEF, a_, False), b_, False)) > 1e-12)
+NANTI = sum(1 for r in S3 for s in S3
+            if gap(act(COEF, comp(r, s)), act(act(COEF, r), s)) > 1e-12)
+assert NWREV == 0 and NANTI == 0, \
+    "the two orderings that the section says are the right ones fail nowhere in S3 squared"
+NPAIR = len(S3) ** 2
 HOMO = max(gap(act(COEF, comp(r, s)), act(act(COEF, s), r)) for r in S3 for s in S3)
 NHOMO = sum(1 for r in S3 for s in S3
             if gap(act(COEF, comp(r, s)), act(act(COEF, s), r)) > 1e-12)
@@ -464,8 +479,8 @@ class AdvCalcE86Base(ArrayArt, CanonicalBase):
                      (f"σ   =   ( {show(SG0)} )", ACCENT_B),
                      (f"σ ⁻ ¹   =   ( {show(SG0I)} )", ACCENT_C)),
                     y0=0.90, dy=0.26, size=FS_TAG - 3))
-  g.add(self._cap("四個分數都是把整個 S₄ 列舉過的結果",
-                  "each of those counts comes from enumerating the whole of S four"))
+  g.add(self._cap("三個分數都是把整個 S₄ 列舉過的結果",
+                  "each of those three counts comes from enumerating the whole of S four"))
   return g.add(self._foot("集合上的置換就是這個集合到自己的一個一對一又映成的對應。所有置換合起來在複合之下封閉，每個都有反元素，恆等映射也在裡面",
                           "a permutation of a set is a one to one correspondence of that set with itself; the collection of all of them is closed under composition, each has an inverse, and the identity map is one of them",
                           ACCENT_A,
@@ -492,8 +507,9 @@ class AdvCalcE86Base(ArrayArt, CanonicalBase):
                      ("( − 1 ) ᵏ        − 1            − 1", ACCENT_A),
                      (f"τ ₁ ∘ ⋯ ∘ τ ₖ   =   σ            {len(S4)} / {len(S4)}", ACCENT_B),
                      (f"k   ≤   5            {len(WIT)} / {len(S4)}", ACCENT_B),
-                     ("      k        0      1      2      3", DIM),
-                     ("                " + "    ".join(f"{m:<2d}" for m in MINLEN), ACCENT_C)),
+                     ("min k  :  # σ        "
+                      + "        ".join(f"{k}  :  {m}"
+                                       for k, m in enumerate(MINLEN)), ACCENT_C)),
                     y0=0.90, dy=0.23, size=FS_TAG - 4))
   g.add(self._cap("兩種寫法長度一個三一個五，奇偶一樣",
                   "the two factorisations have lengths three and five, and the same parity"))
@@ -505,7 +521,7 @@ class AdvCalcE86Base(ArrayArt, CanonicalBase):
 
  # ── beat 2: right translation ───────────────────────────────────
  def _biject(self):
-  xa, xb, y0, dy = -5.50, -3.15, 0.88, 0.38
+  xa, xb, y0, dy = -5.50, -3.15, 0.88, 0.33
   ys = [y0 - k * dy for k in range(6)]
   at = {s: ys[k] for k, s in enumerate(S3)}
   g = VGroup()
@@ -537,19 +553,22 @@ class AdvCalcE86Base(ArrayArt, CanonicalBase):
 
  # ── beat 3: n factorial ─────────────────────────────────────────
  def _count(self):
-  xs = [-4.20 + (k - 2.5) * 0.55 for k in range(6)]
-  x1 = (-5.30, -4.20, -3.10)
+  cx, dx = -4.40, 0.46
+  xs = [cx + (k - 2.5) * dx for k in range(6)]
+  # each level-1 node sits over the midpoint of the two leaves it feeds, so the
+  # edges meet the dots instead of merely pointing near them
+  x1 = [(xs[2 * k] + xs[2 * k + 1]) / 2.0 for k in range(3)]
   y0, y1, y2 = 1.02, 0.32, -0.38
-  g = VGroup(Dot([-4.20, y0, 0], radius=0.065, color=ACCENT_A))
+  g = VGroup(Dot([cx, y0, 0], radius=0.065, color=ACCENT_A))
   for x in x1:
    g.add(Dot([x, y1, 0], radius=0.060, color=ACCENT_B),
-         Line([-4.20, y0, 0], [x, y1, 0], color=DIM, stroke_width=1.4))
+         Line([cx, y0, 0], [x, y1, 0], color=DIM, stroke_width=1.4))
   for k, x in enumerate(xs):
    g.add(Dot([x, y2, 0], radius=0.055, color=ACCENT_C),
          Line([x1[k // 2], y1, 0], [x, y2, 0], color=DIM, stroke_width=1.4))
-   g.add(self._sym(y2 - 0.36, flat(S3[k]), ACCENT_C, FS_TAG - 5, x=x, w=0.50))
+   g.add(self._sym(y2 - 0.36, flat(S3[k]), ACCENT_C, FS_TAG - 5, x=x, w=0.44))
   for y, s in ((0.67, "×  3"), (-0.03, "×  2"), (-0.73, "×  1")):
-   g.add(self._sym(y, s, DIM, FS_TAG - 3, x=-2.34, w=0.52))
+   g.add(self._sym(y, s, DIM, FS_TAG - 3, x=-2.60, w=0.54))
   g.add(self._table((("      n            n !            | S ₙ |", DIM),)
                     + tuple((f"      {n}          {f:<4d}          {c:<4d}",
                              ACCENT_B if n % 2 else ACCENT_C)
@@ -574,7 +593,7 @@ class AdvCalcE86Base(ArrayArt, CanonicalBase):
   g.add(self._arr([-3.55, 0.42, 0], [-3.55, -0.14, 0], DIM, sw=3, tl=0.12))
   g.add(self._arr([-5.34, 0.42, 0], [-4.52, -0.26, 0], ACCENT_A, sw=3, tl=0.13))
   g.add(self._sym(1.00, "σ ₁", ACCENT_B, FS_TAG - 1, x=-4.68, w=0.52),
-        self._sym(0.14, "σ ₂", ACCENT_C, FS_TAG - 1, x=-2.42, w=0.52),
+        self._sym(0.14, "σ ₂", ACCENT_C, FS_TAG - 1, x=-3.10, w=0.52),
         self._sym(-0.14, "σ ₁ σ ₂", ACCENT_A, FS_TAG - 2, x=-5.26, w=0.90))
   g.add(self._sym(-0.98, "f ( ξ ∘ σ )      ⇒      f · ( σ ₁ σ ₂ )   =   ( f · σ ₂ ) · σ ₁",
                   WARN, FS_TAG - 3, x=-4.20, w=3.90))
@@ -582,9 +601,9 @@ class AdvCalcE86Base(ArrayArt, CanonicalBase):
                      ("( f · σ ) ( ξ )   =   f ( ξ ∘ σ ⁻ ¹ )", ACCENT_A),
                      ("f · ( σ ₁ σ ₂ )   =   ( f · σ ₁ ) · σ ₂", ACCENT_B),
                      ("                    ‖ Δ ‖            #", DIM),
-                     (f"ξ ∘ σ ⁻ ¹            {LEM31:.0e}            {N31} / 36", ACCENT_B),
-                     (f"ξ ∘ σ                {WRONG:.2f}            {NWRONG} / 36", WARN),
-                     (f"ξ ∘ σ  ,  σ ₂ σ ₁        {WREV:.0e}            0 / 36", ACCENT_C)),
+                     (f"ξ ∘ σ ⁻ ¹            {LEM31:.0e}            {N31} / {NPAIR}", ACCENT_B),
+                     (f"ξ ∘ σ                {WRONG:.2f}            {NWRONG} / {NPAIR}", WARN),
+                     (f"ξ ∘ σ  ,  σ ₂ σ ₁        {WREV:.0e}            {NWREV} / {NPAIR}", ACCENT_C)),
                     y0=0.90, dy=0.26, size=FS_TAG - 3))
   g.add(self._cap("右欄是不成立的對數：中間那列有十八對",
                   "the last column counts the pairs that fail, and the middle row has eighteen"))
@@ -613,9 +632,9 @@ class AdvCalcE86Base(ArrayArt, CanonicalBase):
                      (f"T ( ρ σ )   =   T ( σ )  ∘  T ( ρ )        σ  =  ( {show(SIG5)} )",
                       ACCENT_B),
                      ("                        ‖ Δ ‖            #", DIM),
-                     (f"T ( σ )  ∘  T ( ρ )        {ANTI:.0e}            0 / 36", ACCENT_B),
-                     (f"T ( ρ )  ∘  T ( σ )        {HOMO:.2f}            {NHOMO} / 36", WARN),
-                     (f"ρ σ   =   σ ρ                            {NCOMM} / 36", ACCENT_C),
+                     (f"T ( σ )  ∘  T ( ρ )        {ANTI:.0e}            {NANTI} / {NPAIR}", ACCENT_B),
+                     (f"T ( ρ )  ∘  T ( σ )        {HOMO:.2f}            {NHOMO} / {NPAIR}", WARN),
+                     (f"ρ σ   =   σ ρ                            {NCOMM} / {NPAIR}", ACCENT_C),
                      (f"T ( σ ⁻ ¹ ) ∘ T ( σ )   =   I            {INVOK:.0e}", ACCENT_A)),
                     y0=0.90, dy=0.26, size=FS_TAG - 3))
   g.add(self._cap("不成立的十八對，正好就是不可交換的那十八對",
@@ -628,11 +647,35 @@ class AdvCalcE86Base(ArrayArt, CanonicalBase):
 
  # ── beat 6: lemma 3.2 ───────────────────────────────────────────
  def _basis(self):
-  g = VGroup()
-  for cy, cyc, col in ((0.62, CYC3[0], ACCENT_B), (-0.52, CYC3[1], ACCENT_C)):
-   g.add(self._ring(-4.60, cy, 0.32, [flat(p) for p in cyc], col))
-  for cy, p, col in ((0.62, FIX3[0], ACCENT_A), (-0.52, FIX3[1], ACCENT_A)):
-   g.add(self._sym(cy, f"{flat(p)}   ↦   {flat(p)}", col, FS_TAG - 4, x=-2.95, w=1.10))
+  # 八個指標排在同一個圓上，而不是畫成兩個全等的三角形：引理 3.2 要說的是
+  # 「八個進、八個出、沒有多也沒有少」，兩個分離的三角形畫不出那件事，
+  # 而且兩個三角形形狀相同、只有標籤不同，正是「畫成兩個其實是同一個」。
+  cx, cy, rr = -4.20, 0.16, 0.66
+  ang = {flat(q): math.pi / 2.0 - 2.0 * math.pi * k / len(IDXB)
+         for k, q in enumerate(IDXB)}
+  pt = lambda s_: (cx + rr * math.cos(ang[s_]), cy + rr * math.sin(ang[s_]))
+  g = VGroup(self._curve([[cx + rr * math.cos(2.0 * math.pi * k / 96),
+                           cy + rr * math.sin(2.0 * math.pi * k / 96), 0]
+                          for k in range(97)], DIM, sw=1.2))
+  for cyc, col in ((CYC3[0], ACCENT_B), (CYC3[1], ACCENT_C)):
+   for k in range(len(cyc)):
+    a_, b_ = pt(flat(cyc[k])), pt(flat(cyc[(k + 1) % len(cyc)]))
+    g.add(self._link(a_[0], a_[1], b_[0], b_[1], col, pad=0.11, sw=2.0, tl=0.10))
+  for q in IDXB:
+   lab = flat(q)
+   col = (ACCENT_A if q in FIX3 else
+          ACCENT_B if q in CYC3[0] else ACCENT_C)
+   x_, y_ = pt(lab)
+   # 說明話說的是「圈上的八個點」，所以八個點都要畫得出來，不能只有
+   # 不動的那兩個有記號、其餘六個只靠箭頭末端代表
+   g.add(Dot([x_, y_, 0], radius=0.048, color=col))
+   if q in FIX3:
+    g.add(Circle(radius=0.11, color=ACCENT_A, stroke_width=2.4).move_to([x_, y_, 0]))
+   # 標籤原本掛在半徑 1.18 倍的地方，離那個半徑 0.66 的圈太遠，
+   # 看起來不像是圈上那八個點的名字
+   a_ = ang[lab]
+   g.add(self._sym(cy + (rr + 0.27) * math.sin(a_), lab, col, FS_TAG - 5,
+                   x=cx + (rr + 0.27) * math.cos(a_) * 1.10, w=0.46))
   g.add(self._table(((f"m  =  2        n  =  3        m ⁿ  =  {len(IDXB)}", ACCENT_A),
                      ("μ ( p )  ·  σ   =   μ ( p ∘ σ )", ACCENT_A),
                      (f"σ   =   ( {show(SG6)} )", ACCENT_B),
@@ -642,14 +685,14 @@ class AdvCalcE86Base(ArrayArt, CanonicalBase):
                      (f"{flat(FIX3[0])}   ↦   {flat(FIX3[0])}"
                       f"            {flat(FIX3[1])}   ↦   {flat(FIX3[1])}", ACCENT_A),
                      (f"S ₃  ×  m ⁿ            {NB32} / {len(IDXB) * 6}", ACCENT_B)),
-                    y0=0.90, dy=0.23, size=FS_TAG - 4))
-  g.add(self._cap("八個基底元素被分成兩個三元環加兩個不動點",
-                  "the eight basis elements fall into two three-cycles and two fixed points"))
+                    y0=0.90, dy=0.21, size=FS_TAG - 4))
+  g.add(self._cap("同一個圈上的八個點：兩條三角路徑加兩個自己不動的",
+                  "eight points on one circle: two triangular paths and two that stay put"))
   return g.add(self._foot("引理 3.2 說，每一個這樣的算子都把張量積空間的那組基底送回基底自己，只是把它重新排列而已，並沒有產生新的東西",
                           "Lemma 3.2 says each of these operators carries the basis of the tensor product space into itself, merely rearranging it rather than producing anything new",
                           ACCENT_A,
-                          "算出來是：指標為 p 的那個基底元素，被 σ 送到指標為 p 複合 σ 的那一個。左圖取二維空間、三重線性，八個基底被一個三循環這樣分",
-                          "the computation gives the basis element indexed by p going to the one indexed by p composed with sigma; the figure takes a two-dimensional space and three slots, and one three-cycle splits the eight like this"))
+                          "算出來是：指標為 p 的那個基底元素，被 σ 送到指標為 p 複合 σ 的那一個。左圖把八個指標排在同一個圈上，六支箭頭是兩條三角路徑，圈起來的兩個留在原地",
+                          "the computation gives the basis element indexed by p going to the one indexed by p composed with sigma; the figure puts all eight indices on one circle, the six arrows forming two triangular paths while the two ringed ones stay where they are"))
 
  # ── beat 7: the polynomial E ────────────────────────────────────
  def _poly(self):
@@ -668,7 +711,6 @@ class AdvCalcE86Base(ArrayArt, CanonicalBase):
                    f"( x {'₁₂₃'[i]} − x {'₁₂₃'[j]} )   ↦   "
                    f"( x {'₁₂₃'[si]} − x {'₁₂₃'[sj]} )      {-1 if rev else 1:+d}",
                    WARN if rev else ACCENT_B, FS_TAG - 4, x=-4.30, w=3.60))
-  g.add(self._sym(0.80, "σ", ACCENT_A, FS_TAG, x=-3.10, w=0.30))
   g.add(self._table((("E ( x )   =   ∏  ( x ᵢ  −  x ₖ )            i  <  k", ACCENT_A),
                      (f"n  =  3            ∏   :   {len(PAIRS7)}", DIM),
                      (f"x   =   ( {' , '.join(f'{v:+.1f}' for v in X3)} )", ACCENT_B),
@@ -697,7 +739,9 @@ class AdvCalcE86Base(ArrayArt, CanonicalBase):
   for x, y in CROSS:
    g.add(Dot([x, y, 0], radius=0.068, color=WARN))
   g.add(self._sym(0.10, f"r  =  {len(CROSS)}", WARN, FS_TAG - 1, x=-2.68, w=0.84))
-  g.add(self._sym(-1.06, f"σ   =   ( {show(SG8)} )            sgn σ   =   {sgn(SG8):+d}",
+  # -1.06 sits on the first footnote line at -1.22; the node row below the
+  # diagram ends at -0.80, so -0.98 still clears both
+  g.add(self._sym(-0.98, f"σ   =   ( {show(SG8)} )            sgn σ   =   {sgn(SG8):+d}",
                   ACCENT_A, FS_TAG - 3, x=-4.30, w=3.60))
   g.add(self._table((("      S ₃            r            sgn", DIM),)
                     + tuple((f"   ( {show(s)} )          {r}          {g_:+d}",
@@ -747,9 +791,9 @@ class AdvCalcE86Base(ArrayArt, CanonicalBase):
  # ── beat 10: alternating ────────────────────────────────────────
  def _alt(self):
   g = VGroup()
-  ga, _pa = self._numgrid(-5.30, 0.66, [[f"{v:+.0f}" for v in row] for row in CMAT],
+  ga, _pa = self._numgrid(-5.30, 0.66, [[cell(v) for v in row] for row in CMAT],
                           dx=0.46, dy=0.34, size=FS_TAG - 4, color=DIM)
-  gb, _pb = self._numgrid(-3.10, 0.66, [[f"{v:+.1f}" for v in row] for row in AMAT],
+  gb, _pb = self._numgrid(-3.10, 0.66, [[cell(v, 1) for v in row] for row in AMAT],
                           dx=0.46, dy=0.34, size=FS_TAG - 4, color=ACCENT_C,
                           hotcolor=WARN, hot=tuple((k, k) for k in range(3)))
   g.add(ga, gb, self._sym(0.66, "↦", ACCENT_A, FS_TAG, x=-4.20, w=0.30))
@@ -766,7 +810,7 @@ class AdvCalcE86Base(ArrayArt, CanonicalBase):
                              ACCENT_B if r else ACCENT_C) for m, n, r, c, _i in RANKS)
                     + ((f"Ω ∘ Ω   =   Ω            {max(i for *_x, i in RANKS):.0e}",
                         ACCENT_C),),
-                    y0=0.90, dy=0.23, size=FS_TAG - 4))
+                    y0=0.90, dy=0.21, size=FS_TAG - 4))
   g.add(self._cap("右邊那個陣列對角線是零，對稱位置互為相反數",
                   "the right-hand array has a zero diagonal and opposite entries across it"))
   return g.add(self._foot("有了正負號就可以把「交錯」講清楚：f 被任何置換作用之後都等於那個置換的正負號乘上 f。對稱則是作用之後完全不變",

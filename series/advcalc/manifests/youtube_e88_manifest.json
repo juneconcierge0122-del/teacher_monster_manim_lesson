@@ -1,0 +1,41 @@
+[
+  {
+    "file": "manim_lessons/samples/output/advcalc_e88_zh-TW.mp4",
+    "title": "《高等微積分》第 88 集｜行列式｜Loomis & Sternberg 第 7 章 §6",
+    "description": "本集是 Loomis 與 Sternberg《Advanced Calculus》第 7 章第 6 節「行列式」（書頁 312 到 315），從這一節的開頭到 Cramer 法則為止。第 7 章整章沒有習題。\n\n整節只靠上一集的一個數字。第 5 節算出交錯 m 重形式那個空間的維數是 m 取 m，也就是一。所以這種形式差一個純量倍只有一個，再要求它在標準基底上取值等於一，就把它完全定死。那個唯一確定的形式就是行列式；一個矩陣的行列式，就是它在那 m 條直行上的值。剩下的整節，是第 2 章列過的每一條行列式性質一條一條被兌現。\n\n引理 6.1 把它寫成顯式公式：從每一條直行各取一個元素、彼此落在不同橫列，乘起來再配上重排的奇偶號，全部加總。推論 1 說轉置不改變它，因為把乘積的因子依橫列指標重排用的是反排列，而取反排列是置換群上的一對一對應、奇偶性又不變。推論 2 立刻跟著來：既然轉置無關，對直行交錯就等於對橫列也交錯。\n\n接著是不依賴基底的那個行列式。取任何一個不是零的交錯 m 形式，把一個線性變換先作用在每個輸入上，出來的還是交錯 m 形式，所以是原來那個的常數倍；而因為那個空間一維，那個常數與選哪個形式無關。定理 6.1 的證明只有兩行：複合的行列式等於兩個行列式相乘。定理 6.2 說相似變換的行列式相同，三個推論一起落地，其中最有用的一條是：行列式為零等價於矩陣奇異。\n\n要把第 2 章剩下的性質補齊，靠的是兩個降階引理。引理 6.2 說最後一條直行是標準基底最後一個向量時，行列式等於劃掉最後一橫列與最後一直行之後那個小矩陣的行列式——前提只要求直行，被劃掉那一橫列的其他元素根本進不了答案，畫面特地把那三個數換掉一次，行列式紋風不動。引理 6.3 把它翻成變換的話。\n\n降階引理一到手，定理 6.3 的餘因子展開就是把某一條直行寫成標準基底的組合再逐項套用。把其中的元素換成另一條直行上的，那個和是零，因為它等於一個有兩條直行相同的矩陣的行列式。兩件事合成一條，就是餘因子矩陣與反矩陣。最後是 Cramer 法則：把第 j 條直行換成右手邊那個向量，算出來的行列式除以原行列式，就是解的第 j 個座標。\n\n畫面上每一個數字都由模組層算出來並釘住，而顯示用的值與檢查用的值不共用任何程式碼：螢幕上的數照引理 6.1 對 m 階乘個排列硬加、正負號靠數逆序對，對照用的來自 numpy 的 LU 分解，不經過任何餘子式。所以四條直行各展開一次都得到同一個負一百六十、Cramer 算出來的三個座標與獨立解法逐項相同這些，才是這一集真正的保證。\n\n本影片為雙語教學動畫系列（繁體中文版）。\n\n本影片為獨立製作的學習導讀，非官方教材，與原書作者及出版社無關。\n講解為自行撰寫，動畫為自行繪製，不含原書頁面，也不提供原書的取得管道。",
+    "tags": [
+      "高等微積分",
+      "Advanced Calculus",
+      "Loomis",
+      "Sternberg",
+      "行列式",
+      "餘因子展開",
+      "Cramer 法則",
+      "交錯形式",
+      "反矩陣",
+      "線性代數",
+      "數學分析",
+      "大學數學"
+    ],
+    "language": "zh-TW"
+  },
+  {
+    "file": "manim_lessons/samples/output/advcalc_e88_en.mp4",
+    "title": "Advanced Calculus, Episode 88 | The Determinant | Ch. 7, §6",
+    "description": "This episode is section 6 of chapter 7 of Loomis and Sternberg's Advanced Calculus, the determinant, pages 312 to 315, running from the start of the section to Cramer's rule. Chapter 7 has no exercises.\n\nThe whole section rests on one number from the previous episode. Section 5 computed the dimension of the space of alternating m-linear forms as m choose m, which is one. So such a form is unique up to a scalar, and asking it to take the value one on the standard basis pins it down completely. That uniquely determined form is the determinant, and the determinant of a matrix is its value on the m columns. The rest of the section cashes in, one by one, every property of determinants listed back in chapter 2.\n\nLemma 6.1 writes it as an explicit formula: take one entry from each column, no two in the same row, multiply them, attach the sign of the rearrangement and sum. Corollary 1 says the transpose does not change it, because reordering the factors by row index uses the inverse permutation, and inversion is a bijection of the permutation group that preserves parity. Corollary 2 follows at once: since the transpose is irrelevant, alternating in the columns is the same as alternating in the rows.\n\nThen comes the basis-free determinant. Take any nonzero alternating m-form and let a linear transformation act on each input first; what comes out is again an alternating m-form, hence a constant multiple of the original, and because that space is one-dimensional the constant does not depend on which form was chosen. The proof of Theorem 6.1 is two lines: the determinant of a composite is the product of the determinants. Theorem 6.2 says similar transformations have the same determinant, and three corollaries land together, the most useful being that the determinant vanishes exactly when the matrix is singular.\n\nThe remaining properties from chapter 2 need two reduction lemmas. Lemma 6.2 says that when the last column is the last standard basis vector, the determinant equals that of the matrix with the last row and last column deleted -- the hypothesis constrains only the column, and the other entries of the deleted row never reach the answer, which the screen demonstrates by replacing those three numbers and watching the determinant stay put. Lemma 6.3 restates it for transformations.\n\nWith the reduction lemmas in hand, the cofactor expansion of Theorem 6.3 is just writing one column in terms of the standard basis and applying the lemma term by term. Replacing the entries by those of a different column gives zero, because that sum is the determinant of a matrix with two equal columns. Putting the two together gives the cofactor matrix and the inverse. Last is Cramer's rule: replace the jth column by the right-hand side, and the determinant of that over the original determinant is the jth coordinate of the solution.\n\nEvery number on screen is computed and asserted in the module layer, and the displayed values share no code with the checking values: the screen's numbers come from summing over all m factorial permutations as in Lemma 6.1, with the sign counted from inversions, while the comparison comes from numpy's LU factorization, which never touches a minor. That is why the real guarantees here are the ones like expanding along each of the four columns and getting the same minus one hundred sixty every time, and the three Cramer coordinates agreeing entry by entry with an independent solver.\n\nPart of a bilingual animated teaching series (English edition).\n\nThis is an independently produced study guide. It is not official course material and is not affiliated with the authors or publisher of the book. The narration and animations are original work; no pages of the book are reproduced, and no copy of it is provided.",
+    "tags": [
+      "Advanced Calculus",
+      "Loomis",
+      "Sternberg",
+      "determinant",
+      "cofactor expansion",
+      "Cramer's rule",
+      "alternating forms",
+      "matrix inverse",
+      "linear algebra",
+      "real analysis",
+      "university mathematics"
+    ],
+    "language": "en"
+  }
+]

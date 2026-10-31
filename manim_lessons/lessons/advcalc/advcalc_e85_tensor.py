@@ -35,6 +35,7 @@ and no subscript q, and the alternative was a literal underscore in every row
 of beats 7 to 9.
 """
 import itertools
+import math
 import pathlib, sys
 
 sys.path.insert(0, str(pathlib.Path(__file__).resolve().parents[3]))
@@ -62,14 +63,17 @@ def bil(Tm):
  return lambda x, y: float(np.asarray(x) @ Tm @ np.asarray(y))
 
 
+def cell(v, nd=0):
+ """A grid entry. Zero prints as 0 rather than +0, which reads as a typo, and
+ the minus is the typographic one so the four episodes of this chapter match."""
+ if abs(v) < 1e-12:
+  return "0"
+ return f"{v:+.{nd}f}".replace("-", "\u2212")
+
+
 def gram(h):
  """Recover t_ij = h(alpha_i, beta_j) by evaluating h on the basis pairs."""
  return np.array([[h(EV[i], EW[j]) for j in range(NDUAL)] for i in range(M)])
-
-
-def gram_rev(h):
- """The same table read the other way round, for the Hom(V, W*) picture."""
- return np.array([[h(EV[i], EW[j]) for i in range(M)] for j in range(NDUAL)])
 
 
 F = bil(T)
@@ -105,18 +109,18 @@ V1LO = min(min(f(s) for s in SS) for f in CURV)
 V1HI = max(max(f(s) for s in SS) for f in CURV)
 SY1 = 1.00 / (V1HI - V1LO)
 OY1 = -0.15 - SY1 * (V1LO + V1HI) / 2.0
-assert SY1 * (min(f(1.0) for f in CURV) - min(f(-1.0) for f in CURV)) != 0.0
+FLAT1 = min(SY1 * (max(f(s) for s in SS) - min(f(s) for s in SS)) for f in CURV)
+assert FLAT1 > 0.25, \
+    "even the flattest of the three curves rises across a quarter of the drawn band"
 
 # ── beat 2: f -> (alpha -> f_alpha) is linear, and invertible ─────────
 CSC = -1.5
 LIN_ADD = float(np.abs(gram(lambda x, y: F(x, y) + G(x, y)) - (gram(F) + gram(G))).max())
 LIN_SC = float(np.abs(gram(lambda x, y: CSC * F(x, y)) - CSC * gram(F)).max())
-REVR = float(np.abs(gram_rev(F) - gram(F).T).max())
 INVR = max(abs(sum(gram(F)[i, j] * x[i] * y[j] for i in range(M) for j in range(NDUAL))
                - F(x, y)) for x, y in GRIDPTS)
 assert LIN_ADD == 0.0 and LIN_SC == 0.0, \
     "the correspondence respects sums and scalars, which is all Theorem 1.1 adds"
-assert REVR == 0.0, "reversing the roles of the variables transposes the table"
 assert INVR == 0.0, "and rebuilding f from its table gives f back, so the map is a bijection"
 
 # ── beat 3: elementary iff dyad ───────────────────────────────────────
@@ -223,6 +227,10 @@ RSYM = float(np.abs(SYM.T - SYM).max())
 RSKW = float(np.abs(SKW.T + SKW).max())
 RSPL = float(np.abs(SYM + SKW - C33).max())
 DSYM, DSKW = M * (M + 1) // 2, M * (M - 1) // 2
+# the antisymmetric half has dimension C(m, 2): counted here the second way, so
+# the number printed under that label is not the same expression wearing two names
+assert DSKW == math.comb(M, 2), \
+    "the antisymmetric part of a 2-tensor is indexed by the 2-subsets, so its dimension is C(m, 2)"
 assert RSPL == 0.0 and RSYM == 0.0 and RSKW == 0.0, \
     "every order two tensor is a symmetric part plus a skew part, uniquely"
 assert DSYM + DSKW == M ** 2, \
@@ -310,8 +318,8 @@ class AdvCalcE85Base(ArrayArt, CanonicalBase):
                      (f"dim ( V * ) ⊗ ⁿ   =   m ⁿ            {M} ³   =   {M ** 3}",
                       ACCENT_B)),
                     y0=0.90, dy=0.23, size=FS_TAG - 4))
-  g.add(self._cap("右表每一列是那一節最後做出來的東西",
-                  "each row names what that section ends up building"))
+  g.add(self._cap("右表每個節號後面，是那一節最後做出來的東西",
+                  "each section number in the table is followed by what that section builds"))
   return g.add(self._foot("第 7 章一開頭就說自己主要是備查用的，證明大多寫了出來，但不期待讀者細讀。目標是交錯多重線性泛函那一整套工具",
                           "chapter 7 says at the outset that it is principally for reference: most proofs are included but the reader is not expected to study them, and the goal is the machinery of alternating multilinear functionals",
                           ACCENT_A,
@@ -377,7 +385,7 @@ class AdvCalcE85Base(ArrayArt, CanonicalBase):
                       ACCENT_B),
                      ("Φ ⁻ ¹ ( t ᵢ ⱼ )   =   Σ   t ᵢ ⱼ  ( μ ᵢ ⊗ ν ⱼ )", ACCENT_A),
                      (f"Φ ⁻ ¹ Φ f   −   f              {INVR:.1e}", ACCENT_B),
-                     (f"Ψ f   −   ( Φ f ) ᵗ              {REVR:.1e}", ACCENT_C)),
+                     ("Ψ  :  V * ⊗ W *   ≅   Hom ( V , W * )", ACCENT_C)),
                     y0=0.90, dy=0.26, size=FS_TAG - 3))
   g.add(self._cap("三個殘差都是零：那個對應真的是線性的雙射",
                   "all three residuals vanish: the correspondence really is a linear bijection"))
@@ -392,15 +400,15 @@ class AdvCalcE85Base(ArrayArt, CanonicalBase):
   g = VGroup()
   for cx, Mx, lab, col, rk in ((-5.10, DYAD, "γ ⊗ λ", ACCENT_B, RK1),
                                (-3.35, T, "f", ACCENT_C, RK2)):
-   grid, _pos = self._numgrid(cx, 0.26, [[f"{int(v):+d}" for v in row] for row in Mx],
+   grid, _pos = self._numgrid(cx, 0.26, [[cell(v) for v in row] for row in Mx],
                               dx=0.52, dy=0.42, size=FS_TAG - 4, color=col)
    g.add(grid)
    g.add(self._sym(1.12, lab, col, FS_TAG, x=cx, w=1.00))
    g.add(self._sym(-0.62, f"rank   =   {rk}", col, FS_TAG - 3, x=cx, w=1.30))
   g.add(self._table((("( γ ⊗ λ ) ( ξ , η )   =   γ ( ξ )  ·  λ ( η )", ACCENT_A),
-                     (f"γ ( α ᵢ )   :   {' , '.join(f'{int(v):+d}' for v in GAM)}"
+                     (f"γ ( α ᵢ )   :   {' , '.join(cell(v) for v in GAM)}"
                       f"            λ ( β ⱼ )   :   "
-                      f"{' , '.join(f'{int(v):+d}' for v in LAM)}", ACCENT_C),
+                      f"{' , '.join(cell(v) for v in LAM)}", ACCENT_C),
                      ("t ᵢ ⱼ   =   γ ᵢ  λ ⱼ            ⇔            rank   =   1",
                       ACCENT_A),
                      (f"rank ( γ ⊗ λ )   =   {RK1}            σ ₂   =   {SV1:.1e}",
@@ -418,7 +426,7 @@ class AdvCalcE85Base(ArrayArt, CanonicalBase):
 
  # ── beat 4: Theorem 1.2, the coefficient table ──────────────────
  def _basis2(self):
-  grid, pos = self._numgrid(-4.05, 0.10, [[f"{int(v):+d}" for v in row] for row in T],
+  grid, pos = self._numgrid(-4.05, 0.10, [[cell(v) for v in row] for row in T],
                             dx=0.74, dy=0.50, size=FS_TAG - 3, color=ACCENT_A)
   g = VGroup(grid)
   for i in range(M):
@@ -496,9 +504,8 @@ class AdvCalcE85Base(ArrayArt, CanonicalBase):
                      ("p   ∈   m̄ ⁿ            1   ≤   p ᵢ   ≤   m", ACCENT_B),
                      (f"m   =   {M}        n   =   2        m ⁿ   =   {CNT[2]}",
                       ACCENT_C),
-                     (f"f ( ξ ₁ , ξ ₂ )   =   {V6:+.0f}            Σ ₚ   =   {V6S:+.0f}",
-                      ACCENT_A),
-                     (f"| Δ |   =   {D6:.1e}", DIM)),
+                     (f"f ( ξ ₁ , ξ ₂ )   =   {V6:+.0f}        Σ ₚ   =   {V6S:+.0f}"
+                      f"        | Δ |   =   {D6:.1e}", ACCENT_A)),
                     y0=0.90, dy=0.26, size=FS_TAG - 3))
   g.add(self._cap("左圖那九格就是 n 等於二時所有的 p",
                   "those nine cells are every p there is when n is two"))
@@ -543,8 +550,7 @@ class AdvCalcE85Base(ArrayArt, CanonicalBase):
    pts.append((y, row, r))
   for (ya, ra, _r0), (yb, rb, _r1) in zip(pts, pts[1:]):
    for k, xb in enumerate(rb):
-    g.add(Line([ra[k * len(ra) // len(rb)] if False else ra[k // M], ya, 0],
-               [xb, yb, 0], color=DIM, stroke_width=1.2))
+    g.add(Line([ra[k // M], ya, 0], [xb, yb, 0], color=DIM, stroke_width=1.2))
   for y, row, r in pts:
    for x in row:
     g.add(Dot([x, y, 0], radius=r, color=ACCENT_B if y < 0.80 else DIM))
@@ -556,8 +562,8 @@ class AdvCalcE85Base(ArrayArt, CanonicalBase):
                      ("        n            m ⁿ            | m̄ ⁿ |", DIM))
                     + tuple((f"        {n}            {M ** n}            {CNT[n]}",
                              ACCENT_B) for n in (1, 2, 3))
-                    + ((f"dim ( V * ) ⊗ ⁿ   =   m ⁿ            m   =   {M}", ACCENT_A),
-                       (f"det   =   {DETK:+.0f}", ACCENT_C)),
+                    + ((f"dim ( V * ) ⊗ ⁿ   =   m ⁿ        m   =   {M}"
+                        f"        det   =   {DETK:+.0f}", ACCENT_A),),
                     y0=0.90, dy=0.23, size=FS_TAG - 4))
   g.add(self._cap("中間一欄是公式，右邊一欄是真的數出來的",
                   "the middle column is the formula and the right one an actual count"))
@@ -578,7 +584,9 @@ class AdvCalcE85Base(ArrayArt, CanonicalBase):
    p, j = TUPS[2][k]
    g.add(self._sym(y, f"⟨ {p} , {j} ⟩", ACCENT_B, FS_TAG - 5, x=-2.95, w=0.80))
    g.add(Line([-5.22, ly[p - 1], 0], [-3.42, y, 0], color=DIM, stroke_width=1.3))
-  g.add(self._sym(1.14, "m̄ ¹   ×   m̄", ACCENT_A, FS_TAG - 3, x=-5.60, w=1.30))
+  # 左欄只有 m̄ ¹ 的三個節點；乘積集合只存在於那九條連線裡，
+  # 所以標題只標左欄實際畫出來的東西，乘積留給右表第一列
+  g.add(self._sym(1.14, "m̄ ¹", ACCENT_A, FS_TAG - 3, x=-5.60, w=0.70))
   g.add(self._sym(1.14, "m̄ ²", ACCENT_B, FS_TAG - 3, x=-2.95, w=0.70))
   g.add(self._table((("m̄ ⁿ  ×  m̄            ↔            m̄ ⁿ ⁺ ¹", ACCENT_A),
                      ("⟨ p , j ⟩   ↦   r            r ᵢ  =  p ᵢ   ,   r ₙ ₊ ₁  =  j",
@@ -603,7 +611,7 @@ class AdvCalcE85Base(ArrayArt, CanonicalBase):
   g = VGroup()
   for cx, Mx, lab, col, rel in ((-5.15, SYM, "S", ACCENT_B, "S ᵗ   =   S"),
                                 (-3.35, SKW, "A", ACCENT_C, "A ᵗ   =   −  A")):
-   grid, _pos = self._numgrid(cx, 0.24, [[f"{v:+.1f}" for v in row] for row in Mx],
+   grid, _pos = self._numgrid(cx, 0.24, [[cell(v, 1) for v in row] for row in Mx],
                               dx=0.46, dy=0.36, size=FS_TAG - 5, color=col)
    g.add(grid)
    g.add(self._sym(1.08, lab, col, FS_TAG + 1, x=cx, w=0.40))
@@ -617,9 +625,9 @@ class AdvCalcE85Base(ArrayArt, CanonicalBase):
                      (f"| S ᵗ − S |   =   {RSYM:.0e}            "
                       f"| A ᵗ + A |   =   {RSKW:.0e}", ACCENT_B),
                      (f"| S + A − C |   =   {RSPL:.0e}", ACCENT_B),
-                     (f"𝒜 ⁿ   ⊂   ( V * ) ⊗ ⁿ            C ( {M} , 2 )   =   {DSKW}",
-                      ACCENT_C),
-                     ("S ₙ   ,   ±  1            § 3  ,  § 4", DIM)),
+                     ("𝒜 ⁿ   ⊂   ( V * ) ⊗ ⁿ            § 5", DIM),
+                     (f"dim 𝒜 ²   =   C ( {M} , 2 )   =   {math.comb(M, 2)}",
+                      ACCENT_C)),
                     y0=0.90, dy=0.30, size=FS_TAG - 3))
   g.add(self._cap("兩個矩陣相加就是原來那個係數矩陣",
                   "the two matrices add back up to the original coefficient matrix"))

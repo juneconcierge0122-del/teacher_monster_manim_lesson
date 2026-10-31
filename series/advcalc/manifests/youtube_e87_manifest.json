@@ -1,0 +1,41 @@
+[
+  {
+    "file": "manim_lessons/samples/output/advcalc_e87_zh-TW.mp4",
+    "title": "《高等微積分》第 87 集｜交錯張量與它的維數｜Loomis & Sternberg 第 7 章 §5",
+    "description": "本集是 Loomis 與 Sternberg《Advanced Calculus》第 7 章第 5 節「交錯張量構成的子空間 𝒜 ⁿ」（書頁 310 下半到 312 上半）。第 7 章整章沒有習題。\n\n這一集是整章的軸心。第 2 節給了 n 階共變張量一組以「所有 n 元指標組」為索引的基底，所以那裡的維數是 m 的 n 次方。第 5 節問的是：其中哪些在變數被置換時只差一個正負號？答案從 m 的 n 次方塌縮成一個組合數。\n\n兩個定義並排擺出來：對稱是置換變數之後值不變，交錯是置換變數之後乘上那個置換的正負號。交錯的第一個後果立刻就看得出來——兩個變數相同就是零：把那兩個對換，值沒動，可是按定義要變號，所以它等於自己的相反數。畫面上用一個二階的對稱例子與一個二階的交錯例子對照，交錯那個的對角線整條是零。\n\n定理 5.1 是投影算子：把所有置換的結果配上正負號平均起來，得到的一定交錯，而本來就交錯的原封不動送回來。所以它複合自己等於自己，真的是投影。畫面取一個既不對稱也不交錯的泛函，算出它自己對六個置換的交錯殘差分別是 0、7.211、8.124、7.874、7.874、6.928，而投影之後六個殘差全是零。引理 5.1 是同一個計算換個指標名字，對全部六個置換都成立；把正負號那一項拿掉就不成立，三個奇置換全部差 3.367。\n\n接著是係數的刻畫：一個張量交錯，等價於它的係數陣列在指標被置換時只差一個正負號。於是兩個後果：指標有重複的位置一定是零；而階數大於維數時根本沒有不重複的指標組，整個空間只剩零。\n\n階數不超過維數時，不重複的指標組按值域分類，同一類彼此只差一個置換，每類有 n 階乘個。取值域遞增的那一個當代表，就得到定理 5.2：維數等於 m 取 n。畫面把 m 從二到五、n 從零到 m 的所有情形都和組合數對過，又用解線性方程組的秩獨立算了一次維數，逐格相同；而六個基底元素在六個代表元上的取值矩陣，正好就是六階單位矩陣。\n\n最後是 n 等於 m 這個特例：代表元只剩一個，維數就是一，展開式變成對所有置換求和、每一項是正負號乘上一串座標的乘積，每個變數各出一個、行與列都不重複。書上說這本質上就是行列式的公式。畫面把那個和算出來是 53，和 numpy 的行列式差 7.1e-15。下一集就把它認出來。\n\n本影片為雙語教學動畫系列（繁體中文版）。\n\n本影片為獨立製作的學習導讀，非官方教材，與原書作者及出版社無關。\n講解為自行撰寫，動畫為自行繪製，不含原書頁面，也不提供原書的取得管道。",
+    "tags": [
+      "高等微積分",
+      "Advanced Calculus",
+      "Loomis",
+      "Sternberg",
+      "交錯張量",
+      "多重線性泛函",
+      "投影算子",
+      "組合數",
+      "外代數",
+      "線性代數",
+      "數學分析",
+      "大學數學"
+    ],
+    "language": "zh-TW"
+  },
+  {
+    "file": "manim_lessons/samples/output/advcalc_e87_en.mp4",
+    "title": "Advanced Calculus, Episode 87 | Alternating Tensors and Their Dimension | Ch. 7, §5",
+    "description": "This episode is section 5 of chapter 7 of Loomis and Sternberg's Advanced Calculus, the subspace of alternating tensors, pages 310 to 312. Chapter 7 has no exercises.\n\nThis is the hinge of the chapter. Section 2 gave the covariant tensors of rank n a basis indexed by all n-tuples of indices, so the dimension there is m to the n. Section 5 asks which of them change only by a sign when the variables are permuted, and the answer collapses m to the n down to a binomial coefficient.\n\nThe two definitions sit side by side: symmetric means permuting the variables leaves the value alone, alternating means it picks up the sign of the permutation. The first consequence of alternating is immediate -- two equal variables give zero: swap them and the value does not move, yet by definition it must change sign, so it equals its own negative. The screen contrasts a symmetric example with an alternating one in rank two, and the alternating one has a diagonal of zeros.\n\nTheorem 5.1 is the projection operator: average over all permutations with their signs, and what comes out is always alternating, while anything already alternating comes back untouched. So it composed with itself is itself, a genuine projection. The screen takes a functional that is neither symmetric nor alternating and measures its own alternation residuals over the six permutations as 0, 7.211, 8.124, 7.874, 7.874 and 6.928; after the projection all six are zero. Lemma 5.1 is the same computation with the indices renamed, and holds for all six permutations; drop the sign factor and it fails, with all three odd permutations off by 3.367.\n\nNext comes the characterization in coordinates: a tensor is alternating exactly when its coefficient array changes only by a sign as the indices are permuted. Two consequences follow: any index tuple with a repeat gives zero, and when the rank exceeds the dimension there are no injective index tuples at all, so the whole space is zero.\n\nWhen the rank does not exceed the dimension, the injective tuples fall into classes that differ by a permutation, each of size n factorial. Taking the increasing one in each class as its representative gives Theorem 5.2: the dimension is m choose n. The screen checks every case for m from two to five and n from zero to m against the binomial coefficient, computes the dimension again independently from the rank of a linear system and gets the same table entry by entry, and shows that the six basis elements evaluated at the six representatives form exactly the six by six identity matrix.\n\nLast is the case where the rank equals the dimension: one representative remains, the dimension is one, and the expansion becomes a sum over all permutations of the sign times a product of coordinates, one from each variable, with no row and no column repeated. The book says this is essentially the formula for the determinant. The screen evaluates that sum as 53 and compares it with numpy's determinant, differing by 7.1e-15. The next episode names it.\n\nPart of a bilingual animated teaching series (English edition).\n\nThis is an independently produced study guide. It is not official course material and is not affiliated with the authors or publisher of the book. The narration and animations are original work; no pages of the book are reproduced, and no copy of it is provided.",
+    "tags": [
+      "Advanced Calculus",
+      "Loomis",
+      "Sternberg",
+      "alternating tensors",
+      "multilinear functionals",
+      "projection operator",
+      "binomial coefficient",
+      "exterior algebra",
+      "linear algebra",
+      "real analysis",
+      "university mathematics"
+    ],
+    "language": "en"
+  }
+]
