@@ -187,4 +187,19 @@ curl -s -o /dev/null -w '%{http_code}\n' -H "Authorization: Bearer $(tr -d '\n' 
   這個 repo 設了 `credential.helper = store`，git 會**先問 helper**；helper 有回答就不會去問
   `GIT_ASKPASS`，於是舊的過期 token 被送出去而被拒。被拒之後 git 會自己把它從
   `~/.git-credentials` 刪掉，所以**原指令再推一次就會成功**（2026-10-22 踩到）。
+
+- **但如果 helper 回的是「別人的」帳號，再推一次也沒用。** `~/.git-credentials` 裡
+  `https://soaring0616:…@github.com` 排在 `x-access-token` 前面，store 先回它，
+  GitHub 回的是 **403 `Permission to … denied to soaring0616`**（不是 401）。
+  403 不會讓 git 把那組憑證從 helper 裡刪掉，所以重試幾次都是同一個 403。
+  這時候**不要去動 `~/.git-credentials`**（那是整台機器共用的），
+  改成這一次推送不要問 helper：
+
+  ```bash
+  GIT_ASKPASS=.secrets/github-askpass.sh git --git-dir=.git-backup --work-tree=. \
+    -c credential.helper= push origin HEAD:main
+  ```
+
+  askpass 腳本本來就同時應付 Username 與 Password 兩個提示，所以關掉 helper 照樣能推。
+  （2026-11-02 踩到；token 本身是好的，用上面那個 `git-receive-pack` 測是 200。）
   不想等那一次失敗就先清：`: > ~/.git-credentials`。
