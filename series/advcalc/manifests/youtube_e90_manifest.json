@@ -1,0 +1,43 @@
+[
+  {
+    "file": "manim_lessons/samples/output/advcalc_e90_zh-TW.mp4",
+    "title": "《高等微積分》第 90 集｜外冪與星算子｜Loomis & Sternberg 第 7 章 §8–§9",
+    "description": "本集是 Loomis 與 Sternberg《Advanced Calculus》第 7 章第 8 節「純量積空間的外冪」（書頁 319 下半）與第 9 節「星算子」（書頁 320）。第 7 章整章沒有習題，本集是第 7 章的最後一集。\n\n兩節各只有一頁多，但它們是同一件事：第 8 節替外冪裝上純量積，第 9 節把它花掉。\n\n起點是空間上一個非退化的對稱雙線性形式。書上明講，即使它不是正定的，這兩節照樣把它叫做純量積。非退化讓每個向量對應到對偶空間裡一個泛函，而且是個同構，於是對偶空間上也有一個純量積。公式 8.1 再把它搬到外冪上：兩個楔積的純量積，就是那些兩兩相乘排成的矩陣的行列式。這個定義看起來理所當然，其實要靠上一集的定理 7.3 才站得住——固定一半，右邊對另一半是交錯多重線性的，所以唯一地延拓得上去。\n\n要證那個純量積非退化，得先挑一組好的基底。第 2 章的定理 7.1 保證：在任何非退化對稱形式之下，都找得到一組基底，使得兩兩相乘不是正一就是負一，不同的兩個則是零。負號的個數就是書上那個井字號。公式 8.3 說外冪上那組基底也是正交的：不同的兩個指標組，一定有某個指標只出現在其中一邊，那個矩陣就整條橫列是零；相同的指標組，對角線是正負一、其餘是零。公式 8.4 把最高次冪算出來，它自乘就是負一的井字號次方。\n\n第 9 節從一件小事開始。最高次冪是一維的，而導出的純量積非退化，所以每個不是零的元素自乘都同號；於是恰好有兩個元素是單位的，彼此差一個負號。選定其中一個並固定住，幾何上就是替空間選了一個定向。\n\n有了定向就能定義星算子。拿一個 q 次的元素去楔一個互補次數的，結果落在那個一維空間裡，所以是一個數乘上基準元素；而互補那一層上的純量積非退化，所以那個線性泛函一定是「與某個唯一元素作內積」。那個唯一的元素就是 v 的星。基底上的樣子也跟著出來：兩個指標組只要有一個共同的指標，楔起來就是零，那是上一集「因式重複就是零」的直接後果；沒有共同指標就表示剛好互補。三十六對裡只有六對不是零。\n\n最後兩條是星做兩次等於正負恆等，以及星保持純量積、只差一個正負號。這一集把特徵取成三正一負，不是隨便挑的：全正的話井字號等於零，那兩條的正負號會全部塌成加一，每一條恆等式都變成「等於自己」，寫錯也看不出來。\n\n畫面上的星算子建了兩次：一次是照定義式去解，一次是照公式 9.3 把正負號讀出來、完全不解方程，兩者逐格相同。這是這一集真正的保證。\n\n第 7 章到此結束，下一章是積分。\n\n本影片為雙語教學動畫系列（繁體中文版）。\n\n本影片為獨立製作的學習導讀，非官方教材，與原書作者及出版社無關。\n講解為自行撰寫，動畫為自行繪製，不含原書頁面，也不提供原書的取得管道。",
+    "tags": [
+      "高等微積分",
+      "Advanced Calculus",
+      "Loomis",
+      "Sternberg",
+      "外冪",
+      "星算子",
+      "Hodge 星",
+      "純量積",
+      "定向",
+      "外代數",
+      "線性代數",
+      "數學分析",
+      "大學數學"
+    ],
+    "language": "zh-TW"
+  },
+  {
+    "file": "manim_lessons/samples/output/advcalc_e90_en.mp4",
+    "title": "Advanced Calculus, Episode 90 | Exterior Powers and the Star Operator | Ch. 7, §8-9",
+    "description": "This episode is section 8 of chapter 7 of Loomis and Sternberg's Advanced Calculus, exterior powers of scalar product spaces, on the lower half of page 319, together with section 9, the star operator, on page 320. Chapter 7 has no exercises, and this is the last episode of the chapter.\n\nThe two sections are a page each, and they are one idea: section 8 puts a scalar product on the exterior powers and section 9 spends it.\n\nThe starting point is a nondegenerate symmetric bilinear form on the space. The book says plainly that both sections call such a form a scalar product even where it is not positive definite. Nondegeneracy sends each vector to a functional on the dual, isomorphically, so the dual carries a scalar product too, and formula 8.1 carries it to the exterior powers: the product of two wedges is the determinant of the matrix of pairwise products. That definition looks like nothing, but it needs Theorem 7.3 from the previous episode to stand up -- fix one half and the right-hand side is alternating and multilinear in the other, so it extends uniquely.\n\nShowing the product is nondegenerate needs a good basis first. Theorem 7.1 of chapter 2 provides one: under any nondegenerate symmetric form there is a basis whose vectors pair to plus or minus one, and to zero with each other. The number of minus signs is what the book writes as a hash mark. Formula 8.3 says the power's basis is orthogonal too: two different index tuples always leave one index out of the other, which makes a whole row of the matrix vanish, while for equal tuples the diagonal is plus or minus one and the rest is zero. Formula 8.4 computes the top power, whose self product is minus one to the hash.\n\nSection 9 starts from something small. The top power is a line and its induced product is nondegenerate, so every nonzero element has the same sign, and exactly two of them are unit, each the negative of the other. Choosing one and holding it fixed is geometrically a choice of orientation for the space.\n\nWith an orientation the star operator can be defined. Wedging a q-vector against one of complementary order lands in that one-dimensional space, so it is a number times the chosen element, and since the complementary power is nondegenerate that functional has to be the product against one unique element. That element is the star of v. Its behaviour on the basis follows at once: if two index tuples share even one index their wedge is zero, which is last episode's repeated-factor rule applied directly, and no shared index means they are complementary. Of the thirty-six pairs only six are nonzero.\n\nThe last two identities are that the star applied twice is plus or minus the identity, and that the star preserves the scalar product up to a sign. The signature here is three plus signs and one minus, which is not an arbitrary choice: with an all-positive signature the hash would be zero, both of those signs would collapse to plus one, every identity would read as equal to itself, and a sign error would be invisible.\n\nThe star on screen is built twice: once by solving its defining identity, and once by reading the signs off formula 9.3 with nothing solved. The two agree entry by entry, and that is the real guarantee in this episode.\n\nChapter 7 ends here. The next chapter is integration.\n\nPart of a bilingual animated teaching series (English edition).\n\nThis is an independently produced study guide. It is not official course material and is not affiliated with the authors or publisher of the book. The narration and animations are original work; no pages of the book are reproduced, and no copy of it is provided.",
+    "tags": [
+      "Advanced Calculus",
+      "Loomis",
+      "Sternberg",
+      "exterior powers",
+      "star operator",
+      "Hodge star",
+      "scalar product",
+      "orientation",
+      "exterior algebra",
+      "linear algebra",
+      "real analysis",
+      "university mathematics"
+    ],
+    "language": "en"
+  }
+]

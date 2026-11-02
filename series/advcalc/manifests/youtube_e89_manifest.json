@@ -1,0 +1,43 @@
+[
+  {
+    "file": "manim_lessons/samples/output/advcalc_e89_zh-TW.mp4",
+    "title": "《高等微積分》第 89 集｜外代數｜Loomis & Sternberg 第 7 章 §7",
+    "description": "本集是 Loomis 與 Sternberg《Advanced Calculus》第 7 章第 7 節「外代數」（書頁 316 到 319 上半）。第 7 章整章沒有習題。\n\n前六節把交錯張量建好、又拿它做出行列式，但一直缺一件事：乘法。兩個交錯張量的張量積幾乎從來不是交錯的，一乘就離開那個空間。這一節補的就是這件事，辦法很直接：乘完之後用第 5 節那個投影打回來。畫面上先把這個問題量出來——一個交錯的 f 配上一個一形式，它們的張量積離交錯有多遠，以及投影之後又多接近。\n\n定理 7.1 讓那個辦法成立：先投影再乘，和乘完再投影，結果一樣。證明是把那個和重新分組——把後面那個置換看成只動後面 l 個位置，那麼每一個總的置換恰好來自 l 階乘組配對，除掉就回到原來的樣子。它的用處是讓「先打回交錯」可以隨時插進乘法裡而不改變答案，後面每一步都靠它。\n\n有了那一條就能定義楔積：兩個交錯張量的張量積投影回交錯那一層，再乘上一個二項係數。那個係數是為了讓後面的公式不帶多餘的階乘。一階的情形最好檢查——兩個一形式的楔積餵進兩個向量，答案就是那個二乘二行列式。\n\n引理 7.1 把好幾個接起來，係數是總階數的階乘除以各自階數的階乘。畫面上四組階數的係數分別是六、十二、十二與三十，階數不同係數就不同，所以那個分母不是裝飾品。接著的推論把第 5 節那組基底收了回來：把對偶基底裡遞增的那幾個拿來楔，得到的正好就是那一節辛苦建出來的基底元素。畫面把六個這樣的楔積在六個代表元上的值排成方陣，它就是六階單位矩陣。\n\n定理 7.2 說換邊只差一個正負號，而那個號只看兩個階數：把後面的位置一個一個搬到前面之前，要用的對換個數就是兩個階數相乘。於是一形式與自己楔起來等於自己的相反數，也就是零。推論跟著來：一組一形式楔起來等於零，恰好就是它們線性相依——獨立的那邊可以延拓成基底，楔積就是某個基底元素；相依的那邊代進去之後每一項都有因式重複。\n\n引理 7.2 說楔積雙線性，一行就證完，但它是下一條定理的前提。定理 7.3 是延拓定理：把幾個一形式送到它們的楔積，這個對應本身是交錯多重線性的，而任何一個交錯泛函都唯一地從它穿過去，變成楔積那個空間上的一個線性泛函。書上說硬算會寫得很繁，改用維數算：兩邊都是 m 取 n，而那個對應是單射，所以它是同構。這等於說楔積是所有交錯映射裡最普遍的那一個。\n\n接著書上用它把「轉置不改變行列式」重證一次，而且完全不用座標。最後是引理 7.3：不是零的楔積叫多重向量，它的因式張出一個子空間，而兩組獨立的元組張出同一個子空間，恰好就是它們的楔積差一個純量倍，那個純量是換底矩陣的行列式。畫面另外取一組跨出子空間的，確認它的楔積與原來那個真的不成比例——只驗一半不算證完。\n\n下一集是第 7 章的最後一集：外冪與星算子。\n\n本影片為雙語教學動畫系列（繁體中文版）。\n\n本影片為獨立製作的學習導讀，非官方教材，與原書作者及出版社無關。\n講解為自行撰寫，動畫為自行繪製，不含原書頁面，也不提供原書的取得管道。",
+    "tags": [
+      "高等微積分",
+      "Advanced Calculus",
+      "Loomis",
+      "Sternberg",
+      "外代數",
+      "楔積",
+      "交錯張量",
+      "多重向量",
+      "延拓定理",
+      "外微分形式",
+      "線性代數",
+      "數學分析",
+      "大學數學"
+    ],
+    "language": "zh-TW"
+  },
+  {
+    "file": "manim_lessons/samples/output/advcalc_e89_en.mp4",
+    "title": "Advanced Calculus, Episode 89 | The Exterior Algebra | Ch. 7, §7",
+    "description": "This episode is section 7 of chapter 7 of Loomis and Sternberg's Advanced Calculus, the exterior algebra, pages 316 to the top of 319. Chapter 7 has no exercises.\n\nThe first six sections built alternating tensors and spent them on the determinant, but one thing was always missing: a multiplication. The tensor product of two alternating tensors is almost never alternating, so it leaves the space. This section repairs that in the obvious way, by projecting back with the operator of section 5. The screen measures the problem first: how far an alternating functional's tensor product with a one-form falls outside, and how far back in the projection brings it.\n\nTheorem 7.1 is what makes the repair work: projecting a factor first changes nothing. The proof regroups the sum, reading the inner permutation as acting on the last places only, so that each total permutation comes from exactly a factorial number of pairs, which divides back out. Its use is that the projection can then be inserted anywhere inside a product without changing the answer, and every later step relies on that.\n\nThe wedge can then be defined: the tensor product projected back, times a binomial coefficient chosen to keep stray factorials out of what follows. The one-form case is the easiest to check -- wedge two one-forms, feed in two vectors, and the answer is a two by two determinant.\n\nLemma 7.1 chains several together, with the total factorial over the product of the individual factorials. The screen's four cases have coefficients six, twelve, twelve and thirty: different orders give different coefficients, so that denominator is not decoration. The corollary then recovers the basis of section 5, since wedging an increasing selection of the dual basis gives exactly the element that section worked for. The screen arranges six such wedges evaluated at the six representatives, and the square is the six by six identity.\n\nTheorem 7.2 says swapping the two factors costs only a sign, and the sign depends only on the two orders: moving each of the later places past each of the earlier ones takes that many transpositions. So a one-form wedged with itself is its own negative, hence zero. The corollary follows: a wedge of one-forms vanishes exactly when they are dependent -- an independent tuple extends to a basis and its wedge is a basis element, while a dependent one, once substituted, leaves every term with a repeated factor.\n\nLemma 7.2 says the wedge is bilinear, proved in a line, but it is what the next theorem needs. Theorem 7.3 is the extension theorem: sending one-forms to their wedge is itself alternating and multilinear, and every alternating functional factors through it uniquely, as one linear functional on the wedge space. The book says the direct computation gets notationally heavy and counts dimensions instead: both sides are m choose n and the map is injective, hence an isomorphism. The wedge is the universal alternating map.\n\nThe book then uses it to reprove that a transpose has the same determinant, with no coordinates at all. Last is Lemma 7.3: a nonzero wedge is called a multivector and its factors span a subspace, and two independent tuples span the same subspace exactly when their wedges differ by a scalar, that scalar being the determinant of the change of basis. The screen also takes a tuple that leaves the span and confirms its wedge really is not proportional to the original, since checking one direction only is half a proof.\n\nNext episode closes chapter 7: exterior powers and the star operator.\n\nPart of a bilingual animated teaching series (English edition).\n\nThis is an independently produced study guide. It is not official course material and is not affiliated with the authors or publisher of the book. The narration and animations are original work; no pages of the book are reproduced, and no copy of it is provided.",
+    "tags": [
+      "Advanced Calculus",
+      "Loomis",
+      "Sternberg",
+      "exterior algebra",
+      "wedge product",
+      "alternating tensors",
+      "multivector",
+      "extension theorem",
+      "exterior forms",
+      "linear algebra",
+      "real analysis",
+      "university mathematics"
+    ],
+    "language": "en"
+  }
+]

@@ -46,7 +46,14 @@ import sys
 sys.path.insert(0, str(pathlib.Path(__file__).resolve().parents[2]))
 from manim import Arc, Circle, Dot, Ellipse, Rectangle, Text, ValueTracker
 
-CONTAINERS = (Rectangle, Ellipse, Circle, Arc, Dot)
+# A Rectangle is NOT in here. It used to be, and that made a panel border
+# invisible to the stroke test: 2026-11-02 E89 beat 0 drew a labelled box at
+# y = -0.98 whose border ran straight through the caption line, and collide
+# reported 0. Boxes drawn *around* their own label are still not flagged --
+# the containment check below skips any stroke whose box swallows the text's --
+# so including Rectangle costs nothing and catches a border crossing other text.
+# The round markers stay excluded, since they really are drawn over points.
+CONTAINERS = (Ellipse, Circle, Arc, Dot)
 
 PAD = 0.03        # ignore text/text overlaps smaller than this
 INSET = 0.16      # shrink a text box by this fraction before the stroke test
