@@ -8,7 +8,7 @@ Chapter 7: The Determinant
 - 腳本與公式：`manim_lessons/localization/advcalc.py`（`TOPICS_ADVCALC[88]` / `FORMULAS_ADVCALC[88]`）
 - 配音：`manim_lessons/samples/audio_e88/`（zh-TW `-4%`、en `-4%`）
 - 片長：中文 238.0 秒（3:58）／英文 195.9 秒（3:15）
-- YouTube（私人）：中文 — ／英文 —（尚未上傳）
+- YouTube（私人）：中文 https://youtu.be/63uYiZdExMU ／英文 https://youtu.be/kokcmYr2efU
 
 ## 這一節在做什麼
 

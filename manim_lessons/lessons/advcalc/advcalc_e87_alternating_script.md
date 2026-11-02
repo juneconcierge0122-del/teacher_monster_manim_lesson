@@ -8,7 +8,7 @@ Chapter 7: Alternating Tensors and Their Dimension
 - 腳本與公式：`manim_lessons/localization/advcalc.py`（`TOPICS_ADVCALC[87]` / `FORMULAS_ADVCALC[87]`）
 - 配音：`manim_lessons/samples/audio_e87/`（zh-TW `-4%`、en `-4%`）
 - 片長：中文 263.1 秒（4:23）／英文 205.8 秒（3:25）
-- YouTube（私人）：尚未上傳
+- YouTube（私人）：中文 https://youtu.be/ss8slBY4XOk ／英文 https://youtu.be/u0jHipfKPPQ
 
 ## 這半節在做什麼
 

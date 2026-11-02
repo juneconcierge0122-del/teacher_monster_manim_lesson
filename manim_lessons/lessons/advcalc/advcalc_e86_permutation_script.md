@@ -8,7 +8,7 @@ Chapter 7: Permutations and the Sign
 - 腳本與公式：`manim_lessons/localization/advcalc.py`（`TOPICS_ADVCALC[86]` / `FORMULAS_ADVCALC[86]`，由主控從 `nar_e86.py` 合併）
 - 配音：`manim_lessons/samples/audio_e86/`（zh-TW `-4%`、en `-4%`）— 尚未產生
 - 片長：中文 277.4 秒（4:37）／英文 198.1 秒（3:18）
-- YouTube（私人）：中文 —／英文 —
+- YouTube（私人）：中文 https://youtu.be/aGaCTI4amHo ／英文 https://youtu.be/6OVJ3enoSEI
 
 
 ## 這半節在做什麼

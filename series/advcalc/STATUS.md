@@ -1,7 +1,7 @@
 # advcalc —《Advanced Calculus》(Loomis & Sternberg)
 
-**狀態：E00–E84 已上傳（私人）。第 6 章完結（書頁 304）。
-下一集 E85 進第 7 章「多重線性泛函」（書頁 305–320，**整章沒有習題**），細目表給它 6 集（E85–E90）。**
+**狀態：E00–E88 已上傳（私人）。第 7 章 §1–§6 完成（書頁 315），全章無習題。
+下一集 E89 收第 7 章剩下的 §7–§9（外代數、外冪、星算子，書頁 315–320），細目表給這一章 6 集（E85–E90），還剩 2 集。**
 **E81–E84 是第一次四集一批**：四個 opus subagent 各寫一集、一個 opus advisor 在開渲前審一次、
 sonnet worker 跑機械步驟。**8 支 1080p 一批實測 101 分鐘**（4 支那次是 54 分），
 每支吞吐從 13.5 分進步到 12.6 分——批量加倍幾乎沒有額外代價，但也沒有明顯加速。
@@ -184,6 +184,10 @@ E22 從「零化子」起（83–86）。自然性那張交換圖雖然講的是
 | E82 | 邊界值問題與形式自伴 | 6.6 前半（294–297） | 4:26 ／ 3:22 | https://youtu.be/b33wWQW92TY | https://youtu.be/STb24Y9Y7ic |
 | E83 | Sturm-Liouville 與特徵基底 | 6.6 後半（297–299） | 4:19 ／ 3:21 | https://youtu.be/pElyyNI3DkY | https://youtu.be/1YOX60sK4_o |
 | E84 | Fourier 級數 | 6.7（301–303） | 4:41 ／ 3:27 | https://youtu.be/74PqP-j7cKQ | https://youtu.be/oA8ZepMDHmM |
+| E85 | 張量積與共變張量 | 7.1–7.2（305–308，**全章無習題**） | 4:15 ／ 3:27 | https://youtu.be/u8ht77mMKNA | https://youtu.be/4vIO0YIB4F4 |
+| E86 | 置換與正負號 | 7.3–7.4（308–310） | 4:37 ／ 3:18 | https://youtu.be/aGaCTI4amHo | https://youtu.be/6OVJ3enoSEI |
+| E87 | 交錯張量與它的維數 | 7.5（310–312） | 4:23 ／ 3:25 | https://youtu.be/ss8slBY4XOk | https://youtu.be/u0jHipfKPPQ |
+| E88 | 行列式 | 7.6（312–315） | 3:58 ／ 3:15 | https://youtu.be/63uYiZdExMU | https://youtu.be/kokcmYr2efU |
 
 **E16 起的描述結尾都帶了 PLAYBOOK 第 8 節那段免責聲明**（E00–E15 是在此之前上傳的，沒有那段，
 而 YouTube token 只有上傳權限、改不了已上傳影片的描述，要補只能在 YouTube Studio 手動編輯）。

@@ -8,7 +8,7 @@ Chapter 7: Tensor Products and Covariant Tensors
 - 腳本與公式：`manim_lessons/localization/advcalc.py`（`TOPICS_ADVCALC[85]` / `FORMULAS_ADVCALC[85]`）
 - 配音：`manim_lessons/samples/audio_e85/`（zh-TW `-4%`、en `-4%`）
 - 片長：中文 255.4 秒（4:15）／英文 207.9 秒（3:27）
-- YouTube（私人）：中文 —／英文 —（尚未渲染）
+- YouTube（私人）：中文 https://youtu.be/u8ht77mMKNA ／英文 https://youtu.be/4vIO0YIB4F4
 
 ## 這兩節在做什麼
 
