@@ -7,8 +7,8 @@ Chapter 7: The Exterior Algebra
 - 場景檔：`manim_lessons/lessons/advcalc/advcalc_e89_exterior.py`（`AdvCalcE89ZH` / `AdvCalcE89EN`）
 - 腳本與公式：`manim_lessons/localization/advcalc.py`（`TOPICS_ADVCALC[89]` / `FORMULAS_ADVCALC[89]`）
 - 配音：`manim_lessons/samples/audio_e89/`（zh-TW `-4%`、en `-4%`）
-- 片長：中文 — 秒／英文 — 秒（尚未渲染）
-- YouTube（私人）：中文 — ／英文 —（尚未上傳）
+- 片長：中文 233.5 秒（3:53）／英文 195.9 秒（3:15）
+- YouTube（私人）：中文 https://youtu.be/-BYUF2ejiBY ／英文 https://youtu.be/RT3HfW01NFg
 
 **書頁範圍的更正**：`OUTLINE.md` 的細目表把這一節寫成 316–318，但引理 7.3 的證明跑到 319 的第一段，而第 8 節是從 319 的中間開始的。2026-11-02 逐頁核過。
 

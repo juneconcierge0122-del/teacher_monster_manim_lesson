@@ -7,8 +7,8 @@ Chapter 7: Exterior Powers and the Star Operator
 - 場景檔：`manim_lessons/lessons/advcalc/advcalc_e90_star.py`（`AdvCalcE90ZH` / `AdvCalcE90EN`）
 - 腳本與公式：`manim_lessons/localization/advcalc.py`（`TOPICS_ADVCALC[90]` / `FORMULAS_ADVCALC[90]`）
 - 配音：`manim_lessons/samples/audio_e90/`（zh-TW `-4%`、en `-4%`）
-- 片長：中文 — 秒／英文 — 秒（尚未渲染）
-- YouTube（私人）：中文 — ／英文 —（尚未上傳）
+- 片長：中文 243.8 秒（4:03）／英文 196.3 秒（3:16）
+- YouTube（私人）：中文 https://youtu.be/F8uGXk20PEk ／英文 https://youtu.be/NsWQUIHivs0
 
 **書頁範圍的更正**：`OUTLINE.md` 把 §8 寫成 319–320。實際上 §8 從 319 的中間開始、收在 319 的頁尾（公式 8.4），**只有半頁多一點**；320 整頁都是 §9。321 是第 8 章 INTEGRATION。2026-11-02 逐頁核過。
 
